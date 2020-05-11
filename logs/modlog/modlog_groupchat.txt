@@ -1,0 +1,10 @@
+[2020-04-24T21:52:33.655Z] (groupchat-beelzemon2003-13247832) INVITE: [thundercebra] by beelzemon2003
+[2020-04-24T21:52:50.371Z] (groupchat-beelzemon2003-13247832) TOUR CREATE:  by beelzemon2003: gen2ou
+[2020-04-24T21:53:03.500Z] (groupchat-beelzemon2003-13247832) TOUR RULES:  by beelzemon2003: item clause, team preview
+[2020-04-24T21:53:11.206Z] (groupchat-beelzemon2003-13247832) TOUR START:  by beelzemon2003: 2 players
+[2020-04-24T22:03:57.493Z] (groupchat-beelzemon2003-13247832) TOUR CREATE:  by beelzemon2003: gen2ou
+[2020-04-24T22:04:06.886Z] (groupchat-beelzemon2003-13247832) TOUR RULES:  by beelzemon2003: item clause, team preview, -ou
+[2020-04-24T22:04:54.201Z] (groupchat-beelzemon2003-13247832) TOUR START:  by beelzemon2003: 2 players
+[2020-04-24T22:13:02.188Z] (groupchat-beelzemon2003-13247832) TOUR CREATE:  by beelzemon2003: gen2ou
+[2020-04-24T22:13:06.537Z] (groupchat-beelzemon2003-13247832) TOUR RULES:  by beelzemon2003: item clause, team preview, -ou
+[2020-04-24T22:13:54.373Z] (groupchat-beelzemon2003-13247832) TOUR START:  by beelzemon2003: 2 players
