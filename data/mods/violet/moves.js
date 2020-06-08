@@ -28,6 +28,60 @@ let BattleMovedex = {
 		basePower: 70,
 		pp: 5,
   },
+	disable: {
+		num: 50,
+		accuracy: 100,
+		basePower: 0,
+		category: "Status",
+		desc: "For 4 turns, the target's last move used becomes disabled. Fails if one of the target's moves is already disabled, if the target has not made a move, if the target no longer knows the move, or if the move was a Max or G-Max Move.",
+		shortDesc: "For 4 turns, disables the target's last move used.",
+		id: "disable",
+		isViable: true,
+		name: "Disable",
+		pp: 5,
+		priority: 0,
+		flags: {protect: 1, reflectable: 1, mirror: 1, authentic: 1},
+		volatileStatus: 'disable',
+		onTryHit(target) {
+			return true;
+		},
+		effect: {
+			duration: 4,
+			durationCallback(target, source, effect) {
+				let duration = this.random(1, 7);
+				return duration;
+			},
+			onStart(pokemon) {
+				if (!this.queue.willMove(pokemon)) {
+					this.effectData.duration++;
+				}
+				let moves = pokemon.moves;
+				let move = this.dex.getMove(this.sample(moves));
+				this.add('-start', pokemon, 'Disable', move.name);
+				this.effectData.move = move.id;
+				return;
+			},
+			onResidualOrder: 14,
+			onBeforeMove(attacker, defender, move) {
+				if (move.id === this.effectData.move) {
+					this.add('cant', attacker, 'Disable', move);
+					return false;
+				}
+			},
+			onDisableMove(pokemon) {
+				for (const moveSlot of pokemon.moveSlots) {
+					if (moveSlot.id === this.effectData.move) {
+						pokemon.disableMove(moveSlot.id);
+					}
+				}
+			},
+		},
+		secondary: null,
+		target: "normal",
+		type: "Normal",
+		zMoveEffect: 'clearnegativeboost',
+		contestType: "Clever",
+	},
 	dreameater: {
 		inherit: true,
 		basePower: 200,
@@ -65,6 +119,30 @@ let BattleMovedex = {
 	megadrain: {
 		inherit: true,
 		drain: [1, 1],
+	},
+	mimic: {
+		inherit: true,
+		onHit(target, source) {
+			let moveslot = source.moves.indexOf('mimic');
+			if (moveslot < 0) return false;
+			let moves = target.moves;
+			let moveid = this.sample(moves);
+			if (!moveid) return false;
+			let move = this.dex.getMove(moveid);
+			let mimicMove = {
+				move: move.name,
+				id: move.id,
+				pp: source.moveSlots[moveslot].pp,
+				maxpp: move.pp * 8 / 5,
+				target: move.target,
+				disabled: false,
+				used: false,
+				virtual: true,
+			};
+      source.moveSlots[moveslot] = mimicMove;
+      source.baseMoveSlots[moveslot] = mimicMove;
+			this.add('-start', source, 'Mimic', move.name);
+		},
 	},
 	petaldance: {
 		inherit: true,
