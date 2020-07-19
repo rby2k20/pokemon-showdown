@@ -3,7 +3,7 @@
 /**
  * The server port - the port to run Pokemon Showdown under
  */
-exports.port = 8000;
+exports.port = 18000;
 
 /**
  * The server address - the address at which Pokemon Showdown should be hosting
@@ -135,6 +135,9 @@ Ko0LaPAMhcfETxlFQFutoWBRcH415A/EMXJa4FqYa9oeXWABNtKkUW0zrQ194btg
 Y929lRybWEiKUr+4Yw2O1W0CAwEAAQ==
 -----END PUBLIC KEY-----
 `;
+
+exports.serverid = 'rby';
+exports.servertoken = 'SNGz3X8a7w3e';
 
 /**
  * routes - where Pokemon Showdown is hosted.
@@ -366,7 +369,7 @@ exports.autolockdown = true;
  * @type {{[userid: string]: string}}
  */
 exports.customavatars = {
-	// 'userid': 'customavatar.png'
+	'klegacy': 'klegacy.png'
 };
 
 /**

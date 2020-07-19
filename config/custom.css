@@ -1,0 +1,114 @@
+/**
+ * Custom CSS declarations
+ *
+ * If your server is registered, you can create a file named `custom.css`
+ * in the `config` directory and populate it with CSS rules to override the
+ * normal client styles, when the client is connected to your server. In
+ * other words, you can use this facility to introduce a custom theme for
+ * your server.
+ */
+
+menugroup .button.mainmenu1.big, .menugroup .button.mainmenu1.onlineonly, .menugroup .button.mainmenu1.onlineonly.disabled, .menugroup .button.mainmenu2, .menugroup .button.mainmenu3, .menugroup .button.mainmenu4, .menugroup .button.mainmenu5 {
+    background: crimson;
+    border-color: black;
+    border-radius: 5px;
+    color: #fff;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+    margin: 0 0 0;
+    box-shadow: none;
+}
+
+menugroup .button.mainmenu1.big:hover, .menugroup .button.mainmenu1.onlineonly:hover, .menugroup .button.mainmenu1.onlineonly.disabled:hover, .menugroup .button.mainmenu2:hover, .menugroup .button.mainmenu3:hover, .menugroup .button.mainmenu4:hover, .menugroup .button.mainmenu5:hover {
+    background: #960e29;
+    border-color: black;
+    border-radius: 5px;
+    color: #fff;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+    margin: 0 0 0;
+    box-shadow: none;
+}
+
+.header, .dark .header {
+    background: url(https://github.com/rby2k20/rby2k20/blob/master/images/FinalLogoText.png?raw=true)no-repeat left;
+    background-color: rgba(40,0,0,0.8);
+    background-size: 144px 46px;
+}
+
+.header .logo {
+    position: fixed; 
+    top: -500px;
+    left: -500px;
+    width:0px;
+    height: 0px;
+    float: none;
+    display: none;
+}
+
+.menugroup .button.mainmenu1.big, .menugroup .button.mainmenu1.onlineonly, .menugroup .button.mainmenu1.onlineonly.disabled {
+    margin-bottom: 10px;
+    margin-top: 5px;
+}
+
+.menugroup .button.mainmenu1.big, .menugroup .button.mainmenu1.onlineonly, .menugroup .button.mainmenu1.onlineonly.disabled, .menugroup .button.mainmenu2, .menugroup .button.mainmenu3, .menugroup .button.mainmenu4, .menugroup .button.mainmenu5 {
+    background: crimson
+    border-color: black;
+    border-radius: 5px;
+    color: #fff;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+    margin: 0 0 0;
+    box-shadow: none;
+}
+
+.menugroup .button.mainmenu1.big:hover, .menugroup .button.mainmenu1.onlineonly:hover, .menugroup .button.mainmenu1.onlineonly.disabled:hover, .menugroup .button.mainmenu2:hover, .menugroup .button.mainmenu3:hover, .menugroup .button.mainmenu4:hover, .menugroup .button.mainmenu5:hover {
+    background: #960e29;
+    border-color: black;
+    border-radius: 5px;
+    color: #fff;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+    margin: 0 0 0;
+    box-shadow: none;
+}
+
+.button.mainmenu1, .button.mainmenu1.big {
+    background: crimson;
+    border-color: black;
+    border-radius: 5px;
+    color: #fff;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+}
+
+/*
+.maintabbarbottom {
+    background-color: green;
+    border-color: black;
+    border-right: 0;
+}
+
+.tabbar a.button.cur, .tabbar a.button.cur:hover {
+    background: green;
+    border-color: black;
+    color: #fff;
+}
+
+.tabbar a.button {
+    background: darkgreen;
+    border-color: black;
+    color: #fff;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+}*/
+
+/*
+.chat-log {
+	background-color: #36393f;
+	color: #fff;
+}
+
+a.ilink {
+	color: #bbf;
+}
+
+.ps-room.ps-room-light {
+    background: rgba(54,57,63,.85);
+    color: #000;
+}
+*/
