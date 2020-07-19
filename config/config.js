@@ -369,7 +369,9 @@ exports.autolockdown = true;
  * @type {{[userid: string]: string}}
  */
 exports.customavatars = {
-	'klegacy': 'klegacy.png'
+	'klegacy': 'klegacy.png',
+	'drcaetano93' : 'drcaetano93.png'
+	
 };
 
 /**
