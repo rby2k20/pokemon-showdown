@@ -370,8 +370,11 @@ exports.autolockdown = true;
  */
 exports.customavatars = {
 	'klegacy': 'klegacy.png',
-	'drcaetano93' : 'drcaetano93.png'
-	
+	'drcaetano93' : 'drcaetano93.png',
+	'ememeff' : 'ememeff.png',
+	'enigami' : 'enigami.png',
+	'kuraitenshi26' : 'kuraitenshi26.png',
+	'plaguevonkarma' : 'plaguevonkarma.png'
 };
 
 /**
