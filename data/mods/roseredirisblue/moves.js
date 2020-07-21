@@ -122,7 +122,8 @@ let BattleMovedex = {
 	bind: {
 		inherit: true,
 		ignoreImmunity: true,
-		basePower: 30,
+		basePower: 35,
+		accuracy: 85,
 		pp: 5,
 		volatileStatus: 'partiallytrapped',
 		self: {
@@ -145,6 +146,7 @@ let BattleMovedex = {
 				}
 			}
 		},
+		type: "Bug",
 	},
 	bite: {
 		inherit: true,
@@ -184,8 +186,8 @@ let BattleMovedex = {
 	},
 	clamp: {
 		inherit: true,
-		accuracy: 75,
-		basePower: 50,
+		accuracy: 85,
+		basePower: 35,
 		pp: 5,
 		volatileStatus: 'partiallytrapped',
 		self: {
@@ -366,12 +368,15 @@ let BattleMovedex = {
 	},
 	firepunch: {
 		inherit: true,
-		basePower: 95,
+		desc: "10% chance to burn. 25% recoil."
+		shortDesc: "10% chance to burn. 25% recoil."
+		basePower: 120,
+		recoil: [1, 4],
 	},
 	firespin: {
 		inherit: true,
-		accuracy: 70,
-		basePower: 40,
+		accuracy: 85,
+		basePower: 35,
 		pp: 5,
 		volatileStatus: 'partiallytrapped',
 		self: {
@@ -494,7 +499,10 @@ let BattleMovedex = {
 	},
 	icepunch: {
 		inherit: true,
-		basePower: 95,
+		desc: "10% chance to freeze. 25% recoil."
+		shortDesc: "10% chance to freeze. 25% recoil."
+		basePower: 120,
+		recoil: [1, 4],
 	},
 	jumpkick: {
 		inherit: true,
@@ -692,8 +700,17 @@ let BattleMovedex = {
 		target: "normal",
 	},
 	razorwind: {
-		inherit: true,
-		critRatio: 1,
+		id: "razorwind",
+		name: "Razor Wind",
+		desc: "High critical rate.",
+		shortDesc: "High crit rate.",
+		inherit: false,
+		basePower: 45,
+		accuracy: 100,
+		category: "Physical",
+		pp: 10,
+		type: "Flying",
+		critRatio: 2,
 		target: "normal",
 	},
 	recover: {
@@ -830,6 +847,8 @@ let BattleMovedex = {
 		},
 	},
 	splash: {
+		id: "splash",
+		name: "Splash",
 		desc: "30% chance to paralyze.",
 		shortDesc: "30% chance to paralyze.",
 		secondary: {
@@ -996,7 +1015,17 @@ let BattleMovedex = {
 	},
 	thunderpunch: {
 		inherit: true,
-		basePower: 95,
+		desc: "10% chance to paralyze. 25% recoil."
+		shortDesc: "10% chance to paralyze. 25% recoil."
+		basePower: 120,
+		recoil: [1, 4],
+	},
+	thundershock: {
+		inherit: true,
+		desc: "10% chance to paralyze target. High critical rate.",
+		shortDesc: "10% paralysis chance. High crit rate.",
+		basePower: 55,
+		critRatio: 2,
 	},
 	thunderwave: {
 		inherit: true,
@@ -1034,15 +1063,17 @@ let BattleMovedex = {
 	whirlwind: {
 		desc: "No additional effect.",
 		shortDesc: "No additional effect.",
+		id: "whirlwind",
+		name: "Whirlwind",
 		inherit: false,
 		isViable: true,
 		forceSwitch: false,
 		onTryHit: function () {},
 		priority: 0,
-		basePower: 80,
-		accuracy: 100,
+		basePower: 110,
+		accuracy: 85,
 		category: "Physical",
-		pp: 10,
+		pp: 5,
 		type: "Flying",
 	},
 	wingattack: {
@@ -1053,7 +1084,7 @@ let BattleMovedex = {
 	wrap: {
 		inherit: true,
 		accuracy: 85,
-		basePower: 30,
+		basePower: 35,
 		pp: 5,
 		ignoreImmunity: true,
 		volatileStatus: 'partiallytrapped',
