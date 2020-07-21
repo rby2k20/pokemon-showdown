@@ -368,8 +368,8 @@ let BattleMovedex = {
 	},
 	firepunch: {
 		inherit: true,
-		desc: "10% chance to burn. 25% recoil."
-		shortDesc: "10% chance to burn. 25% recoil."
+		desc: "10% chance to burn. 25% recoil.",
+		shortDesc: "10% chance to burn. 25% recoil.",
 		basePower: 120,
 		recoil: [1, 4],
 	},
@@ -499,8 +499,8 @@ let BattleMovedex = {
 	},
 	icepunch: {
 		inherit: true,
-		desc: "10% chance to freeze. 25% recoil."
-		shortDesc: "10% chance to freeze. 25% recoil."
+		desc: "10% chance to freeze. 25% recoil.",
+		shortDesc: "10% chance to freeze. 25% recoil.",
 		basePower: 120,
 		recoil: [1, 4],
 	},
@@ -1015,8 +1015,8 @@ let BattleMovedex = {
 	},
 	thunderpunch: {
 		inherit: true,
-		desc: "10% chance to paralyze. 25% recoil."
-		shortDesc: "10% chance to paralyze. 25% recoil."
+		desc: "10% chance to paralyze. 25% recoil.",
+		shortDesc: "10% chance to paralyze. 25% recoil.",
 		basePower: 120,
 		recoil: [1, 4],
 	},
