@@ -6926,7 +6926,7 @@ exports.BattleLearnsets = {
 		swift: ["1M", "2M"],
 		takedown: ["1L45", "1M", "2L43"],
 		toxic: ["1M", "2M"],
-		whirlwind: ["1M", "2E"],
+		//whirlwind: ["1M", "2E"],
 		wingattack: ["1L1", "2L1", "2S0"],
 	}},
 	snorlax: {learnset: {
