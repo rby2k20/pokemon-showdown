@@ -122,6 +122,8 @@ let BattleMovedex = {
 	bind: {
 		inherit: true,
 		ignoreImmunity: true,
+		desc: "Traps and damages enemies for 2-3 turns.",
+		shortDesc: "Traps 2-3 turns.",
 		basePower: 35,
 		accuracy: 85,
 		pp: 5,
@@ -188,6 +190,8 @@ let BattleMovedex = {
 		inherit: true,
 		accuracy: 85,
 		basePower: 35,
+		desc: "Traps and damages enemies for 2-3 turns.",
+		shortDesc: "Traps 2-3 turns.",
 		pp: 5,
 		volatileStatus: 'partiallytrapped',
 		self: {
@@ -255,7 +259,7 @@ let BattleMovedex = {
 	},
 	crabhammer: {
 		inherit: true,
-		accuracy: 90,
+		accuracy: 100,
 		critRatio: 2,
 	},
 	dig: {
@@ -336,6 +340,8 @@ let BattleMovedex = {
 	dreameater: {
 		inherit: true,
 		category: "Physical",
+		desc: "User gains all HP inflicted. Sleeping or poisoned target only.",
+		shortDesc: "100% drain, slp or psn target only.",
 		basePower: 180,
 		drain: [1, 1],
 		type: "Ghost",
@@ -375,6 +381,8 @@ let BattleMovedex = {
 	},
 	firespin: {
 		inherit: true,
+		desc: "Traps and damages enemies for 2-3 turns.",
+		shortDesc: "Traps 2-3 turns.",
 		accuracy: 85,
 		basePower: 35,
 		pp: 5,
@@ -861,6 +869,7 @@ let BattleMovedex = {
 		category: "Physical",
 		pp: 10,
 		type: "Flying",
+		target: "normal",
 	},
 	sludge: {
 		inherit: true,
@@ -1047,6 +1056,8 @@ let BattleMovedex = {
 	},
 	triattack: {
 		inherit: true,
+		desc: "No additional effect.",
+		shortDesc: "No additional effect.",
 		onHit: function () {},
 		secondary: false,
 		type: "Ghost",
@@ -1075,6 +1086,7 @@ let BattleMovedex = {
 		category: "Physical",
 		pp: 5,
 		type: "Flying",
+		target: "normal",
 	},
 	wingattack: {
 		inherit: true,
@@ -1085,6 +1097,8 @@ let BattleMovedex = {
 		inherit: true,
 		accuracy: 85,
 		basePower: 35,
+		desc: "Traps and damages enemies for 2-3 turns.",
+		shortDesc: "Traps 2-3 turns.",
 		pp: 5,
 		ignoreImmunity: true,
 		volatileStatus: 'partiallytrapped',
