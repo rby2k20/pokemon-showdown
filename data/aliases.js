@@ -3,6 +3,8 @@
 /**@type {{[k: string]: string}} */
 let BattleAliases = {
 	// formats
+	"vio": "[Gen 1] Violet Version",
+	"rrib": "[Gen 1] Rose Red / Iris Blue",
 	"randbats": "[Gen 8] Random Battle",
 	"uber": "[Gen 8] Ubers",
 	"mono": "[Gen 8] Monotype",
