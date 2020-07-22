@@ -4632,3 +4632,24 @@ Additional information:
 |-miss|p1a: Gengar
 |move|p2a: Chansey|Counter|p1a: Gengar
 
+
+C:\Users\Aabrar\Desktop\rbyserver\pokemon-showdown\data\mods\roseredirisblue\moves.js:372
+		shortDesc: "10% chance to burn. 25% recoil."
+		^^^^^^^^^
+
+SyntaxError: Unexpected identifier
+    at Module._compile (internal/modules/cjs/loader.js:718:23)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:785:10)
+    at Module.load (internal/modules/cjs/loader.js:641:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:556:12)
+    at Module.require (internal/modules/cjs/loader.js:681:19)
+    at require (internal/modules/cjs/helpers.js:16:16)
+    at ModdedDex.loadDataFile (C:\Users\Aabrar\Desktop\rbyserver\pokemon-showdown\.sim-dist\dex.js:1424:23)
+    at ModdedDex.loadData (C:\Users\Aabrar\Desktop\rbyserver\pokemon-showdown\.sim-dist\dex.js:1490:28)
+    at ModdedDex.includeData (C:\Users\Aabrar\Desktop\rbyserver\pokemon-showdown\.sim-dist\dex.js:1461:8)
+    at ModdedDex.forFormat (C:\Users\Aabrar\Desktop\rbyserver\pokemon-showdown\.sim-dist\dex.js:231:33)
+
+Additional information:
+  formatid = gen1roseredirisblue
+  team = Parasect|||none|spore,leechlife,bind,stunspore|||||||]Farfetch'd|||none|swordsdance,whirlwind,hyperbeam,razorleaf|||||||]Fearow|||none|hypnosis,slash,whirlwind,razorwind|||||||]Vileplume|||none|sleeppowder,recover,acid,megadrain|||||||]Seaking|||none|swordsdance,hyperbeam,drillpeck,surf|||||||]Venusaur|||none|stunspore,swordsdance,poisonsting,razorleaf|||||||
+
