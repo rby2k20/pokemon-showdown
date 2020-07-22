@@ -10,6 +10,10 @@ let BattlePokedex = {
 		inherit: true,
 		baseStats: {hp:65, atk:80, def:40, spa:45, spd:45, spe:130},
 	},
+	blastoise: {
+		inherit: true,
+		types: ["Water", "Ground"],
+	},
 	butterfree: {
 		inherit: true,
 		types: ["Bug", "Psychic"],
@@ -42,10 +46,19 @@ let BattlePokedex = {
 	golduck: {
 		inherit: true,
 		types: ["Water", "Ghost"],
+		baseStats: {hp:90, atk:82, def:78, spa:80, spd:80, spe:95},
 	},
 	hypno: {
 		inherit: true,
 		baseStats: {hp:85, atk:113, def:70, spa:115, spd:115, spe:67},
+	},
+	kabutops: {
+		inherit: true,
+		baseStats: {hp:60, atk:115, def:135, spa:70, spd:70, spe:80},
+	},
+	jynx: {
+		inherit: true,
+		baseStats: {hp:65, atk:50, def:35, spa:115, spd:115, spe:95},
 	},
 	machamp: {
 		inherit: true,
@@ -61,9 +74,13 @@ let BattlePokedex = {
 		types: ["Electric", "Rock"],
 		baseStats: {hp:120, atk:60, def:95, spa:120, spd:120, spe:70},
 	},
+	mew: {
+		inherit: true,
+		baseStats: {hp:70, atk:70, def:70, spa:70, spd:70, spe:70},
+	},
 	muk: {
 		inherit: true,
-		baseStats: {hp:145, atk:105, def:85, spa:75, spd:75, spe:50},
+		baseStats: {hp:135, atk:105, def:85, spa:65, spd:65, spe:50},
 	},
 	nidoqueen: {
 		inherit: true,
@@ -81,9 +98,18 @@ let BattlePokedex = {
 		inherit: true,
 		baseStats: {hp:83, atk:110, def:75, spa:105, spd:105, spe:100},
 	},
+	pinsir: {
+		inherit: true,
+		baseStats: {hp:65, atk:135, def:100, spa:55, spd:55, spe:85},
+	},
 	poliwrath: {
 		inherit: true,
 		baseStats: {hp:90, atk:115, def:95, spa:70, spd:70, spe:70},
+	},
+	porygon: {
+		inherit: true,
+		types: ["Normal", "Ghost"],
+		baseStats: {hp:75, atk:80, def:80, spa:105, spd:105, spe:85},
 	},
 	primeape: {
 		inherit: true,
