@@ -80,7 +80,7 @@ let Formats = [
 		section: "Modded Formats",
 		column: 2,
 	},
-	{
+	/*{
 		name: "[Gen 3] ADV 50",
 		threads: [
 			`&bullet; <a href="https://www.pokemonperfect.com/forums/index.php?threads/rules-discussion-thread.4222/">ADV 50 Metagame Discussion</a>`,
@@ -91,7 +91,7 @@ let Formats = [
 		ruleset: ['Standard'],
 		banlist: ['Uber', 'OU', 'UUBL', 'UU', 'NUBL', 'NU', 'NFE', 'LC', "Mean Look"],
 		unbanlist: ['Aggron', 'Altaria', 'Ampharos', 'Armaldo', 'Azumarill', 'Banette', 'Cacturne', 'Camerupt', 'Castform', 'Chimecho', 'Clefable', 'Crawdaunt', 'Crobat', 'Electrode', 'Fearow', 'Flareon', 'Forretress', 'Glalie', 'Golduck', 'Golem', 'Granbull', 'Hitmonlee', 'Huntail', 'Jumpluff', 'Kabutops', 'Kadabra', 'Lanturn', 'Manectric', 'Mantine', 'Meganium', 'Mightyena', 'Misdreavus', 'Muk', 'Nidoqueen', 'Rapidash', 'Sableye', 'Sandslash', 'Scizor', 'Scyther', 'Sharpedo', 'Shiftry', 'Slowking', 'Stantler', 'Steelix', 'Torkoal', 'Typhlosion', 'Venomoth', 'Vileplume', 'Wailord', 'Whiscash'],
-	},
+	},*/
 	{
 		name: "[Gen 1] Violet Version",
 		threads: [
@@ -106,6 +106,15 @@ let Formats = [
 	},
 	{
       name: "[Gen 1] Rose Red / Iris Blue",
+        desc: `A balance mod for Gen 1 that adds select future-generation Pokemon.`,
+        threads: [
+            `<a href="https://www.smogon.com/forums/threads/gen-1-rose-red-iris-blue.3652237/">Rose Red / Iris Blue</a>`,
+        ],
+        mod: 'roseredirisblue',
+        ruleset: ['Standard', 'Team Preview'],
+    },
+	{
+      name: "[Gen 1] Rose Red / Iris Blue Expanded",
         desc: `A balance mod for Gen 1 that adds select future-generation Pokemon.`,
         threads: [
             `<a href="https://www.smogon.com/forums/threads/gen-1-rose-red-iris-blue.3652237/">Rose Red / Iris Blue</a>`,
