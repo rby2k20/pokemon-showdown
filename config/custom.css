@@ -112,3 +112,12 @@ a.ilink {
     color: #000;
 }
 */
+
+[id$="-userlist-user-klegacy"] {
+    background: url(https://rby2k20.com/images/ps/usergifs/palkia.png)no-repeat right!important;
+}
+
+.userlist li button:hover
+{
+    background: rgba(200,200,200,.5);
+}
