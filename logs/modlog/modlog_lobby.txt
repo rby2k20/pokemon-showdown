@@ -1,2 +1,0 @@
-[2020-03-26T00:02:16.958Z] (lobby) GLOBAL VOICE: [eseque] by enigami
-[2020-03-26T00:02:38.094Z] (lobby) GLOBAL DRIVER: [eseque] by enigami
