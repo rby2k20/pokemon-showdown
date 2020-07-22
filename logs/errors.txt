@@ -4653,3 +4653,300 @@ Additional information:
   formatid = gen1roseredirisblue
   team = Parasect|||none|spore,leechlife,bind,stunspore|||||||]Farfetch'd|||none|swordsdance,whirlwind,hyperbeam,razorleaf|||||||]Fearow|||none|hypnosis,slash,whirlwind,razorwind|||||||]Vileplume|||none|sleeppowder,recover,acid,megadrain|||||||]Seaking|||none|swordsdance,hyperbeam,drillpeck,surf|||||||]Venusaur|||none|stunspore,swordsdance,poisonsting,razorleaf|||||||
 
+
+ReferenceError: target is not defined
+    at Battle.onHit (C:\Users\Aabrar\Desktop\rbyserver\pokemon-showdown\data\mods\violet\moves.js:219:23)
+    at Battle.singleEvent (C:\Users\Aabrar\Desktop\rbyserver\pokemon-showdown\.sim-dist\battle.js:474:25)
+    at Battle.moveHit (C:\Users\Aabrar\Desktop\rbyserver\pokemon-showdown\data\mods\violet\scripts.js:571:21)
+    at Battle.tryMoveHit (C:\Users\Aabrar\Desktop\rbyserver\pokemon-showdown\data\mods\violet\scripts.js:360:19)
+    at Battle.useMove (C:\Users\Aabrar\Desktop\rbyserver\pokemon-showdown\data\mods\violet\scripts.js:230:17)
+    at Battle.runMove (C:\Users\Aabrar\Desktop\rbyserver\pokemon-showdown\data\mods\violet\scripts.js:133:8)
+    at Battle.runAction (C:\Users\Aabrar\Desktop\rbyserver\pokemon-showdown\.sim-dist\battle.js:2460:9)
+    at Battle.go (C:\Users\Aabrar\Desktop\rbyserver\pokemon-showdown\.sim-dist\battle.js:2691:9)
+    at Battle.commitDecisions (C:\Users\Aabrar\Desktop\rbyserver\pokemon-showdown\.sim-dist\battle.js:2757:8)
+    at Battle.choose (C:\Users\Aabrar\Desktop\rbyserver\pokemon-showdown\.sim-dist\battle.js:2713:35)
+
+Additional information:
+  chunk = >p2 switch 3
+  inputLog = 
+>version 4513c00e4c1995167f1c5b114f35a5dfb5781353
+>version-origin ba04a71cf404fb4e2da0f138cb7c2f2fb870dab1
+>start {"formatid":"gen1violetversion","seed":[15821,43743,30269,52792]}
+>player p1 {"name":"testrai24","avatar":"265","team":"Slowbro|||noability|surf,psychic,thunderwave,meditate|Serious|252,252,252,252,252,252|N||||]Dragonite|||noability|whirlwind,haze,toxic,thunderbolt|Serious|252,252,252,252,252,252|N||||]Porygon|||noability|triattack,icebeam,conversion,thunderwave|Serious|252,252,252,252,252,252|N||||]Jynx|||noability|lovelykiss,blizzard,psychic,mirrormove|Serious|252,252,252,252,252,252|N||||","rating":0}
+>player p2 {"name":"KuraiTenshi26","avatar":"kuraitenshi26.png","team":"Slowbro|||noability|surf,psychic,thunderwave,meditate|Serious|252,252,252,252,252,252|N||||]Dragonite|||noability|whirlwind,haze,toxic,thunderbolt|Serious|252,252,252,252,252,252|N||||]Porygon|||noability|triattack,icebeam,conversion,thunderwave|Serious|252,252,252,252,252,252|N||||]Jynx|||noability|lovelykiss,blizzard,psychic,mirrormove|Serious|252,252,252,252,252,252|N||||","rating":0}
+>p1 move meditate
+>p2 switch 2
+>p1 move psychic
+>p2 move thunderbolt
+>p1 move psychic
+>p2 move toxic
+>p1 move psychic
+>p2 move toxic
+>p1 move surf
+>p2 move haze
+>p1 move surf
+>p2 move whirlwind
+>p1 switch 3
+>p1 move conversion
+>p2 move haze
+>p1 switch 4
+>p2 move thunderbolt
+>p1 move mirrormove
+>p2 switch 3
+  log = 
+|player|p1|testrai24|265|
+|player|p2|KuraiTenshi26|kuraitenshi26.png|
+|teamsize|p1|4
+|teamsize|p2|4
+|gametype|singles
+|gen|1
+|tier|[Gen 1] Violet Version
+|rule|Sleep Clause Mod: Limit one foe put to sleep
+|rule|Freeze Clause Mod: Limit one foe frozen
+|rule|Species Clause: Limit one of each Pokémon
+|rule|OHKO Clause: OHKO moves are banned
+|rule|Evasion Moves Clause: Evasion moves are banned
+|rule|HP Percentage Mod: HP is shown in percentages
+|
+|start
+|switch|p1a: Slowbro|Slowbro|393/393
+|switch|p2a: Slowbro|Slowbro|393/393
+|turn|1
+|
+|switch|p2a: Dragonite|Dragonite|385/385
+|move|p1a: Slowbro|Meditate|p1a: Slowbro
+|-fail|p1a: Slowbro
+|
+|upkeep
+|turn|2
+|
+|move|p2a: Dragonite|Thunderbolt|p1a: Slowbro
+|-crit|p1a: Slowbro
+|-supereffective|p1a: Slowbro
+|-damage|p1a: Slowbro|52/393
+|-status|p1a: Slowbro|par
+|cant|p1a: Slowbro|par
+|
+|upkeep
+|turn|3
+|
+|move|p2a: Dragonite|Toxic|p1a: Slowbro
+|-fail|p1a: Slowbro
+|move|p1a: Slowbro|Psychic|p2a: Dragonite
+|-damage|p2a: Dragonite|288/385
+|
+|upkeep
+|turn|4
+|
+|move|p2a: Dragonite|Toxic|p1a: Slowbro
+|-fail|p1a: Slowbro
+|move|p1a: Slowbro|Psychic|p2a: Dragonite
+|-damage|p2a: Dragonite|203/385
+|
+|upkeep
+|turn|5
+|
+|move|p2a: Dragonite|Haze|p2a: Dragonite
+|-clearallboost
+|-heal|p2a: Dragonite|330/385
+|-end|p1a: Slowbro|parspeeddrop
+|-heal|p2a: Dragonite|385/385
+|move|p1a: Slowbro|Surf|p2a: Dragonite
+|-resisted|p2a: Dragonite
+|-damage|p2a: Dragonite|337/385
+|
+|upkeep
+|turn|6
+|
+|move|p1a: Slowbro|Surf|p2a: Dragonite
+|-resisted|p2a: Dragonite
+|-damage|p2a: Dragonite|288/385
+|move|p2a: Dragonite|Whirlwind|p1a: Slowbro
+|-damage|p1a: Slowbro|0 fnt
+|faint|p1a: Slowbro
+|
+|switch|p1a: Porygon|Porygon|353/353
+|turn|7
+|
+|move|p1a: Porygon|Conversion|p2a: Dragonite
+|-start|p1a: Porygon|typechange|Dragon, Flying|[from] move: Conversion|[of] p1a: Porygon
+|move|p2a: Dragonite|Haze|p2a: Dragonite
+|-clearallboost
+|-heal|p2a: Dragonite|385/385
+|-end|p2a: Dragonite|conversion
+|
+|upkeep
+|turn|8
+|
+|switch|p1a: Jynx|Jynx|333/333
+|move|p2a: Dragonite|Thunderbolt|p1a: Jynx
+|-damage|p1a: Jynx|270/333
+|
+|upkeep
+|turn|9
+|
+|switch|p2a: Porygon|Porygon|353/353
+|move|p1a: Jynx|Mirror Move|p1a: Jynx
+
+
+TypeError: Cannot read property 'id' of null
+    at Battle.onHit (C:\Users\Aabrar\Desktop\rbyserver\pokemon-showdown\data\mods\violet\moves.js:221:21)
+    at Battle.singleEvent (C:\Users\Aabrar\Desktop\rbyserver\pokemon-showdown\.sim-dist\battle.js:474:25)
+    at Battle.moveHit (C:\Users\Aabrar\Desktop\rbyserver\pokemon-showdown\data\mods\violet\scripts.js:571:21)
+    at Battle.tryMoveHit (C:\Users\Aabrar\Desktop\rbyserver\pokemon-showdown\data\mods\violet\scripts.js:360:19)
+    at Battle.useMove (C:\Users\Aabrar\Desktop\rbyserver\pokemon-showdown\data\mods\violet\scripts.js:230:17)
+    at Battle.runMove (C:\Users\Aabrar\Desktop\rbyserver\pokemon-showdown\data\mods\violet\scripts.js:133:8)
+    at Battle.runAction (C:\Users\Aabrar\Desktop\rbyserver\pokemon-showdown\.sim-dist\battle.js:2460:9)
+    at Battle.go (C:\Users\Aabrar\Desktop\rbyserver\pokemon-showdown\.sim-dist\battle.js:2691:9)
+    at Battle.commitDecisions (C:\Users\Aabrar\Desktop\rbyserver\pokemon-showdown\.sim-dist\battle.js:2757:8)
+    at Battle.choose (C:\Users\Aabrar\Desktop\rbyserver\pokemon-showdown\.sim-dist\battle.js:2713:35)
+
+Additional information:
+  chunk = >p2 switch 3
+  inputLog = 
+>version 4513c00e4c1995167f1c5b114f35a5dfb5781353
+>version-origin ba04a71cf404fb4e2da0f138cb7c2f2fb870dab1
+>start {"formatid":"gen1violetversion","seed":[62256,5363,61207,35302]}
+>player p1 {"name":"testrai24","avatar":"169","team":"Slowbro|||noability|surf,psychic,thunderwave,meditate|Serious|252,252,252,252,252,252|N||||]Dragonite|||noability|whirlwind,haze,toxic,thunderbolt|Serious|252,252,252,252,252,252|N||||]Porygon|||noability|triattack,icebeam,conversion,thunderwave|Serious|252,252,252,252,252,252|N||||]Jynx|||noability|lovelykiss,blizzard,psychic,mirrormove|Serious|252,252,252,252,252,252|N||||","rating":0}
+>player p2 {"name":"KuraiTenshi26","avatar":"kuraitenshi26.png","team":"Slowbro|||noability|surf,psychic,thunderwave,meditate|Serious|252,252,252,252,252,252|N||||]Dragonite|||noability|whirlwind,haze,toxic,thunderbolt|Serious|252,252,252,252,252,252|N||||]Porygon|||noability|triattack,icebeam,conversion,thunderwave|Serious|252,252,252,252,252,252|N||||]Jynx|||noability|lovelykiss,blizzard,psychic,mirrormove|Serious|252,252,252,252,252,252|N||||","rating":0}
+>p1 switch 2
+>p2 move psychic
+>p1 move whirlwind
+>p2 move surf
+>p1 move haze
+>p2 move surf
+>p1 move thunderbolt
+>p2 move psychic
+>p1 move toxic
+>p2 move meditate
+>p1 move haze
+>p2 move surf
+>p1 move toxic
+>p2 move surf
+>p1 move thunderbolt
+>p2 move meditate
+>p1 switch 4
+>p2 move surf
+>p1 move psychic
+>p2 move surf
+>p1 move mirrormove
+>p2 switch 3
+  log = 
+|player|p1|testrai24|169|
+|player|p2|KuraiTenshi26|kuraitenshi26.png|
+|teamsize|p1|4
+|teamsize|p2|4
+|gametype|singles
+|gen|1
+|tier|[Gen 1] Violet Version
+|rule|Sleep Clause Mod: Limit one foe put to sleep
+|rule|Freeze Clause Mod: Limit one foe frozen
+|rule|Species Clause: Limit one of each Pokémon
+|rule|OHKO Clause: OHKO moves are banned
+|rule|Evasion Moves Clause: Evasion moves are banned
+|rule|HP Percentage Mod: HP is shown in percentages
+|
+|start
+|switch|p1a: Slowbro|Slowbro|393/393
+|switch|p2a: Slowbro|Slowbro|393/393
+|turn|1
+|
+|switch|p1a: Dragonite|Dragonite|385/385
+|move|p2a: Slowbro|Psychic|p1a: Dragonite
+|-damage|p1a: Dragonite|287/385
+|
+|upkeep
+|turn|2
+|
+|move|p2a: Slowbro|Surf|p1a: Dragonite
+|-resisted|p1a: Dragonite
+|-damage|p1a: Dragonite|236/385
+|move|p1a: Dragonite|Whirlwind|p2a: Slowbro
+|-crit|p2a: Slowbro
+|-damage|p2a: Slowbro|265/393
+|
+|upkeep
+|turn|3
+|
+|move|p1a: Dragonite|Haze|p1a: Dragonite
+|-clearallboost
+|-heal|p1a: Dragonite|363/385
+|-heal|p2a: Slowbro|393/393
+|move|p2a: Slowbro|Surf|p1a: Dragonite
+|-resisted|p1a: Dragonite
+|-damage|p1a: Dragonite|312/385
+|
+|upkeep
+|turn|4
+|
+|move|p1a: Dragonite|Thunderbolt|p2a: Slowbro
+|-crit|p2a: Slowbro
+|-supereffective|p2a: Slowbro
+|-damage|p2a: Slowbro|64/393
+|-status|p2a: Slowbro|par
+|move|p2a: Slowbro|Psychic|p1a: Dragonite
+|-damage|p1a: Dragonite|216/385
+|
+|upkeep
+|turn|5
+|
+|move|p1a: Dragonite|Toxic|p2a: Slowbro
+|-fail|p2a: Slowbro
+|move|p2a: Slowbro|Meditate|p2a: Slowbro
+|-status|p2a: Slowbro|slp|[from] move: Meditate
+|-heal|p2a: Slowbro|393/393 slp
+|-status|p2a: Slowbro|slp|[from] move: Meditate
+|
+|upkeep
+|turn|6
+|
+|move|p1a: Dragonite|Haze|p1a: Dragonite
+|-clearallboost
+|-heal|p1a: Dragonite|343/385
+|-end|p2a: Slowbro|parspeeddrop
+|move|p2a: Slowbro|Surf|p1a: Dragonite
+|-resisted|p1a: Dragonite
+|-damage|p1a: Dragonite|292/385
+|
+|upkeep
+|turn|7
+|
+|move|p1a: Dragonite|Toxic|p2a: Slowbro
+|-status|p2a: Slowbro|tox
+|move|p2a: Slowbro|Surf|p1a: Dragonite
+|-resisted|p1a: Dragonite
+|-damage|p1a: Dragonite|246/385
+|-damage|p2a: Slowbro|369/393 tox|[from] psn
+|
+|upkeep
+|turn|8
+|
+|move|p1a: Dragonite|Thunderbolt|p2a: Slowbro
+|-supereffective|p2a: Slowbro
+|-damage|p2a: Slowbro|195/393 tox
+|move|p2a: Slowbro|Meditate|p2a: Slowbro
+|-status|p2a: Slowbro|slp|[from] move: Meditate
+|-heal|p2a: Slowbro|393/393 slp
+|-status|p2a: Slowbro|slp|[from] move: Meditate
+|
+|upkeep
+|turn|9
+|
+|switch|p1a: Jynx|Jynx|333/333
+|-curestatus|p2a: Slowbro|slp|[msg]
+|
+|upkeep
+|turn|10
+|
+|move|p1a: Jynx|Psychic|p2a: Slowbro
+|-resisted|p2a: Slowbro
+|-damage|p2a: Slowbro|329/393
+|move|p2a: Slowbro|Surf|p1a: Jynx
+|-damage|p1a: Jynx|240/333
+|
+|upkeep
+|turn|11
+|
+|switch|p2a: Porygon|Porygon|353/353
+|move|p1a: Jynx|Mirror Move|p1a: Jynx
+
