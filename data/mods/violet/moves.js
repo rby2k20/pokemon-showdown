@@ -9,9 +9,11 @@
 let BattleMovedex = {
 	acid: {
 		inherit: true,
+		desc: "Drops defense 1 stage.",
+		shortDesc: "Drops def -1.",
 		basePower: 70,
 		secondary: {
-			chance: 50,
+			chance: 100,
 			boosts: {
 				def: -1,
 			},
@@ -22,7 +24,20 @@ let BattleMovedex = {
 		basePower: 40,
 		pp: 5,
 		type: "Bug",
-  },
+	},
+	conversion: { //Typing needs to be retained after switch-out
+		inherit: true,
+		desc: "Copies foe's typing, and heals 50% health.",
+		shortDesc: "Copy foe's typing, heal 50%",
+		volatileStatus: 'conversion',
+		accuracy: true,
+		target: "normal",
+		onHit: function (target, source) {
+			this.heal(Math.floor(source.maxhp / 2), source, source);
+			source.types = target.types;
+			this.add('-start', source, 'typechange', source.types.join(', '), '[from] move: Conversion', '[of] ' + source);
+		},
+	},
 	clamp: {
 		inherit: true,
 		basePower: 70,
@@ -90,23 +105,60 @@ let BattleMovedex = {
 			return target.status === 'slp' || target.status === 'psn' || target.status === 'tox' || target.hasAbility('comatose');
 		},
 		type: "Ghost",
-  },
+	},
 	firespin: {
 		inherit: true,
 		basePower: 30,
 		pp: 5,
-  },
+	},
+	glare: {
+		inherit: true,
+		accuracy: 100,
+	},
 	gust: {
 		inherit: true,
+		desc: "Always drops attack 1 stage.",
+		shortDesc: "Atk drops -1.",
 		basePower: 80,
 		secondary: {
-			chance: 30,
+			chance: 100,
 			boosts: {
 				atk: -1,
 			},
 		},
 		type: "Flying",
-  },
+    },
+	haze: {
+		inherit: true,
+		desc: "Eliminates any stat stage changes and status from all active Pokemon. Heal both Pokemon by 33%.",
+		shortDesc: "Remove stat changes, own status, both heal 33%",
+		onHit: function (target, source) {
+			this.add('-clearallboost');
+			for (const side of this.sides) {
+				for (const pokemon of side.active) {
+					pokemon.clearBoosts();
+					this.heal(Math.floor(pokemon.maxhp * 0.33), pokemon, pokemon);
+
+					if (pokemon !== source) {
+						// Clears the status from the opponent
+						pokemon.setStatus('');
+					}
+					if (pokemon.status === 'tox') {
+						pokemon.setStatus('psn');
+					}
+					for (const id of Object.keys(pokemon.volatiles)) {
+						if (id === 'residualdmg') {
+							pokemon.volatiles[id].counter = 0;
+						} else {
+							pokemon.removeVolatile(id);
+							this.add('-end', pokemon, id);
+						}
+					}
+				}
+			}
+		},
+		target: "self",
+	},
 	karatechop: {
 		inherit: true,
 		type: "Fighting",
@@ -115,13 +167,38 @@ let BattleMovedex = {
 		inherit: true,
 		basePower: 60,
 		drain: [1, 1],
-  },
+	},
+    meditate: {
+		id: "meditate",
+		name: "Meditate",
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		pp: 10,
+		priority: 0,
+		type: "Psychic",
+		desc: "Sleep for 1 turn, restoring 100% of health.",
+		shortDesc: "1 turn sleep, heal 100%.",
+		onHit: function (target) {
+			// Fails if the difference between
+			// max HP and current HP is 0
+			if (target.hp >= target.maxhp) return false;
+			if (!target.setStatus('slp')) return false;
+			target.statusData.time = 1;
+			target.statusData.startTime = 1;
+			this.heal(target.maxhp); // Aeshetic only as the healing happens after you fall asleep in-game
+			this.add('-status', target, 'slp', '[from] move: Meditate');
+		},
+		target: "self",
+	},
 	megadrain: {
 		inherit: true,
 		drain: [1, 1],
 	},
-	mimic: {
+	mimic: { //needs to avoid mimicking moves already known. should fail if both movesets are identical
 		inherit: true,
+		desc: "Permanently learns a random move from the foe's moveset.",
+		shortDesc: "Keeps a random move from foe.",
 		onHit(target, source) {
 			let moveslot = source.moves.indexOf('mimic');
 			if (moveslot < 0) return false;
@@ -139,9 +216,19 @@ let BattleMovedex = {
 				used: false,
 				virtual: true,
 			};
-      source.moveSlots[moveslot] = mimicMove;
-      source.baseMoveSlots[moveslot] = mimicMove;
+			source.moveSlots[moveslot] = mimicMove;
+			source.baseMoveSlots[moveslot] = mimicMove;
 			this.add('-start', source, 'Mimic', move.name);
+		},
+	},
+	mirrormove: { //needs to use a move even if it's from several turns ago. maybe counter is a good reference code?
+		inherit: true,
+		onHit: function (pokemon) {
+			let foe = pokemon.side.foe.active[0];
+			if (!foe || !foe.lastMove || foe.lastMove.id === 'mirrormove') {
+				return false;
+			}
+			this.useMove(foe.lastMove.id, pokemon);
 		},
 	},
 	petaldance: {
@@ -246,10 +333,26 @@ let BattleMovedex = {
 		inherit: true,
 		basePower: 40,
   },
-	vicegrip: {
+	visegrip: {
 		inherit: true,
 		critRatio: 2,
 		type: "Bug",
+	},
+	whirlwind: {
+		desc: "Forces enemy out.",
+		shortDesc: "Forces enemy out.",
+		id: "whirlwind",
+		name: "Whirlwind",
+		inherit: false,
+		isViable: true,
+		forceSwitch: true, //I have no idea why the forced switch isn't working
+		priority: -6,
+		basePower: 50,
+		accuracy: 100,
+		category: "Physical",
+		pp: 5,
+		target: "normal",
+		type: "Flying",
 	},
 	wrap: {
 		inherit: true,
