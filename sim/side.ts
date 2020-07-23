@@ -654,6 +654,7 @@ export class Side {
 		const positions = (('' + data)
 			.split(data.includes(',') ? ',' : '')
 			.map(datum => parseInt(datum) - 1));
+		const format = this.battle.format;
 
 		if (autoFill && this.choice.actions.length >= this.maxTeamSize) return true;
 		if (this.requestState !== 'teampreview') {
@@ -663,6 +664,16 @@ export class Side {
 		// hack for >6 pokemon Custom Game
 		while (positions.length >= 6 && positions.length < this.maxTeamSize && positions.length < this.pokemon.length) {
 			positions.push(positions.length);
+		}
+
+		if (format.teamLength && format.cupLevelLimit) {
+			let total_level = 0;
+			for (const pos of positions.slice(0, format.teamLength.battle)) {
+				total_level += this.pokemon[pos].level;
+			}
+			if (total_level > format.cupLevelLimit[2]) {
+				return this.emitChoiceError(`Your selected team's combined level of ${total_level} exceeds the format's maximum of ${format.cupLevelLimit[2]}, please select a valid team of ${format.teamLength.battle} Pokemon`);
+			}
 		}
 
 		for (const pos of positions) {
