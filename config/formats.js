@@ -132,6 +132,13 @@ let Formats = [
             battle: 3,
         },
     },
+
+	// Stadium Metagames
+	///////////////////////////////////////////////////////////////////
+	{
+		section: "Stadium Metagames",
+		column: 2,
+	},
     {
         name: "[Gen 1] Poke Cup",
         desc: `Stadium poke cup.`,
