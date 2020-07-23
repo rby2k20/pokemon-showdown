@@ -113,7 +113,7 @@ let Formats = [
         mod: 'stadium', //to-do: make a stadiumjp format
         ruleset: ['Obtainable', 'Team Preview', 'Sleep Clause Mod', 'Freeze Clause Mod', 'Species Clause', 'Exact HP Mod', 'Nickname Clause', 'Cancel Mod'],
         banlist: ['Uber', 'OU', 'UUBL', 'UU', 'NUBL', 'NU', 'NFE', 'LC', 'Nidoking + Fury Attack + Thrash', 'Exeggutor + Poison Powder + Stomp', 'Exeggutor + Sleep Powder + Stomp', 'Exeggutor + Stun Spore + Stomp', 'Jolteon + Focus Energy + Thunder Shock', 'Flareon + Focus Energy + Ember'],
-        unbanlist: ['Beedrill','Fearow','Pikachu','Nidoqueen','Nidoking','Dugtrio','Primeape','Arcanine','Alakazam','Machamp','Golem','Magneton','Cloyster','Gengar','Onix','Hypno','Electrode','Exeggutor','Chansey','Kangaskhan','Starmie','Scyther','Jynx','Pinsir','Tauros','Gyarados','Lapras','Ditto','Vaporeon','Jolteon','Flareon','Aerodactyl','Snorlax','Mewtwo','Mew'],
+        unbanlist: ['Beedrill','Fearow','Pikachu','Nidoqueen','Nidoking','Dugtrio','Primeape','Arcanine','Alakazam','Machamp','Golem','Magneton','Cloyster','Gengar','Onix','Hypno','Electrode','Exeggutor','Chansey','Kangaskhan','Starmie','Scyther','Jynx','Pinsir','Tauros','Gyarados','Lapras','Ditto','Vaporeon','Jolteon','Flareon','Aerodactyl','Snorlax'],
         maxLevel: 30,
         teamLength: {
             validate: [3, 6],
