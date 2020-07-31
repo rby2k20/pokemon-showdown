@@ -8,7 +8,7 @@
 
 /**@type {ModdedBattleScriptsData} */
 let BattleScripts = {
-	inherit: 'gen1',
+	inherit: 'gen2',
 	gen: 1,
 	debug(activity) {
 		if (this.format.debug) {
@@ -159,7 +159,7 @@ let BattleScripts = {
 					sourceVolatile.locked = target;
 				} else if (target !== pokemon && target !== sourceVolatile.locked) {
 					// Our target switched out! Re-roll the duration, damage, and accuracy.
-					const duration = this.sample([2, 3]);
+					const duration = this.sample([2, 2, 2, 3, 3, 3, 4, 5]);
 					sourceVolatile.duration = duration;
 					sourceVolatile.locked = target;
 					// Duration reset thus partially trapped at 2 always.
@@ -322,6 +322,14 @@ let BattleScripts = {
 		accuracy = this.runEvent('Accuracy', target, pokemon, move, accuracy);
 		// Moves that target the user do not suffer from the 1/256 miss chance.
 		if (move.target === 'self' && accuracy !== true) accuracy++;
+
+		// 1/256 chance of missing always, no matter what. Besides the aforementioned exceptions.
+		if (accuracy !== true && !this.randomChance(accuracy, 256)) {
+			this.attrLastMove('[miss]');
+			this.add('-miss', pokemon);
+			if (accuracy === 255) this.hint("In Gen 1, moves with 100% accuracy can still miss 1/256 of the time.");
+			damage = false;
+		}
 
 		// If damage is 0 and not false it means it didn't miss, let's calc.
 		if (damage !== false) {
@@ -567,9 +575,6 @@ let BattleScripts = {
 					didSomething = true;
 				}
 			}
-			if (moveData.forceSwitch) {
-				if (this.canSwitch(target.side)) didSomething = true; // at least defer the fail message to later
-			}
 			// Hit events
 			hitResult = this.singleEvent('Hit', moveData, {}, target, pokemon, move);
 			if (!isSelf && !isSecondary) {
@@ -607,19 +612,11 @@ let BattleScripts = {
 				// In the game, this is checked and if true, the random number generator is not called.
 				// That means that a move that does not share the type of the target can status it.
 				// If a move that was not fire-type would exist on Gen 1, it could burn a Pokémon.
-				if (!(secondary.status && ['brn', 'frz'].includes(secondary.status) && target && target.hasType(move.type))) {
+				if (!(secondary.status && ['par', 'brn', 'frz'].includes(secondary.status) && target && target.hasType(move.type))) {
 					if (secondary.chance === undefined || this.randomChance(Math.ceil(secondary.chance * 256 / 100), 256)) {
 						this.moveHit(target, pokemon, move, secondary, true, isSelf);
 					}
 				}
-			}
-		}
-		if (target && target.hp > 0 && pokemon.hp > 0 && moveData.forceSwitch && this.canSwitch(target.side)) {
-			hitResult = this.runEvent('DragOut', target, pokemon, move);
-			if (hitResult) {
-				this.dragIn(target.side, target.position);
-			} else if (hitResult === false) {
-				this.add('-fail', target);
 			}
 		}
 		if (move.selfSwitch && pokemon.hp) {
