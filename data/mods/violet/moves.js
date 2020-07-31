@@ -132,6 +132,7 @@ let BattleMovedex = {
 		inherit: true,
 		desc: "Eliminates any stat stage changes and status from all active Pokemon. Heal both Pokemon by 33%.",
 		shortDesc: "Remove stat changes, own status, both heal 33%",
+		pp: 10,
 		onHit: function (target, source) {
 			this.add('-clearallboost');
 			for (const side of this.sides) {
@@ -202,7 +203,16 @@ let BattleMovedex = {
 		onHit(target, source) {
 			let moveslot = source.moves.indexOf('mimic');
 			if (moveslot < 0) return false;
-			let moves = target.moves;
+			let noMimic = source.moves;
+			
+			let moves = [];
+			
+			for (const moveSlot of target.moveSlots) {
+				let moveid = moveSlot.id;
+				if (noMimic.includes(moveid)) continue;
+				moves.push(moveid);
+			}
+			
 			let moveid = this.sample(moves);
 			if (!moveid) return false;
 			let move = this.dex.getMove(moveid);
@@ -221,14 +231,15 @@ let BattleMovedex = {
 			this.add('-start', source, 'Mimic', move.name);
 		},
 	},
-	mirrormove: { //needs to use a move even if it's from several turns ago. maybe counter is a good reference code?
+	mirrormove: {
 		inherit: true,
-		onHit: function (pokemon) {
+		desc: "The user uses the last move used by the target. Fails if the target has not made a move, or if the last move used was Mirror Move.",
+		onHit(pokemon) {
 			let foe = pokemon.side.foe.active[0];
-			if (!foe || !foe.lastMove || foe.lastMove.id === 'mirrormove') {
+			if (foe.side.lastMove.id === 'mirrormove') {
 				return false;
 			}
-			this.useMove(foe.lastMove.id, pokemon);
+			this.useMove(foe.side.lastMove.id, pokemon);
 		},
 	},
 	petaldance: {
@@ -343,9 +354,9 @@ let BattleMovedex = {
 		shortDesc: "Forces enemy out.",
 		id: "whirlwind",
 		name: "Whirlwind",
-		inherit: false,
 		isViable: true,
 		forceSwitch: true, //I have no idea why the forced switch isn't working
+		onTryHit: function () {},
 		priority: -6,
 		basePower: 50,
 		accuracy: 100,

@@ -10,6 +10,7 @@ let BattleMovedex = {
 		inherit: true,
 		desc: "Has a 30% chance to freeze the target.",
 		shortDesc: "30% chance to freeze foe(s).",
+		accuracy: 90,
 		secondary: {
 			chance: 30,
 			status: 'frz',
