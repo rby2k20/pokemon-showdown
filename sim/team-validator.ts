@@ -877,7 +877,7 @@ export class TeamValidator {
 			// Check for level import errors from user in VGC -> DOU, etc.
 			// Note that in VGC etc (maxForcedLevel: 50), `set.level` will be 100 here for validation purposes
 			if (set.level === 50 && this.format.maxLevel !== 50 && allowEVs && totalEV % 4 === 0) {
-				problems.push(`${name} is level 50, but this format allows level 100 Pokémon. (If this was intentional, add exactly 1 to one of your EVs, which won't change its stats but will tell us that it wasn't a mistake).`);
+				//problems.push(`${name} is level 50, but this format allows level 100 Pokémon. (If this was intentional, add exactly 1 to one of your EVs, which won't change its stats but will tell us that it wasn't a mistake).`);
 			}
 		}
 

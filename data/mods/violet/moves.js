@@ -133,27 +133,25 @@ let BattleMovedex = {
 		desc: "Eliminates any stat stage changes and status from all active Pokemon. Heal both Pokemon by 33%.",
 		shortDesc: "Remove stat changes, own status, both heal 33%",
 		pp: 10,
-		onHit: function (target, source) {
+		onHit(target, source) {
 			this.add('-clearallboost');
-			for (const side of this.sides) {
-				for (const pokemon of side.active) {
-					pokemon.clearBoosts();
-					this.heal(Math.floor(pokemon.maxhp * 0.33), pokemon, pokemon);
+			for (const pokemon of this.getAllActive()) {
+				pokemon.clearBoosts();
+				this.heal(Math.floor(pokemon.maxhp * 0.33), pokemon, pokemon);
 
-					if (pokemon !== source) {
-						// Clears the status from the opponent
-						pokemon.setStatus('');
-					}
-					if (pokemon.status === 'tox') {
-						pokemon.setStatus('psn');
-					}
-					for (const id of Object.keys(pokemon.volatiles)) {
-						if (id === 'residualdmg') {
-							pokemon.volatiles[id].counter = 0;
-						} else {
-							pokemon.removeVolatile(id);
-							this.add('-end', pokemon, id);
-						}
+				if (pokemon === source) {
+					// Clears the status from the user
+					pokemon.setStatus('');
+				}
+				if (pokemon.status === 'tox') {
+					pokemon.setStatus('psn');
+				}
+				for (const id of Object.keys(pokemon.volatiles)) {
+					if (id === 'residualdmg') {
+						pokemon.volatiles[id].counter = 0;
+					} else {
+						pokemon.removeVolatile(id);
+						this.add('-end', pokemon, id);
 					}
 				}
 			}
@@ -196,7 +194,7 @@ let BattleMovedex = {
 		inherit: true,
 		drain: [1, 1],
 	},
-	mimic: { //needs to avoid mimicking moves already known. should fail if both movesets are identical
+	mimic: { 
 		inherit: true,
 		desc: "Permanently learns a random move from the foe's moveset.",
 		shortDesc: "Keeps a random move from foe.",
@@ -355,7 +353,7 @@ let BattleMovedex = {
 		id: "whirlwind",
 		name: "Whirlwind",
 		isViable: true,
-		forceSwitch: true, //I have no idea why the forced switch isn't working
+		forceSwitch: true,
 		onTryHit: function () {},
 		priority: -6,
 		basePower: 50,
