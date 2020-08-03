@@ -46,6 +46,39 @@ let BattleStatuses = {
 			return this.random(2, 3);
 		},
 	},
+	disable: {
+		name: "disable",
+		id: "disable",
+		duration: 4,
+		durationCallback(target, source, effect) {
+			let duration = 4;
+			return duration;
+		},
+		onStart(pokemon) {
+			if (!this.queue.willMove(pokemon)) {
+				this.effectData.duration++;
+			}
+			let moves = pokemon.moves;
+			let move = this.dex.getMove(this.sample(moves));
+			this.add('-start', pokemon, 'Disable', move.name);
+			this.effectData.move = move.id;
+			return;
+		},
+		onResidualOrder: 14,
+		onBeforeMove(attacker, defender, move) {
+			if (move.id === this.effectData.move) {
+				this.add('cant', attacker, 'Disable', move);
+				return false;
+			}
+		},
+		onDisableMove(pokemon) {
+			for (const moveSlot of pokemon.moveSlots) {
+				if (moveSlot.id === this.effectData.move) {
+					pokemon.disableMove(moveSlot.id);
+				}
+			}
+		},
+	},
 };
 
 exports.BattleStatuses = BattleStatuses;
