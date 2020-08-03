@@ -12,6 +12,7 @@ let BattleMovedex = {
 		desc: "Drops defense 1 stage.",
 		shortDesc: "Drops def -1.",
 		basePower: 70,
+		pp: 15,
 		secondary: {
 			chance: 100,
 			boosts: {
@@ -48,7 +49,7 @@ let BattleMovedex = {
 		accuracy: 100,
 		basePower: 0,
 		category: "Status",
-		desc: "For 4 turns, the target's last move used becomes disabled. Fails if one of the target's moves is already disabled, if the target has not made a move, if the target no longer knows the move, or if the move was a Max or G-Max Move.",
+		desc: "For 4 turns, the target's last move used becomes disabled. Fails if one of the target's moves is already disabled, if the target has not made a move, or if the target no longer knows the move.",
 		shortDesc: "For 4 turns, disables the target's last move used.",
 		id: "disable",
 		isViable: true,
@@ -56,41 +57,10 @@ let BattleMovedex = {
 		pp: 5,
 		priority: 0,
 		flags: {protect: 1, reflectable: 1, mirror: 1, authentic: 1},
-		volatileStatus: 'disable',
 		onTryHit(target) {
 			return true;
 		},
-		effect: {
-			duration: 4,
-			durationCallback(target, source, effect) {
-				let duration = this.random(1, 7);
-				return duration;
-			},
-			onStart(pokemon) {
-				if (!this.queue.willMove(pokemon)) {
-					this.effectData.duration++;
-				}
-				let moves = pokemon.moves;
-				let move = this.dex.getMove(this.sample(moves));
-				this.add('-start', pokemon, 'Disable', move.name);
-				this.effectData.move = move.id;
-				return;
-			},
-			onResidualOrder: 14,
-			onBeforeMove(attacker, defender, move) {
-				if (move.id === this.effectData.move) {
-					this.add('cant', attacker, 'Disable', move);
-					return false;
-				}
-			},
-			onDisableMove(pokemon) {
-				for (const moveSlot of pokemon.moveSlots) {
-					if (moveSlot.id === this.effectData.move) {
-						pokemon.disableMove(moveSlot.id);
-					}
-				}
-			},
-		},
+		status: 'disable',
 		secondary: null,
 		target: "normal",
 		type: "Normal",
@@ -132,7 +102,7 @@ let BattleMovedex = {
 		inherit: true,
 		desc: "Eliminates any stat stage changes and status from all active Pokemon. Heal both Pokemon by 33%.",
 		shortDesc: "Remove stat changes, own status, both heal 33%",
-		pp: 10,
+		pp: 15,
 		onHit(target, source) {
 			this.add('-clearallboost');
 			for (const pokemon of this.getAllActive()) {
