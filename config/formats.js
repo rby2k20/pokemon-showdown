@@ -26,6 +26,20 @@ let Formats = [
 			'Exeggutor + Stun Spore + Stomp', 'Jolteon + Focus Energy + Thunder Shock', 'Flareon + Focus Energy + Ember',
 		],
 	},
+		{
+		name: "[Gen 1] 1U (Blitz)",
+		desc: `RBY with movepool additions from the Time Capsule.`,
+		threads: [
+			`&bullet; <a href="https://www.smogon.com/articles/rby-tradebacks-ou">Information</a>`,
+		],
+
+		mod: 'gen1',
+		ruleset: ['Obtainable', 'Allow Tradeback', 'Sleep Clause Mod', 'Freeze Clause Mod', 'Species Clause', 'OHKO Clause', 'Evasion Moves Clause', 'HP Percentage Mod', 'Cancel Mod', 'Blitz'],
+		banlist: ['Uber',
+			'Nidoking + Fury Attack + Thrash', 'Exeggutor + Poison Powder + Stomp', 'Exeggutor + Sleep Powder + Stomp',
+			'Exeggutor + Stun Spore + Stomp', 'Jolteon + Focus Energy + Thunder Shock', 'Flareon + Focus Energy + Ember',
+		],
+	},
 	
 	// Smogon Formats
 	///////////////////////////////////////////////////////////////////
@@ -50,6 +64,17 @@ let Formats = [
 
 		mod: 'gen1',
 		ruleset: ['Standard'],
+		banlist: ['Uber'],
+	},
+		{
+		name: "[Gen 1] OU (Blitz)",
+		threads: [
+			`&bullet; <a href="https://www.smogon.com/forums/threads/3572352/">RBY OU Viability Ranking</a>`,
+			`&bullet; <a href="https://www.smogon.com/forums/threads/3650478/#post-8133786">RBY Sample Teams</a>`,
+		],
+
+		mod: 'gen1',
+		ruleset: ['[Gen 1] OU', 'Blitz'],
 		banlist: ['Uber'],
 	},
 	{
