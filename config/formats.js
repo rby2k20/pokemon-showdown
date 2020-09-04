@@ -389,7 +389,7 @@ let Formats = [
 			battle: 1,
 		},
 		ruleset: ['[Gen 1] OU', 'Accuracy Moves Clause', 'Sleep Moves Clause', 'Team Preview'],
-		banlist: ['Explosion', 'Self-Destruct'],
+		banlist: ['Explosion', 'Self-Destruct', 'Clamp', 'Bind', 'Wrap', 'Fire Spin'],
 	},
 	{
 		name: "[Gen 1] Monotype",
