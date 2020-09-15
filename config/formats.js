@@ -26,6 +26,20 @@ let Formats = [
 			'Exeggutor + Stun Spore + Stomp', 'Jolteon + Focus Energy + Thunder Shock', 'Flareon + Focus Energy + Ember',
 		],
 	},
+		{
+		name: "[Gen 1] 1U (Blitz)",
+		desc: `RBY with movepool additions from the Time Capsule.`,
+		threads: [
+			`&bullet; <a href="https://www.smogon.com/articles/rby-tradebacks-ou">Information</a>`,
+		],
+
+		mod: 'gen1',
+		ruleset: ['Obtainable', 'Allow Tradeback', 'Sleep Clause Mod', 'Freeze Clause Mod', 'Species Clause', 'OHKO Clause', 'Evasion Moves Clause', 'HP Percentage Mod', 'Cancel Mod', 'Blitz'],
+		banlist: ['Uber',
+			'Nidoking + Fury Attack + Thrash', 'Exeggutor + Poison Powder + Stomp', 'Exeggutor + Sleep Powder + Stomp',
+			'Exeggutor + Stun Spore + Stomp', 'Jolteon + Focus Energy + Thunder Shock', 'Flareon + Focus Energy + Ember',
+		],
+	},
 	
 	// Smogon Formats
 	///////////////////////////////////////////////////////////////////
@@ -50,6 +64,17 @@ let Formats = [
 
 		mod: 'gen1',
 		ruleset: ['Standard'],
+		banlist: ['Uber'],
+	},
+		{
+		name: "[Gen 1] OU (Blitz)",
+		threads: [
+			`&bullet; <a href="https://www.smogon.com/forums/threads/3572352/">RBY OU Viability Ranking</a>`,
+			`&bullet; <a href="https://www.smogon.com/forums/threads/3650478/#post-8133786">RBY Sample Teams</a>`,
+		],
+
+		mod: 'gen1',
+		ruleset: ['[Gen 1] OU', 'Blitz'],
 		banlist: ['Uber'],
 	},
 	{
@@ -110,7 +135,7 @@ let Formats = [
     {
         name: "[Gen 1] Nintendo Cup 98",
         desc: `Nintendo Cup that only allowed specific in-game Pokemon, played on Stadium.`,
-        mod: 'stadium', //to-do: make a stadiumjp format
+        mod: 'stadium', //to-do: make a stadiumjp format. Once that's done, move this to Stadium Metagames, as it is technically a format anyway. 
         ruleset: ['Obtainable', 'Team Preview', 'Sleep Clause Mod', 'Freeze Clause Mod', 'Species Clause', 'Exact HP Mod', 'Nickname Clause', 'Cancel Mod'],
         banlist: ['Uber', 'OU', 'UUBL', 'UU', 'NUBL', 'NU', 'NFE', 'LC', 'Nidoking + Fury Attack + Thrash', 'Exeggutor + Poison Powder + Stomp', 'Exeggutor + Sleep Powder + Stomp', 'Exeggutor + Stun Spore + Stomp', 'Jolteon + Focus Energy + Thunder Shock', 'Flareon + Focus Energy + Ember'],
         unbanlist: ['Beedrill','Fearow','Pikachu','Nidoqueen','Nidoking','Dugtrio','Primeape','Arcanine','Alakazam','Machamp','Golem','Magneton','Cloyster','Gengar','Onix','Hypno','Electrode','Exeggutor','Chansey','Kangaskhan','Starmie','Scyther','Jynx','Pinsir','Tauros','Gyarados','Lapras','Ditto','Vaporeon','Jolteon','Flareon','Aerodactyl','Snorlax'],
@@ -141,7 +166,7 @@ let Formats = [
 	},
     {
         name: "[Gen 1] Poke Cup",
-        desc: `Stadium poke cup.`,
+        desc: `Stadium Poke Cup, a port of the Nintendo Cup 1997 format to the N64. This introduced the format to an international audience.`,
         mod: 'stadium',
 		ruleset: ['Obtainable', 'Team Preview', 'Cup Level Limit', 'Stadium Sleep Clause', 'Freeze Clause Mod', 'Species Clause', 'Exact HP Mod', 'Nickname Clause', 'Cancel Mod'],
 		banlist: ['Uber',
@@ -155,7 +180,7 @@ let Formats = [
 	},
 	{
         name: "[Gen 1] Pika Cup",
-        desc: `Stadium pika cup.`,
+        desc: `Stadium Pika Cup, played in the Stadium World Tour in the year 2000.`,
         mod: 'stadium',
 		ruleset: ['Obtainable', 'Team Preview', 'Cup Level Limit', 'Stadium Sleep Clause', 'Freeze Clause Mod', 'Species Clause', 'Exact HP Mod', 'Nickname Clause', 'Cancel Mod'],
 		banlist: ['Uber',
@@ -169,7 +194,7 @@ let Formats = [
 	},
 	{
         name: "[Gen 1] Petit Cup",
-        desc: `Stadium pika cup.`,
+        desc: `Stadium Petit Cup, played in various tournaments in the 2000s.`,
         mod: 'stadium',
 		ruleset: ['Obtainable', 'Team Preview', 'Cup Level Limit', 'Stadium Sleep Clause', 'Freeze Clause Mod', 'Species Clause', 'Exact HP Mod', 'Nickname Clause', 'Cancel Mod'],
 		banlist: ['Uber',
@@ -183,6 +208,7 @@ let Formats = [
 	},
 	{
 	name: "[Gen 1] Prime Cup",
+	desc: `Pokemon Stadium's Prime Cup format. Played in the Stadium World Tour in the year 2000.`
 	mod: 'stadium',
 		ruleset: ['Obtainable', 'Team Preview', 'Stadium Sleep Clause', 'Freeze Clause Mod', 'Species Clause', 'Nickname Clause', 'Exact HP Mod', 'Cancel Mod'],
 		banlist: ['Nidoking + Fury Attack + Thrash', 'Exeggutor + Poison Powder + Stomp', 'Exeggutor + Sleep Powder + Stomp',
@@ -191,6 +217,63 @@ let Formats = [
 		validate: [3, 6],
 		battle: 3,
 	},
+	{
+	name: "[Gen 1] Stadium AG",
+	desc: `The Pokemon Stadium Anything Goes format, taken directly from the ruleset in-game.`,
+	mod: 'stadium',
+		ruleset: ['Obtainable', 'Team Preview', 'Stadium Sleep Clause', 'Freeze Clause Mod', 'Nickname Clause', 'Endless Battle Clause', 'Exact HP Mod', 'Cancel Mod'],
+		banlist: ['Nidoking + Fury Attack + Thrash', 'Exeggutor + Poison Powder + Stomp', 'Exeggutor + Sleep Powder + Stomp',
+			'Exeggutor + Stun Spore + Stomp', 'Jolteon + Focus Energy + Thunder Shock', 'Flareon + Focus Energy + Ember',],
+	},
+	
+	// Yellow Colosseum2 Metagames, commented out until the proper sleep can be added in a mod. 
+	///////////////////////////////////////////////////////////////////
+	/*{
+		section: "Yellow Colosseum2 Metagames",
+		column: 2,
+	},
+	{
+        name: "[Gen 1] Poke Cup",
+        desc: `Yellow Poke Cup, a port of the Nintendo Cup 1997 format to the N64. This introduced the format to an international audience.`,
+        mod: 'gen1',
+		ruleset: ['Obtainable', 'Team Preview', 'Cup Level Limit', 'Stadium Sleep Clause', 'Freeze Clause Mod', 'Species Clause', 'Exact HP Mod', 'Nickname Clause', 'Cancel Mod'],
+		banlist: ['Uber',
+			'Nidoking + Fury Attack + Thrash', 'Exeggutor + Poison Powder + Stomp', 'Exeggutor + Sleep Powder + Stomp',
+			'Exeggutor + Stun Spore + Stomp', 'Jolteon + Focus Energy + Thunder Shock', 'Flareon + Focus Energy + Ember'],
+		cupLevelLimit: [50, 55, 155],
+		teamLength: {
+			validate: [3, 6],
+			battle: 3,
+		},
+	},
+	{
+        name: "[Gen 1] Pika Cup",
+        desc: `Yellow Pika Cup, played in the Stadium World Tour in the year 2000.`,
+        mod: 'gen1',
+		ruleset: ['Obtainable', 'Team Preview', 'Cup Level Limit', 'Stadium Sleep Clause', 'Freeze Clause Mod', 'Species Clause', 'Exact HP Mod', 'Nickname Clause', 'Cancel Mod'],
+		banlist: ['Uber',
+			'Nidoking + Fury Attack + Thrash', 'Exeggutor + Poison Powder + Stomp', 'Exeggutor + Sleep Powder + Stomp',
+			'Exeggutor + Stun Spore + Stomp', 'Jolteon + Focus Energy + Thunder Shock', 'Flareon + Focus Energy + Ember'],
+		cupLevelLimit: [15, 20, 50],
+		teamLength: {
+			validate: [3, 6],
+			battle: 3,
+		},
+	},
+	{
+        name: "[Gen 1] Yellow Petit Cup",
+        desc: `Yellow Petit Cup, played in various tournaments in the 2000s.`,
+        mod: 'gen1',
+		ruleset: ['Obtainable', 'Team Preview', 'Cup Level Limit', 'Stadium Sleep Clause', 'Freeze Clause Mod', 'Species Clause', 'Exact HP Mod', 'Nickname Clause', 'Cancel Mod'],
+		banlist: ['Uber',
+			'Nidoking + Fury Attack + Thrash', 'Exeggutor + Poison Powder + Stomp', 'Exeggutor + Sleep Powder + Stomp',
+			'Exeggutor + Stun Spore + Stomp', 'Jolteon + Focus Energy + Thunder Shock', 'Flareon + Focus Energy + Ember'],
+		cupLevelLimit: [25, 30, 80],
+		teamLength: {
+			validate: [3, 6],
+			battle: 3,
+		},
+	/*},
  
 	// Modded Formats
 	///////////////////////////////////////////////////////////////////
@@ -241,7 +324,30 @@ let Formats = [
         ruleset: ['Standard', 'Team Preview'],
 		unbanlist: ['Ampharos', 'Forretress', 'Seviper', 'Zangoose', 'Gogoat', 'Breloom', 'Sceptile'],
     },
+	
+		// Randomized Formats
+	///////////////////////////////////////////////////////////////////
+	{
+		section: "Randomized Formats",
+		column: 3,
+	},
+	{
+		name: "[Gen 1] Random Battle",
 
+		mod: 'gen1',
+		team: 'random',
+		ruleset: ['Standard'],
+	},
+	{
+		name: "[Gen 1] Challenge Cup",
+
+		mod: 'gen1',
+		team: 'randomCC',
+		searchShow: false,
+		challengeShow: false,
+		ruleset: ['Obtainable', 'HP Percentage Mod', 'Cancel Mod'],
+	},
+	
 	// Miscellaneous Metagames
 	///////////////////////////////////////////////////////////////////
 
@@ -261,6 +367,16 @@ let Formats = [
 		ruleset: ['Standard', 'Little Cup'],
 	},
 	{
+		name: "[Gen 1] NFE",
+		mod: 'gen1',
+		ruleset: ['Standard', 'Not Fully Evolved'],
+	},
+	{
+		name: "[Gen 1] Middle Cup",
+		mod: 'gen1',
+		ruleset: ['Standard', 'Not Fully Evolved', 'Little Cup'],
+	},
+	{
 		name: "[Gen 1] 1v1",
 		desc: `Bring three Pok&eacute;mon to Team Preview and choose one to battle.`,
 		threads: [
@@ -273,7 +389,63 @@ let Formats = [
 			battle: 1,
 		},
 		ruleset: ['[Gen 1] OU', 'Accuracy Moves Clause', 'Sleep Moves Clause', 'Team Preview'],
-		banlist: ['Explosion', 'Self-Destruct'],
+		banlist: ['Explosion', 'Self-Destruct', 'Clamp', 'Bind', 'Wrap', 'Fire Spin'],
+	},
+	{
+		name: "[Gen 1] Monotype",
+		desc: `All the Pok&eacute;mon on a team must share a type.`,
+
+		mod: 'gen1',
+		ruleset: ['Same Type Clause', 'Standard'],
+		banlist: ['Uber',],
+	},
+	{
+		name: "[Gen 1] Inverse",
+		desc: `The effectiveness of each attack is inverted.`,
+		threads: [
+			`&bullet; <a href="https://www.smogon.com/forums/threads/3666858/">Inverse</a>`,
+		],
+
+		mod: 'gen1',
+		ruleset: ['Standard', 'Inverse Mod'],
+		banlist: ['Uber',],
+	},
+	{
+		name: "[Gen 1] STABmons",
+		desc: `Pok&eacute;mon can use any move of their typing, in addition to the moves they can normally learn.`,
+		threads: [
+			`&bullet; <a href="https://www.smogon.com/forums/threads/3656429/">STABmons</a>`,
+			`&bullet; <a href="https://www.smogon.com/forums/threads/3658578/">STABmons Resources</a>`,
+		],
+
+		mod: 'gen1',
+		ruleset: ['Standard', 'STABmons Move Legality'],
+		banlist: ['Mewtwo', 'Mew'],
+		restricted: ['Spore'],
+	},
+	{
+		name: "[Gen 1] Camomons",
+		desc: `Pok&eacute;mon change type to match their first two moves.`,
+		threads: [
+			`&bullet; <a href="https://www.smogon.com/forums/threads/3656413/">Camomons</a>`,
+		],
+
+		mod: 'gen1',
+		searchShow: false,
+		ruleset: ['Obtainable', 'Species Clause', 'Nickname Clause', 'OHKO Clause', 'Evasion Moves Clause', 'Team Preview', 'HP Percentage Mod', 'Cancel Mod', 'Dynamax Clause', 'Sleep Clause Mod', 'Endless Battle Clause'],
+		banlist: ['Mewtwo', 'Mew'],
+		onModifySpecies(species, target, source, effect) {
+			if (!target) return; // Chat command
+			if (effect && ['imposter', 'transform'].includes(effect.id)) return;
+			const types = [...new Set(target.baseMoveSlots.slice(0, 2).map(move => this.dex.getMove(move.id).type))];
+			return Object.assign({}, species, {types: types});
+		},
+		onSwitchIn(pokemon) {
+			this.add('-start', pokemon, 'typechange', pokemon.getTypes(true).join('/'), '[silent]');
+		},
+		onAfterMega(pokemon) {
+			this.add('-start', pokemon, 'typechange', pokemon.getTypes(true).join('/'), '[silent]');
+		},
 	},
 	{
 		name: "[Gen 1] Custom Game",
