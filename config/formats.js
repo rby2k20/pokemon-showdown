@@ -412,14 +412,15 @@ let Formats = [
 		ruleset: ['Standard', 'Inverse Mod'],
 		banlist: ['Uber',],
 	},
-	{
+	//FIXME: This doesn't work for some reason. I have a thing in rulesets.js for it, but the code breaks when used. It may be the .ts I copied it from? - Plague
+	/*{
 		name: "[Gen 1] Flipped",
 		desc: `Every Pok&eacute;mon's stats are reversed. HP becomes Spe, Atk becomes Spc, Def stays the same.`,
 
 		mod: 'gen1',
 		ruleset: ['Standard', 'Flipped Mod'],
 		banlist: ['Uber',],
-	},
+	},*/
 	{
 		name: "[Gen 1] Scalemons",
 		desc: `All stats but HP are scaled to make a Pokemon's BST as close to 600 as possible.`,
