@@ -474,7 +474,7 @@ let Formats = [
 	{
 		name: "[Gen 1] RBY Doubles Experiment Custom Game",
 
-		mod: 'stadium',
+		mod: 'gen1doubles',
 		gameType: 'doubles',
 		searchShow: false,
 		debug: true,
