@@ -356,6 +356,17 @@ let Formats = [
 		section: "Misc. Metagames",
 		column: 4,
 	},
+		{
+		name: "[Gen 1] NFE",
+		mod: 'gen1',
+		ruleset: ['Standard', 'Not Fully Evolved'],
+	},
+	{
+		name: "[Gen 1] Middle Cup",
+		mod: 'gen1',
+		ruleset: ['Standard', 'Not Fully Evolved'],
+		banlist: ['LC']
+	},
 	{
 		name: "[Gen 1] LC",
 		threads: [
@@ -366,17 +377,6 @@ let Formats = [
 		mod: 'gen1',
 		maxLevel: 5,
 		ruleset: ['Standard', 'Little Cup'],
-	},
-	{
-		name: "[Gen 1] NFE",
-		mod: 'gen1',
-		ruleset: ['Standard', 'Not Fully Evolved'],
-	},
-	{
-		name: "[Gen 1] Middle Cup",
-		mod: 'gen1',
-		ruleset: ['Standard', 'Not Fully Evolved'],
-		banlist: ['LC']
 	},
 	{
 		name: "[Gen 1] 1v1",
@@ -453,6 +453,29 @@ let Formats = [
 		name: "[Gen 1] Custom Game",
 
 		mod: 'gen1',
+		searchShow: false,
+		debug: true,
+		maxLevel: 9999,
+		trunc(n) { return Math.trunc(n); },
+		defaultLevel: 100,
+		ruleset: ['HP Percentage Mod', 'Cancel Mod'],
+	},
+	{
+		name: "[Gen 1] Stadium Custom Game",
+
+		mod: 'stadium',
+		searchShow: false,
+		debug: true,
+		maxLevel: 9999,
+		trunc(n) { return Math.trunc(n); },
+		defaultLevel: 100,
+		ruleset: ['HP Percentage Mod', 'Cancel Mod'],
+	},
+	{
+		name: "[Gen 1] RBY Doubles Experiment Custom Game",
+
+		mod: 'stadium',
+		gameType: 'doubles',
 		searchShow: false,
 		debug: true,
 		maxLevel: 9999,
