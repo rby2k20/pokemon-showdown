@@ -356,7 +356,7 @@ let Formats = [
 
 	{
 		section: "Misc. Metagames",
-		column: 3,
+		column: 4,
 	},
 	{
 		name: "[Gen 1] LC",
