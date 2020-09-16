@@ -274,14 +274,16 @@ let Formats = [
 			validate: [3, 6],
 			battle: 3,
 		},
-	/*},
+	},*/
  
 	// Modded Formats
 	///////////////////////////////////////////////////////////////////
+	
 	{
 		section: "Modded Formats",
 		column: 3,
 	},
+	
 	/*{
 		name: "[Gen 3] ADV 50",
 		threads: [
