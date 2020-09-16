@@ -450,7 +450,6 @@ let Formats = [
 		],
 
 		mod: 'gen1',
-		searchShow: false,
 		ruleset: ['Obtainable', 'Species Clause', 'Nickname Clause', 'OHKO Clause', 'Evasion Moves Clause', 'Team Preview', 'HP Percentage Mod', 'Cancel Mod', 'Dynamax Clause', 'Sleep Clause Mod', 'Endless Battle Clause'],
 		banlist: ['Mewtwo', 'Mew'],
 		onModifySpecies(species, target, source, effect) {
