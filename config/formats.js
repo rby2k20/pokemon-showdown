@@ -377,7 +377,8 @@ let Formats = [
 	{
 		name: "[Gen 1] Middle Cup",
 		mod: 'gen1',
-		ruleset: ['Standard', 'Not Fully Evolved', 'Little Cup'],
+		ruleset: ['Standard', 'Not Fully Evolved'],
+		banlist: ['LC']
 	},
 	{
 		name: "[Gen 1] 1v1",
