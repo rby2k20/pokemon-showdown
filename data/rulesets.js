@@ -981,7 +981,7 @@ let BattleFormats = {
 			return newTemplate;
 		},
 	},
-	flippedmod: {
+	/*flippedmod: {
 		effectType: 'Rule',
 		name: 'Flipped Mod',
 		desc: "Every Pok&eacute;mon's stats are reversed. HP becomes Spe, Atk becomes Spc, Def stays the same.",
@@ -1003,7 +1003,7 @@ let BattleFormats = {
 			}
 			return newSpecies;
 		},
-	},
+	},*/
 };
 
 exports.BattleFormats = BattleFormats;
