@@ -346,8 +346,6 @@ let Formats = [
 
 		mod: 'gen1',
 		team: 'randomCC',
-		searchShow: false,
-		challengeShow: false,
 		ruleset: ['Obtainable', 'HP Percentage Mod', 'Cancel Mod'],
 	},
 	
