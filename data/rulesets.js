@@ -981,6 +981,29 @@ let BattleFormats = {
 			return newTemplate;
 		},
 	},
+	flippedmod: {
+		effectType: 'Rule',
+		name: 'Flipped Mod',
+		desc: "Every Pok&eacute;mon's stats are reversed. HP becomes Spe, Atk becomes Spc, Def stays the same.",
+		onBegin() {
+			this.add('rule', 'Pokemon have their stats flipped (HP becomes Spe, vice versa).');
+		},
+		onModifySpecies(species) {
+			const newSpecies = this.dex.deepClone(species);
+			const stats: {[k: string]: number} = {
+				hp: newSpecies.baseStats.spe,
+				atk: newSpecies.baseStats.spa,
+				def: newSpecies.baseStats.def,
+				spa: newSpecies.baseStats.atk,
+				spd: newSpecies.baseStats.atk,
+				spe: newSpecies.baseStats.hp,
+			};
+			for (const i in newSpecies.baseStats) {
+				newSpecies.baseStats[i] = stats[i];
+			}
+			return newSpecies;
+		},
+	},
 };
 
 exports.BattleFormats = BattleFormats;
