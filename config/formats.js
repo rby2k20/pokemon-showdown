@@ -499,6 +499,57 @@ let Formats = [
 		defaultLevel: 100,
 		ruleset: ['HP Percentage Mod', 'Cancel Mod'],
 	},*/
+	// Pokemon Perfect Metagames
+	///////////////////////////////////////////////////////////////////
+
+	{
+		section: "Pokemon Perfect Metagames",
+		column: 5,
+	},
+	{
+		name: "[Gen 1] PP 3U",
+
+		mod: 'gen1',
+		ruleset: ['Standard'],
+		banlist: ['Psywave', 'Uber', 'Articuno', 'Dodrio', 'Dragonite', 'Gyarados', 'Haunter', 'Hypno', 'Kadabra', 
+			  'Kangaskhan', 'Moltres', 'Persian', 'Poliwrath', 'Raichu', 'Raticate', 'Tentacruel', 'Victreebel'],
+	},
+	{
+		name: "[Gen 1] PP 4U",
+
+		mod: 'gen1',
+		ruleset: ['Standard'],
+		banlist: ['Psywave', 'Uber', 'Articuno', 'Dodrio', 'Dragonite', 'Gyarados', 'Haunter', 'Hypno', 'Kadabra', 
+			  'Kangaskhan', 'Moltres', 'Persian', 'Poliwrath', 'Raichu', 'Raticate', 'Tentacruel', 'Victreebel', 
+			 'Aerodactyl', 'Charizard', 'Clefable', 'Dewgong', 'Dugtrio', 'Electabuzz', 'Exeggcute', 'Fearow', 
+			  'Golduck', 'Kingler', 'Mr. Mime', 'Pinsir', 'Poliwhirl', 'Sandslash', 'Vaporeon', 'Venusaur', 'Wigglytuff'],
+	},
+	{
+		name: "[Gen 1] PP 5U",
+
+		mod: 'gen1',
+		ruleset: ['Standard'],
+		banlist: ['Psywave', 'Uber', 'Articuno', 'Dodrio', 'Dragonite', 'Gyarados', 'Haunter', 'Hypno', 'Kadabra', 
+			  'Kangaskhan', 'Moltres', 'Persian', 'Poliwrath', 'Raichu', 'Raticate', 'Tentacruel', 'Victreebel', 
+			 'Aerodactyl', 'Charizard', 'Clefable', 'Dewgong', 'Dugtrio', 'Electabuzz', 'Exeggcute', 'Fearow', 
+			  'Golduck', 'Kingler', 'Mr. Mime', 'Pinsir', 'Poliwhirl', 'Sandslash', 'Vaporeon', 'Venusaur', 'Wigglytuff', 
+			 'Abra', 'Arcanine', 'Blastoise', 'Nidoking', 'Nidoqueen', 'Omastar', 'Porygon', 'Rapidash', 'Scyther', 
+			  'Slowpoke', 'Staryu', 'Tangela', 'Venomoth'],
+	},
+	{
+		name: "[Gen 1] PP 6U",
+
+		mod: 'gen1',
+		ruleset: ['Standard'],
+		banlist: ['Psywave', 'Uber', 'Articuno', 'Dodrio', 'Dragonite', 'Gyarados', 'Haunter', 'Hypno', 'Kadabra', 
+			  'Kangaskhan', 'Moltres', 'Persian', 'Poliwrath', 'Raichu', 'Raticate', 'Tentacruel', 'Victreebel', 
+			  'Aerodactyl', 'Charizard', 'Clefable', 'Dewgong', 'Dugtrio', 'Electabuzz', 'Exeggcute', 'Fearow', 
+			  'Golduck', 'Kingler', 'Mr. Mime', 'Pinsir', 'Poliwhirl', 'Sandslash', 'Vaporeon', 'Venusaur', 'Wigglytuff', 
+			  'Abra', 'Arcanine', 'Blastoise', 'Nidoking', 'Nidoqueen', 'Omastar', 'Porygon', 'Rapidash', 'Scyther', 
+			  'Slowpoke', 'Staryu', 'Tangela', 'Venomoth', 'Arbok', 'Dragonair', 'Drowzee', 'Electrode', 'Gastly', 
+			  'Graveler', 'Lickitung', 'Magmar', 'Ninetales', 'Parasect', 'Poliwag', 'Primeape', 'Seadra', 'Seaking', 
+			  'Vileplume', 'Wartortle'],
+	},
 ];
 
 exports.Formats = Formats;
