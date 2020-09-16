@@ -414,7 +414,7 @@ let Formats = [
 	},
 	{
 		name: "[Gen 1] Flipped",
-		desc: `Stats are reversed. HP becomes Spe, Atk becomes Spc, Def stays the same.`,
+		desc: `Every Pok&eacute;mon's stats are reversed. HP becomes Spe, Atk becomes Spc, Def stays the same.`,
 
 		mod: 'gen1',
 		ruleset: ['Standard', 'Flipped Mod'],
