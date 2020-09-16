@@ -487,7 +487,7 @@ let Formats = [
 		defaultLevel: 100,
 		ruleset: ['HP Percentage Mod', 'Cancel Mod'],
 	},
-	{
+	/*{
 		name: "[Gen 1] RBY Doubles Experiment (Custom Game)",
 
 		mod: 'gen1',
@@ -498,7 +498,7 @@ let Formats = [
 		trunc(n) { return Math.trunc(n); },
 		defaultLevel: 100,
 		ruleset: ['HP Percentage Mod', 'Cancel Mod'],
-	},
+	},*/
 ];
 
 exports.Formats = Formats;
