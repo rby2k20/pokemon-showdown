@@ -213,9 +213,10 @@ let Formats = [
 		ruleset: ['Obtainable', 'Team Preview', 'Stadium Sleep Clause', 'Freeze Clause Mod', 'Species Clause', 'Nickname Clause', 'Exact HP Mod', 'Cancel Mod'],
 		banlist: ['Nidoking + Fury Attack + Thrash', 'Exeggutor + Poison Powder + Stomp', 'Exeggutor + Sleep Powder + Stomp',
 			'Exeggutor + Stun Spore + Stomp', 'Jolteon + Focus Energy + Thunder Shock', 'Flareon + Focus Energy + Ember',],
-	teamLength: {
-		validate: [3, 6],
-		battle: 3,
+		teamLength: {
+			validate: [3, 6],
+			battle: 3,
+		},
 	},
 	{
 	name: "[Gen 1] Stadium AG",
