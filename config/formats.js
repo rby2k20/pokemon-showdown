@@ -208,7 +208,7 @@ let Formats = [
 	},
 	{
 	name: "[Gen 1] Prime Cup",
-	desc: `Pokemon Stadium's Prime Cup format. Played in the Stadium World Tour in the year 2000.`
+	desc: `Pokemon Stadium's Prime Cup format. Played in the Stadium World Tour in the year 2000.`,
 	mod: 'stadium',
 		ruleset: ['Obtainable', 'Team Preview', 'Stadium Sleep Clause', 'Freeze Clause Mod', 'Species Clause', 'Nickname Clause', 'Exact HP Mod', 'Cancel Mod'],
 		banlist: ['Nidoking + Fury Attack + Thrash', 'Exeggutor + Poison Powder + Stomp', 'Exeggutor + Sleep Powder + Stomp',
