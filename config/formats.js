@@ -413,6 +413,22 @@ let Formats = [
 		banlist: ['Uber',],
 	},
 	{
+		name: "[Gen 1] Flipped",
+		desc: `Stats are reversed. HP becomes Spe, Atk becomes Spc, Def stays the same.`,
+
+		mod: 'gen1',
+		ruleset: ['Standard', 'Flipped Mod'],
+		banlist: ['Uber',],
+	},
+	{
+		name: "[Gen 1] Scalemons",
+		desc: `All stats but HP are scaled to make a Pokemon's BST as close to 600 as possible.`,
+
+		mod: 'gen1',
+		ruleset: ['Standard', 'Scalemons Mod'],
+		banlist: ['Uber',],
+	},
+	{
 		name: "[Gen 1] STABmons",
 		desc: `Pok&eacute;mon can use any move of their typing, in addition to the moves they can normally learn.`,
 		threads: [
@@ -472,9 +488,9 @@ let Formats = [
 		ruleset: ['HP Percentage Mod', 'Cancel Mod'],
 	},
 	{
-		name: "[Gen 1] RBY Doubles Experiment Custom Game",
+		name: "[Gen 1] RBY Doubles Experiment (Custom Game)",
 
-		mod: 'gen1doubles',
+		mod: 'gen1',
 		gameType: 'doubles',
 		searchShow: false,
 		debug: true,
