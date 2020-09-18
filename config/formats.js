@@ -503,37 +503,57 @@ let Formats = [
 	///////////////////////////////////////////////////////////////////
 
 	{
-		section: "Pokemon Perfect Metagames",
+		section: "Pokemon Perfect Tiers",
 		column: 5,
+	},
+	{
+		name: "[Gen 1] PP 1U",
+
+		mod: 'gen1',
+		ruleset: ['Standard'],
+		banlist: ['Psywave', 'Uber'],
+	},
+	{
+		name: "[Gen 1] PP 2U",
+
+		mod: 'gen1',
+		ruleset: ['Standard'],
+		banlist: ['Uber', 'Psywave', 'Alakazam', 'Chansey', 'Cloyster', 'Exeggutor', 'Gengar', 'Golem', 'Jolteon', 
+			  'Jynx', 'Lapras', 'Rhydon', 'Slowbro', 'Snorlax', 'Starmie', 'Tauros', 'Zapdos'],
 	},
 	{
 		name: "[Gen 1] PP 3U",
 
 		mod: 'gen1',
 		ruleset: ['Standard'],
-		banlist: ['Psywave', 'Uber', 'Articuno', 'Dodrio', 'Dragonite', 'Gyarados', 'Haunter', 'Hypno', 'Kadabra', 
-			  'Kangaskhan', 'Moltres', 'Persian', 'Poliwrath', 'Raichu', 'Raticate', 'Tentacruel', 'Victreebel'],
+		banlist: ['Psywave', 'Uber','Alakazam', 'Chansey', 'Cloyster', 'Exeggutor', 'Gengar', 'Golem', 'Jolteon', 
+			  'Jynx', 'Lapras', 'Rhydon', 'Slowbro', 'Snorlax', 'Starmie', 'Tauros', 'Zapdos', 'Articuno', 
+			  'Dodrio', 'Dragonite', 'Gyarados', 'Haunter', 'Hypno', 'Kadabra', 'Kangaskhan', 'Moltres', 'Persian', 
+			  'Poliwrath', 'Raichu', 'Raticate', 'Tentacruel', 'Victreebel'],
 	},
 	{
 		name: "[Gen 1] PP 4U",
 
 		mod: 'gen1',
 		ruleset: ['Standard'],
-		banlist: ['Psywave', 'Uber', 'Articuno', 'Dodrio', 'Dragonite', 'Gyarados', 'Haunter', 'Hypno', 'Kadabra', 
-			  'Kangaskhan', 'Moltres', 'Persian', 'Poliwrath', 'Raichu', 'Raticate', 'Tentacruel', 'Victreebel', 
-			 'Aerodactyl', 'Charizard', 'Clefable', 'Dewgong', 'Dugtrio', 'Electabuzz', 'Exeggcute', 'Fearow', 
-			  'Golduck', 'Kingler', 'Mr. Mime', 'Pinsir', 'Poliwhirl', 'Sandslash', 'Vaporeon', 'Venusaur', 'Wigglytuff'],
+		banlist: ['Psywave', 'Uber', 'Alakazam', 'Chansey', 'Cloyster', 'Exeggutor', 'Gengar', 'Golem', 'Jolteon', 
+			  'Jynx', 'Lapras', 'Rhydon', 'Slowbro', 'Snorlax', 'Starmie', 'Tauros', 'Zapdos', 'Articuno', 'Dodrio', 
+			  'Dragonite', 'Gyarados', 'Haunter', 'Hypno', 'Kadabra', 'Kangaskhan', 'Moltres', 'Persian', 'Poliwrath', 
+			  'Raichu', 'Raticate', 'Tentacruel', 'Victreebel', 'Aerodactyl', 'Charizard', 'Clefable', 'Dewgong', 'Dugtrio', 
+			  'Electabuzz', 'Exeggcute', 'Fearow', 'Golduck', 'Kingler', 'Mr. Mime', 'Pinsir', 'Poliwhirl', 'Sandslash', 'Vaporeon', 
+			  'Venusaur', 'Wigglytuff'],
 	},
 	{
 		name: "[Gen 1] PP 5U",
 
 		mod: 'gen1',
 		ruleset: ['Standard'],
-		banlist: ['Psywave', 'Uber', 'Articuno', 'Dodrio', 'Dragonite', 'Gyarados', 'Haunter', 'Hypno', 'Kadabra', 
-			  'Kangaskhan', 'Moltres', 'Persian', 'Poliwrath', 'Raichu', 'Raticate', 'Tentacruel', 'Victreebel', 
-			 'Aerodactyl', 'Charizard', 'Clefable', 'Dewgong', 'Dugtrio', 'Electabuzz', 'Exeggcute', 'Fearow', 
+		banlist: ['Psywave', 'Uber', 'Alakazam', 'Chansey', 'Cloyster', 'Exeggutor', 'Gengar', 'Golem', 'Jolteon', 
+			  'Jynx', 'Lapras', 'Rhydon', 'Slowbro', 'Snorlax', 'Starmie', 'Tauros', 'Zapdos', 'Articuno', 'Dodrio', 'Dragonite', 
+			  'Gyarados', 'Haunter', 'Hypno', 'Kadabra', 'Kangaskhan', 'Moltres', 'Persian', 'Poliwrath', 'Raichu', 'Raticate', 'Tentacruel', 
+			  'Victreebel', 'Aerodactyl', 'Charizard', 'Clefable', 'Dewgong', 'Dugtrio', 'Electabuzz', 'Exeggcute', 'Fearow', 
 			  'Golduck', 'Kingler', 'Mr. Mime', 'Pinsir', 'Poliwhirl', 'Sandslash', 'Vaporeon', 'Venusaur', 'Wigglytuff', 
-			 'Abra', 'Arcanine', 'Blastoise', 'Nidoking', 'Nidoqueen', 'Omastar', 'Porygon', 'Rapidash', 'Scyther', 
+			  'Abra', 'Arcanine', 'Blastoise', 'Nidoking', 'Nidoqueen', 'Omastar', 'Porygon', 'Rapidash', 'Scyther', 
 			  'Slowpoke', 'Staryu', 'Tangela', 'Venomoth'],
 	},
 	{
@@ -541,9 +561,10 @@ let Formats = [
 
 		mod: 'gen1',
 		ruleset: ['Standard'],
-		banlist: ['Psywave', 'Uber', 'Articuno', 'Dodrio', 'Dragonite', 'Gyarados', 'Haunter', 'Hypno', 'Kadabra', 
-			  'Kangaskhan', 'Moltres', 'Persian', 'Poliwrath', 'Raichu', 'Raticate', 'Tentacruel', 'Victreebel', 
-			  'Aerodactyl', 'Charizard', 'Clefable', 'Dewgong', 'Dugtrio', 'Electabuzz', 'Exeggcute', 'Fearow', 
+		banlist: ['Psywave', 'Uber', 'Alakazam', 'Chansey', 'Cloyster', 'Exeggutor', 'Gengar', 'Golem', 'Jolteon', 'Jynx', 'Lapras', 
+			  'Rhydon', 'Slowbro', 'Snorlax', 'Starmie', 'Tauros', 'Zapdos', 'Articuno', 'Dodrio', 'Dragonite', 'Gyarados', 
+			  'Haunter', 'Hypno', 'Kadabra', 'Kangaskhan', 'Moltres', 'Persian', 'Poliwrath', 'Raichu', 'Raticate', 'Tentacruel', 
+			  'Victreebel', 'Aerodactyl', 'Charizard', 'Clefable', 'Dewgong', 'Dugtrio', 'Electabuzz', 'Exeggcute', 'Fearow', 
 			  'Golduck', 'Kingler', 'Mr. Mime', 'Pinsir', 'Poliwhirl', 'Sandslash', 'Vaporeon', 'Venusaur', 'Wigglytuff', 
 			  'Abra', 'Arcanine', 'Blastoise', 'Nidoking', 'Nidoqueen', 'Omastar', 'Porygon', 'Rapidash', 'Scyther', 
 			  'Slowpoke', 'Staryu', 'Tangela', 'Venomoth', 'Arbok', 'Dragonair', 'Drowzee', 'Electrode', 'Gastly', 
