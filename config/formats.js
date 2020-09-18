@@ -10,7 +10,7 @@ let Formats = [
 	///////////////////////////////////////////////////////////////////
 
 	{
-		section: "RBY 2K20 Metagames"
+		section: "RBY 2K20 Tiers"
 	},
 	{
 		name: "[Gen 1] 1U",
@@ -44,7 +44,7 @@ let Formats = [
 	// Smogon Formats
 	///////////////////////////////////////////////////////////////////
 	{
-		section: "Smogon Formats"
+		section: "Smogon Tiers"
 	},
 	{
 		name: "[Gen 1] Ubers",
