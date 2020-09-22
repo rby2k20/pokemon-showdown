@@ -445,8 +445,8 @@ let Formats = [
 
 		mod: 'gen1',
 		maxLevel: 5,
-		ruleset: ['Standard', 'Little Cup'],
-		banlist: ['Dragon Rage', 'Magikarp + Dragon Rage', 'Sonic Boom']
+		ruleset: ['Standard', 'Little Cup', 'Allow Tradeback'],
+		banlist: ['Dragon Rage', 'Sonic Boom', 'Wrap'],
 	},
 	{
 		name: "[Gen 1] LC L100",
@@ -456,6 +456,7 @@ let Formats = [
 		],
 
 		mod: 'gen1',
+		maxLevel: 100,
 		ruleset: ['Standard', 'Not Fully Evolved'],
 		banlist: ['NFE'],
 	},
