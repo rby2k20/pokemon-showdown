@@ -322,7 +322,31 @@ let Formats = [
 	unbanlist: ['Ampharos', 'Forretress', 'Seviper', 'Zangoose', 'Gogoat', 'Breloom', 'Sceptile'],
     },
 	
-		// Randomized Formats
+	// Hacked Formats
+	///////////////////////////////////////////////////////////////////
+	{
+		section: "Hacked Formats",
+		column: 3,
+	},
+	{
+		name: "[Gen 1] Pure Hackmons",
+		desc: `Anything that can be hacked in-game and is usable in local battles is allowed.`,
+		threads: [
+			`&bullet; <a href="https://www.smogon.com/forums/threads/3656851/">Pure Hackmons</a>`,
+		],
+
+		mod: 'gen1',
+		ruleset: ['-Nonexistent', 'Team Preview', 'HP Percentage Mod', 'Cancel Mod', 'Endless Battle Clause'],
+	},
+	{
+		name: "[Gen 1] Balanced Hackmons",
+		desc: `A more balanced form of Hackmons.`,
+
+		mod: 'gen1',
+		ruleset: ['-Nonexistent', 'OHKO Clause', 'Evasion Moves Clause', 'Team Preview', 'HP Percentage Mod', 'Cancel Mod', 'Sleep Clause Mod', 'Endless Battle Clause'],
+	},
+	
+	// Randomized Formats
 	///////////////////////////////////////////////////////////////////
 	{
 		section: "Randomized Formats",
@@ -543,23 +567,6 @@ let Formats = [
 		onAfterMega(pokemon) {
 			this.add('-start', pokemon, 'typechange', pokemon.getTypes(true).join('/'), '[silent]');
 		},
-	},
-	{
-		name: "[Gen 1] Pure Hackmons",
-		desc: `Anything that can be hacked in-game and is usable in local battles is allowed.`,
-		threads: [
-			`&bullet; <a href="https://www.smogon.com/forums/threads/3656851/">Pure Hackmons</a>`,
-		],
-
-		mod: 'gen1',
-		ruleset: ['-Nonexistent', 'Team Preview', 'HP Percentage Mod', 'Cancel Mod', 'Endless Battle Clause'],
-	},
-	{
-		name: "[Gen 1] Balanced Hackmons",
-		desc: `A more balanced form of Hackmons.`,
-
-		mod: 'gen1',
-		ruleset: ['-Nonexistent', 'OHKO Clause', 'Evasion Moves Clause', 'Team Preview', 'HP Percentage Mod', 'Cancel Mod', 'Sleep Clause Mod', 'Endless Battle Clause'],
 	},
 	{
 		name: "[Gen 1] Custom Game",
