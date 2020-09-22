@@ -215,7 +215,8 @@ let Formats = [
 	name: "[Gen 1] Stadium Anything Goes",
 	desc: `The Pokemon Stadium Anything Goes format, taken directly from the ruleset in-game.`,
 	mod: 'stadium',
-		ruleset: ['Obtainable', 'Team Preview', 'Stadium Sleep Clause', 'Freeze Clause Mod', 'Nickname Clause', 'Endless Battle Clause', 'Exact HP Mod', 'Cancel Mod'],
+		ruleset: ['Obtainable', 'Team Preview', 'Stadium Sleep Clause', 'Freeze Clause Mod', 'Nickname Clause', 'Endless Battle Clause', 'Exact HP Mod', 'Cancel Mod', 
+			  'Allow Tradeback'],
 		banlist: ['Nidoking + Fury Attack + Thrash', 'Exeggutor + Poison Powder + Stomp', 'Exeggutor + Sleep Powder + Stomp',
 			'Exeggutor + Stun Spore + Stomp', 'Jolteon + Focus Energy + Thunder Shock', 'Flareon + Focus Energy + Ember',],
 	},
@@ -412,7 +413,7 @@ let Formats = [
 		],
 
 		mod: 'gen1',
-		ruleset: ['Obtainable', 'HP Percentage Mod', 'Cancel Mod', 'Endless Battle Clause'],
+		ruleset: ['Obtainable', 'HP Percentage Mod', 'Cancel Mod', 'Endless Battle Clause', 'Allow Tradeback'],
 		banlist: ['Nidoking + Fury Attack + Thrash', 'Exeggutor + Poison Powder + Stomp', 'Exeggutor + Sleep Powder + Stomp',
 			'Exeggutor + Stun Spore + Stomp', 'Jolteon + Focus Energy + Thunder Shock', 'Flareon + Focus Energy + Ember'],	
 	},
