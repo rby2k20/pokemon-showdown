@@ -21,10 +21,7 @@ let Formats = [
 
 		mod: 'gen1',
 		ruleset: ['Obtainable', 'Allow Tradeback', 'Sleep Clause Mod', 'Freeze Clause Mod', 'Species Clause', 'OHKO Clause', 'Evasion Moves Clause', 'HP Percentage Mod', 'Cancel Mod'],
-		banlist: ['Uber',
-			'Nidoking + Fury Attack + Thrash', 'Exeggutor + Poison Powder + Stomp', 'Exeggutor + Sleep Powder + Stomp',
-			'Exeggutor + Stun Spore + Stomp', 'Jolteon + Focus Energy + Thunder Shock', 'Flareon + Focus Energy + Ember',
-		],
+		banlist: ['Uber',],
 	},
 		{
 		name: "[Gen 1] 1U (Blitz)",
@@ -89,10 +86,9 @@ let Formats = [
 		banlist: ['OU', 'UUBL'],
 	},
 	{
-		name: "[Gen 1] NU (Beta)",
+		name: "[Gen 1] NU (Alpha)",
 		threads: [
-			`&bullet; <a href="https://www.smogon.com/forums/threads/3573896/">RBY UU General Discussion</a>`,
-			`&bullet; <a href="https://www.smogon.com/forums/threads/3647713/">RBY UU Viability Ranking</a>`,
+			`&bullet; <a href="https://www.smogon.com/forums/threads/rby-nu-pre-alph-viability-ranking.3668913/">RBY NU Alpha Viability Rankings</a>`,
 		],
 
 		mod: 'gen1',
@@ -118,10 +114,7 @@ let Formats = [
 	},
 	{
 		name: "[Gen 1] Nintendo Cup 97",
-		threads: [
-			`&bullet; <a href="https://www.smogon.com/forums/threads/3572352/">RBY OU Viability Ranking</a>`,
-			`&bullet; <a href="https://www.smogon.com/forums/threads/3650478/#post-8133786">RBY Sample Teams</a>`,
-		],
+		desc: `The official format for Red and Green from 1997.`,
 
 		mod: 'gen1jpn',
 		cupLevelLimit: [50, 55, 155],
@@ -219,7 +212,7 @@ let Formats = [
 		},
 	},
 	{
-	name: "[Gen 1] Stadium AG",
+	name: "[Gen 1] Stadium Anything Goes",
 	desc: `The Pokemon Stadium Anything Goes format, taken directly from the ruleset in-game.`,
 	mod: 'stadium',
 		ruleset: ['Obtainable', 'Team Preview', 'Stadium Sleep Clause', 'Freeze Clause Mod', 'Nickname Clause', 'Endless Battle Clause', 'Exact HP Mod', 'Cancel Mod'],
@@ -227,7 +220,7 @@ let Formats = [
 			'Exeggutor + Stun Spore + Stomp', 'Jolteon + Focus Energy + Thunder Shock', 'Flareon + Focus Energy + Ember',],
 	},
 	
-	// Yellow Colosseum2 Metagames, commented out until the proper sleep can be added in a mod. 
+	// Yellow Colosseum2 Metagames, commented out until the proper sleep mechanics can be added in a mod. 
 	///////////////////////////////////////////////////////////////////
 	/*{
 		section: "Yellow Colosseum2 Metagames",
@@ -298,6 +291,7 @@ let Formats = [
 	},*/
 	{
 		name: "[Gen 1] Violet Version",
+		desc: `A balance mod for Gen 1.`,
 		threads: [
 			`&bullet; <a href="https://www.smogon.com/forums/threads/3572352/">RBY OU Viability Ranking</a>`,
 			`&bullet; <a href="https://www.smogon.com/forums/threads/3650478/#post-8133786">RBY Sample Teams</a>`,
@@ -310,7 +304,7 @@ let Formats = [
 	},
 	{
       name: "[Gen 1] Rose Red / Iris Blue",
-        desc: `A balance mod for Gen 1 that adds select future-generation Pokemon.`,
+        desc: `A balance mod for Gen 1.`,
         threads: [
             `<a href="https://www.smogon.com/forums/threads/gen-1-rose-red-iris-blue.3652237/">Rose Red / Iris Blue</a>`,
         ],
@@ -318,14 +312,14 @@ let Formats = [
         ruleset: ['Standard', 'Team Preview'],
     },
 	{
-      name: "[Gen 1] Rose Red / Iris Blue Expanded",
+	name: "[Gen 1] Rose Red / Iris Blue Expanded",
         desc: `A balance mod for Gen 1 that adds select future-generation Pokemon.`,
         threads: [
-            `<a href="https://www.smogon.com/forums/threads/gen-1-rose-red-iris-blue.3652237/">Rose Red / Iris Blue</a>`,
-        ],
+		`<a href="https://www.smogon.com/forums/threads/gen-1-rose-red-iris-blue.3652237/">Rose Red / Iris Blue</a>`,
+	],
         mod: 'roseredirisblue',
-        ruleset: ['Standard', 'Team Preview'],
-		unbanlist: ['Ampharos', 'Forretress', 'Seviper', 'Zangoose', 'Gogoat', 'Breloom', 'Sceptile'],
+       	ruleset: ['Standard', 'Team Preview'],
+	unbanlist: ['Ampharos', 'Forretress', 'Seviper', 'Zangoose', 'Gogoat', 'Breloom', 'Sceptile'],
     },
 	
 		// Randomized Formats
@@ -348,35 +342,98 @@ let Formats = [
 		team: 'randomCC',
 		ruleset: ['Obtainable', 'HP Percentage Mod', 'Cancel Mod'],
 	},
+	{
+		name: '[Gen 1] Metronome Battle',
+		desc: `A metagame where you can only use Metronome!`,
+		threads: [
+			`&bullet; <a href="https://www.smogon.com/forums/threads/3632075/">Metronome Battle</a>`,
+			`&bullet; <a href="https://www.pokemonperfect.com/forums/index.php?threads/metronome.3372//">RBY Metronome Probability</a>`,
+		],
+
+		mod: 'gen1',
+		ruleset: ['HP Percentage Mod', 'Cancel Mod'],
+		banlist: [
+			'Pound', 'Karate Chop', 'Double Slap', 'Comet Punch', 'Mega Punch', 'Pay Day', 'Fire Punch', 'Ice Punch', 'Thunder Punch', 'Scratch', 'Vise Grip', 
+			'Guillotine', 'Razor Wind', 'Swords Dance', 'Cut', 'Gust', 'Wing Attack', 'Whirlwind', 'Fly', 'Bind', 'Slam', 'Vine Whip', 'Stomp', 'Double Kick', 
+			'Mega Kick', 'JumpKick', 'Rolling Kick', 'Sand Attack', 'Headbutt', 'Horn Attack', 'Fury Attack', 'Horn Drill', 'Tackle', 'Body Slam', 'Wrap', 
+			'Take Down', 'Thrash', 'Double-Edge', 'Tail Whip', 'Poison Sting', 'Twineedle', 'Pin Missile', 'Leer', 'Bite', 'Growl', 'Roar', 'Sing', 'Supersonic', 
+			'Sonicboom', 'Disable', 'Acid', 'Ember', 'Flamethrower', 'Mist', 'Water Gun', 'Hydro Pump', 'Surf', 'Ice Beam', 'Blizzard', 'Psybeam', 'Bubblebeam', 
+			'Aurora Beam', 'Hyper Beam', 'Peck', 'Drill Peck', 'Submission', 'Low Kick', 'Counter', 'Seismic Toss', 'Strength', 'Absorb', 'Mega Drain', 
+			'Leech Seed', 'Growth', 'Razor Leaf', 'Solar Beam', 'Poisonpowder', 'Stun Spore', 'Sleep Powder', 'Petal Dance', 'String Shot', 'Dragon Rage', 
+			'Fire Spin', 'Thundershock', 'Thunderbolt', 'Thunder Wave', 'Thunder', 'Rock Throw', 'Earthquake', 'Fissure', 'Dig', 'Toxic', 'Confusion', 'Psychic', 
+			'Hypnosis', 'Meditate', 'Agility', 'Quick Attack', 'Rage', 'Teleport', 'Night Shade', 'Mimic', 'Screech', 'Double Team', 'Recover', 'Harden', 'Minimize', 
+			'Smokescreen', 'Confuse Ray', 'Withdraw', 'Defense Curl', 'Barrier', 'Light Screen', 'Haze', 'Reflect', 'Focus Energy', 'Bide', 'Mirror Move', 'Selfdestruct', 
+			'Egg Bomb', 'Lick', 'Smog', 'Sludge', 'Bone Club', 'Fire Blast', 'Waterfall', 'Clamp', 'Swift', 'Skull Bash', 'Spike Cannon', 'Constrict', 'Amnesia', 'Kinesis', 
+			'Softboiled', 'Hi Jump Kick', 'Glare', 'Dream Eater', 'Poison Gas', 'Barrage', 'Leech Life', 'Lovely Kiss', 'Sky Attack', 'Transform', 'Bubble', 'Dizzy Punch', 
+			'Spore', 'Flash', 'Psywave', 'Splash', 'Acid Armor', 'Crabhammer', 'Explosion', 'Fury Swipes', 'Bonemerang', 'Rest', 'Rock Slide', 'Hyper Fang', 'Sharpen', 'Conversion', 
+			'Tri Attack', 'Super Fang', 'Slash', 'Substitute'
+		],
+		onValidateSet(set) {
+			if (set.moves.length !== 1 || this.dex.getMove(set.moves[0]).id !== 'metronome') {
+				return [`${set.name || set.species} has illegal moves.`, `(Pok\u00e9mon can only have one Metronome in their moveset)`];
+			}
+		},
+	},
 	
-	// Miscellaneous Metagames
+	// Miscellaneous Metagames 
 	///////////////////////////////////////////////////////////////////
 
 	{
 		section: "Misc. Metagames",
 		column: 4,
 	},
-		{
+	{
+		name: "[Gen 1] Anything Goes",
+		desc: `A metagame where anything is allowed!.`,
+		threads: [
+			`&bullet; <a href="https://www.smogon.com/forums/threads/3587441/">Anything Goes Metagame Discussion</a>`,
+		],
+
+		mod: 'gen1',
+		ruleset: ['Obtainable', 'Team Preview', 'HP Percentage Mod', 'Cancel Mod', 'Endless Battle Clause'],
+		banlist: ['Nidoking + Fury Attack + Thrash', 'Exeggutor + Poison Powder + Stomp', 'Exeggutor + Sleep Powder + Stomp',
+			'Exeggutor + Stun Spore + Stomp', 'Jolteon + Focus Energy + Thunder Shock', 'Flareon + Focus Energy + Ember'],	
+	},
+	{
 		name: "[Gen 1] NFE",
+		desc: `A metagame that only allows NFE and LC Pokemon.`,
 		mod: 'gen1',
 		ruleset: ['Standard', 'Not Fully Evolved'],
 	},
 	{
 		name: "[Gen 1] Middle Cup",
+		desc: `A metagame that only allows the 16 NFEs available in RBY.`,
+		threads: [
+			`&bullet; <a href="https://docs.google.com/document/d/1ZJk6uxtDPgCrSO_2GcwmmAFmTUZGsPsW5Jncf6h9rDE/edit?usp=sharing">Meloyy's Middle Cup Guide</a>`,
+			`&bullet; <a href="https://www.smogon.com/forums/threads/gen-1-side-formats-pika-cup-petit-cup-little-cup-level-100-and-middle-cup.3651579/post-8162599">Gen 1 Side Formats Thread</a>`,
+		],
+		
 		mod: 'gen1',
 		ruleset: ['Standard', 'Not Fully Evolved'],
 		banlist: ['LC']
 	},
 	{
 		name: "[Gen 1] LC",
+		desc: `The Gen 1 LC Format. It allows Tradebacks to preserve the L5 formula.`,
 		threads: [
-			`&bullet; <a href="https://www.smogon.com/dp/articles/little_cup_guide">DPP LC Guide</a>`,
-			`&bullet; <a href="https://www.smogon.com/forums/posts/7336500/">DPP LC Viability Ranking</a>`,
+			`&bullet; <a href="https://www.smogon.com/forums/threads/old-generations-little-cup-discussion-currently-has-threatlist-for-rby-only.3450397/">RBY LC Guide</a>`,
+			`&bullet; <a href="https://www.smogon.com/forums/threads/rby-little-cup-tradebacks.3533572/">RBY LC Guide w/Tradebacks by Jellicent</a>`,
 		],
 
 		mod: 'gen1',
 		maxLevel: 5,
 		ruleset: ['Standard', 'Little Cup'],
+	},
+	{
+		name: "[Gen 1] LC L100",
+		desc: `An alternative to conventional Gen 1 Little Cup that aims to create a Tradeback-free format.`,
+		threads: [
+			`&bullet; <a href="https://www.smogon.com/forums/threads/gen-1-side-formats-pika-cup-petit-cup-little-cup-level-100-and-middle-cup.3651579/page-2#post-8484942">LC L100 Resources</a>`,
+		],
+
+		mod: 'gen1',
+		ruleset: ['Standard', 'Not Fully Evolved'],
+		banlist: ['NFE'],
 	},
 	{
 		name: "[Gen 1] 1v1",
@@ -391,7 +448,23 @@ let Formats = [
 			battle: 1,
 		},
 		ruleset: ['[Gen 1] OU', 'Accuracy Moves Clause', 'Sleep Moves Clause', 'Team Preview'],
-		banlist: ['Explosion', 'Self-Destruct', 'Clamp', 'Bind', 'Wrap', 'Fire Spin'],
+		banlist: ['Explosion', 'Self-Destruct', 'Clamp', 'Bind', 'Wrap', 'Fire Spin' 'Nidoking + Fury Attack + Thrash', 'Exeggutor + Poison Powder + Stomp', 'Exeggutor + Sleep Powder + Stomp',
+			'Exeggutor + Stun Spore + Stomp', 'Jolteon + Focus Energy + Thunder Shock', 'Flareon + Focus Energy + Ember'],
+	},
+	{
+		name: "[Gen 1] Mediocremons",
+		desc: `A metagame where only Pokemon with no base stat above 100 are allowed.`,
+
+		mod: 'gen1',
+		ruleset: ['Standard'],
+		banlist: ['Uber', 'Alakazam', 'Cloyster', 'Exeggutor', 'Gengar', 'Golem', 'Jolteon', 'Lapras', 'Rhydon', 'Slowbro', 
+			  'Snorlax', 'Starmie', 'Tauros', 'Zapdos', 'Aerodactyl', 'Arcanine', 'Articuno', 'Blastoise', 'Charizard', 
+			  'Dodrio', 'Dragonite', 'Dugtrio', 'Electabuzz', 'Electrode', 'Fearow', 'Flareon', 'Graveler', 'Gyarados', 
+			  'Hitmonchan', 'Hitmonlee', 'Hypno', 'Kabutops', 'Kadabra', 'Kangaskhan', 'Kingler', 'Machamp', 'Magneton', 
+			  'Marowak', 'Moltres', 'Mr. Mime', 'Muk', 'Ninetales', 'Omastar', 'Onix', 'Persian', 'Pinsir', 'Primeape', 
+			  'Raichu', 'Rapidash', 'Sandslash', 'Scyther', 'Tangela', 'Tentacruel', 'Vaporeon', 'Venusaur', 'Victreebel', 
+			  'Vileplume', 'Weezing', 'Wigglytuff', 'Haunter', 'Machoke', 'Abra', 'Gastly', 'Geodude', 'Jigglypuff', 'Krabby', 
+			  'Omanyte', 'Shellder', 'Tentacool', 'Voltorb', 'Chansey'],
 	},
 	{
 		name: "[Gen 1] Monotype",
@@ -410,7 +483,8 @@ let Formats = [
 
 		mod: 'gen1',
 		ruleset: ['Standard', 'Inverse Mod'],
-		banlist: ['Uber',],
+		banlist: ['Uber', 'Nidoking + Fury Attack + Thrash', 'Exeggutor + Poison Powder + Stomp', 'Exeggutor + Sleep Powder + Stomp',
+			'Exeggutor + Stun Spore + Stomp', 'Jolteon + Focus Energy + Thunder Shock', 'Flareon + Focus Energy + Ember'],
 	},
 	//FIXME: This doesn't work for some reason. I have a thing in rulesets.js for it, but the code breaks when used. It may be the .ts I copied it from? - Plague
 	/*{
@@ -427,7 +501,8 @@ let Formats = [
 
 		mod: 'gen1',
 		ruleset: ['Standard', 'Scalemons Mod'],
-		banlist: ['Uber',],
+		banlist: ['Uber', 'Nidoking + Fury Attack + Thrash', 'Exeggutor + Poison Powder + Stomp', 'Exeggutor + Sleep Powder + Stomp',
+			'Exeggutor + Stun Spore + Stomp', 'Jolteon + Focus Energy + Thunder Shock', 'Flareon + Focus Energy + Ember'],
 	},
 	{
 		name: "[Gen 1] STABmons",
@@ -439,7 +514,10 @@ let Formats = [
 
 		mod: 'gen1',
 		ruleset: ['Standard', 'STABmons Move Legality'],
-		banlist: ['Mewtwo', 'Mew'],
+		banlist: ['Mewtwo', 'Mew'
+			'Nidoking + Fury Attack + Thrash', 'Exeggutor + Poison Powder + Stomp', 'Exeggutor + Sleep Powder + Stomp',
+			'Exeggutor + Stun Spore + Stomp', 'Jolteon + Focus Energy + Thunder Shock', 'Flareon + Focus Energy + Ember'
+			 ],
 		restricted: ['Spore'],
 	},
 	{
@@ -451,7 +529,10 @@ let Formats = [
 
 		mod: 'gen1',
 		ruleset: ['Obtainable', 'Species Clause', 'Nickname Clause', 'OHKO Clause', 'Evasion Moves Clause', 'Team Preview', 'HP Percentage Mod', 'Cancel Mod', 'Dynamax Clause', 'Sleep Clause Mod', 'Endless Battle Clause'],
-		banlist: ['Mewtwo', 'Mew'],
+		banlist: ['Mewtwo', 'Mew'
+			'Nidoking + Fury Attack + Thrash', 'Exeggutor + Poison Powder + Stomp', 'Exeggutor + Sleep Powder + Stomp',
+			'Exeggutor + Stun Spore + Stomp', 'Jolteon + Focus Energy + Thunder Shock', 'Flareon + Focus Energy + Ember'
+			 ],
 		onModifySpecies(species, target, source, effect) {
 			if (!target) return; // Chat command
 			if (effect && ['imposter', 'transform'].includes(effect.id)) return;
@@ -464,6 +545,23 @@ let Formats = [
 		onAfterMega(pokemon) {
 			this.add('-start', pokemon, 'typechange', pokemon.getTypes(true).join('/'), '[silent]');
 		},
+	},
+	{
+		name: "[Gen 1] Pure Hackmons",
+		desc: `Anything that can be hacked in-game and is usable in local battles is allowed.`,
+		threads: [
+			`&bullet; <a href="https://www.smogon.com/forums/threads/3656851/">Pure Hackmons</a>`,
+		],
+
+		mod: 'gen1',
+		ruleset: ['-Nonexistent', 'Team Preview', 'HP Percentage Mod', 'Cancel Mod', 'Endless Battle Clause'],
+	},
+	{
+		name: "[Gen 1] Balanced Hackmons",
+		desc: `A more balanced form of Hackmons.`,
+
+		mod: 'gen1',
+		ruleset: ['-Nonexistent', 'OHKO Clause', 'Evasion Moves Clause', 'Team Preview', 'HP Percentage Mod', 'Cancel Mod', 'Sleep Clause Mod', 'Endless Battle Clause'],
 	},
 	{
 		name: "[Gen 1] Custom Game",
