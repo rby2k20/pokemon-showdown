@@ -448,7 +448,7 @@ let Formats = [
 			battle: 1,
 		},
 		ruleset: ['[Gen 1] OU', 'Accuracy Moves Clause', 'Sleep Moves Clause', 'Team Preview'],
-		banlist: ['Explosion', 'Self-Destruct', 'Clamp', 'Bind', 'Wrap', 'Fire Spin' 'Nidoking + Fury Attack + Thrash', 'Exeggutor + Poison Powder + Stomp', 'Exeggutor + Sleep Powder + Stomp',
+		banlist: ['Explosion', 'Self-Destruct', 'Clamp', 'Bind', 'Wrap', 'Fire Spin', 'Nidoking + Fury Attack + Thrash', 'Exeggutor + Poison Powder + Stomp', 'Exeggutor + Sleep Powder + Stomp',
 			'Exeggutor + Stun Spore + Stomp', 'Jolteon + Focus Energy + Thunder Shock', 'Flareon + Focus Energy + Ember'],
 	},
 	{
@@ -514,7 +514,7 @@ let Formats = [
 
 		mod: 'gen1',
 		ruleset: ['Standard', 'STABmons Move Legality'],
-		banlist: ['Mewtwo', 'Mew'
+		banlist: ['Mewtwo', 'Mew',
 			'Nidoking + Fury Attack + Thrash', 'Exeggutor + Poison Powder + Stomp', 'Exeggutor + Sleep Powder + Stomp',
 			'Exeggutor + Stun Spore + Stomp', 'Jolteon + Focus Energy + Thunder Shock', 'Flareon + Focus Energy + Ember'
 			 ],
@@ -529,7 +529,7 @@ let Formats = [
 
 		mod: 'gen1',
 		ruleset: ['Obtainable', 'Species Clause', 'Nickname Clause', 'OHKO Clause', 'Evasion Moves Clause', 'Team Preview', 'HP Percentage Mod', 'Cancel Mod', 'Dynamax Clause', 'Sleep Clause Mod', 'Endless Battle Clause'],
-		banlist: ['Mewtwo', 'Mew'
+		banlist: ['Mewtwo', 'Mew',
 			'Nidoking + Fury Attack + Thrash', 'Exeggutor + Poison Powder + Stomp', 'Exeggutor + Sleep Powder + Stomp',
 			'Exeggutor + Stun Spore + Stomp', 'Jolteon + Focus Energy + Thunder Shock', 'Flareon + Focus Energy + Ember'
 			 ],
