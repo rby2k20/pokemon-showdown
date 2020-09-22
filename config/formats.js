@@ -446,6 +446,7 @@ let Formats = [
 		mod: 'gen1',
 		maxLevel: 5,
 		ruleset: ['Standard', 'Little Cup'],
+		banlist: ['Dragon Rage', 'Magikarp + Dragon Rage', 'Sonic Boom']
 	},
 	{
 		name: "[Gen 1] LC L100",
