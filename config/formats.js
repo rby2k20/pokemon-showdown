@@ -352,8 +352,7 @@ let Formats = [
 
 		mod: 'gen1',
 		ruleset: ['HP Percentage Mod', 'Cancel Mod'],
-		banlist: [
-			'Pound', 'Karate Chop', 'Double Slap', 'Comet Punch', 'Mega Punch', 'Pay Day', 'Fire Punch', 'Ice Punch', 'Thunder Punch', 'Scratch', 'Vise Grip', 
+		banlist: ['Pound', 'Karate Chop', 'Double Slap', 'Comet Punch', 'Mega Punch', 'Pay Day', 'Fire Punch', 'Ice Punch', 'Thunder Punch', 'Scratch', 'Vise Grip', 
 			'Guillotine', 'Razor Wind', 'Swords Dance', 'Cut', 'Gust', 'Wing Attack', 'Whirlwind', 'Fly', 'Bind', 'Slam', 'Vine Whip', 'Stomp', 'Double Kick', 
 			'Mega Kick', 'JumpKick', 'Rolling Kick', 'Sand Attack', 'Headbutt', 'Horn Attack', 'Fury Attack', 'Horn Drill', 'Tackle', 'Body Slam', 'Wrap', 
 			'Take Down', 'Thrash', 'Double-Edge', 'Tail Whip', 'Poison Sting', 'Twineedle', 'Pin Missile', 'Leer', 'Bite', 'Growl', 'Roar', 'Sing', 'Supersonic', 
@@ -366,12 +365,12 @@ let Formats = [
 			'Egg Bomb', 'Lick', 'Smog', 'Sludge', 'Bone Club', 'Fire Blast', 'Waterfall', 'Clamp', 'Swift', 'Skull Bash', 'Spike Cannon', 'Constrict', 'Amnesia', 'Kinesis', 
 			'Softboiled', 'Hi Jump Kick', 'Glare', 'Dream Eater', 'Poison Gas', 'Barrage', 'Leech Life', 'Lovely Kiss', 'Sky Attack', 'Transform', 'Bubble', 'Dizzy Punch', 
 			'Spore', 'Flash', 'Psywave', 'Splash', 'Acid Armor', 'Crabhammer', 'Explosion', 'Fury Swipes', 'Bonemerang', 'Rest', 'Rock Slide', 'Hyper Fang', 'Sharpen', 'Conversion', 
-			'Tri Attack', 'Super Fang', 'Slash', 'Substitute'
-		],
+			'Tri Attack', 'Super Fang', 'Slash', 'Substitute'],
 		onValidateSet(set) {
 			if (set.moves.length !== 1 || this.dex.getMove(set.moves[0]).id !== 'metronome') {
 				return [`${set.name || set.species} has illegal moves.`, `(Pok\u00e9mon can only have one Metronome in their moveset)`];
-			},
+			}
+		},
 	},
 	
 	// Miscellaneous Metagames 
