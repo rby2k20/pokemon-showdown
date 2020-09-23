@@ -337,14 +337,18 @@ let Formats = [
 		],
 
 		mod: 'gen1',
+		maxLevel: 255,
 		ruleset: ['-Nonexistent', 'HP Percentage Mod', 'Cancel Mod', 'Endless Battle Clause'],
+		unbanlist: ['MissingNo.'],
 	},
 	{
 		name: "[Gen 1] Balanced Hackmons",
 		desc: `A more balanced form of Hackmons.`,
 
 		mod: 'gen1',
+		maxLevel: 255,
 		ruleset: ['-Nonexistent', 'OHKO Clause', 'Evasion Moves Clause', 'HP Percentage Mod', 'Cancel Mod', 'Sleep Clause Mod', 'Endless Battle Clause'],
+		unbanlist: ['MissingNo.'],
 	},
 	
 	// Randomized Formats
