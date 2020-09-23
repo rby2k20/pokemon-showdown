@@ -338,7 +338,6 @@ let Formats = [
 
 		mod: 'gen1',
 		debug: true,
-		maxLevel: 255,
 		trunc(n) { return Math.trunc(n); },
 		defaultLevel: 255,
 		ruleset: ['-Nonexistent', 'HP Percentage Mod', 'Cancel Mod', 'Endless Battle Clause'],
@@ -350,7 +349,6 @@ let Formats = [
 
 		mod: 'gen1',
 		debug: true,
-		maxLevel: 255,
 		trunc(n) { return Math.trunc(n); },
 		defaultLevel: 255,
 		ruleset: ['-Nonexistent', 'OHKO Clause', 'Evasion Moves Clause', 'HP Percentage Mod', 'Cancel Mod', 'Sleep Clause Mod', 'Endless Battle Clause'],
