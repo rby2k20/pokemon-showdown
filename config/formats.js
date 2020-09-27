@@ -157,6 +157,15 @@ let Formats = [
 		section: "Stadium Metagames",
 		column: 2,
 	},
+	{
+	name: "[Gen 1] Stadium Anything Goes",
+	desc: `The Pokemon Stadium Anything Goes format, taken directly from the ruleset in-game.`,
+	mod: 'stadium',
+		ruleset: ['Obtainable', 'Team Preview', 'Stadium Sleep Clause', 'Freeze Clause Mod', 'Nickname Clause', 'Endless Battle Clause', 'Exact HP Mod', 'Cancel Mod', 
+			  'Allow Tradeback'],
+		banlist: ['Nidoking + Fury Attack + Thrash', 'Exeggutor + Poison Powder + Stomp', 'Exeggutor + Sleep Powder + Stomp',
+			'Exeggutor + Stun Spore + Stomp', 'Jolteon + Focus Energy + Thunder Shock', 'Flareon + Focus Energy + Ember',],
+	},
     {
         name: "[Gen 1] Poke Cup",
         desc: `Stadium Poke Cup, a port of the Nintendo Cup 1997 format to the N64. This introduced the format to an international audience.`,
@@ -210,15 +219,6 @@ let Formats = [
 			validate: [3, 6],
 			battle: 3,
 		},
-	},
-	{
-	name: "[Gen 1] Stadium Anything Goes",
-	desc: `The Pokemon Stadium Anything Goes format, taken directly from the ruleset in-game.`,
-	mod: 'stadium',
-		ruleset: ['Obtainable', 'Team Preview', 'Stadium Sleep Clause', 'Freeze Clause Mod', 'Nickname Clause', 'Endless Battle Clause', 'Exact HP Mod', 'Cancel Mod', 
-			  'Allow Tradeback'],
-		banlist: ['Nidoking + Fury Attack + Thrash', 'Exeggutor + Poison Powder + Stomp', 'Exeggutor + Sleep Powder + Stomp',
-			'Exeggutor + Stun Spore + Stomp', 'Jolteon + Focus Energy + Thunder Shock', 'Flareon + Focus Energy + Ember',],
 	},
 	
 	// Yellow Colosseum2 Metagames, commented out until the proper sleep mechanics can be added in a mod. 
@@ -322,6 +322,14 @@ let Formats = [
        	ruleset: ['Standard', 'Team Preview'],
 	unbanlist: ['Ampharos', 'Forretress', 'Seviper', 'Zangoose', 'Gogoat', 'Breloom', 'Sceptile'],
     },
+	{
+		name: "[Gen 1] Doubles OU",
+
+		mod: 'gen1doubles',
+		ruleset: ['Standard'],
+		banlist: ['Uber'],
+		debug: true,
+	},
 	
 	// Hacked Formats
 	///////////////////////////////////////////////////////////////////
@@ -594,18 +602,6 @@ let Formats = [
 		name: "[Gen 1] Stadium Custom Game",
 
 		mod: 'stadium',
-		searchShow: false,
-		debug: true,
-		maxLevel: 9999,
-		trunc(n) { return Math.trunc(n); },
-		defaultLevel: 100,
-		ruleset: ['HP Percentage Mod', 'Cancel Mod'],
-	},
-	{
-		name: "[Gen 1] RBY Doubles 1U (Beta)",
-
-		mod: 'gen1doubles',
-		gameType: 'doubles',
 		searchShow: false,
 		debug: true,
 		maxLevel: 9999,
