@@ -329,7 +329,7 @@ let BattleMovedex = {
 	},
 	earthquake: {
 		inherit: true,
-		target: "allAdjacentFoes",
+		target: "allAdjacent",
 	},
 	explosion: {
 		inherit: true,
@@ -450,7 +450,7 @@ let BattleMovedex = {
 				}
 			}
 		},
-		target: "self",
+		target: "all",
 	},
 	highjumpkick: {
 		inherit: true,
@@ -581,6 +581,7 @@ let BattleMovedex = {
 	},
 	mist: {
 		inherit: true,
+		target: "allySide",
 	},
 	nightshade: {
 		inherit: true,
@@ -602,7 +603,6 @@ let BattleMovedex = {
 	},
 	poisongas: {
 		inherit: true,
-		target: "allAdjacentFoes",
 	},
 	psychic: {
 		inherit: true,
@@ -893,6 +893,10 @@ let BattleMovedex = {
 		target: "self",
 		type: "Normal",
 		flags: {},
+	},
+	surf: {
+		inherit: true,
+		target: "allAdjacentFoes",
 	},
 	superfang: {
 		inherit: true,
