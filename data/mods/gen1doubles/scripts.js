@@ -255,6 +255,50 @@ let BattleScripts = {
 		let boostTable = [1, 4 / 3, 5 / 3, 2, 7 / 3, 8 / 3, 3];
 		/** @type {number | false | undefined} */
 		let damage = 0;
+		//Doubles Targeting from Gen 3
+		if (move.target === 'all' || move.target === 'foeSide' || move.target === 'allySide' || move.target === 'allyTeam') {
+			damage = this.tryMoveHit(target, pokemon, move);
+			if (damage === this.NOT_FAIL) pokemon.moveThisTurnResult = null;
+			if (damage || damage === 0 || damage === undefined) moveResult = true;
+		} else if (move.target === 'allAdjacent' || move.target === 'allAdjacentFoes') {
+			if (!targets.length) {
+				this.attrLastMove('[notarget]');
+				this.add('-notarget', pokemon);
+				return false;
+			}
+			if (targets.length > 1) move.spreadHit = true;
+			const hitSlots = [];
+			for (const source of targets) {
+				const hitResult = this.tryMoveHit(source, pokemon, move);
+				if (hitResult || hitResult === 0 || hitResult === undefined) {
+					moveResult = true;
+					hitSlots.push(source.getSlot());
+				}
+				if (damage) {
+					damage += hitResult || 0;
+				} else {
+					if (damage !== false || hitResult !== this.NOT_FAIL) damage = hitResult;
+				}
+				if (damage === this.NOT_FAIL) pokemon.moveThisTurnResult = null;
+			}
+			if (move.spreadHit) this.attrLastMove('[spread] ' + hitSlots.join(','));
+		} else {
+			target = targets[0];
+			let lacksTarget = !target || target.fainted;
+			if (!lacksTarget) {
+				if (move.target === 'adjacentFoe' || move.target === 'adjacentAlly' || move.target === 'normal' || move.target === 'randomNormal') {
+					lacksTarget = !this.isAdjacent(target, pokemon);
+				}
+			}
+			if (lacksTarget && !move.isFutureMove) {
+				this.attrLastMove('[notarget]');
+				this.add('-notarget', pokemon);
+				return false;
+			}
+			damage = this.tryMoveHit(target, pokemon, move);
+			if (damage === this.NOT_FAIL) pokemon.moveThisTurnResult = null;
+			if (damage || damage === 0 || damage === undefined) moveResult = true;
+		}
 
 		// First, check if the target is semi-invulnerable
 		let hitResult = this.runEvent('Invulnerability', target, pokemon, move);
