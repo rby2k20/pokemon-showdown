@@ -324,6 +324,7 @@ let Formats = [
     },
 	{
 		name: "[Gen 1] Doubles OU",
+		desc: `A modified Gen 1 sim made with the intention of making Doubles possible. It uses Gen 3 Doubles Mechanics; Surf targets two opponents, you switch out immediately, and spread move damage is halved.`,
 
 		mod: 'gen1doubles',
 		gameType: 'doubles',
