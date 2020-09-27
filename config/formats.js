@@ -326,6 +326,7 @@ let Formats = [
 		name: "[Gen 1] Doubles OU",
 
 		mod: 'gen1doubles',
+		gameType: 'doubles',
 		ruleset: ['Standard'],
 		banlist: ['Uber'],
 		debug: true,
