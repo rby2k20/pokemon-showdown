@@ -36,10 +36,11 @@ let BattleMovedex = {
 	},
 	bide: {
 		inherit: true,
+		desc: "The user spends two or three turns locked into this move and then, on the second or third turn after using this move, the user attacks the opponent, inflicting double the damage in HP it lost during those turns. This move ignores type immunity and cannot be avoided even if the target is using Dig or Fly. The user can choose to switch out during the effect. If the user switches out or is prevented from moving during this move's use, the effect ends. During the effect, if the opposing Pokemon switches out or uses Confuse Ray, Conversion, Focus Energy, Glare, Haze, Leech Seed, Light Screen, Mimic, Mist, Poison Gas, Poison Powder, Recover, Reflect, Rest, Soft-Boiled, Splash, Stun Spore, Substitute, Supersonic, Teleport, Thunder Wave, Toxic, or Transform, the previous damage dealt to the user will be added to the total.",
 		priority: 0,
 		accuracy: true,
 		ignoreEvasion: true,
-		condition: {
+		effect: {
 			duration: 2,
 			durationCallback(target, source, effect) {
 				return this.random(3, 4);
@@ -51,7 +52,7 @@ let BattleMovedex = {
 			},
 			onHit(target, source, move) {
 				if (source && source !== target && move.category !== 'Physical' && move.category !== 'Special') {
-					const damage = this.effectData.totalDamage;
+					let damage = this.effectData.totalDamage;
 					this.effectData.totalDamage += damage;
 					this.effectData.lastDamage = damage;
 					this.effectData.sourcePosition = source.position;
@@ -84,7 +85,7 @@ let BattleMovedex = {
 					}
 				}
 			},
-			onBeforeMove(pokemon, t, move) {
+			onBeforeMove(pokemon, target, move) {
 				if (this.effectData.duration === 1) {
 					if (!this.effectData.totalDamage) {
 						this.debug("Bide failed due to 0 damage taken");
@@ -92,8 +93,8 @@ let BattleMovedex = {
 						return false;
 					}
 					this.add('-end', pokemon, 'Bide');
-					const target = this.effectData.sourceSide.active[this.effectData.sourcePosition];
-					this.moveHit(target, pokemon, move, {damage: this.effectData.totalDamage * 2} as ActiveMove);
+					let target = this.effectData.sourceSide.active[this.effectData.sourcePosition];
+					this.moveHit(target, pokemon, move, /** @type {ActiveMove} */ ({damage: this.effectData.totalDamage * 2}));
 					return false;
 				}
 				this.add('-activate', pokemon, 'Bide');
