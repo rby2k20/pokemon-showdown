@@ -601,10 +601,10 @@ let Formats = [
 		defaultLevel: 100,
 		ruleset: ['HP Percentage Mod', 'Cancel Mod'],
 	},
-	/*{
-		name: "[Gen 1] RBY Doubles Experiment (Custom Game)",
+	{
+		name: "[Gen 1] RBY Doubles 1U (Beta)",
 
-		mod: 'gen1',
+		mod: 'gen1doubles',
 		gameType: 'doubles',
 		searchShow: false,
 		debug: true,
@@ -612,7 +612,7 @@ let Formats = [
 		trunc(n) { return Math.trunc(n); },
 		defaultLevel: 100,
 		ruleset: ['HP Percentage Mod', 'Cancel Mod'],
-	},*/
+	},
 	// Pokemon Perfect Metagames
 	///////////////////////////////////////////////////////////////////
 
