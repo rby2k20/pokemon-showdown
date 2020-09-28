@@ -1,18 +1,8 @@
 'use strict';
-
+//We lack a Battle Factory randomizer...for now.
 const RandomGen2Teams = require('../gen2/random-teams');
 
 class RandomGen1Teams extends RandomGen2Teams {
-	/**
-	 * @param {Format | string} format
-	 * @param {?PRNG | [number, number, number, number]} [prng]
-	 */
-	constructor(format, prng) {
-		super(format, prng);
-		/**@type {AnyObject} */
-		// @ts-ignore
-		this.randomFactorySets = require('./factory-sets.json');
-	}
 	// Challenge Cup or CC teams are basically fully random teams.
 	randomCCTeam() {
 		let team = [];
