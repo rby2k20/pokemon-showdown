@@ -387,14 +387,14 @@ let Formats = [
 		team: 'randomCC',
 		ruleset: ['Obtainable', 'HP Percentage Mod', 'Cancel Mod'],
 	},
-	/*{
+	{
 		name: "[Gen 1] Battle Factory",
 		desc: `Randomized teams of Pok&eacute;mon for a generated Smogon tier with sets that are competitively viable.`,
 
 		mod: 'gen1',
 		team: 'randomFactory',
 		ruleset: ['Obtainable', 'Sleep Clause Mod', 'HP Percentage Mod', 'Cancel Mod'],
-	},*/
+	},
 	{
 		name: '[Gen 1] Metronome Battle',
 		desc: `A metagame where you can only use Metronome!`,
