@@ -29,8 +29,8 @@
 				"evs": {"hp": 252, "atk": 252, "def": 252, "spc": 252, "spd": 252},
 				"ivs": {"hp": 31, "atk": 0, "def": 31, "spc": 31, "spd": 31},
 				"moves": [["Psychic"], ["Barrier"], ["Recover"], ["Amnesia"]]
-			},
 			}]
+		},
 		"mew": {
 			"flags": {},
 			"sets": [{
@@ -68,7 +68,6 @@
 				"ability": ["None"],
 				"evs": {"hp": 252, "atk": 252, "def": 252, "spc": 252, "spd": 252},
 				"moves": [["Swords Dance"], ["Soft-Boiled"], ["Earthquake"], ["Reflect"]]
-			},
 			}]
 		},
 	"OU": {
