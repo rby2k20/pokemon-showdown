@@ -70,6 +70,7 @@
 				"moves": [["Swords Dance"], ["Soft-Boiled"], ["Earthquake"], ["Reflect"]]
 			}]
 		},
+	}
 	"OU": {
 		"alakazam": {
 			"flags": {},
@@ -395,7 +396,7 @@
 				"moves": [["Thunderbolt"], ["Drill Peck"], ["Thunder Wave"], ["Agility"]]
 			}]
 		},
-	},
+	}
 	"UU": {
 		"aerodactyl": {
 			"flags": {},
@@ -1084,5 +1085,5 @@
 				"moves": [["Sing"], ["Thunderbolt"], ["Blizzard"], ["Counter"]]
 			}]
 		},
-	},
+	}
 }
