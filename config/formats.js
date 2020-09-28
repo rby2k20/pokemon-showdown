@@ -387,14 +387,16 @@ let Formats = [
 		team: 'randomCC',
 		ruleset: ['Obtainable', 'HP Percentage Mod', 'Cancel Mod'],
 	},
-	{
+	//FINISHME: There is a finished JSON File for Gen 1 Battle Factory in the gen1 Mod folder, by yours truly.
+	//The issue is, we lack a randomizer for it, so we can't actually use it. - Plague von Karma
+	/*{
 		name: "[Gen 1] Battle Factory",
 		desc: `Randomized teams of Pok&eacute;mon for a generated Smogon tier with sets that are competitively viable.`,
 
 		mod: 'gen1',
 		team: 'randomFactory',
 		ruleset: ['Obtainable', 'Sleep Clause Mod', 'HP Percentage Mod', 'Cancel Mod'],
-	},
+	},*/
 	{
 		name: '[Gen 1] Metronome Battle',
 		desc: `A metagame where you can only use Metronome!`,
