@@ -763,8 +763,8 @@
 		"marowak": {
 			"flags": {},
 			"sets": [{ 
-				"species": "Marowak"
-				"ability": ["None"]
+				"species": "Marowak",
+				"ability": ["None"],
 				"evs": {"hp": 252, "atk": 252, "def": 252, "spc": 252, "spd": 252},
 				"moves": [["Swords Dance"], ["Earthquake"], ["Body Slam"], ["Blizzard"]]
 			}]
