@@ -4,28 +4,28 @@
 			"flags": {},
 			"sets": [{
 				"species": "Mewtwo",
-				
+				"ability": ["None"],
 				"evs": {"hp": 252, "atk": 0, "def": 252, "spc": 252, "spd": 252},
 				"ivs": {"hp": 31, "atk": 0, "def": 31, "spc": 31, "spd": 31},
 				"moves": [["Psychic"], ["Blizzard"], ["Recover"], ["Amnesia"]]
 			},
 			{
 				"species": "Mewtwo",
-				
+				"ability": ["None"],
 				"evs": {"hp": 252, "atk": 0, "def": 252, "spc": 252, "spd": 252},
 				"ivs": {"hp": 31, "atk": 0, "def": 31, "spc": 31, "spd": 31},
 				"moves": [["Psychic"], ["Ice Beam"], ["Recover"], ["Amnesia"]]
 			},
 			{
 				"species": "Mewtwo",
-				
+				"ability": ["None"],
 				"evs": {"hp": 252, "atk": 0, "def": 252, "spc": 252, "spd": 252},
 				"ivs": {"hp": 31, "atk": 0, "def": 31, "spc": 31, "spd": 31},
 				"moves": [["Psychic"], ["Thunderbolt"], ["Recover"], ["Amnesia"]]
 			},
 			{
 				"species": "Mewtwo",
-				
+				"ability": ["None"],
 				"evs": {"hp": 252, "atk": 252, "def": 252, "spc": 252, "spd": 252},
 				"ivs": {"hp": 31, "atk": 0, "def": 31, "spc": 31, "spd": 31},
 				"moves": [["Psychic"], ["Barrier"], ["Recover"], ["Amnesia"]]
@@ -35,37 +35,37 @@
 			"flags": {},
 			"sets": [{
 				"species": "Mew",
-				
+				"ability": ["None"],
 				"evs": {"hp": 252, "atk": 252, "def": 252, "spc": 252, "spd": 252},
 				"moves": [["Swords Dance"], ["Soft-Boiled"], ["Body Slam"], ["Earthquake"]]
 			},
 			{
 				"species": "Mew",
-				
+				"ability": ["None"],
 				"evs": {"hp": 252, "atk": 252, "def": 252, "spc": 252, "spd": 252},
 				"moves": [["Swords Dance"], ["Explosion"], ["Body Slam"], ["Earthquake"]]
 			},
 			{
 				"species": "Mew",
-				
+				"ability": ["None"],
 				"evs": {"hp": 252, "atk": 252, "def": 252, "spc": 252, "spd": 252},
 				"moves": [["Swords Dance"], ["Hyper Beam"], ["Body Slam"], ["Earthquake"]]
 			},
 			{
 				"species": "Mew",
-				
+				"ability": ["None"],
 				"evs": {"hp": 252, "atk": 252, "def": 252, "spc": 252, "spd": 252},
 				"moves": [["Swords Dance"], ["Thunder Wave"], ["Body Slam"], ["Earthquake"]]
 			},
 			{
 				"species": "Mew",
-				
+				"ability": ["None"],
 				"evs": {"hp": 252, "atk": 252, "def": 252, "spc": 252, "spd": 252},
 				"moves": [["Swords Dance"], ["Soft-Boiled"], ["Body Slam"], ["Reflect"]]
 			},
 			{
 				"species": "Mew",
-				
+				"ability": ["None"],
 				"evs": {"hp": 252, "atk": 252, "def": 252, "spc": 252, "spd": 252},
 				"moves": [["Swords Dance"], ["Soft-Boiled"], ["Earthquake"], ["Reflect"]]
 			}]
@@ -74,15 +74,15 @@
 		"alakazam": {
 			"flags": {},
 			"sets": [{
-				"species": "Alakazam"
-				
+				"species": "Alakazam",
+				"ability": ["None"],
 				"evs": {"hp": 252, "atk": 0, "def": 252, "spc": 252, "spd": 252},
 				"ivs": {"hp": 31, "atk": 0, "def": 31, "spc": 31, "spd": 31},
 				"moves": [["Psychic"], ["Seismic Toss"], ["Thunder Wave"], ["Recover"]]
 			},
 			{
-				"species": "Alakazam"
-				
+				"species": "Alakazam",
+				"ability": ["None"],
 				"evs": {"hp": 252, "atk": 0, "def": 252, "spc": 252, "spd": 252},
 				"ivs": {"hp": 31, "atk": 0, "def": 31, "spc": 31, "spd": 31},
 				"moves": [["Psychic"], ["Reflect"], ["Thunder Wave"], ["Recover"]]
@@ -91,36 +91,36 @@
 		"chansey": {
 			"flags": {},
 			"sets": [{
-				"species": "Chansey"
-				
+				"species": "Chansey",
+				"ability": ["None"],
 				"evs": {"hp": 252, "atk": 0, "def": 252, "spc": 252, "spd": 252},
 				"ivs": {"hp": 31, "atk": 0, "def": 31, "spc": 31, "spd": 31},
 				"moves": [["Reflect"], ["Seismic Toss"], ["Soft-Boiled"], ["Thunder Wave"]]
 			},
 			{
-				"species": "Chansey"
-				
+				"species": "Chansey",
+				"ability": ["None"],
 				"evs": {"hp": 252, "atk": 0, "def": 252, "spc": 252, "spd": 252},
 				"ivs": {"hp": 31, "atk": 0, "def": 31, "spc": 31, "spd": 31},
 				"moves": [["Reflect"], ["Ice Beam"], ["Soft-Boiled"], ["Thunder Wave"]]
 			},
 			{
-				"species": "Chansey"
-				
+				"species": "Chansey",
+				"ability": ["None"],
 				"evs": {"hp": 252, "atk": 0, "def": 252, "spc": 252, "spd": 252},
 				"ivs": {"hp": 31, "atk": 0, "def": 31, "spc": 31, "spd": 31},
 				"moves": [["Thunderbolt"], ["Ice Beam"], ["Soft-Boiled"], ["Thunder Wave"]]
 			},
 			{
-				"species": "Chansey"
-				
+				"species": "Chansey",
+				"ability": ["None"],
 				"evs": {"hp": 252, "atk": 0, "def": 252, "spc": 252, "spd": 252},
 				"ivs": {"hp": 31, "atk": 0, "def": 31, "spc": 31, "spd": 31},
 				"moves": [["Sing"], ["Seismic Toss"], ["Soft-Boiled"], ["Thunder Wave"]]
 			},
 			{
-				"species": "Chansey"
-				
+				"species": "Chansey",
+				"ability": ["None"],
 				"evs": {"hp": 252, "atk": 0, "def": 252, "spc": 252, "spd": 252},
 				"ivs": {"hp": 31, "atk": 0, "def": 31, "spc": 31, "spd": 31},
 				"moves": [["Counter"], ["Ice Beam"], ["Soft-Boiled"], ["Thunder Wave"]]
@@ -129,14 +129,14 @@
 		"cloyster": {
 			"flags": {},
 			"sets": [{
-				"species": "Cloyster"
-				
+				"species": "Cloyster",
+				"ability": ["None"],
 				"evs": {"hp": 252, "atk": 252, "def": 252, "spc": 252, "spd": 252},
 				"moves": [["Clamp"], ["Blizzard"], ["Rest"], ["Explosion"]]
 			},
 			{
-				"species": "Cloyster"
-				
+				"species": "Cloyster",
+				"ability": ["None"],
 				"evs": {"hp": 252, "atk": 252, "def": 252, "spc": 252, "spd": 252},
 				"moves": [["Clamp"], ["Blizzard"], ["Hyper Beam"], ["Explosion"]]
 			}]
@@ -144,26 +144,26 @@
 		"exeggutor": {
 			"flags": {},
 			"sets": [{
-				"species": "Exeggutor"
-				
+				"species": "Exeggutor",
+				"ability": ["None"],
 				"evs": {"hp": 252, "atk": 252, "def": 252, "spc": 252, "spd": 252},
 				"moves": [["Sleep Powder"], ["Psychic"], ["Explosion"], ["Double-Edge"]]
 			},
 			{
-				"species": "Exeggutor"
-				
+				"species": "Exeggutor",
+				"ability": ["None"],
 				"evs": {"hp": 252, "atk": 252, "def": 252, "spc": 252, "spd": 252},
 				"moves": [["Sleep Powder"], ["Psychic"], ["Explosion"], ["Stun Spore"]]
 			},
 			{
-				"species": "Exeggutor"
-				
+				"species": "Exeggutor",
+				"ability": ["None"],
 				"evs": {"hp": 252, "atk": 252, "def": 252, "spc": 252, "spd": 252},
 				"moves": [["Sleep Powder"], ["Psychic"], ["Explosion"], ["Mega Drain"]]
 			},
 			{
-				"species": "Exeggutor"
-				
+				"species": "Exeggutor",
+				"ability": ["None"],
 				"evs": {"hp": 252, "atk": 252, "def": 252, "spc": 252, "spd": 252},
 				"moves": [["Sleep Powder"], ["Psychic"], ["Explosion"], ["Hyper Beam"]]
 			}]
@@ -171,8 +171,8 @@
 		"gengar": {
 			"flags": {},
 			"sets": [{
-				"species": "Gengar"
-				
+				"species": "Gengar",
+				"ability": ["None"],
 				"evs": {"hp": 252, "atk": 252, "def": 252, "spc": 252, "spd": 252},
 				"moves": [["Hypnosis"], ["Night Shade"], ["Thunderbolt"], ["Explosion"]]
 			}]
@@ -180,14 +180,14 @@
 		"jolteon": {
 			"flags": {},
 			"sets": [{
-				"species": "Jolteon"
-				
+				"species": "Jolteon",
+				"ability": ["None"],
 				"evs": {"hp": 252, "atk": 252, "def": 252, "spc": 252, "spd": 252},
 				"moves": [["Thunder Wave"], ["Thunderbolt"], ["Double Kick"], ["Rest"]]
 			},
 			{
-				"species": "Jolteon"
-				
+				"species": "Jolteon",
+				"ability": ["None"],
 				"evs": {"hp": 252, "atk": 252, "def": 252, "spc": 252, "spd": 252},
 				"moves": [["Thunder Wave"], ["Thunderbolt"], ["Double Kick"], ["Pin Missile"]]
 			}]
@@ -195,8 +195,8 @@
 		"jynx": {
 			"flags": {},
 			"sets": [{
-				"species": "Jynx"
-				
+				"species": "Jynx",
+				"ability": ["None"],
 				"evs": {"hp": 252, "atk": 0, "def": 252, "spc": 252, "spd": 252},
 				"ivs": {"hp": 31, "atk": 0, "def": 31, "spc": 31, "spd": 31},
 				"moves": [["Lovely Kiss"], ["Psychic"], ["Blizzard"], ["Rest"]]
@@ -205,14 +205,14 @@
 		"lapras": {
 			"flags": {},
 			"sets": [{
-				"species": "Lapras"
-				
+				"species": "Lapras",
+				"ability": ["None"],
 				"evs": {"hp": 252, "atk": 252, "def": 252, "spc": 252, "spd": 252},
 				"moves": [["Blizzard"], ["Thunderbolt"], ["Hyper Beam"], ["Sing"]]
 			},
 			{
-				"species": "Lapras"
-				
+				"species": "Lapras",
+				"ability": ["None"],
 				"evs": {"hp": 252, "atk": 252, "def": 252, "spc": 252, "spd": 252},
 				"moves": [["Blizzard"], ["Thunderbolt"], ["Body Slam"], ["Confuse Ray"]]
 			}]
@@ -220,8 +220,8 @@
 		"rhydon": {
 			"flags": {},
 			"sets": [{
-				"species": "Rhydon"
-				
+				"species": "Rhydon",
+				"ability": ["None"],
 				"evs": {"hp": 252, "atk": 252, "def": 252, "spc": 252, "spd": 252},
 				"moves": [["Earthquake"], ["Rock Slide"], ["Body Slam"], ["Substitute"]]
 			}]
@@ -229,15 +229,15 @@
 		"slowbro": {
 			"flags": {},
 			"sets": [{
-				"species": "Slowbro"
-				
+				"species": "Slowbro",
+				"ability": ["None"],
 				"evs": {"hp": 252, "atk": 0, "def": 252, "spc": 252, "spd": 252},
 				"ivs": {"hp": 31, "atk": 0, "def": 31, "spc": 31, "spd": 31},
 				"moves": [["Amnesia"], ["Surf"], ["Thunder Wave"], ["Rest"]]
 			},
 			{
-				"species": "Slowbro"
-				
+				"species": "Slowbro",
+				"ability": ["None"],
 				"evs": {"hp": 252, "atk": 0, "def": 252, "spc": 252, "spd": 252},
 				"ivs": {"hp": 31, "atk": 0, "def": 31, "spc": 31, "spd": 31},
 				"moves": [["Amnesia"], ["Psychic"], ["Reflect"], ["Rest"]]
@@ -246,68 +246,68 @@
 		"snorlax": {
 			"flags": {},
 			"sets": [{
-				"species": "Snorlax"
-				
+				"species": "Snorlax",
+				"ability": ["None"],
 				"evs": {"hp": 252, "atk": 252, "def": 252, "spc": 252, "spd": 252},
 				"moves": [["Body Slam"], ["Reflect"], ["Rest"], ["Ice Beam"]]
 			},
 			{
-				"species": "Snorlax"
-				
+				"species": "Snorlax",
+				"ability": ["None"],
 				"evs": {"hp": 252, "atk": 252, "def": 252, "spc": 252, "spd": 252},
 				"moves": [["Body Slam"], ["Reflect"], ["Rest"], ["Self-Destruct"]]
 			},
 			{
-				"species": "Snorlax"
-				
+				"species": "Snorlax",
+				"ability": ["None"],
 				"evs": {"hp": 252, "atk": 252, "def": 252, "spc": 252, "spd": 252},
 				"moves": [["Body Slam"], ["Reflect"], ["Rest"], ["Hyper Beam"]]
 			},
 			{
-				"species": "Snorlax"
-				
+				"species": "Snorlax",
+				"ability": ["None"],
 				"evs": {"hp": 252, "atk": 252, "def": 252, "spc": 252, "spd": 252},
 				"moves": [["Body Slam"], ["Reflect"], ["Rest"], ["Earthquake"]]
 			},
 			{
-				"species": "Snorlax"
-				
+				"species": "Snorlax",
+				"ability": ["None"],
 				"evs": {"hp": 252, "atk": 252, "def": 252, "spc": 252, "spd": 252},
 				"moves": [["Body Slam"], ["Hyper Beam"], ["Self-Destruct"], ["Earthquake"]]
 			},
 			{
-				"species": "Snorlax"
-				
+				"species": "Snorlax",
+				"ability": ["None"],
 				"evs": {"hp": 252, "atk": 252, "def": 252, "spc": 252, "spd": 252},
 				"moves": [["Body Slam"], ["Counter"], ["Self-Destruct"], ["Earthquake"]]
 			},
 			{
-				"species": "Snorlax"
-				
+				"species": "Snorlax",
+				"ability": ["None"],
 				"evs": {"hp": 252, "atk": 252, "def": 252, "spc": 252, "spd": 252},
 				"moves": [["Body Slam"], ["Hyper Beam"], ["Self-Destruct"], ["Counter"]]
 			},
 			{
-				"species": "Snorlax"
-				
+				"species": "Snorlax",
+				"ability": ["None"],
 				"evs": {"hp": 252, "atk": 252, "def": 252, "spc": 252, "spd": 252},
 				"moves": [["Body Slam"], ["Blizzard"], ["Amnesia"], ["Rest"]]
 			},
 			{
-				"species": "Snorlax"
-				
+				"species": "Snorlax",
+				"ability": ["None"],
 				"evs": {"hp": 252, "atk": 252, "def": 252, "spc": 252, "spd": 252},
 				"moves": [["Body Slam"], ["Ice Beam"], ["Amnesia"], ["Rest"]]
 			},
 			{
-				"species": "Snorlax"
-				
+				"species": "Snorlax",
+				"ability": ["None"],
 				"evs": {"hp": 252, "atk": 252, "def": 252, "spc": 252, "spd": 252},
 				"moves": [["Body Slam"], ["Blizzard"], ["Amnesia"], ["Self-Destruct"]]
 			},
 			{
-				"species": "Snorlax"
-				
+				"species": "Snorlax",
+				"ability": ["None"],
 				"evs": {"hp": 252, "atk": 252, "def": 252, "spc": 252, "spd": 252},
 				"moves": [["Body Slam"], ["Ice Beam"], ["Amnesia"], ["Self-Destruct"]]
 			}]
@@ -315,36 +315,36 @@
 		"starmie": {
 			"flags": {},
 			"sets": [{
-				"species": "Starmie"
-				
+				"species": "Starmie",
+				"ability": ["None"],
 				"evs": {"hp": 252, "atk": 0, "def": 252, "spc": 252, "spd": 252},
 				"ivs": {"hp": 31, "atk": 0, "def": 31, "spc": 31, "spd": 31},
 				"moves": [["Recover"], ["Thunder Wave"], ["Blizzard"], ["Psychic"]]
 			},
 			{
-				"species": "Starmie"
-				
+				"species": "Starmie",
+				"ability": ["None"],
 				"evs": {"hp": 252, "atk": 0, "def": 252, "spc": 252, "spd": 252},
 				"ivs": {"hp": 31, "atk": 0, "def": 31, "spc": 31, "spd": 31},
 				"moves": [["Recover"], ["Thunder Wave"], ["Blizzard"], ["Thunderbolt"]]
 			},
 			{
-				"species": "Starmie"
-				
+				"species": "Starmie",
+				"ability": ["None"],
 				"evs": {"hp": 252, "atk": 0, "def": 252, "spc": 252, "spd": 252},
 				"ivs": {"hp": 31, "atk": 0, "def": 31, "spc": 31, "spd": 31},
 				"moves": [["Recover"], ["Thunder Wave"], ["Blizzard"], ["Surf"]]
 			},
 			{
-				"species": "Starmie"
-				
+				"species": "Starmie",
+				"ability": ["None"],
 				"evs": {"hp": 252, "atk": 0, "def": 252, "spc": 252, "spd": 252},
 				"ivs": {"hp": 31, "atk": 0, "def": 31, "spc": 31, "spd": 31},
 				"moves": [["Recover"], ["Thunder Wave"], ["Thunderbolt"], ["Surf"]]
 			},
 			{
-				"species": "Starmie"
-				
+				"species": "Starmie",
+				"ability": ["None"],
 				"evs": {"hp": 252, "atk": 0, "def": 252, "spc": 252, "spd": 252},
 				"ivs": {"hp": 31, "atk": 0, "def": 31, "spc": 31, "spd": 31},
 				"moves": [["Recover"], ["Thunder Wave"], ["Thunderbolt"], ["Psychic"]]
@@ -353,14 +353,14 @@
 		"tauros": {
 			"flags": {},
 			"sets": [{
-				"species": "Tauros"
-				
+				"species": "Tauros",
+				"ability": ["None"],
 				"evs": {"hp": 252, "atk": 252, "def": 252, "spc": 252, "spd": 252},
 				"moves": [["Body Slam"], ["Hyper Beam"], ["Blizzard"], ["Earthquake"]]
 			},
 			{
-				"species": "Tauros"
-				
+				"species": "Tauros",
+				"ability": ["None"],
 				"evs": {"hp": 252, "atk": 252, "def": 252, "spc": 252, "spd": 252},
 				"moves": [["Body Slam"], ["Hyper Beam"], ["Blizzard"], ["Fire Blast"]]
 			}]
@@ -368,20 +368,20 @@
 		"victreebel": {
 			"flags": {},
 			"sets": [{
-				"species": "Victreebel"
-				
+				"species": "Victreebel",
+				"ability": ["None"],
 				"evs": {"hp": 252, "atk": 252, "def": 252, "spc": 252, "spd": 252},
 				"moves": [["Sleep Powder"], ["Wrap"], ["Razor Leaf"], ["Stun Spore"]]
 			},
 			{
-				"species": "Victreebel"
-				
+				"species": "Victreebel",
+				"ability": ["None"],
 				"evs": {"hp": 252, "atk": 252, "def": 252, "spc": 252, "spd": 252},
 				"moves": [["Sleep Powder"], ["Wrap"], ["Razor Leaf"], ["Hyper Beam"]]
 			},
 			{
-				"species": "Victreebel"
-				
+				"species": "Victreebel",
+				"ability": ["None"],
 				"evs": {"hp": 252, "atk": 252, "def": 252, "spc": 252, "spd": 252},
 				"moves": [["Swords Dance"], ["Hyper Beam"], ["Body Slam"], ["Razor Leaf"]]
 			}]
@@ -389,8 +389,8 @@
 		"zapdos": {
 			"flags": {},
 			"sets": [{
-				"species": "Zapdos"
-				
+				"species": "Zapdos",
+				"ability": ["None"],
 				"evs": {"hp": 252, "atk": 252, "def": 252, "spc": 252, "spd": 252},
 				"moves": [["Thunderbolt"], ["Drill Peck"], ["Thunder Wave"], ["Agility"]]
 			}]
@@ -399,9 +399,9 @@
 	"UU": {
 		"aerodactyl": {
 			"flags": {},
-			"sets": [{ // Aerodactyl has sets?
-				"species": "Aerodactyl"
-				
+			"sets": [{
+				"species": "Aerodactyl",
+				"ability": ["None"],
 				"evs": {"hp": 252, "atk": 252, "def": 252, "spc": 252, "spd": 252},
 				"moves": [["Sky Attack"], ["Reflect"], ["Double-Edge"], ["Hyper Beam"]]
 			}]
@@ -409,8 +409,8 @@
 		"arbok": {
 			"flags": {},
 			"sets": [{ 
-				"species": "Arbok"
-				
+				"species": "Arbok",
+				"ability": ["None"],
 				"evs": {"hp": 252, "atk": 252, "def": 252, "spc": 252, "spd": 252},
 				"moves": [["Earthquake"], ["Wrap"], ["Glare"], ["Hyper Beam"]]
 			}]
@@ -418,8 +418,8 @@
 		"arcanine": {
 			"flags": {},
 			"sets": [{ 
-				"species": "Arcanine"
-				
+				"species": "Arcanine",
+				"ability": ["None"],
 				"evs": {"hp": 252, "atk": 252, "def": 252, "spc": 252, "spd": 252},
 				"moves": [["Body Slam"], ["Fire Blast"], ["Hyper Beam"], ["Rest"]]
 			}]
@@ -427,14 +427,14 @@
 		"articuno": {
 			"flags": {},
 			"sets": [{ 
-				"species": "Articuno"
-				
+				"species": "Articuno",
+				"ability": ["None"],
 				"evs": {"hp": 252, "atk": 252, "def": 252, "spc": 252, "spd": 252},
 				"moves": [["Blizzard"], ["Hyper Beam"], ["Double-Edge"], ["Agility"]]
 			},
 			{ 
-				"species": "Articuno"
-				
+				"species": "Articuno",
+				"ability": ["None"],
 				"evs": {"hp": 252, "atk": 252, "def": 252, "spc": 252, "spd": 252},
 				"moves": [["Blizzard"], ["Ice Beam"], ["Hyper Beam"], ["Agility"]]
 			}]
@@ -442,8 +442,8 @@
 		"beedrill": {
 			"flags": {},
 			"sets": [{ 
-				"species": "Beedrill"
-				
+				"species": "Beedrill",
+				"ability": ["None"],
 				"evs": {"hp": 252, "atk": 252, "def": 252, "spc": 252, "spd": 252},
 				"moves": [["Twineedle"], ["Hyper Beam"], ["Swords Dance"], ["Agility"]]
 			}]
@@ -451,8 +451,8 @@
 		"blastoise": {
 			"flags": {},
 			"sets": [{ 
-				"species": "Blastoise"
-				
+				"species": "Blastoise",
+				"ability": ["None"],
 				"evs": {"hp": 252, "atk": 252, "def": 252, "spc": 252, "spd": 252},
 				"moves": [["Surf"], ["Blizzard"], ["Body Slam"], ["Rest"]]
 			}]
@@ -460,8 +460,8 @@
 		"butterfree": {
 			"flags": {},
 			"sets": [{ 
-				"species": "Butterfree"
-				
+				"species": "Butterfree",
+				"ability": ["None"],
 				"evs": {"hp": 252, "atk": 0, "def": 252, "spc": 252, "spd": 252},
 				"ivs": {"hp": 31, "atk": 0, "def": 31, "spc": 31, "spd": 31},
 				"moves": [["Sleep Powder"], ["Stun Spore"], ["Psychic"], ["Mega Drain"]]
@@ -470,14 +470,14 @@
 		"charizard": {
 			"flags": {},
 			"sets": [{ 
-				"species": "Charizard"
-				
+				"species": "Charizard",
+				"ability": ["None"],
 				"evs": {"hp": 252, "atk": 252, "def": 252, "spc": 252, "spd": 252},
 				"moves": [["Fire Blast"], ["Swords Dance"], ["Body Slam"], ["Earthquake"]]
 			},
 			{ 
-				"species": "Charizard"
-				
+				"species": "Charizard",
+				"ability": ["None"],
 				"evs": {"hp": 252, "atk": 252, "def": 252, "spc": 252, "spd": 252},
 				"moves": [["Fire Blast"], ["Fire Spin"], ["Slash"], ["Earthquake"]]
 			}]
@@ -485,14 +485,14 @@
 		"Clefable": {
 			"flags": {},
 			"sets": [{ 
-				"species": "Clefable"
-				
+				"species": "Clefable",
+				"ability": ["None"],
 				"evs": {"hp": 252, "atk": 252, "def": 252, "spc": 252, "spd": 252},
 				"moves": [["Sing"], ["Thunder Wave"], ["Body Slam"], ["Hyper Beam"]]
 			},
 			{ 
-				"species": "Clefable"
-				
+				"species": "Clefable",
+				"ability": ["None"],
 				"evs": {"hp": 252, "atk": 0, "def": 252, "spc": 252, "spd": 252},
 				"ivs": {"hp": 31, "atk": 0, "def": 31, "spc": 31, "spd": 31},
 				"moves": [["Sing"], ["Thunder Wave"], ["Blizzard"], ["Thunderbolt"]]
@@ -501,14 +501,14 @@
 		"dewgong": {
 			"flags": {},
 			"sets": [{ 
-				"species": "Dewgong"
-				
+				"species": "Dewgong",
+				"ability": ["None"],
 				"evs": {"hp": 252, "atk": 252, "def": 252, "spc": 252, "spd": 252},
 				"moves": [["Surf"], ["Blizzard"], ["Body Slam"], ["Rest"]]
 			},
 			{ 
-				"species": "Dewgong"
-				
+				"species": "Dewgong",
+				"ability": ["None"],
 				"evs": {"hp": 252, "atk": 0, "def": 252, "spc": 252, "spd": 252},
 				"ivs": {"hp": 31, "atk": 0, "def": 31, "spc": 31, "spd": 31},
 				"moves": [["Surf"], ["Blizzard"], ["Ice Beam"], ["Rest"]]
@@ -517,8 +517,8 @@
 		"ditto": {
 			"flags": {},
 			"sets": [{ 
-				"species": "Ditto"
-				
+				"species": "Ditto",
+				"ability": ["None"],
 				"evs": {"hp": 252, "atk": 252, "def": 252, "spc": 252, "spd": 252},
 				"moves": [["Transform"]]
 			}]
@@ -526,8 +526,8 @@
 		"dodrio": {
 			"flags": {},
 			"sets": [{ 
-				"species": "Dodrio"
-				
+				"species": "Dodrio",
+				"ability": ["None"],
 				"evs": {"hp": 252, "atk": 252, "def": 252, "spc": 252, "spd": 252},
 				"moves": [["Body Slam"], ["Hyper Beam"], ["Drill Peck"], ["Agility"]]
 			}]
@@ -535,8 +535,8 @@
 		"dragonite": {
 			"flags": {},
 			"sets": [{ 
-				"species": "Dragonite"
-				
+				"species": "Dragonite",
+				"ability": ["None"],
 				"evs": {"hp": 252, "atk": 252, "def": 252, "spc": 252, "spd": 252},
 				"moves": [["Wrap"], ["Hyper Beam"], ["Thunder Wave"], ["Agility"]]
 			}]
@@ -544,8 +544,8 @@
 		"dugtrio": {
 			"flags": {},
 			"sets": [{ 
-				"species": "Dugtrio"
-				
+				"species": "Dugtrio",
+				"ability": ["None"],
 				"evs": {"hp": 252, "atk": 252, "def": 252, "spc": 252, "spd": 252},
 				"moves": [["Slash"], ["Rock Slide"], ["Earthquake"], ["Toxic"]]
 			}]
@@ -553,8 +553,8 @@
 		"electabuzz": {
 			"flags": {},
 			"sets": [{ 
-				"species": "Electabuzz"
-				
+				"species": "Electabuzz",
+				"ability": ["None"],
 				"evs": {"hp": 252, "atk": 0, "def": 252, "spc": 252, "spd": 252},
 				"ivs": {"hp": 31, "atk": 0, "def": 31, "spc": 31, "spd": 31},
 				"moves": [["Thunder Wave"], ["Thunderbolt"], ["Psychic"], ["Seismic Toss"]]
@@ -563,8 +563,8 @@
 		"electrode": {
 			"flags": {},
 			"sets": [{ 
-				"species": "Electrode"
-				
+				"species": "Electrode",
+				"ability": ["None"],
 				"evs": {"hp": 252, "atk": 252, "def": 252, "spc": 252, "spd": 252},
 				"moves": [["Thunder Wave"], ["Thunderbolt"], ["Light Screen"], ["Explosion"]]
 			}]
@@ -572,8 +572,8 @@
 		"farfetchd": {
 			"flags": {},
 			"sets": [{ 
-				"species": "Farfetch'd"
-				
+				"species": "Farfetch'd",
+				"ability": ["None"],
 				"evs": {"hp": 252, "atk": 252, "def": 252, "spc": 252, "spd": 252},
 				"moves": [["Swords Dance"], ["Agility"], ["Body Slam"], ["Mimic"]]
 			}]
@@ -581,14 +581,14 @@
 		"fearow": {
 			"flags": {},
 			"sets": [{ 
-				"species": "Fearow"
-				
+				"species": "Fearow",
+				"ability": ["None"],
 				"evs": {"hp": 252, "atk": 252, "def": 252, "spc": 252, "spd": 252},
 				"moves": [["Double-Edge"], ["Drill Peck"], ["Hyper Beam"], ["Agility"]]
 			},
 			{ 
-				"species": "Fearow"
-				
+				"species": "Fearow",
+				"ability": ["None"],
 				"evs": {"hp": 252, "atk": 252, "def": 252, "spc": 252, "spd": 252},
 				"moves": [["Double-Edge"], ["Drill Peck"], ["Hyper Beam"], ["Mirror Move"]]
 			}]
@@ -596,8 +596,8 @@
 		"flareon": {
 			"flags": {},
 			"sets": [{ 
-				"species": "Flareon"
-				
+				"species": "Flareon",
+				"ability": ["None"],
 				"evs": {"hp": 252, "atk": 252, "def": 252, "spc": 252, "spd": 252},
 				"moves": [["Fire Blast"], ["Body Slam"], ["Hyper Beam"], ["Quick Attack"]]
 			}]
@@ -605,8 +605,8 @@
 		"golbat": {
 			"flags": {},
 			"sets": [{ 
-				"species": "Golbat"
-				
+				"species": "Golbat",
+				"ability": ["None"],
 				"evs": {"hp": 252, "atk": 252, "def": 252, "spc": 252, "spd": 252},
 				"moves": [["Confuse Ray"], ["Double-Edge"], ["Mega Drain"], ["Hyper Beam"]]
 			}]
@@ -614,14 +614,14 @@
 		"golduck": {
 			"flags": {},
 			"sets": [{ 
-				"species": "Golduck"
-				
+				"species": "Golduck",
+				"ability": ["None"],
 				"evs": {"hp": 252, "atk": 252, "def": 252, "spc": 252, "spd": 252},
 				"moves": [["Amnesia"], ["Body Slam"], ["Blizzard"], ["Surf"]]
 			},
 			{ 
-				"species": "Golduck"
-				
+				"species": "Golduck",
+				"ability": ["None"],
 				"evs": {"hp": 252, "atk": 252, "def": 252, "spc": 252, "spd": 252},
 				"moves": [["Amnesia"], ["Rest"], ["Ice Beam"], ["Surf"]]
 			}]
@@ -629,8 +629,8 @@
 		"golem": {
 			"flags": {},
 			"sets": [{ 
-				"species": "Golem"
-				
+				"species": "Golem",
+				"ability": ["None"],
 				"evs": {"hp": 252, "atk": 252, "def": 252, "spc": 252, "spd": 252},
 				"moves": [["Rock Slide"], ["Earthquake"], ["Body Slam"], ["Explosion"]]
 			}]
@@ -638,8 +638,8 @@
 		"gyarados": {
 			"flags": {},
 			"sets": [{ 
-				"species": "Gyarados"
-				
+				"species": "Gyarados",
+				"ability": ["None"],
 				"evs": {"hp": 252, "atk": 252, "def": 252, "spc": 252, "spd": 252},
 				"moves": [["Surf"], ["Blizzard"], ["Body Slam"], ["Hyper Beam"]]
 			}]
@@ -647,14 +647,14 @@
 		"hitmonchan": {
 			"flags": {},
 			"sets": [{ 
-				"species": "Hitmonchan"
-				
+				"species": "Hitmonchan",
+				"ability": ["None"],
 				"evs": {"hp": 252, "atk": 252, "def": 252, "spc": 252, "spd": 252},
 				"moves": [["Submission"], ["Body Slam"], ["Counter"], ["Agility"]]
 			},
 			{ 
-				"species": "Hitmonchan"
-				
+				"species": "Hitmonchan",
+				"ability": ["None"],
 				"evs": {"hp": 252, "atk": 252, "def": 252, "spc": 252, "spd": 252},
 				"moves": [["Submission"], ["Body Slam"], ["Seismic Toss"], ["Agility"]]
 			}]
@@ -662,14 +662,14 @@
 		"hitmonlee": {
 			"flags": {},
 			"sets": [{ 
-				"species": "Hitmonlee"
-				
+				"species": "Hitmonlee",
+				"ability": ["None"],
 				"evs": {"hp": 252, "atk": 252, "def": 252, "spc": 252, "spd": 252},
 				"moves": [["High Jump Kick"], ["Body Slam"], ["Counter"], ["Meditate"]]
 			},
 			{ 
-				"species": "Hitmonlee"
-				
+				"species": "Hitmonlee",
+				"ability": ["None"],
 				"evs": {"hp": 252, "atk": 252, "def": 252, "spc": 252, "spd": 252},
 				"moves": [["High Jump Kick"], ["Body Slam"], ["Counter"], ["Seismic Toss"]]
 			}]
@@ -677,8 +677,8 @@
 		"hypno": {
 			"flags": {},
 			"sets": [{ 
-				"species": "Hypno"
-				
+				"species": "Hypno",
+				"ability": ["None"],
 				"evs": {"hp": 252, "atk": 0, "def": 252, "spc": 252, "spd": 252},
 				"ivs": {"hp": 31, "atk": 0, "def": 31, "spc": 31, "spd": 31},
 				"moves": [["Thunder Wave"], ["Hypnosis"], ["Psychic"], ["Rest"]]
@@ -687,14 +687,14 @@
 		"kabutops": {
 			"flags": {},
 			"sets": [{ 
-				"species": "Kabutops"
-				
+				"species": "Kabutops",
+				"ability": ["None"],
 				"evs": {"hp": 252, "atk": 252, "def": 252, "spc": 252, "spd": 252},
 				"moves": [["Swords Dance"], ["Body Slam"], ["Hyper Beam"], ["Surf"]]
 			},
 			{ 
-				"species": "Kabutops"
-				
+				"species": "Kabutops",
+				"ability": ["None"],
 				"evs": {"hp": 252, "atk": 252, "def": 252, "spc": 252, "spd": 252},
 				"moves": [["Slash"], ["Blizzard"], ["Surf"], ["Rest"]]
 			}]
@@ -702,8 +702,8 @@
 		"kangaskhan": {
 			"flags": {},
 			"sets": [{ 
-				"species": "Kangaskhan"
-				
+				"species": "Kangaskhan",
+				"ability": ["None"],
 				"evs": {"hp": 252, "atk": 252, "def": 252, "spc": 252, "spd": 252},
 				"moves": [["Body Slam"], ["Earthquake"], ["Surf"], ["Hyper Beam"]]
 			}]
@@ -711,8 +711,8 @@
 		"kingler": {
 			"flags": {},
 			"sets": [{ 
-				"species": "Kingler"
-				
+				"species": "Kingler",
+				"ability": ["None"],
 				"evs": {"hp": 252, "atk": 252, "def": 252, "spc": 252, "spd": 252},
 				"moves": [["Swords Dance"], ["Body Slam"], ["Hyper Beam"], ["Crabhammer"]]
 			}]
@@ -720,14 +720,14 @@
 		"lickitung": {
 			"flags": {},
 			"sets": [{ 
-				"species": "Lickitung"
-				
+				"species": "Lickitung",
+				"ability": ["None"],
 				"evs": {"hp": 252, "atk": 252, "def": 252, "spc": 252, "spd": 252},
 				"moves": [["Swords Dance"], ["Body Slam"], ["Hyper Beam"], ["Earthquake"]]
 			},
 			{ 
-				"species": "Lickitung"
-				
+				"species": "Lickitung",
+				"ability": ["None"],
 				"evs": {"hp": 252, "atk": 252, "def": 252, "spc": 252, "spd": 252},
 				"moves": [["Swords Dance"], ["Wrap"], ["Hyper Beam"], ["Body Slam"]]
 			}]
@@ -735,8 +735,8 @@
 		"machamp": {
 			"flags": {},
 			"sets": [{ 
-				"species": "Machamp"
-				
+				"species": "Machamp",
+				"ability": ["None"],
 				"evs": {"hp": 252, "atk": 252, "def": 252, "spc": 252, "spd": 252},
 				"moves": [["Submission"], ["Body Slam"], ["Hyper Beam"], ["Earthquake"]]
 			}]
@@ -744,8 +744,8 @@
 		"magmar": {
 			"flags": {},
 			"sets": [{ 
-				"species": "Magmar"
-				
+				"species": "Magmar",
+				"ability": ["None"],
 				"evs": {"hp": 252, "atk": 252, "def": 252, "spc": 252, "spd": 252},
 				"moves": [["Confuse Ray"], ["Fire Blast"], ["Psychic"], ["Body Slam"]]
 			}]
@@ -753,8 +753,8 @@
 		"magneton": {
 			"flags": {},
 			"sets": [{ 
-				"species": "Magneton"
-				
+				"species": "Magneton",
+				"ability": ["None"],
 				"evs": {"hp": 252, "atk": 252, "def": 252, "spc": 252, "spd": 252},
 				"moves": [["Thunder Wave"], ["Thunderbolt"], ["Double-Edge"], ["Mimic"]]
 			}]
@@ -763,7 +763,7 @@
 			"flags": {},
 			"sets": [{ 
 				"species": "Marowak"
-				
+				"ability": ["None"]
 				"evs": {"hp": 252, "atk": 252, "def": 252, "spc": 252, "spd": 252},
 				"moves": [["Swords Dance"], ["Earthquake"], ["Body Slam"], ["Blizzard"]]
 			}]
@@ -771,8 +771,8 @@
 		"moltres": {
 			"flags": {},
 			"sets": [{ 
-				"species": "Moltres"
-				
+				"species": "Moltres",
+				"ability": ["None"],
 				"evs": {"hp": 252, "atk": 252, "def": 252, "spc": 252, "spd": 252},
 				"moves": [["Fire Blast"], ["Fire Spin"], ["Hyper Beam"], ["Agility"]]
 			}]
@@ -780,8 +780,8 @@
 		"moltres": {
 			"flags": {},
 			"sets": [{ 
-				"species": "Moltres"
-				
+				"species": "Moltres",
+				"ability": ["None"],
 				"evs": {"hp": 252, "atk": 252, "def": 252, "spc": 252, "spd": 252},
 				"moves": [["Fire Blast"], ["Fire Spin"], ["Hyper Beam"], ["Agility"]]
 			}]
@@ -789,8 +789,8 @@
 		"mrmime": {
 			"flags": {},
 			"sets": [{ 
-				"species": "Mr. Mime"
-				
+				"species": "Mr. Mime",
+				"ability": ["None"],
 				"evs": {"hp": 252, "atk": 252, "def": 252, "spc": 252, "spd": 252},
 				"moves": [["Psychic"], ["Thunderbolt"], ["Thunder Wave"], ["Seismic Toss"]]
 			}]
@@ -798,8 +798,8 @@
 		"muk": {
 			"flags": {},
 			"sets": [{ 
-				"species": "Muk"
-				
+				"species": "Muk",
+				"ability": ["None"],
 				"evs": {"hp": 252, "atk": 252, "def": 252, "spc": 252, "spd": 252},
 				"moves": [["Sludge"], ["Body Slam"], ["Fire Blast"], ["Explosion"]]
 			}]
@@ -807,8 +807,8 @@
 		"nidoking": {
 			"flags": {},
 			"sets": [{ 
-				"species": "Nidoking"
-				
+				"species": "Nidoking",
+				"ability": ["None"],
 				"evs": {"hp": 252, "atk": 252, "def": 252, "spc": 252, "spd": 252},
 				"moves": [["Blizzard"], ["Thunderbolt"], ["Body Slam"], ["Earthquake"]]
 			}]
@@ -816,8 +816,8 @@
 		"nidoqueen": {
 			"flags": {},
 			"sets": [{ 
-				"species": "Nidoqueen"
-				
+				"species": "Nidoqueen",
+				"ability": ["None"],
 				"evs": {"hp": 252, "atk": 252, "def": 252, "spc": 252, "spd": 252},
 				"moves": [["Blizzard"], ["Thunderbolt"], ["Body Slam"], ["Earthquake"]]
 			}]
@@ -825,8 +825,8 @@
 		"ninetales": {
 			"flags": {},
 			"sets": [{ 
-				"species": "Ninetales"
-				
+				"species": "Ninetales",
+				"ability": ["None"],
 				"evs": {"hp": 252, "atk": 252, "def": 252, "spc": 252, "spd": 252},
 				"moves": [["Confuse Ray"], ["Fire Blast"], ["Fire Spin"], ["Body Slam"]]
 			}]
@@ -834,8 +834,8 @@
 		"omastar": {
 			"flags": {},
 			"sets": [{ 
-				"species": "Omastar"
-				
+				"species": "Omastar",
+				"ability": ["None"],
 				"evs": {"hp": 252, "atk": 252, "def": 252, "spc": 252, "spd": 252},
 				"moves": [["Surf"], ["Blizzard"], ["Body Slam"], ["Rest"]]
 			}]
@@ -843,8 +843,8 @@
 		"onix": {
 			"flags": {},
 			"sets": [{ 
-				"species": "Onix"
-				
+				"species": "Onix",
+				"ability": ["None"],
 				"evs": {"hp": 252, "atk": 252, "def": 252, "spc": 252, "spd": 252},
 				"moves": [["Rock Slide"], ["Earthquake"], ["Bind"], ["Explosion"]]
 			}]
@@ -852,8 +852,8 @@
 		"parasect": {
 			"flags": {},
 			"sets": [{ 
-				"species": "Parasect"
-				
+				"species": "Parasect",
+				"ability": ["None"],
 				"evs": {"hp": 252, "atk": 252, "def": 252, "spc": 252, "spd": 252},
 				"moves": [["Spore"], ["Stun Spore"], ["Slash"], ["Mega Drain"]]
 			}]
@@ -861,8 +861,8 @@
 		"persian": {
 			"flags": {},
 			"sets": [{ 
-				"species": "Persian"
-				
+				"species": "Persian",
+				"ability": ["None"],
 				"evs": {"hp": 252, "atk": 252, "def": 252, "spc": 252, "spd": 252},
 				"moves": [["Slash"], ["Bubble Beam"], ["Thunderbolt"], ["Hyper Beam"]]
 			}]
@@ -870,8 +870,8 @@
 		"pidgeot": {
 			"flags": {},
 			"sets": [{ 
-				"species": "Pidgeot"
-				
+				"species": "Pidgeot",
+				"ability": ["None"],
 				"evs": {"hp": 252, "atk": 252, "def": 252, "spc": 252, "spd": 252},
 				"moves": [["Double-Edge"], ["Hyper Beam"], ["Agility"], ["Mirror Move"]]
 			}]
@@ -879,14 +879,14 @@
 		"pinsir": {
 			"flags": {},
 			"sets": [{ 
-				"species": "Pinsir"
-				
+				"species": "Pinsir",
+				"ability": ["None"],
 				"evs": {"hp": 252, "atk": 252, "def": 252, "spc": 252, "spd": 252},
 				"moves": [["Swords Dance"], ["Body Slam"], ["Submission"], ["Hyper Beam"]]
 			},
 			{ 
-				"species": "Pinsir"
-				
+				"species": "Pinsir",
+				"ability": ["None"],
 				"evs": {"hp": 252, "atk": 252, "def": 252, "spc": 252, "spd": 252},
 				"moves": [["Slash"], ["Body Slam"], ["Submission"], ["Seismic Toss"]]
 			}]
@@ -894,8 +894,8 @@
 		"poliwrath": {
 			"flags": {},
 			"sets": [{ 
-				"species": "Poliwrath"
-				
+				"species": "Poliwrath",
+				"ability": ["None"],
 				"evs": {"hp": 252, "atk": 252, "def": 252, "spc": 252, "spd": 252},
 				"moves": [["Hypnosis"], ["Amnesia"], ["Surf"], ["Blizzard"]]
 			}]
@@ -903,8 +903,8 @@
 		"porygon": {
 			"flags": {},
 			"sets": [{ 
-				"species": "Porygon"
-				
+				"species": "Porygon",
+				"ability": ["None"],
 				"evs": {"hp": 252, "atk": 0, "def": 252, "spc": 252, "spd": 252},
 				"ivs": {"hp": 31, "atk": 0, "def": 31, "spc": 31, "spd": 31},
 				"moves": [["Thunder Wave"], ["Thunderbolt"], ["Psychic"], ["Recover"]]
@@ -913,8 +913,8 @@
 		"primeape": {
 			"flags": {},
 			"sets": [{ 
-				"species": "Primeape"
-				
+				"species": "Primeape",
+				"ability": ["None"],
 				"evs": {"hp": 252, "atk": 252, "def": 252, "spc": 252, "spd": 252},
 				"moves": [["Submission"], ["Body Slam"], ["Rock Slide"], ["Seismic Toss"]]
 			}]
@@ -922,8 +922,8 @@
 		"raichu": {
 			"flags": {},
 			"sets": [{ 
-				"species": "Raichu"
-				
+				"species": "Raichu",
+				"ability": ["None"],
 				"evs": {"hp": 252, "atk": 252, "def": 252, "spc": 252, "spd": 252},
 				"moves": [["Thunder Wave"], ["Thunderbolt"], ["Surf"], ["Body Slam"]]
 			}]
@@ -931,8 +931,8 @@
 		"rapidash": {
 			"flags": {},
 			"sets": [{ 
-				"species": "Rapidash"
-				
+				"species": "Rapidash",
+				"ability": ["None"],
 				"evs": {"hp": 252, "atk": 252, "def": 252, "spc": 252, "spd": 252},
 				"moves": [["Fire Blast"], ["Fire Spin"], ["Hyper Beam"], ["Body Slam"]]
 			}]
@@ -940,20 +940,20 @@
 		"raticate": {
 			"flags": {},
 			"sets": [{ 
-				"species": "Raticate"
-				
+				"species": "Raticate",
+				"ability": ["None"],
 				"evs": {"hp": 252, "atk": 252, "def": 252, "spc": 252, "spd": 252},
 				"moves": [["Super Fang"], ["Hyper Beam"], ["Blizzard"], ["Body Slam"]]
 			},
 			{ 
-				"species": "Raticate"
-				
+				"species": "Raticate",
+				"ability": ["None"],
 				"evs": {"hp": 252, "atk": 252, "def": 252, "spc": 252, "spd": 252},
 				"moves": [["Super Fang"], ["Hyper Beam"], ["Bubble Beam"], ["Body Slam"]]
 			},
 			{ 
-				"species": "Raticate"
-				
+				"species": "Raticate",
+				"ability": ["None"],
 				"evs": {"hp": 252, "atk": 252, "def": 252, "spc": 252, "spd": 252},
 				"moves": [["Super Fang"], ["Hyper Beam"], ["Thunder"], ["Body Slam"]]
 			}]
@@ -961,14 +961,14 @@
 		"sandslash": {
 			"flags": {},
 			"sets": [{ 
-				"species": "Sandslash"
-				
+				"species": "Sandslash",
+				"ability": ["None"],
 				"evs": {"hp": 252, "atk": 252, "def": 252, "spc": 252, "spd": 252},
 				"moves": [["Swords Dance"], ["Rock Slide"], ["Earthquake"], ["Body Slam"]]
 			},
 			{ 
-				"species": "Sandslash"
-				
+				"species": "Sandslash",
+				"ability": ["None"],
 				"evs": {"hp": 252, "atk": 252, "def": 252, "spc": 252, "spd": 252},
 				"moves": [["Slash"], ["Rock Slide"], ["Earthquake"], ["Submission"]]
 			}]
@@ -976,14 +976,14 @@
 		"scyther": {
 			"flags": {},
 			"sets": [{ 
-				"species": "Scyther"
-				
+				"species": "Scyther",
+				"ability": ["None"],
 				"evs": {"hp": 252, "atk": 252, "def": 252, "spc": 252, "spd": 252},
 				"moves": [["Swords Dance"], ["Agility"], ["Hyper Beam"], ["Double-Edge"]]
 			},
 			{ 
-				"species": "Scyther"
-				
+				"species": "Scyther",
+				"ability": ["None"],
 				"evs": {"hp": 252, "atk": 252, "def": 252, "spc": 252, "spd": 252},
 				"moves": [["Slash"], ["Agility"], ["Hyper Beam"], ["Wing Attack"]]
 			}]
@@ -991,8 +991,8 @@
 		"seadra": {
 			"flags": {},
 			"sets": [{ 
-				"species": "Seadra"
-				
+				"species": "Seadra",
+				"ability": ["None"],
 				"evs": {"hp": 252, "atk": 252, "def": 252, "spc": 252, "spd": 252},
 				"moves": [["Blizzard"], ["Hydro Pump"], ["Hyper Beam"], ["Agility"]]
 			}]
@@ -1000,8 +1000,8 @@
 		"seaking": {
 			"flags": {},
 			"sets": [{ 
-				"species": "Seaking"
-				
+				"species": "Seaking",
+				"ability": ["None"],
 				"evs": {"hp": 252, "atk": 252, "def": 252, "spc": 252, "spd": 252},
 				"moves": [["Blizzard"], ["Surf"], ["Double-Edge"], ["Agility"]]
 			}]
@@ -1009,8 +1009,8 @@
 		"tangela": {
 			"flags": {},
 			"sets": [{ 
-				"species": "Tangela"
-				
+				"species": "Tangela",
+				"ability": ["None"],
 				"evs": {"hp": 252, "atk": 252, "def": 252, "spc": 252, "spd": 252},
 				"moves": [["Sleep Powder"], ["Stun Spore"], ["Mega Drain"], ["Growth"]]
 			}]
@@ -1018,14 +1018,14 @@
 		"tentacruel": {
 			"flags": {},
 			"sets": [{ 
-				"species": "Tentacruel"
-				
+				"species": "Tentacruel",
+				"ability": ["None"],
 				"evs": {"hp": 252, "atk": 252, "def": 252, "spc": 252, "spd": 252},
 				"moves": [["Surf"], ["Wrap"], ["Swords Dance"], ["Rest"]]
 			},
 			{ 
-				"species": "Tentacruel"
-				
+				"species": "Tentacruel",
+				"ability": ["None"],
 				"evs": {"hp": 252, "atk": 252, "def": 252, "spc": 252, "spd": 252},
 				"moves": [["Surf"], ["Blizzard"], ["Wrap"], ["Rest"]]
 			}]
@@ -1033,8 +1033,8 @@
 		"vaporeon": {
 			"flags": {},
 			"sets": [{ 
-				"species": "Vaporeon"
-				
+				"species": "Vaporeon",
+				"ability": ["None"],
 				"evs": {"hp": 252, "atk": 252, "def": 252, "spc": 252, "spd": 252},
 				"moves": [["Hydro Pump"], ["Blizzard"], ["Body Slam"], ["Rest"]]
 			}]
@@ -1042,8 +1042,8 @@
 		"venomoth": {
 			"flags": {},
 			"sets": [{ 
-				"species": "Venomoth"
-				
+				"species": "Venomoth",
+				"ability": ["None"],
 				"evs": {"hp": 252, "atk": 252, "def": 252, "spc": 252, "spd": 252},
 				"moves": [["Sleep Powder"], ["Stun Spore"], ["Psychic"], ["Double-Edge"]]
 			}]
@@ -1051,8 +1051,8 @@
 		"venusaur": {
 			"flags": {},
 			"sets": [{ 
-				"species": "Venusaur"
-				
+				"species": "Venusaur",
+				"ability": ["None"],
 				"evs": {"hp": 252, "atk": 252, "def": 252, "spc": 252, "spd": 252},
 				"moves": [["Stun Spore"], ["Swords Dance"], ["Hyper Beam"], ["Razor Leaf"]]
 			}]
@@ -1060,8 +1060,8 @@
 		"vileplume": {
 			"flags": {},
 			"sets": [{ 
-				"species": "Vileplume"
-				
+				"species": "Vileplume",
+				"ability": ["None"],
 				"evs": {"hp": 252, "atk": 252, "def": 252, "spc": 252, "spd": 252},
 				"moves": [["Stun Spore"], ["Swords Dance"], ["Hyper Beam"], ["Razor Leaf"]]
 			}]
@@ -1069,8 +1069,8 @@
 		"weezing": {
 			"flags": {},
 			"sets": [{ 
-				"species": "Weezing"
-				
+				"species": "Weezing",
+				"ability": ["None"],
 				"evs": {"hp": 252, "atk": 252, "def": 252, "spc": 252, "spd": 252},
 				"moves": [["Thunder"], ["Fire Blast"], ["Sludge"], ["Explosion"]]
 			}]
@@ -1078,8 +1078,8 @@
 		"wigglytuff": {
 			"flags": {},
 			"sets": [{ 
-				"species": "Wigglytuff"
-				
+				"species": "Wigglytuff",
+				"ability": ["None"],
 				"evs": {"hp": 252, "atk": 252, "def": 252, "spc": 252, "spd": 252},
 				"moves": [["Sing"], ["Thunderbolt"], ["Blizzard"], ["Counter"]]
 			}]
