@@ -221,15 +221,15 @@ let Formats = [
 		},
 	},
 	
-	// Yellow Colosseum2 Metagames, commented out until the proper sleep mechanics can be added in a mod. 
+	// Yellow Colosseum2 Metagames, in beta
 	///////////////////////////////////////////////////////////////////
-	/*{
-		section: "Yellow Colosseum2 Metagames",
+	{
+		section: "Yellow Colosseum 2 Metagames",
 		column: 2,
 	},
 	{
         name: "[Gen 1] Poke Cup",
-        desc: `Yellow Poke Cup, a port of the Nintendo Cup 1997 format to the N64. This introduced the format to an international audience.`,
+        desc: `Yellow Poke Cup, a port of the Nintendo Cup 1997.`,
         mod: 'gen1',
 		ruleset: ['Obtainable', 'Team Preview', 'Cup Level Limit', 'Stadium Sleep Clause', 'Freeze Clause Mod', 'Species Clause', 'Exact HP Mod', 'Nickname Clause', 'Cancel Mod'],
 		banlist: ['Uber',
@@ -268,7 +268,7 @@ let Formats = [
 			validate: [3, 6],
 			battle: 3,
 		},
-	},*/
+	},
  
 	// Modded Formats
 	///////////////////////////////////////////////////////////////////
