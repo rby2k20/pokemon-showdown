@@ -228,7 +228,7 @@ let Formats = [
 		column: 2,
 	},
 	{
-        name: "[Gen 1] Poke Cup",
+        name: "[Gen 1] Yellow Poke Cup",
         desc: `Yellow Poke Cup, a port of the Nintendo Cup 1997.`,
         mod: 'gen1',
 		ruleset: ['Obtainable', 'Team Preview', 'Cup Level Limit', 'Stadium Sleep Clause', 'Freeze Clause Mod', 'Species Clause', 'Exact HP Mod', 'Nickname Clause', 'Cancel Mod'],
@@ -242,7 +242,7 @@ let Formats = [
 		},
 	},
 	{
-        name: "[Gen 1] Pika Cup",
+        name: "[Gen 1] Yellow Pika Cup",
         desc: `Yellow Pika Cup, played in the Stadium World Tour in the year 2000.`,
         mod: 'gen1',
 		ruleset: ['Obtainable', 'Team Preview', 'Cup Level Limit', 'Stadium Sleep Clause', 'Freeze Clause Mod', 'Species Clause', 'Exact HP Mod', 'Nickname Clause', 'Cancel Mod'],
