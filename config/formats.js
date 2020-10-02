@@ -329,8 +329,7 @@ let Formats = [
 		mod: 'gen1doubles',
 		gameType: 'doubles',
 		ruleset: ['Standard'],
-		banlist: ['Uber'],
-		debug: true,
+		banlist: ['Uber', 'Wrap', 'Fire Spin', 'Clamp', 'Bind'],
 	},
 	
 	// Hacked Formats
