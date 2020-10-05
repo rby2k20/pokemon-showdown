@@ -518,21 +518,6 @@ let Formats = [
 			'Exeggutor + Stun Spore + Stomp', 'Jolteon + Focus Energy + Thunder Shock', 'Flareon + Focus Energy + Ember'],
 	},
 	{
-		name: "[Gen 1] Mediocremons",
-		desc: `A metagame where only Pokemon with no base stat above 100 are allowed.`,
-
-		mod: 'gen1',
-		ruleset: ['Standard'],
-		banlist: ['Uber', 'Alakazam', 'Cloyster', 'Exeggutor', 'Gengar', 'Golem', 'Jolteon', 'Lapras', 'Rhydon', 'Slowbro', 
-			  'Snorlax', 'Starmie', 'Tauros', 'Zapdos', 'Aerodactyl', 'Arcanine', 'Articuno', 'Blastoise', 'Charizard', 
-			  'Dodrio', 'Dragonite', 'Dugtrio', 'Electabuzz', 'Electrode', 'Fearow', 'Flareon', 'Graveler', 'Gyarados', 
-			  'Hitmonchan', 'Hitmonlee', 'Hypno', 'Kabutops', 'Kadabra', 'Kangaskhan', 'Kingler', 'Machamp', 'Magneton', 
-			  'Marowak', 'Moltres', 'Mr. Mime', 'Muk', 'Ninetales', 'Omastar', 'Onix', 'Persian', 'Pinsir', 'Primeape', 
-			  'Raichu', 'Rapidash', 'Sandslash', 'Scyther', 'Tangela', 'Tentacruel', 'Vaporeon', 'Venusaur', 'Victreebel', 
-			  'Vileplume', 'Weezing', 'Wigglytuff', 'Haunter', 'Machoke', 'Abra', 'Gastly', 'Geodude', 'Jigglypuff', 'Krabby', 
-			  'Omanyte', 'Shellder', 'Tentacool', 'Voltorb', 'Chansey'],
-	},
-	{
 		name: "[Gen 1] Monotype",
 		desc: `All the Pok&eacute;mon on a team must share a type.`,
 
@@ -552,6 +537,21 @@ let Formats = [
 		banlist: ['Uber', 'Nidoking + Fury Attack + Thrash', 'Exeggutor + Poison Powder + Stomp', 'Exeggutor + Sleep Powder + Stomp',
 			'Exeggutor + Stun Spore + Stomp', 'Jolteon + Focus Energy + Thunder Shock', 'Flareon + Focus Energy + Ember'],
 	},
+	{
+		name: "[Gen 1] Mediocremons",
+		desc: `A metagame where only Pokemon with no base stat above 100 are allowed.`,
+
+		mod: 'gen1',
+		ruleset: ['Standard'],
+		banlist: ['Uber', 'Alakazam', 'Cloyster', 'Exeggutor', 'Gengar', 'Golem', 'Jolteon', 'Lapras', 'Rhydon', 'Slowbro', 
+			  'Snorlax', 'Starmie', 'Tauros', 'Zapdos', 'Aerodactyl', 'Arcanine', 'Articuno', 'Blastoise', 'Charizard', 
+			  'Dodrio', 'Dragonite', 'Dugtrio', 'Electabuzz', 'Electrode', 'Fearow', 'Flareon', 'Graveler', 'Gyarados', 
+			  'Hitmonchan', 'Hitmonlee', 'Hypno', 'Kabutops', 'Kadabra', 'Kangaskhan', 'Kingler', 'Machamp', 'Magneton', 
+			  'Marowak', 'Moltres', 'Mr. Mime', 'Muk', 'Ninetales', 'Omastar', 'Onix', 'Persian', 'Pinsir', 'Primeape', 
+			  'Raichu', 'Rapidash', 'Sandslash', 'Scyther', 'Tangela', 'Tentacruel', 'Vaporeon', 'Venusaur', 'Victreebel', 
+			  'Vileplume', 'Weezing', 'Wigglytuff', 'Haunter', 'Machoke', 'Abra', 'Gastly', 'Geodude', 'Jigglypuff', 'Krabby', 
+			  'Omanyte', 'Shellder', 'Tentacool', 'Voltorb', 'Chansey'],
+	},
 	//FIXME: This doesn't work for some reason. I have a thing in rulesets.js for it, but the code breaks when used. It may be the .ts I copied it from? - Plague
 	/*{
 		name: "[Gen 1] Flipped",
@@ -569,6 +569,41 @@ let Formats = [
 		ruleset: ['Standard', 'Scalemons Mod'],
 		banlist: ['Uber', 'Nidoking + Fury Attack + Thrash', 'Exeggutor + Poison Powder + Stomp', 'Exeggutor + Sleep Powder + Stomp',
 			'Exeggutor + Stun Spore + Stomp', 'Jolteon + Focus Energy + Thunder Shock', 'Flareon + Focus Energy + Ember'],
+	},
+	{
+		name: "[Gen 1] Tier Shift",
+		desc: `Pok&eacute;mon below OU get all their stats boosted. UU/RUBL get +10, RU/NUBL get +20, NU/PUBL get +30, and PU or lower get +40.`,
+		threads: [
+			`&bullet; <a href="https://www.smogon.com/forums/threads/3662165/">Tier Shift</a>`,
+		],
+
+		mod: 'gen1',
+		ruleset: ['[Gen 1] OU'],
+		onModifySpecies(species, target, source, effect) {
+			if (!species.baseStats) return;
+			const boosts: {[tier: string]: number} = {
+				uu: 10,
+				rubl: 10,
+				ru: 20,
+				nubl: 20,
+				nu: 30,
+				publ: 30,
+				pu: 40,
+				nfe: 40,
+				lcuber: 40,
+				lc: 40,
+			};
+			const tier = this.toID(species.tier) || 'ou';
+			if (!(tier in boosts)) return;
+			const pokemon: Species = this.dex.deepClone(species);
+			const boost = boosts[tier];
+			let statName: StatName;
+			for (statName in pokemon.baseStats) {
+				if (statName === 'hp') continue;
+				pokemon.baseStats[statName] = this.clampIntRange(pokemon.baseStats[statName] + boost, 1, 255);
+			}
+			return pokemon;
+		},
 	},
 	{
 		name: "[Gen 1] STABmons",
