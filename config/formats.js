@@ -37,7 +37,7 @@ let Formats = [
 			'Exeggutor + Stun Spore + Stomp', 'Jolteon + Focus Energy + Thunder Shock', 'Flareon + Focus Energy + Ember',
 		],
 	},
-	
+
 	// Smogon Formats
 	///////////////////////////////////////////////////////////////////
 	{
@@ -105,7 +105,7 @@ let Formats = [
 			'Exeggutor + Stun Spore + Stomp', 'Jolteon + Focus Energy + Thunder Shock', 'Flareon + Focus Energy + Ember',
 		],
 	},
-	
+
 	// Nintendo Cup
 	///////////////////////////////////////////////////////////////////
 	{
@@ -128,7 +128,7 @@ let Formats = [
     {
         name: "[Gen 1] Nintendo Cup 98",
         desc: `Nintendo Cup that only allowed specific in-game Pokemon, played on Stadium.`,
-        mod: 'stadium', //to-do: make a stadiumjp format. Once that's done, move this to Stadium Metagames, as it is technically a format anyway. 
+        mod: 'stadium', //to-do: make a stadiumjp format. Once that's done, move this to Stadium Metagames, as it is technically a format anyway.
         ruleset: ['Obtainable', 'Team Preview', 'Sleep Clause Mod', 'Freeze Clause Mod', 'Species Clause', 'Exact HP Mod', 'Nickname Clause', 'Cancel Mod'],
         banlist: ['Uber', 'OU', 'UUBL', 'UU', 'NUBL', 'NU', 'NFE', 'LC', 'Nidoking + Fury Attack + Thrash', 'Exeggutor + Poison Powder + Stomp', 'Exeggutor + Sleep Powder + Stomp', 'Exeggutor + Stun Spore + Stomp', 'Jolteon + Focus Energy + Thunder Shock', 'Flareon + Focus Energy + Ember'],
         unbanlist: ['Beedrill','Fearow','Pikachu','Nidoqueen','Nidoking','Dugtrio','Primeape','Arcanine','Alakazam','Machamp','Golem','Magneton','Cloyster','Gengar','Onix','Hypno','Electrode','Exeggutor','Chansey','Kangaskhan','Starmie','Scyther','Jynx','Pinsir','Tauros','Gyarados','Lapras','Ditto','Vaporeon','Jolteon','Flareon','Aerodactyl','Snorlax'],
@@ -161,7 +161,7 @@ let Formats = [
 	name: "[Gen 1] Stadium Anything Goes",
 	desc: `The Pokemon Stadium Anything Goes format, taken directly from the ruleset in-game.`,
 	mod: 'stadium',
-		ruleset: ['Obtainable', 'Team Preview', 'Stadium Sleep Clause', 'Freeze Clause Mod', 'Nickname Clause', 'Endless Battle Clause', 'Exact HP Mod', 'Cancel Mod', 
+		ruleset: ['Obtainable', 'Team Preview', 'Stadium Sleep Clause', 'Freeze Clause Mod', 'Nickname Clause', 'Endless Battle Clause', 'Exact HP Mod', 'Cancel Mod',
 			  'Allow Tradeback'],
 		banlist: ['Nidoking + Fury Attack + Thrash', 'Exeggutor + Poison Powder + Stomp', 'Exeggutor + Sleep Powder + Stomp',
 			'Exeggutor + Stun Spore + Stomp', 'Jolteon + Focus Energy + Thunder Shock', 'Flareon + Focus Energy + Ember',],
@@ -220,7 +220,7 @@ let Formats = [
 			battle: 3,
 		},
 	},
-	
+
 	// Yellow Colosseum2 Metagames, in beta
 	///////////////////////////////////////////////////////////////////
 	{
@@ -269,15 +269,15 @@ let Formats = [
 			battle: 3,
 		},
 	},
- 
+
 	// Modded Formats
 	///////////////////////////////////////////////////////////////////
-	
+
 	{
 		section: "Modded Formats",
 		column: 3,
 	},
-	
+
 	/*{
 		name: "[Gen 3] ADV 50",
 		threads: [
@@ -331,7 +331,7 @@ let Formats = [
 		ruleset: ['Standard'],
 		banlist: ['Uber', 'Wrap', 'Fire Spin', 'Clamp', 'Bind'],
 	},
-	
+
 	// Hacked Formats
 	///////////////////////////////////////////////////////////////////
 	{
@@ -364,7 +364,7 @@ let Formats = [
 		banlist: ['Mewtwo', 'Wrap', 'Fire Spin', 'Clamp', 'Bind'],
 		unbanlist: ['MissingNo.'],
 	},
-	
+
 	// Randomized Formats
 	///////////////////////////////////////////////////////////////////
 	{
@@ -387,9 +387,9 @@ let Formats = [
 			`&bullet; <a href="https://pastebin.com/J4Vft6wk">Overview</a>`,
 		],
 
-		mod: 'gen1estu',
+		mod: 'gen1',
 		team: 'randomAutoLevelAdjusted',
-		ruleset: ['Pokemon', 'Standard'],
+		ruleset: ['Standard'],
 	},
 	{
 		name: "[Gen 1] Challenge Cup",
@@ -419,19 +419,19 @@ let Formats = [
 
 		mod: 'gen1',
 		ruleset: ['HP Percentage Mod', 'Cancel Mod'],
-		banlist: ['Pound', 'Karate Chop', 'Double Slap', 'Comet Punch', 'Mega Punch', 'Pay Day', 'Fire Punch', 'Ice Punch', 'Thunder Punch', 'Scratch', 'Vise Grip', 
-			'Guillotine', 'Razor Wind', 'Swords Dance', 'Cut', 'Gust', 'Wing Attack', 'Whirlwind', 'Fly', 'Bind', 'Slam', 'Vine Whip', 'Stomp', 'Double Kick', 
-			'Mega Kick', 'JumpKick', 'Rolling Kick', 'Sand Attack', 'Headbutt', 'Horn Attack', 'Fury Attack', 'Horn Drill', 'Tackle', 'Body Slam', 'Wrap', 
-			'Take Down', 'Thrash', 'Double-Edge', 'Tail Whip', 'Poison Sting', 'Twineedle', 'Pin Missile', 'Leer', 'Bite', 'Growl', 'Roar', 'Sing', 'Supersonic', 
-			'Sonicboom', 'Disable', 'Acid', 'Ember', 'Flamethrower', 'Mist', 'Water Gun', 'Hydro Pump', 'Surf', 'Ice Beam', 'Blizzard', 'Psybeam', 'Bubblebeam', 
-			'Aurora Beam', 'Hyper Beam', 'Peck', 'Drill Peck', 'Submission', 'Low Kick', 'Counter', 'Seismic Toss', 'Strength', 'Absorb', 'Mega Drain', 
-			'Leech Seed', 'Growth', 'Razor Leaf', 'Solar Beam', 'Poisonpowder', 'Stun Spore', 'Sleep Powder', 'Petal Dance', 'String Shot', 'Dragon Rage', 
-			'Fire Spin', 'Thundershock', 'Thunderbolt', 'Thunder Wave', 'Thunder', 'Rock Throw', 'Earthquake', 'Fissure', 'Dig', 'Toxic', 'Confusion', 'Psychic', 
-			'Hypnosis', 'Meditate', 'Agility', 'Quick Attack', 'Rage', 'Teleport', 'Night Shade', 'Mimic', 'Screech', 'Double Team', 'Recover', 'Harden', 'Minimize', 
-			'Smokescreen', 'Confuse Ray', 'Withdraw', 'Defense Curl', 'Barrier', 'Light Screen', 'Haze', 'Reflect', 'Focus Energy', 'Bide', 'Mirror Move', 'Selfdestruct', 
-			'Egg Bomb', 'Lick', 'Smog', 'Sludge', 'Bone Club', 'Fire Blast', 'Waterfall', 'Clamp', 'Swift', 'Skull Bash', 'Spike Cannon', 'Constrict', 'Amnesia', 'Kinesis', 
-			'Softboiled', 'Hi Jump Kick', 'Glare', 'Dream Eater', 'Poison Gas', 'Barrage', 'Leech Life', 'Lovely Kiss', 'Sky Attack', 'Transform', 'Bubble', 'Dizzy Punch', 
-			'Spore', 'Flash', 'Psywave', 'Splash', 'Acid Armor', 'Crabhammer', 'Explosion', 'Fury Swipes', 'Bonemerang', 'Rest', 'Rock Slide', 'Hyper Fang', 'Sharpen', 'Conversion', 
+		banlist: ['Pound', 'Karate Chop', 'Double Slap', 'Comet Punch', 'Mega Punch', 'Pay Day', 'Fire Punch', 'Ice Punch', 'Thunder Punch', 'Scratch', 'Vise Grip',
+			'Guillotine', 'Razor Wind', 'Swords Dance', 'Cut', 'Gust', 'Wing Attack', 'Whirlwind', 'Fly', 'Bind', 'Slam', 'Vine Whip', 'Stomp', 'Double Kick',
+			'Mega Kick', 'JumpKick', 'Rolling Kick', 'Sand Attack', 'Headbutt', 'Horn Attack', 'Fury Attack', 'Horn Drill', 'Tackle', 'Body Slam', 'Wrap',
+			'Take Down', 'Thrash', 'Double-Edge', 'Tail Whip', 'Poison Sting', 'Twineedle', 'Pin Missile', 'Leer', 'Bite', 'Growl', 'Roar', 'Sing', 'Supersonic',
+			'Sonicboom', 'Disable', 'Acid', 'Ember', 'Flamethrower', 'Mist', 'Water Gun', 'Hydro Pump', 'Surf', 'Ice Beam', 'Blizzard', 'Psybeam', 'Bubblebeam',
+			'Aurora Beam', 'Hyper Beam', 'Peck', 'Drill Peck', 'Submission', 'Low Kick', 'Counter', 'Seismic Toss', 'Strength', 'Absorb', 'Mega Drain',
+			'Leech Seed', 'Growth', 'Razor Leaf', 'Solar Beam', 'Poisonpowder', 'Stun Spore', 'Sleep Powder', 'Petal Dance', 'String Shot', 'Dragon Rage',
+			'Fire Spin', 'Thundershock', 'Thunderbolt', 'Thunder Wave', 'Thunder', 'Rock Throw', 'Earthquake', 'Fissure', 'Dig', 'Toxic', 'Confusion', 'Psychic',
+			'Hypnosis', 'Meditate', 'Agility', 'Quick Attack', 'Rage', 'Teleport', 'Night Shade', 'Mimic', 'Screech', 'Double Team', 'Recover', 'Harden', 'Minimize',
+			'Smokescreen', 'Confuse Ray', 'Withdraw', 'Defense Curl', 'Barrier', 'Light Screen', 'Haze', 'Reflect', 'Focus Energy', 'Bide', 'Mirror Move', 'Selfdestruct',
+			'Egg Bomb', 'Lick', 'Smog', 'Sludge', 'Bone Club', 'Fire Blast', 'Waterfall', 'Clamp', 'Swift', 'Skull Bash', 'Spike Cannon', 'Constrict', 'Amnesia', 'Kinesis',
+			'Softboiled', 'Hi Jump Kick', 'Glare', 'Dream Eater', 'Poison Gas', 'Barrage', 'Leech Life', 'Lovely Kiss', 'Sky Attack', 'Transform', 'Bubble', 'Dizzy Punch',
+			'Spore', 'Flash', 'Psywave', 'Splash', 'Acid Armor', 'Crabhammer', 'Explosion', 'Fury Swipes', 'Bonemerang', 'Rest', 'Rock Slide', 'Hyper Fang', 'Sharpen', 'Conversion',
 			'Tri Attack', 'Super Fang', 'Slash', 'Substitute'],
 		onValidateSet(set) {
 			if (set.moves.length !== 1 || this.dex.getMove(set.moves[0]).id !== 'metronome') {
@@ -439,8 +439,8 @@ let Formats = [
 			}
 		},
 	},
-	
-	// Miscellaneous Metagames 
+
+	// Miscellaneous Metagames
 	///////////////////////////////////////////////////////////////////
 
 	{
@@ -457,7 +457,7 @@ let Formats = [
 		mod: 'gen1',
 		ruleset: ['Obtainable', 'HP Percentage Mod', 'Cancel Mod', 'Endless Battle Clause', 'Allow Tradeback'],
 		banlist: ['Nidoking + Fury Attack + Thrash', 'Exeggutor + Poison Powder + Stomp', 'Exeggutor + Sleep Powder + Stomp',
-			'Exeggutor + Stun Spore + Stomp', 'Jolteon + Focus Energy + Thunder Shock', 'Flareon + Focus Energy + Ember'],	
+			'Exeggutor + Stun Spore + Stomp', 'Jolteon + Focus Energy + Thunder Shock', 'Flareon + Focus Energy + Ember'],
 	},
 	{
 		name: "[Gen 1] NFE",
@@ -472,7 +472,7 @@ let Formats = [
 			`&bullet; <a href="https://docs.google.com/document/d/1ZJk6uxtDPgCrSO_2GcwmmAFmTUZGsPsW5Jncf6h9rDE/edit?usp=sharing">Meloyy's Middle Cup Guide</a>`,
 			`&bullet; <a href="https://www.smogon.com/forums/threads/gen-1-side-formats-pika-cup-petit-cup-little-cup-level-100-and-middle-cup.3651579/post-8162599">Gen 1 Side Formats Thread</a>`,
 		],
-		
+
 		mod: 'gen1',
 		ruleset: ['Standard', 'Not Fully Evolved'],
 		banlist: ['LC']
@@ -544,13 +544,13 @@ let Formats = [
 
 		mod: 'gen1',
 		ruleset: ['Standard'],
-		banlist: ['Uber', 'Alakazam', 'Cloyster', 'Exeggutor', 'Gengar', 'Golem', 'Jolteon', 'Lapras', 'Rhydon', 'Slowbro', 
-			  'Snorlax', 'Starmie', 'Tauros', 'Zapdos', 'Aerodactyl', 'Arcanine', 'Articuno', 'Blastoise', 'Charizard', 
-			  'Dodrio', 'Dragonite', 'Dugtrio', 'Electabuzz', 'Electrode', 'Fearow', 'Flareon', 'Graveler', 'Gyarados', 
-			  'Hitmonchan', 'Hitmonlee', 'Hypno', 'Kabutops', 'Kadabra', 'Kangaskhan', 'Kingler', 'Machamp', 'Magneton', 
-			  'Marowak', 'Moltres', 'Mr. Mime', 'Muk', 'Ninetales', 'Omastar', 'Onix', 'Persian', 'Pinsir', 'Primeape', 
-			  'Raichu', 'Rapidash', 'Sandslash', 'Scyther', 'Tangela', 'Tentacruel', 'Vaporeon', 'Venusaur', 'Victreebel', 
-			  'Vileplume', 'Weezing', 'Wigglytuff', 'Haunter', 'Machoke', 'Abra', 'Gastly', 'Geodude', 'Jigglypuff', 'Krabby', 
+		banlist: ['Uber', 'Alakazam', 'Cloyster', 'Exeggutor', 'Gengar', 'Golem', 'Jolteon', 'Lapras', 'Rhydon', 'Slowbro',
+			  'Snorlax', 'Starmie', 'Tauros', 'Zapdos', 'Aerodactyl', 'Arcanine', 'Articuno', 'Blastoise', 'Charizard',
+			  'Dodrio', 'Dragonite', 'Dugtrio', 'Electabuzz', 'Electrode', 'Fearow', 'Flareon', 'Graveler', 'Gyarados',
+			  'Hitmonchan', 'Hitmonlee', 'Hypno', 'Kabutops', 'Kadabra', 'Kangaskhan', 'Kingler', 'Machamp', 'Magneton',
+			  'Marowak', 'Moltres', 'Mr. Mime', 'Muk', 'Ninetales', 'Omastar', 'Onix', 'Persian', 'Pinsir', 'Primeape',
+			  'Raichu', 'Rapidash', 'Sandslash', 'Scyther', 'Tangela', 'Tentacruel', 'Vaporeon', 'Venusaur', 'Victreebel',
+			  'Vileplume', 'Weezing', 'Wigglytuff', 'Haunter', 'Machoke', 'Abra', 'Gastly', 'Geodude', 'Jigglypuff', 'Krabby',
 			  'Omanyte', 'Shellder', 'Tentacool', 'Voltorb', 'Chansey'],
 	},
 	//FIXME: This doesn't work for some reason. I have a thing in rulesets.js for it, but the code breaks when used. It may be the .ts I copied it from? - Plague
@@ -570,41 +570,6 @@ let Formats = [
 		ruleset: ['Standard', 'Scalemons Mod'],
 		banlist: ['Uber', 'Nidoking + Fury Attack + Thrash', 'Exeggutor + Poison Powder + Stomp', 'Exeggutor + Sleep Powder + Stomp',
 			'Exeggutor + Stun Spore + Stomp', 'Jolteon + Focus Energy + Thunder Shock', 'Flareon + Focus Energy + Ember'],
-	},
-	{
-		name: "[Gen 1] Tier Shift",
-		desc: `Pok&eacute;mon below OU get all their stats boosted. UU/RUBL get +10, RU/NUBL get +20, NU/PUBL get +30, and PU or lower get +40.`,
-		threads: [
-			`&bullet; <a href="https://www.smogon.com/forums/threads/3662165/">Tier Shift</a>`,
-		],
-
-		mod: 'gen1',
-		ruleset: ['[Gen 1] OU'],
-		onModifySpecies(species, target, source, effect) {
-			if (!species.baseStats) return;
-			const boosts: {[tier: string]: number} = {
-				uu: 10,
-				rubl: 10,
-				ru: 20,
-				nubl: 20,
-				nu: 30,
-				publ: 30,
-				pu: 40,
-				nfe: 40,
-				lcuber: 40,
-				lc: 40,
-			};
-			const tier = this.toID(species.tier) || 'ou';
-			if (!(tier in boosts)) return;
-			const pokemon: Species = this.dex.deepClone(species);
-			const boost = boosts[tier];
-			let statName: StatName;
-			for (statName in pokemon.baseStats) {
-				if (statName === 'hp') continue;
-				pokemon.baseStats[statName] = this.clampIntRange(pokemon.baseStats[statName] + boost, 1, 255);
-			}
-			return pokemon;
-		},
 	},
 	{
 		name: "[Gen 1] STABmons",
@@ -689,7 +654,7 @@ let Formats = [
 
 		mod: 'gen1',
 		ruleset: ['Standard'],
-		banlist: ['Uber', 'Psywave', 'Alakazam', 'Chansey', 'Cloyster', 'Exeggutor', 'Gengar', 'Golem', 'Jolteon', 
+		banlist: ['Uber', 'Psywave', 'Alakazam', 'Chansey', 'Cloyster', 'Exeggutor', 'Gengar', 'Golem', 'Jolteon',
 			  'Jynx', 'Lapras', 'Rhydon', 'Slowbro', 'Snorlax', 'Starmie', 'Tauros', 'Zapdos'],
 	},
 	{
@@ -697,9 +662,9 @@ let Formats = [
 
 		mod: 'gen1',
 		ruleset: ['Standard'],
-		banlist: ['Psywave', 'Uber','Alakazam', 'Chansey', 'Cloyster', 'Exeggutor', 'Gengar', 'Golem', 'Jolteon', 
-			  'Jynx', 'Lapras', 'Rhydon', 'Slowbro', 'Snorlax', 'Starmie', 'Tauros', 'Zapdos', 'Articuno', 
-			  'Dodrio', 'Dragonite', 'Gyarados', 'Haunter', 'Hypno', 'Kadabra', 'Kangaskhan', 'Moltres', 'Persian', 
+		banlist: ['Psywave', 'Uber','Alakazam', 'Chansey', 'Cloyster', 'Exeggutor', 'Gengar', 'Golem', 'Jolteon',
+			  'Jynx', 'Lapras', 'Rhydon', 'Slowbro', 'Snorlax', 'Starmie', 'Tauros', 'Zapdos', 'Articuno',
+			  'Dodrio', 'Dragonite', 'Gyarados', 'Haunter', 'Hypno', 'Kadabra', 'Kangaskhan', 'Moltres', 'Persian',
 			  'Poliwrath', 'Raichu', 'Raticate', 'Tentacruel', 'Victreebel'],
 	},
 	{
@@ -707,11 +672,11 @@ let Formats = [
 
 		mod: 'gen1',
 		ruleset: ['Standard'],
-		banlist: ['Psywave', 'Uber', 'Alakazam', 'Chansey', 'Cloyster', 'Exeggutor', 'Gengar', 'Golem', 'Jolteon', 
-			  'Jynx', 'Lapras', 'Rhydon', 'Slowbro', 'Snorlax', 'Starmie', 'Tauros', 'Zapdos', 'Articuno', 'Dodrio', 
-			  'Dragonite', 'Gyarados', 'Haunter', 'Hypno', 'Kadabra', 'Kangaskhan', 'Moltres', 'Persian', 'Poliwrath', 
-			  'Raichu', 'Raticate', 'Tentacruel', 'Victreebel', 'Aerodactyl', 'Charizard', 'Clefable', 'Dewgong', 'Dugtrio', 
-			  'Electabuzz', 'Exeggcute', 'Fearow', 'Golduck', 'Kingler', 'Mr. Mime', 'Pinsir', 'Poliwhirl', 'Sandslash', 'Vaporeon', 
+		banlist: ['Psywave', 'Uber', 'Alakazam', 'Chansey', 'Cloyster', 'Exeggutor', 'Gengar', 'Golem', 'Jolteon',
+			  'Jynx', 'Lapras', 'Rhydon', 'Slowbro', 'Snorlax', 'Starmie', 'Tauros', 'Zapdos', 'Articuno', 'Dodrio',
+			  'Dragonite', 'Gyarados', 'Haunter', 'Hypno', 'Kadabra', 'Kangaskhan', 'Moltres', 'Persian', 'Poliwrath',
+			  'Raichu', 'Raticate', 'Tentacruel', 'Victreebel', 'Aerodactyl', 'Charizard', 'Clefable', 'Dewgong', 'Dugtrio',
+			  'Electabuzz', 'Exeggcute', 'Fearow', 'Golduck', 'Kingler', 'Mr. Mime', 'Pinsir', 'Poliwhirl', 'Sandslash', 'Vaporeon',
 			  'Venusaur', 'Wigglytuff'],
 	},
 	{
@@ -719,12 +684,12 @@ let Formats = [
 
 		mod: 'gen1',
 		ruleset: ['Standard'],
-		banlist: ['Psywave', 'Uber', 'Alakazam', 'Chansey', 'Cloyster', 'Exeggutor', 'Gengar', 'Golem', 'Jolteon', 
-			  'Jynx', 'Lapras', 'Rhydon', 'Slowbro', 'Snorlax', 'Starmie', 'Tauros', 'Zapdos', 'Articuno', 'Dodrio', 'Dragonite', 
-			  'Gyarados', 'Haunter', 'Hypno', 'Kadabra', 'Kangaskhan', 'Moltres', 'Persian', 'Poliwrath', 'Raichu', 'Raticate', 'Tentacruel', 
-			  'Victreebel', 'Aerodactyl', 'Charizard', 'Clefable', 'Dewgong', 'Dugtrio', 'Electabuzz', 'Exeggcute', 'Fearow', 
-			  'Golduck', 'Kingler', 'Mr. Mime', 'Pinsir', 'Poliwhirl', 'Sandslash', 'Vaporeon', 'Venusaur', 'Wigglytuff', 
-			  'Abra', 'Arcanine', 'Blastoise', 'Nidoking', 'Nidoqueen', 'Omastar', 'Porygon', 'Rapidash', 'Scyther', 
+		banlist: ['Psywave', 'Uber', 'Alakazam', 'Chansey', 'Cloyster', 'Exeggutor', 'Gengar', 'Golem', 'Jolteon',
+			  'Jynx', 'Lapras', 'Rhydon', 'Slowbro', 'Snorlax', 'Starmie', 'Tauros', 'Zapdos', 'Articuno', 'Dodrio', 'Dragonite',
+			  'Gyarados', 'Haunter', 'Hypno', 'Kadabra', 'Kangaskhan', 'Moltres', 'Persian', 'Poliwrath', 'Raichu', 'Raticate', 'Tentacruel',
+			  'Victreebel', 'Aerodactyl', 'Charizard', 'Clefable', 'Dewgong', 'Dugtrio', 'Electabuzz', 'Exeggcute', 'Fearow',
+			  'Golduck', 'Kingler', 'Mr. Mime', 'Pinsir', 'Poliwhirl', 'Sandslash', 'Vaporeon', 'Venusaur', 'Wigglytuff',
+			  'Abra', 'Arcanine', 'Blastoise', 'Nidoking', 'Nidoqueen', 'Omastar', 'Porygon', 'Rapidash', 'Scyther',
 			  'Slowpoke', 'Staryu', 'Tangela', 'Venomoth'],
 	},
 	{
@@ -732,14 +697,14 @@ let Formats = [
 
 		mod: 'gen1',
 		ruleset: ['Standard'],
-		banlist: ['Psywave', 'Uber', 'Alakazam', 'Chansey', 'Cloyster', 'Exeggutor', 'Gengar', 'Golem', 'Jolteon', 'Jynx', 'Lapras', 
-			  'Rhydon', 'Slowbro', 'Snorlax', 'Starmie', 'Tauros', 'Zapdos', 'Articuno', 'Dodrio', 'Dragonite', 'Gyarados', 
-			  'Haunter', 'Hypno', 'Kadabra', 'Kangaskhan', 'Moltres', 'Persian', 'Poliwrath', 'Raichu', 'Raticate', 'Tentacruel', 
-			  'Victreebel', 'Aerodactyl', 'Charizard', 'Clefable', 'Dewgong', 'Dugtrio', 'Electabuzz', 'Exeggcute', 'Fearow', 
-			  'Golduck', 'Kingler', 'Mr. Mime', 'Pinsir', 'Poliwhirl', 'Sandslash', 'Vaporeon', 'Venusaur', 'Wigglytuff', 
-			  'Abra', 'Arcanine', 'Blastoise', 'Nidoking', 'Nidoqueen', 'Omastar', 'Porygon', 'Rapidash', 'Scyther', 
-			  'Slowpoke', 'Staryu', 'Tangela', 'Venomoth', 'Arbok', 'Dragonair', 'Drowzee', 'Electrode', 'Gastly', 
-			  'Graveler', 'Lickitung', 'Magmar', 'Ninetales', 'Parasect', 'Poliwag', 'Primeape', 'Seadra', 'Seaking', 
+		banlist: ['Psywave', 'Uber', 'Alakazam', 'Chansey', 'Cloyster', 'Exeggutor', 'Gengar', 'Golem', 'Jolteon', 'Jynx', 'Lapras',
+			  'Rhydon', 'Slowbro', 'Snorlax', 'Starmie', 'Tauros', 'Zapdos', 'Articuno', 'Dodrio', 'Dragonite', 'Gyarados',
+			  'Haunter', 'Hypno', 'Kadabra', 'Kangaskhan', 'Moltres', 'Persian', 'Poliwrath', 'Raichu', 'Raticate', 'Tentacruel',
+			  'Victreebel', 'Aerodactyl', 'Charizard', 'Clefable', 'Dewgong', 'Dugtrio', 'Electabuzz', 'Exeggcute', 'Fearow',
+			  'Golduck', 'Kingler', 'Mr. Mime', 'Pinsir', 'Poliwhirl', 'Sandslash', 'Vaporeon', 'Venusaur', 'Wigglytuff',
+			  'Abra', 'Arcanine', 'Blastoise', 'Nidoking', 'Nidoqueen', 'Omastar', 'Porygon', 'Rapidash', 'Scyther',
+			  'Slowpoke', 'Staryu', 'Tangela', 'Venomoth', 'Arbok', 'Dragonair', 'Drowzee', 'Electrode', 'Gastly',
+			  'Graveler', 'Lickitung', 'Magmar', 'Ninetales', 'Parasect', 'Poliwag', 'Primeape', 'Seadra', 'Seaking',
 			  'Vileplume', 'Wartortle'],
 	},
 ];
