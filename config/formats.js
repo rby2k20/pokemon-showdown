@@ -386,7 +386,7 @@ let Formats = [
 			`&bullet; <a href="https://pastebin.com/J4Vft6wk">Overview</a>`,
 		],
 
-		mod: 'gen1',
+		mod: 'gen1estu',
 		team: 'randomAutoLevelAdjusted',
 		ruleset: ['Pokemon', 'Standard'],
 	},
