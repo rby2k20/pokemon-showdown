@@ -27,7 +27,7 @@ class RandomTeams {
 	 * @param {Format | string} format
 	 * @param {?PRNG | [number, number, number, number]} [prng]
 	 */
-	constructor(format, prng) {
+	constructor(format, seed, pokemonRecord) {
 		format = Dex.getFormat(format);
 		this.dex = Dex.forFormat(format);
 		this.gen = this.dex.gen;
@@ -37,6 +37,7 @@ class RandomTeams {
 		this.factoryTier = '';
 		this.format = format;
 		this.prng = prng && !Array.isArray(prng) ? prng : new PRNG(prng);
+		this.pokemonRecord = pokemonRecord;
 	}
 
 	/**
