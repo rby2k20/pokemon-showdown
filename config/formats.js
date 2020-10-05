@@ -379,6 +379,18 @@ let Formats = [
 		ruleset: ['Standard'],
 	},
 	{
+		name: "[Gen 1] Random Battle (Auto Level Adjusted)",
+		desc: `A variation of Gen 1 Random Battle developed by Estu that takes wins and losses to adjust the levels automatically.`,
+		threads:  [
+			`&bullet; <a href="https://www.smogon.com/forums/threads/random-battles.3526564/post-7643404">Introductory Thread</a>`,
+			`&bullet; <a href="https://pastebin.com/J4Vft6wk">Overview</a>`,
+		],
+
+		mod: 'gen1',
+		team: 'randomAutoLevelAdjusted',
+		ruleset: ['Pokemon', 'Standard'],
+	},
+	{
 		name: "[Gen 1] Challenge Cup",
 		desc: `Randomized teams of Pok&eacute;mon, limited only by what's available in-game.`,
 
