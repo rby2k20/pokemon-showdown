@@ -360,7 +360,8 @@ let Formats = [
 		debug: true,
 		trunc(n) { return Math.trunc(n); },
 		defaultLevel: 255,
-		ruleset: ['-Nonexistent', 'OHKO Clause', 'Evasion Moves Clause', 'HP Percentage Mod', 'Cancel Mod', 'Sleep Clause Mod', 'Endless Battle Clause'],
+		ruleset: ['-Nonexistent', 'OHKO Clause', 'Evasion Moves Clause', 'HP Percentage Mod', 'Cancel Mod', 'Freeze Clause Mod', 'Sleep Clause Mod', 'Endless Battle Clause'],
+		banlist: ['Mewtwo', 'Wrap', 'Fire Spin', 'Clamp', 'Bind'],
 		unbanlist: ['MissingNo.'],
 	},
 	
