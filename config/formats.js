@@ -119,8 +119,7 @@ let Formats = [
 	},
 	{
 		name: "[Gen 1] Nintendo Cup 97",
-		desc: `The official format for Red and Green from 1997. Team preview is on, and it functions as a bring 6 pick 3 format. 
-			Pokemon going into the battle must be between levels 50 and 55, but levels must not go over 155 in total.`,
+		desc: `The official format for Red and Green from 1997. Team preview is on, and it functions as a bring 6 pick 3 format. Pokemon going into the battle must be between levels 50 and 55, but levels must not go over 155 in total.`,
 		threads: [
 			`<a href="https://rby2k20.com/pokedex.php?meta=nc97">Strategy Dex</a>`,
 		],   
@@ -177,8 +176,7 @@ let Formats = [
 	},
 	{
 	name: "[Gen 1] Stadium Anything Goes",
-	desc: `The Pokemon Stadium Anything Goes format, taken directly from the ruleset in-game. This means Stadium Sleep Clause and Freeze Clause are still used, as they're ran innately in-game. 
-		Tradebacks are also enabled.`,
+	desc: `The Pokemon Stadium Anything Goes format, taken directly from the ruleset in-game. This means Stadium Sleep Clause and Freeze Clause are still used, as they're ran innately in-game. Tradebacks are also enabled.`,
 	mod: 'stadium',
 		ruleset: ['Obtainable', 'Team Preview', 'Stadium Sleep Clause', 'Freeze Clause Mod', 'Nickname Clause', 'Endless Battle Clause', 'Exact HP Mod', 'Cancel Mod',
 			  'Allow Tradeback'],
@@ -187,8 +185,7 @@ let Formats = [
 	},
     {
         name: "[Gen 1] Poke Cup",
-        desc: `Stadium Poke Cup, a port of the Nintendo Cup 1997 format to the N64. This introduced the format to an international audience. Team preview is on, and it 
-		functions as a bring 6 pick 3 format. Pokemon going into the battle must be between levels 50 and 55, but levels must not go over 155 in total.`,
+        desc: `Stadium Poke Cup, a port of the Nintendo Cup 1997 format to the N64. This introduced the format to an international audience. Team preview is on, and it functions as a bring 6 pick 3 format. Pokemon going into the battle must be between levels 50 and 55, but levels must not go over 155 in total.`,
 	threads: [
 		`<a href="https://rby2k20.com/pokedex.php?meta=nc97">Strategy Dex</a>`,
 		],    
@@ -206,8 +203,7 @@ let Formats = [
 	},
 	{
         name: "[Gen 1] Pika Cup",
-        desc: `Stadium Pika Cup, played in the Stadium World Tour in the year 2000. Any Pokemon obtainable at L20 or below can be used. It's a bring 6 pick 3 format, though 
-		Pokemon must be between L15 and L20. The total levels of participating Pokemon must not exceed L50.`,
+        desc: `Stadium Pika Cup, played in the Stadium World Tour in the year 2000. Any Pokemon obtainable at L20 or below can be used. It's a bring 6 pick 3 format, though Pokemon must be between L15 and L20. The total levels of participating Pokemon must not exceed L50.`,
 	threads: [
 		`<a href="https://rby2k20.com/pokedex.php?meta=pika">Strategy Dex</a>`,
 		],
@@ -225,9 +221,7 @@ let Formats = [
 	},
 	{
         name: "[Gen 1] Petit Cup",
-        desc: `Stadium Petit Cup, played in various tournaments in the 2000s. Pokémon must be of the lowest evolutionary stage, have a height no more than 2 m (6'07") 
-		and a weight no more than 20 kg (44.1 lbs.) to compete. In addition, Pokemon must be between levels 25 and 30. It's a bring 6 pick 3 format, and participating
-		Pokemon must not have their total levels exceed L80.`,
+        desc: `Stadium Petit Cup, played in various tournaments in the 2000s. Pokémon must be of the lowest evolutionary stage, have a height no more than 2 m (6'07") and a weight no more than 20 kg (44.1 lbs.) to compete. In addition, Pokemon must be between levels 25 and 30. It's a bring 6 pick 3 format, and participatingPokemon must not have their total levels exceed L80.`,
 	threads: [
 		`<a href="https://rby2k20.com/pokedex.php?meta=petit">Strategy Dex</a>`,
 		],
@@ -264,8 +258,7 @@ let Formats = [
 	},
 	{
         name: "[Gen 1] Yellow Poke Cup",
-        desc: `Yellow Poke Cup, a port of the Nintendo Cup 1997. Team preview is on, and it functions as a bring 6 pick 3 format. 
-		Pokemon going into the battle must be between levels 50 and 55, but levels must not go over 155 in total.`,
+        desc: `Yellow Poke Cup, a port of the Nintendo Cup 1997. Team preview is on, and it functions as a bring 6 pick 3 format. Pokemon going into the battle must be between levels 50 and 55, but levels must not go over 155 in total.`,
 	threads: [
 		`<a href="https://rby2k20.com/pokedex.php?meta=nc97">Strategy Dex</a>`,
 		],
@@ -283,8 +276,7 @@ let Formats = [
 	},
 	{
         name: "[Gen 1] Yellow Pika Cup",
-        desc: `A variation of Pika Cup that was ported to Pokemon Yellow for the Game Boy. Any Pokemon obtainable at L20 or below can be used. 
-		It's a bring 6 pick 3 format, though Pokemon must be between L15 and L20. The total levels of participating Pokemon must not exceed L50.`,
+        desc: `A variation of Pika Cup that was ported to Pokemon Yellow for the Game Boy. Any Pokemon obtainable at L20 or below can be used. It's a bring 6 pick 3 format, though Pokemon must be between L15 and L20. The total levels of participating Pokemon must not exceed L50.`,
 	threads: [
 		`<a href="https://rby2k20.com/pokedex.php?meta=pika">Strategy Dex</a>`,
 		],
@@ -302,9 +294,7 @@ let Formats = [
 	},
 	{
         name: "[Gen 1] Yellow Petit Cup",
-        desc: `A variation of Petit Cup that was ported to Pokemon Yellow for the Game Boy. Pokémon must be of the lowest evolutionary stage, have a height no more than 2 m (6'07") 
-		and a weight no more than 20 kg (44.1 lbs.) to compete. In addition, Pokemon must be between levels 25 and 30. It's a bring 6 pick 3 format, and participating
-		Pokemon must not have their total levels exceed L80.`,
+        desc: `A variation of Petit Cup that was ported to Pokemon Yellow for the Game Boy. Pokémon must be of the lowest evolutionary stage, have a height no more than 2 m (6'07") and a weight no more than 20 kg (44.1 lbs.) to compete. In addition, Pokemon must be between levels 25 and 30. It's a bring 6 pick 3 format, and participatingPokemon must not have their total levels exceed L80.`,
 	threads: [
 		`<a href="https://rby2k20.com/pokedex.php?meta=petit">Strategy Dex</a>`,
 		],
@@ -439,7 +429,7 @@ let Formats = [
 	},
 	{
 		name: "[Gen 1] Random Battle (Auto Level Adjusted)",
-		desc: `A variation of Gen 1 Random Battle developed by Estu that takes wins and losses to adjust the levels automatically.`,
+		desc: `A variation of Gen 1 Random Battle developed by Estu that takes wins and losses to adjust the levels automatically. Use /randombattleadjusted to view the statistics.`,
 		threads:  [
 			`&bullet; <a href="https://www.smogon.com/forums/threads/random-battles.3526564/post-7643404">Introductory Thread</a>`,
 			`&bullet; <a href="https://pastebin.com/J4Vft6wk">Overview</a>`,
