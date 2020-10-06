@@ -17,6 +17,9 @@ let Formats = [
 		desc: `RBY with movepool additions from the Time Capsule.`,
 		threads: [
 			`&bullet; <a href="https://www.smogon.com/articles/rby-tradebacks-ou">Information</a>`,
+			`&bullet; <a href="https://rby2k20.com/read.php?article=Guides/TradebacksIntro">Introduction to RBY 1U</a>`,
+			`&bullet; <a href="https://www.smogon.com/rb/articles/tradebacks">Old Article</a>`,
+			`&bullet; <a href="https://rby2k20.com/teams.php?tag=rby1u">Sample Teams</a>`,
 		],
 
 		mod: 'gen1',
@@ -25,9 +28,11 @@ let Formats = [
 	},
 		{
 		name: "[Gen 1] 1U (Blitz)",
-		desc: `RBY with movepool additions from the Time Capsule.`,
+		desc: `RBY with movepool additions from the Time Capsule. Blitz means you've got just 30 seconds to pick a move by default!`,
 		threads: [
 			`&bullet; <a href="https://www.smogon.com/articles/rby-tradebacks-ou">Information</a>`,
+			`&bullet; <a href="https://rby2k20.com/read.php?article=Guides/TradebacksIntro">Introduction to RBY 1U</a>`,
+			`&bullet; <a href="https://www.smogon.com/rb/articles/tradebacks">Old Article</a>`,
 		],
 
 		mod: 'gen1',
@@ -141,7 +146,10 @@ let Formats = [
 	{
         name: "[Gen 1] Nintendo Cup 99",
         desc: `Nintendo Cup that banned winning NC97 Pokemon, played on Stadium.`,
-        mod: 'stadium', //to-do: make a stadiumjp format
+	threads: [
+		`&bullet; <a href="https://rby2k20.com/read.php?article=Guides/NC99Intro">An Introduction to NC99</a>`,
+	],
+        mod: 'stadium', 
         ruleset: ['Obtainable', 'Team Preview', 'Sleep Clause Mod', 'Freeze Clause Mod', 'Species Clause', 'HP Percentage Mod', 'Cancel Mod'],
         banlist: ['Venusaur','Dugtrio','Alakazam','Golem','Magneton','Gengar','Hypno','Electrode','Exeggutor','Chansey','Kangaskhan','Starmie','Jynx','Tauros','Gyarados','Lapras','Ditto','Vaporeon','Jolteon','Snorlax','Articuno','Zapdos','Dragonite','Mewtwo','Mew','Flareon + Focus Energy + Ember','Nidoking + Fury Attack + Thrash'],
         maxLevel: 50,
@@ -294,8 +302,7 @@ let Formats = [
 		name: "[Gen 1] Violet Version",
 		desc: `A balance mod for Gen 1.`,
 		threads: [
-			`&bullet; <a href="https://www.smogon.com/forums/threads/3572352/">RBY OU Viability Ranking</a>`,
-			`&bullet; <a href="https://www.smogon.com/forums/threads/3650478/#post-8133786">RBY Sample Teams</a>`,
+			`&bullet; <a href="https://rby2k20.com/teams.php?tag=violet">Sample Teams</a>`,
 		],
 
 		mod: 'violet',
@@ -465,6 +472,10 @@ let Formats = [
 	{
 		name: "[Gen 1] NFE",
 		desc: `A metagame that only allows NFE and LC Pokemon.`,
+		threads: [
+			`&bullet; <a href="https://www.smogon.com/forums/threads/nfe-old-gens-hub.3656369/post-8574232">NFE Old Gens Hub</a>`,
+		],
+		
 		mod: 'gen1',
 		ruleset: ['Standard', 'Not Fully Evolved'],
 	},
@@ -481,7 +492,7 @@ let Formats = [
 		banlist: ['LC']
 	},
 	{
-		name: "[Gen 1] LC",
+		name: "[Gen 1] LC (Tradebacks)",
 		desc: `The Gen 1 LC Format. It allows Tradebacks to preserve the L5 formula.`,
 		threads: [
 			`&bullet; <a href="https://www.smogon.com/forums/threads/old-generations-little-cup-discussion-currently-has-threatlist-for-rby-only.3450397/">RBY LC Guide</a>`,
@@ -509,7 +520,7 @@ let Formats = [
 		name: "[Gen 1] 1v1",
 		desc: `Bring three Pok&eacute;mon to Team Preview and choose one to battle.`,
 		threads: [
-			`&bullet; <a href="https://www.smogon.com/forums/posts/8031456/">GSC 1v1</a>`,
+			`&bullet; <a href="https://www.smogon.com/forums/threads/1v1-throwback.3632458/#post-7754986">RBY 1v1 Viability Rankings and Resources</a>`,
 		],
 
 		mod: 'gen1',
