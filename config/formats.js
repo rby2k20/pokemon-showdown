@@ -370,7 +370,10 @@ let Formats = [
 	{
 		name: "[Gen 1] Doubles OU",
 		desc: `A modified Gen 1 sim made with the intention of making Doubles possible. It uses Gen 3 Doubles Mechanics; Surf targets two opponents, you switch out immediately upon fainting, and spread move damage is halved.`,
-
+		threads: [
+			`&bullet; <a href="https://rby2k20.com/read.php?article=Guides/RBYDoublesIntro">An Introduction to RBY Doubles</a>`,
+		],
+		
 		mod: 'gen1doubles',
 		gameType: 'doubles',
 		ruleset: ['Standard'],
