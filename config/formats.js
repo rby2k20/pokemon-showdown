@@ -119,7 +119,11 @@ let Formats = [
 	},
 	{
 		name: "[Gen 1] Nintendo Cup 97",
-		desc: `The official format for Red and Green from 1997.`,
+		desc: `The official format for Red and Green from 1997. Team preview is on, and it functions as a bring 6 pick 3 format. 
+			Pokemon going into the battle must be between levels 50 and 55, but levels must not go over 155 in total.`,
+		threads: [
+			`<a href="https://rby2k20.com/pokedex.php?meta=nc97">Strategy Dex</a>`,
+		],   
 
 		mod: 'gen1jpn',
 		cupLevelLimit: [50, 55, 155],
@@ -132,9 +136,14 @@ let Formats = [
 	},
     {
         name: "[Gen 1] Nintendo Cup 98",
-        desc: `Nintendo Cup that only allowed specific in-game Pokemon, played on Stadium.`,
+        desc: `Nintendo Cup that only allowed specific in-game Pokemon, played on Stadium. All Pokemon are L30, and you can use 3 out of the 6 Pokemon you bring.`,
         mod: 'stadium', //to-do: make a stadiumjp format. Once that's done, move this to Stadium Metagames, as it is technically a format anyway.
         ruleset: ['Obtainable', 'Team Preview', 'Sleep Clause Mod', 'Freeze Clause Mod', 'Species Clause', 'Exact HP Mod', 'Nickname Clause', 'Cancel Mod'],
+	threads: [
+		`<a href="https://rby2k20.com/read.php?article=Guides/Stad0NC98Guide">Introduction</a>`,
+		`<a href="https://rby2k20.com/pokedex.php?meta=nc98">Strategy Dex</a>`,
+	],    
+	    
         banlist: ['Uber', 'OU', 'UUBL', 'UU', 'NUBL', 'NU', 'NFE', 'LC', 'Nidoking + Fury Attack + Thrash', 'Exeggutor + Poison Powder + Stomp', 'Exeggutor + Sleep Powder + Stomp', 'Exeggutor + Stun Spore + Stomp', 'Jolteon + Focus Energy + Thunder Shock', 'Flareon + Focus Energy + Ember'],
         unbanlist: ['Beedrill','Fearow','Pikachu','Nidoqueen','Nidoking','Dugtrio','Primeape','Arcanine','Alakazam','Machamp','Golem','Magneton','Cloyster','Gengar','Onix','Hypno','Electrode','Exeggutor','Chansey','Kangaskhan','Starmie','Scyther','Jynx','Pinsir','Tauros','Gyarados','Lapras','Ditto','Vaporeon','Jolteon','Flareon','Aerodactyl','Snorlax'],
         maxLevel: 30,
@@ -145,9 +154,10 @@ let Formats = [
     },
 	{
         name: "[Gen 1] Nintendo Cup 99",
-        desc: `Nintendo Cup that banned winning NC97 Pokemon, played on Stadium.`,
+        desc: `The Nintendo Cup that banned Pokemon used at the Nintendo Cup Tournament at Spaceworld 1997, played on Stadium. All Pokemon are L50, and you can use 3 out of the 6 Pokemon you bring.`,
 	threads: [
 		`&bullet; <a href="https://rby2k20.com/read.php?article=Guides/NC99Intro">An Introduction to NC99</a>`,
+		`<a href="https://rby2k20.com/pokedex.php?meta=nc99">Strategy Dex</a>`,
 	],
         mod: 'stadium', 
         ruleset: ['Obtainable', 'Team Preview', 'Sleep Clause Mod', 'Freeze Clause Mod', 'Species Clause', 'HP Percentage Mod', 'Cancel Mod'],
@@ -167,7 +177,8 @@ let Formats = [
 	},
 	{
 	name: "[Gen 1] Stadium Anything Goes",
-	desc: `The Pokemon Stadium Anything Goes format, taken directly from the ruleset in-game.`,
+	desc: `The Pokemon Stadium Anything Goes format, taken directly from the ruleset in-game. This means Stadium Sleep Clause and Freeze Clause are still used, as they're ran innately in-game. 
+		Tradebacks are also enabled.`,
 	mod: 'stadium',
 		ruleset: ['Obtainable', 'Team Preview', 'Stadium Sleep Clause', 'Freeze Clause Mod', 'Nickname Clause', 'Endless Battle Clause', 'Exact HP Mod', 'Cancel Mod',
 			  'Allow Tradeback'],
@@ -176,7 +187,12 @@ let Formats = [
 	},
     {
         name: "[Gen 1] Poke Cup",
-        desc: `Stadium Poke Cup, a port of the Nintendo Cup 1997 format to the N64. This introduced the format to an international audience.`,
+        desc: `Stadium Poke Cup, a port of the Nintendo Cup 1997 format to the N64. This introduced the format to an international audience. Team preview is on, and it 
+		functions as a bring 6 pick 3 format. Pokemon going into the battle must be between levels 50 and 55, but levels must not go over 155 in total.`,
+	threads: [
+		`<a href="https://rby2k20.com/pokedex.php?meta=nc97">Strategy Dex</a>`,
+		],    
+	   
         mod: 'stadium',
 		ruleset: ['Obtainable', 'Team Preview', 'Cup Level Limit', 'Stadium Sleep Clause', 'Freeze Clause Mod', 'Species Clause', 'Exact HP Mod', 'Nickname Clause', 'Cancel Mod'],
 		banlist: ['Uber',
@@ -190,7 +206,12 @@ let Formats = [
 	},
 	{
         name: "[Gen 1] Pika Cup",
-        desc: `Stadium Pika Cup, played in the Stadium World Tour in the year 2000.`,
+        desc: `Stadium Pika Cup, played in the Stadium World Tour in the year 2000. Any Pokemon obtainable at L20 or below can be used. It's a bring 6 pick 3 format, though 
+		Pokemon must be between L15 and L20. The total levels of participating Pokemon must not exceed L50.`,
+	threads: [
+		`<a href="https://rby2k20.com/pokedex.php?meta=pika">Strategy Dex</a>`,
+		],
+		
         mod: 'stadium',
 		ruleset: ['Obtainable', 'Team Preview', 'Cup Level Limit', 'Stadium Sleep Clause', 'Freeze Clause Mod', 'Species Clause', 'Exact HP Mod', 'Nickname Clause', 'Cancel Mod'],
 		banlist: ['Uber',
@@ -204,7 +225,13 @@ let Formats = [
 	},
 	{
         name: "[Gen 1] Petit Cup",
-        desc: `Stadium Petit Cup, played in various tournaments in the 2000s.`,
+        desc: `Stadium Petit Cup, played in various tournaments in the 2000s. Pokémon must be of the lowest evolutionary stage, have a height no more than 2 m (6'07") 
+		and a weight no more than 20 kg (44.1 lbs.) to compete. In addition, Pokemon must be between levels 25 and 30. It's a bring 6 pick 3 format, and participating
+		Pokemon must not have their total levels exceed L80.`,
+	threads: [
+		`<a href="https://rby2k20.com/pokedex.php?meta=petit">Strategy Dex</a>`,
+		],
+		
         mod: 'stadium',
 		ruleset: ['Obtainable', 'Team Preview', 'Cup Level Limit', 'Stadium Sleep Clause', 'Freeze Clause Mod', 'Species Clause', 'Exact HP Mod', 'Nickname Clause', 'Cancel Mod'],
 		banlist: ['Uber',
@@ -218,7 +245,7 @@ let Formats = [
 	},
 	{
 	name: "[Gen 1] Prime Cup",
-	desc: `Pokemon Stadium's Prime Cup format. Played in the Stadium World Tour in the year 2000.`,
+	desc: `Pokemon Stadium's Prime Cup format. Played in the Stadium World Tour in the year 2000. It's a bring 6 pick 3 format, with no restrictions on what can be used so long as it's legally obtainable.`,
 	mod: 'stadium',
 		ruleset: ['Obtainable', 'Team Preview', 'Stadium Sleep Clause', 'Freeze Clause Mod', 'Species Clause', 'Nickname Clause', 'Exact HP Mod', 'Cancel Mod'],
 		banlist: ['Nidoking + Fury Attack + Thrash', 'Exeggutor + Poison Powder + Stomp', 'Exeggutor + Sleep Powder + Stomp',
@@ -237,7 +264,12 @@ let Formats = [
 	},
 	{
         name: "[Gen 1] Yellow Poke Cup",
-        desc: `Yellow Poke Cup, a port of the Nintendo Cup 1997.`,
+        desc: `Yellow Poke Cup, a port of the Nintendo Cup 1997. Team preview is on, and it functions as a bring 6 pick 3 format. 
+		Pokemon going into the battle must be between levels 50 and 55, but levels must not go over 155 in total.`,
+	threads: [
+		`<a href="https://rby2k20.com/pokedex.php?meta=nc97">Strategy Dex</a>`,
+		],
+		
         mod: 'gen1',
 		ruleset: ['Obtainable', 'Team Preview', 'Cup Level Limit', 'Stadium Sleep Clause', 'Freeze Clause Mod', 'Species Clause', 'Exact HP Mod', 'Nickname Clause', 'Cancel Mod'],
 		banlist: ['Uber',
@@ -251,7 +283,12 @@ let Formats = [
 	},
 	{
         name: "[Gen 1] Yellow Pika Cup",
-        desc: `Yellow Pika Cup, played in the Stadium World Tour in the year 2000.`,
+        desc: `A variation of Pika Cup that was ported to Pokemon Yellow for the Game Boy. Any Pokemon obtainable at L20 or below can be used. 
+		It's a bring 6 pick 3 format, though Pokemon must be between L15 and L20. The total levels of participating Pokemon must not exceed L50.`,
+	threads: [
+		`<a href="https://rby2k20.com/pokedex.php?meta=pika">Strategy Dex</a>`,
+		],
+		
         mod: 'gen1',
 		ruleset: ['Obtainable', 'Team Preview', 'Cup Level Limit', 'Stadium Sleep Clause', 'Freeze Clause Mod', 'Species Clause', 'Exact HP Mod', 'Nickname Clause', 'Cancel Mod'],
 		banlist: ['Uber',
@@ -265,7 +302,13 @@ let Formats = [
 	},
 	{
         name: "[Gen 1] Yellow Petit Cup",
-        desc: `Yellow Petit Cup, played in various tournaments in the 2000s.`,
+        desc: `A variation of Petit Cup that was ported to Pokemon Yellow for the Game Boy. Pokémon must be of the lowest evolutionary stage, have a height no more than 2 m (6'07") 
+		and a weight no more than 20 kg (44.1 lbs.) to compete. In addition, Pokemon must be between levels 25 and 30. It's a bring 6 pick 3 format, and participating
+		Pokemon must not have their total levels exceed L80.`,
+	threads: [
+		`<a href="https://rby2k20.com/pokedex.php?meta=petit">Strategy Dex</a>`,
+		],
+		
         mod: 'gen1',
 		ruleset: ['Obtainable', 'Team Preview', 'Cup Level Limit', 'Stadium Sleep Clause', 'Freeze Clause Mod', 'Species Clause', 'Exact HP Mod', 'Nickname Clause', 'Cancel Mod'],
 		banlist: ['Uber',
@@ -300,9 +343,13 @@ let Formats = [
 	},*/
 	{
 		name: "[Gen 1] Violet Version",
-		desc: `A balance mod for Gen 1.`,
+		desc: `A balance mod for Gen 1, with the aim of expanding RBY OU while still allowing standard teams to be usable. Team Preview is on.`,
 		threads: [
+			`&bullet; <a href="https://www.pokemonperfect.com/forums/index.php?threads/an-introduction-to-violet-a-modified-rby-metagame.4839/">Introduction to Violet</a>`,
+			`&bullet; <a href="https://www.pokemonperfect.com/forums/index.php?threads/violet-version-viability-rankings.3756/">Viability Rankings</a>`,
 			`&bullet; <a href="https://rby2k20.com/teams.php?tag=violet">Sample Teams</a>`,
+			`&bullet; <a href="https://www.smogon.com/forums/threads/violet-version-gen-1-mod-playable.3532433/">Smogon Thread</a>`,
+			`<a href="https://rby2k20.com/pokedex.php?meta=violet">Strategy Dex</a>`,
 		],
 
 		mod: 'violet',
@@ -312,9 +359,10 @@ let Formats = [
 	},
 	{
       name: "[Gen 1] Rose Red / Iris Blue",
-        desc: `A balance mod for Gen 1.`,
+        desc: `A balance mod for Gen 1 that aims to make every fully evolved Pokemon a viable pick in OU, while still maintaining their identity. Many moves are also reworked. Team Preview is on.`,
         threads: [
-            `<a href="https://www.smogon.com/forums/threads/gen-1-rose-red-iris-blue.3652237/">Rose Red / Iris Blue</a>`,
+           	`<a href="https://www.smogon.com/forums/threads/gen-1-rose-red-iris-blue.3652237/">Rose Red / Iris Blue</a>`,
+		`<a href="https://rby2k20.com/pokedex.php?meta=rrib">Strategy Dex</a>`,
         ],
         mod: 'roseredirisblue',
         ruleset: ['Standard', 'Team Preview'],
@@ -459,7 +507,7 @@ let Formats = [
 	},
 	{
 		name: "[Gen 1] Anything Goes",
-		desc: `A metagame where anything is allowed!.`,
+		desc: `A metagame where anything is allowed, so long as it can be legally obtained! Tradebacks are also enabled!`,
 		threads: [
 			`&bullet; <a href="https://www.smogon.com/forums/threads/3587441/">Anything Goes Metagame Discussion</a>`,
 		],
@@ -578,7 +626,7 @@ let Formats = [
 	},*/
 	{
 		name: "[Gen 1] Scalemons",
-		desc: `All stats but HP are scaled to make a Pokemon's BST as close to 600 as possible.`,
+		desc: `All stats but HP are scaled to make a Pokemon's BST as close to 500 as possible.`,
 
 		mod: 'gen1',
 		ruleset: ['Standard', 'Scalemons Mod'],
