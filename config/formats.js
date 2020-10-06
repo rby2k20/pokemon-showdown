@@ -354,7 +354,10 @@ let Formats = [
 	},
 	{
 		name: "[Gen 1] Balanced Hackmons",
-		desc: `A more balanced form of Hackmons.`,
+		desc: `A balanced form of Pure Hackmons. Ruleset taken from MAMP and Quantum Tesseract.`,
+		threads: [
+			`&bullet; <a href="https://www.smogon.com/forums/threads/old-gens-other-metas-mega-thread.3597495/#post-7258505">RBY Balanced Hackmons Rulings</a>`,
+		],
 
 		mod: 'gen1',
 		debug: true,
