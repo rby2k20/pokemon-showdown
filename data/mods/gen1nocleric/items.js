@@ -67,3 +67,5 @@ let BattleItems = {
 		desc: "(Gen 1) On switch-in, set PRZ. For use in Non-Cleric Clause.",
 	},
 };
+
+exports.BattleItems = BattleItems;
