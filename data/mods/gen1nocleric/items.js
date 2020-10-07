@@ -10,7 +10,7 @@ let BattleItems = {
 			pokemon.trySetStatus('frz', pokemon);
 			pokemon.setItem('');
 		},
-		num: 0,
+		num: 999,
 		gen: 1,
 		desc: "(Gen 1) On switch-in, set FRZ. For use in Non-Cleric Clause.",
 	},
@@ -22,7 +22,7 @@ let BattleItems = {
 			pokemon.trySetStatus('psn', pokemon);
 			pokemon.setItem('');
 		},
-		num: 0,
+		num: 998,
 		gen: 1,
 		desc: "(Gen 1) On switch-in, set PSN. For use in Non-Cleric Clause.",
 	},
@@ -34,7 +34,7 @@ let BattleItems = {
 			pokemon.trySetStatus('brn', pokemon);
 			pokemon.setItem('');
 		},
-		num: 0,
+		num: 997,
 		gen: 1,
 		desc: "(Gen 1) On switch-in, set BRN. For use in Non-Cleric Clause.",
 	},
@@ -46,7 +46,7 @@ let BattleItems = {
 			pokemon.trySetStatus('prz', pokemon);
 			pokemon.setItem('');
 		},
-		num: 0,
+		num: 996,
 		gen: 1,
 		desc: "(Gen 1) On switch-in, set PAR. For use in Non-Cleric Clause.",
 	},
