@@ -158,7 +158,7 @@ let BattleMovedex = {
 			chance: 10,
 			volatileStatus: 'flinch',
 		},
-		type: "Normal",
+		type: "Dark",
 	},
 	blizzard: {
 		inherit: true,
@@ -1079,6 +1079,42 @@ let BattleMovedex = {
 				}
 			}
 		},
+	},
+	///Gen 2 Moves that Crystal_ purposefully added for specific Pokemon. To quote;
+	//Signature moves of GSC Pokemon have been kept. This includes Aeroblast (Lugia), Sacred Fire (Ho-oh), Megahorn (Heracross), Sketch (Smeargle), Triple Kick (Hitmontop), Milk Drink (Miltank), Present (Delibird), and Spider Web (Ariados).
+	//Bite is a Dark-type move and Magneton is a Electric/Steel-type Pokemon.
+	aeroblast: {
+		inherit: true,
+		critRatio: 3,
+	},
+	sketch: {
+		inherit: true,
+		desc: "Fails when used in Link Battles.",
+		shortDesc: "Fails when used in Link Battles.",
+		onHit() {
+			// Sketch always fails in Link Battles
+			this.add('-nothing');
+		},
+	},
+	triplekick: {
+		inherit: true,
+		desc: "Hits one to three times, at random. Power increases to 20 for the second hit and 30 for the third.",
+		shortDesc: "Hits 1-3 times. Power rises with each hit.",
+		multiaccuracy: false,
+		multihit: [1, 3],
+	},
+	present: {
+		inherit: true,
+		desc: "If this move is successful, it deals damage or heals the target. 102/256 chance for 40 power, 76/256 chance for 80 power, 26/256 chance for 120 power, or 52/256 chance to heal the target by 1/4 of its maximum HP, rounded down. If this move deals damage, it uses an abnormal version of the damage formula by substituting certain values. The user's Attack stat is replaced with 10 times the effectiveness of this move against the target, the target's Defense stat is replaced with the index number of the user's secondary type, and the user's level is replaced with the index number of the target's secondary type. If a Pokemon does not have a secondary type, its primary type is used. The index numbers for each type are Normal: 0, Fighting: 1, Flying: 2, Poison: 3, Ground: 4, Rock: 5, Bug: 7, Ghost: 8, Steel: 9, Fire: 20, Water: 21, Grass: 22, Electric: 23, Psychic: 24, Ice: 25, Dragon: 26, Dark: 27. If at any point a division by 0 would happen in the damage formula, it divides by 1 instead.",
+	},
+	sacredfire: {
+		inherit: true,
+	},
+	megahorn: {
+		inherit: true,
+	},
+	milkdrink: {
+		inherit: true,
 	},
 };
 
