@@ -119,4 +119,6 @@ let BattleLearnsets = {
 			earthquake: ["5L1"],
 		},
 	},
-}
+};
+
+exports.BattleLearnsets = BattleLearnsets;
