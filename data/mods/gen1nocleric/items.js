@@ -50,6 +50,18 @@ let BattleItems = {
 		gen: 1,
 		desc: "(Gen 1) On switch-in, set PAR. For use in Non-Cleric Clause.",
 	},
+	"slp": {
+		id: "slp",
+		name: "SLP",
+		spritenum: 273,
+		onUpdate(pokemon) {
+			pokemon.trySetStatus('slp', pokemon);
+			pokemon.setItem('');
+		},
+		num: 996,
+		gen: 1,
+		desc: "(Gen 1) On switch-in, set SLP. For use in Non-Cleric Clause.",
+	},
 };
 
 exports.BattleItems = BattleItems;
