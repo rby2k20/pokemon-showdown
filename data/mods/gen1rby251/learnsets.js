@@ -58,7 +58,7 @@ let BattleLearnsets = {
 			megadrain: ["5L1"],
 			skullbash: ["5L1"],
 		},
-	),
+	},
 	bayleef: {
 		learnset: {
 			takedown: ["5L1"], 
@@ -87,7 +87,7 @@ let BattleLearnsets = {
 			skullbash: ["5L1"],
 			strength: ["5L1"],
 		},
-	),
+	},
 	meganium: {
 		learnset: {
 			takedown: ["5L1"], 
@@ -118,5 +118,5 @@ let BattleLearnsets = {
 			hyperbeam: ["5L1"],
 			earthquake: ["5L1"],
 		},
-	),
+	},
 }
