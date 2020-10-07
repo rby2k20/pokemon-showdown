@@ -694,7 +694,6 @@ let Formats = [
 		name: "[Gen 1] RBY 251 Custom Game (Testing)",
 
 		mod: 'gen1rby251',
-		searchShow: false,
 		debug: true,
 		maxLevel: 9999,
 		trunc(n) { return Math.trunc(n); },
