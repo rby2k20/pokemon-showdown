@@ -690,7 +690,7 @@ let Formats = [
 		defaultLevel: 100,
 		ruleset: ['HP Percentage Mod', 'Cancel Mod'],
 	},
-	{
+	/*{
 		name: "[Gen 1] RBY 251 Custom Game (Testing)",
 
 		mod: 'gen1rby251',
@@ -699,7 +699,7 @@ let Formats = [
 		trunc(n) { return Math.trunc(n); },
 		defaultLevel: 100,
 		ruleset: ['HP Percentage Mod', 'Cancel Mod'],
-	},
+	},*/
 	// Pokemon Perfect Metagames
 	///////////////////////////////////////////////////////////////////
 
