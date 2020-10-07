@@ -782,7 +782,7 @@ let BattleFormatsData = {
 		tier: "NFE",
 	},
 	meganium: {
-		tier: "New",
+		tier: "OU",
 	},
 	missingno: {
 		isNonstandard: "Unobtainable",
