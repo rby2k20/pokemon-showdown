@@ -377,7 +377,7 @@ let Formats = [
 		mod: 'gen1doubles',
 		gameType: 'doubles',
 		ruleset: ['Standard'],
-		banlist: ['Uber', 'Wrap', 'Fire Spin', 'Clamp', 'Bind'],
+		banlist: ['Uber', 'Wrap', 'Fire Spin', 'Clamp', 'Bind', 'Explosion', 'Self-Destruct'],
 	},
 
 	// Hacked Formats
@@ -388,7 +388,7 @@ let Formats = [
 	},
 	{
 		name: "[Gen 1] Pure Hackmons",
-		desc: `Anything that can be hacked in-game and is usable in local battles is allowed.`,
+		desc: `Anything that can be hacked in-game and is usable in local battles is allowed. You can re-status your Pokemon using special items in this mod via the import/export feature; PAR, SLP, FRZ, PSN and BRN.`,
 		threads: [
 			`&bullet; <a href="https://www.smogon.com/forums/threads/3656851/">Pure Hackmons</a>`,
 		],
@@ -402,7 +402,7 @@ let Formats = [
 	},
 	{
 		name: "[Gen 1] Balanced Hackmons",
-		desc: `A balanced form of Pure Hackmons. Ruleset taken from MAMP and Quantum Tesseract, then tweaked a bit.`,
+		desc: `A balanced form of Pure Hackmons. Ruleset taken from MAMP and Quantum Tesseract, then tweaked. You can re-status your Pokemon using special items in this mod via the import/export feature; PAR, SLP, FRZ, PSN and BRN.`,
 		threads: [
 			`&bullet; <a href="https://www.smogon.com/forums/threads/old-gens-other-metas-mega-thread.3597495/#post-7258505">RBY Balanced Hackmons Rulings</a>`,
 		],
@@ -412,7 +412,7 @@ let Formats = [
 		trunc(n) { return Math.trunc(n); },
 		defaultLevel: 255,
 		ruleset: ['-Nonexistent', 'OHKO Clause', 'Evasion Moves Clause', 'HP Percentage Mod', 'Cancel Mod', 'Freeze Clause Mod', 'Sleep Clause Mod', 'Endless Battle Clause'],
-		banlist: ['Mewtwo', 'Wrap', 'Fire Spin', 'Clamp', 'Bind'],
+		banlist: ['Mewtwo', 'Wrap', 'Fire Spin', 'Clamp', 'Bind', 'Dig', 'Fly'],
 		unbanlist: ['MissingNo.'],
 	},
 
@@ -500,7 +500,7 @@ let Formats = [
 	},
 	{
 		name: "[Gen 1] Anything Goes",
-		desc: `A metagame where anything is allowed, so long as it can be legally obtained! Tradebacks are also enabled!`,
+		desc: `A metagame where anything is allowed, so long as it can be legally obtained! Tradebacks are also enabled! You can re-status your Pokemon using special items in this mod via the import/export feature; PAR, SLP, FRZ, PSN and BRN.`,
 		threads: [
 			`&bullet; <a href="https://www.smogon.com/forums/threads/3587441/">Anything Goes Metagame Discussion</a>`,
 		],
