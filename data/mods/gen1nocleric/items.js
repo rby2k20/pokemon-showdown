@@ -1,4 +1,7 @@
-export const BattleItems: {[k: string]: ModdedItemData} = {
+'use strict';
+
+/**@type {{[k: string]: ItemData}} */
+let BattleItems = {
 	"frz": {
 		id: "frz",
 		name: "FRZ",
