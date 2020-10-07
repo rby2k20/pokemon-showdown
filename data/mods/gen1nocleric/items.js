@@ -38,9 +38,9 @@ let BattleItems = {
 		gen: 1,
 		desc: "(Gen 1) On switch-in, set BRN. For use in Non-Cleric Clause.",
 	},
-	"prz": {
-		id: "prz",
-		name: "PRZ",
+	"par": {
+		id: "par",
+		name: "PAR",
 		spritenum: 273,
 		onUpdate(pokemon) {
 			pokemon.trySetStatus('prz', pokemon);
@@ -48,7 +48,7 @@ let BattleItems = {
 		},
 		num: 0,
 		gen: 1,
-		desc: "(Gen 1) On switch-in, set PRZ. For use in Non-Cleric Clause.",
+		desc: "(Gen 1) On switch-in, set PAR. For use in Non-Cleric Clause.",
 	},
 };
 
