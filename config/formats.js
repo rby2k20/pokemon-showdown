@@ -393,7 +393,7 @@ let Formats = [
 			`&bullet; <a href="https://www.smogon.com/forums/threads/3656851/">Pure Hackmons</a>`,
 		],
 
-		mod: 'gen1',
+		mod: 'gen1nocleric',
 		debug: true,
 		trunc(n) { return Math.trunc(n); },
 		defaultLevel: 255,
@@ -407,7 +407,7 @@ let Formats = [
 			`&bullet; <a href="https://www.smogon.com/forums/threads/old-gens-other-metas-mega-thread.3597495/#post-7258505">RBY Balanced Hackmons Rulings</a>`,
 		],
 
-		mod: 'gen1',
+		mod: 'gen1nocleric',
 		debug: true,
 		trunc(n) { return Math.trunc(n); },
 		defaultLevel: 255,
@@ -505,7 +505,7 @@ let Formats = [
 			`&bullet; <a href="https://www.smogon.com/forums/threads/3587441/">Anything Goes Metagame Discussion</a>`,
 		],
 
-		mod: 'gen1',
+		mod: 'gen1nocleric',
 		ruleset: ['Obtainable', 'HP Percentage Mod', 'Cancel Mod', 'Endless Battle Clause', 'Allow Tradeback'],
 		banlist: ['Nidoking + Fury Attack + Thrash', 'Exeggutor + Poison Powder + Stomp', 'Exeggutor + Sleep Powder + Stomp',
 			'Exeggutor + Stun Spore + Stomp', 'Jolteon + Focus Energy + Thunder Shock', 'Flareon + Focus Energy + Ember'],
