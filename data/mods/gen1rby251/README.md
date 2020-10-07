@@ -1,55 +1,32 @@
-Gen 1, the beginning
+RBY 251 [Currently in an Alpha State]
 ====================
 
 Introduction
 ------------
-Generation 1 includes the original japanese Green and Red, Blue, and Yellow games.
-It was very different than the game we get to know today, and it was, in fact, very different to Gen 2 as well.
-The mechanics were very different, and the game was quite glitched, but most glitches were important parts of the metagame.
-There were only 151 Pokémon plus Missingno, just a handful of moves, no abilities, no items, all stats were
-EVd to the max and we had some kind of different IVs, which maxed at 15 and every point gave 2 to the stat, so in
-a similar fashion, Pokes used to have 30 IVs on each stat.
+This is a port of a Pokemon Online Mod that aimed to bring Gen 2 Pokemon to RBY; the mod was originally developed by Crystal_. This would introduce the Steel and Dark types, as well as a few exclusive moves (eg. Heracross + Megahorn). The Special stats were either taken from one of the Gen 2 Special Stats or averaged out. Unlike the PO Mod, for now at least, I've kept NFE Pokemon.
 
-The following sources have been used and extremly useful when developing this mod:
-https://raw.github.com/po-devs/pokemon-online/master/bin/database/rby-stuff.txt
-https://www.smogon.com/rb/articles/differences
-https://www.smogon.com/forums/threads/past-gens-research-thread.3506992/#post-5878612
+General info on the original mod can be found here; https://www.pokemonperfect.com/forums/index.php?threads/rby-251-live-tournament.3005/#post-5625
 
-Special Stat
-------------
-Back then, there weren't Special Defense and Special Attack stats. It was just "Special", and moves raised and lowered it.
-That's why Special walls were so OP in Gen 1.
+Move Selection, etc
+-------------------
+The level up learnset of GSC Pokemon in RBY 251 matches their level up learnset in GSC excluding the moves that did not exist in RBY.
 
-In order to achieve a similar effect without heavily changing other scripts rather than just the mod, the mod's Pokedex
-and the mod's moves have been edited in order to emulate it, making all Pokémon have the old special stat in both SpA and
-SpD and making moves raise and lower both SpA and SpD at the same time.
+Signature moves of GSC Pokemon have been kept. This includes Aeroblast (Lugia), Sacred Fire (Ho-oh), Megahorn (Heracross), Sketch (Smeargle), Triple Kick (Hitmontop), Milk Drink (Miltank), Present (Delibird), and Spider Web (Ariados).
 
-Critical Hits
--------------
-Critical hits in Gen 1 work with Speed. The faster you are, the more you crit.
-This is the regular critical hit formula:
-CH% = BaseSpeed * 100 / 512.
-This is the high critical hit moves formula:
-CH% = BaseSpeed * 100 / 64.
-That means that a Persian with Slash is going to crit. This made the metagame adapt so OU prefers all the faster Pokémon
-in the game.
+Bite is a Dark-type move and Magneton is a Electric/Steel-type Pokemon.
 
-However, if you used Focus Energy, your crit rate was ruined instead of increased, so if you were slower than your
-opponent you couldn't crit at all.
+The TM/HM moves available in RBY 251 are only the TM/HM moves available in RBY. These 55 TM/HM moves (50 TM + 5 HM), they can be separated in different groups depending on their status in the following generaion(s):
+(If a move satisfies two or more of the following critera, whichever criterion comes first takes precedence)
 
-Status
-------
-Freeze never thaws unless hit by a Fire-type attack or by Haze.
-Sleep lasts 1-7 turns and you wake up at the end of the turn.
 
-1/256 miss
-----------
-All moves but Swift and Bide (while on duration, not first hit) have a 1/256 chance to miss.
+- Moves learned by every Pokemon in RBY, with the exceptions being only Caterpie, Metapod, Weedle, Kakuna, and Magikarp --> Every GSC Pokemon except Unown and Wobbuffet (and Smeargle who learns everything via Sketch aka level) learns them in RBY 251. Examples: Mimic, Rest.
+- Moves that are also TM/HM moves in GSC --> If a Pokemon learns it in GSC, the Pokemon learns it in RBY 251. Otherwise, doesn't. Examples: Fire Blast, Fly.
+- Moves that can be learned by tutor in GSC --> If a Pokemon learns it in GSC, the Pokemon learns it in RBY 251. Otherwise, doesn't. Examples: Ice Beam, Thunderbolt, Flamethrower.
+- Moves that can be learned by TM/tutor in ADV --> If a Pokemon learns it in ADV, the Pokemon learns it in RBY 251. Otherwise, doesn't. Examples: Counter, Body Slam, Swords Dance.
+- If a Pokemon can learn a move via breeding but can not learn it via TM/tutor, it does not learn it in RBY 251. Example: Mantine and Rock Slide.
 
-Partial Trapping Moves
-----------------------
-Partial trapping moves let either Pokémon switch but target will be unable to move for its duration.
+There is a very small number of justified exceptions to these rules. Examples: Hitmontop and Rock Slide (Hitmonchan and Hitmonlee don't learn it in RBY), Espeon/Umbreon and Cut (the other eons don't learn it in RBY). The main exception is Reflect, which has a much wider compatibility in RBY than in ADV, where it is a tutor move.
 
-TODO. Glitches not implemented
-------------------------------
-There are a couple of divisions by zero in the original game in the cartridge. Those have not been implemented.
+Reflect and the moves that don't belong to any of the previous criteria have their compatibility chosen according to RBY trends. For example, only Pokemon that can stand in two legs learn Submission; Psychic and Psywave are learned by the same Pokemon, and idem for Water Gun and BubbleBeam. In addition, GSC's Giga Drain and Skull Bash are used as a reference for Mega Drain and Headbutt respectively, because of the very similar spread in GSC (when looking at RBY Pokemon).
+
+The Special stat of each Pokemon is either its GSC Special Attack stat or its GSC Special Defense stat. One stat or another has been chosen following RBY trends, considering the BST, and/or using common sense. There are a few exceptions of Pokemon with a Special stat that doesn't come from its SpA/SpD (see spreadsheet below).
