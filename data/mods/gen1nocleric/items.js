@@ -7,8 +7,8 @@ let BattleItems = {
 		name: "FRZ",
 		spritenum: 305,
 		onUpdate(pokemon) {
-			onResidualOrder: 26,
-			onResidualSubOrder: 2,
+			onResidualOrder 26,
+			onResidualSubOrder 2,
 			onResidual(pokemon) {
 			pokemon.trySetStatus('frz', pokemon);
 		},
@@ -23,8 +23,8 @@ let BattleItems = {
 		name: "PSN",
 		spritenum: 515,
 		onUpdate(pokemon) {
-			onResidualOrder: 26,
-			onResidualSubOrder: 2,
+			onResidualOrder 26,
+			onResidualSubOrder 2,
 			onResidual(pokemon) {
 			pokemon.trySetStatus('psn', pokemon);
 		},
@@ -39,8 +39,8 @@ let BattleItems = {
 		name: "BRN",
 		spritenum: 145,
 		onUpdate(pokemon) {
-			onResidualOrder: 26,
-			onResidualSubOrder: 2,
+			onResidualOrder 26,
+			onResidualSubOrder 2,
 			onResidual(pokemon) {
 			pokemon.trySetStatus('brn', pokemon);
 		},
@@ -55,8 +55,8 @@ let BattleItems = {
 		name: "PRZ",
 		spritenum: 273,
 		onUpdate(pokemon) {
-			onResidualOrder: 26,
-			onResidualSubOrder: 2,
+			onResidualOrder 26,
+			onResidualSubOrder 2,
 			onResidual(pokemon) {
 			pokemon.trySetStatus('prz', pokemon);
 		},
