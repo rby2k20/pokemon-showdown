@@ -375,6 +375,7 @@ exports.customavatars = {
 	'enigami' : 'enigami.png',
 	'kuraitenshi26' : 'kuraitenshi26.png',
 	'plaguevonkarma' : 'plaguevonkarma.png'
+	'pacattacc' : 'pacattacc.png'
 };
 
 /**
