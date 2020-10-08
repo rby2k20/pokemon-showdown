@@ -14,7 +14,7 @@ let Formats = [
 	},
 	{
 		name: "[Gen 1] 1U",
-		desc: `RBY with movepool additions from the Time Capsule.`,
+		desc: `RBY with movepool additions from the Time Capsule, tiered by RBY 2k20.`,
 		threads: [
 			`&bullet; <a href="https://www.smogon.com/articles/rby-tradebacks-ou">Information</a>`,
 			`&bullet; <a href="https://rby2k20.com/read.php?article=Guides/TradebacksIntro">Introduction to RBY 1U</a>`,
@@ -24,7 +24,7 @@ let Formats = [
 
 		mod: 'gen1',
 		ruleset: ['Obtainable', 'Allow Tradeback', 'Sleep Clause Mod', 'Freeze Clause Mod', 'Species Clause', 'OHKO Clause', 'Evasion Moves Clause', 'HP Percentage Mod', 'Cancel Mod'],
-		banlist: ['Uber',],
+		banlist: ['Uber', 'Magikarp + Dragon Rage', 'Rapidash + Pay Day', 'Fearow + Pay Day'],
 	},
 		{
 		name: "[Gen 1] 1U (Blitz)",
@@ -37,10 +37,7 @@ let Formats = [
 
 		mod: 'gen1',
 		ruleset: ['Obtainable', 'Allow Tradeback', 'Sleep Clause Mod', 'Freeze Clause Mod', 'Species Clause', 'OHKO Clause', 'Evasion Moves Clause', 'HP Percentage Mod', 'Cancel Mod', 'Blitz'],
-		banlist: ['Uber',
-			'Nidoking + Fury Attack + Thrash', 'Exeggutor + Poison Powder + Stomp', 'Exeggutor + Sleep Powder + Stomp',
-			'Exeggutor + Stun Spore + Stomp', 'Jolteon + Focus Energy + Thunder Shock', 'Flareon + Focus Energy + Ember',
-		],
+		banlist: ['Uber', 'Magikarp + Dragon Rage', 'Rapidash + Pay Day', 'Fearow + Pay Day'],
 	},
 
 	// Smogon Formats
@@ -66,7 +63,7 @@ let Formats = [
 
 		mod: 'gen1',
 		ruleset: ['Standard'],
-		banlist: ['Uber'],
+		banlist: ['Uber', 'Magikarp + Dragon Rage', 'Rapidash + Pay Day', 'Fearow + Pay Day'],
 	},
 		{
 		name: "[Gen 1] OU (Blitz)",
@@ -77,7 +74,7 @@ let Formats = [
 
 		mod: 'gen1',
 		ruleset: ['[Gen 1] OU', 'Blitz'],
-		banlist: ['Uber'],
+		banlist: ['Uber', 'Magikarp + Dragon Rage', 'Rapidash + Pay Day', 'Fearow + Pay Day'],
 	},
 	{
 		name: "[Gen 1] UU",
@@ -88,7 +85,7 @@ let Formats = [
 
 		mod: 'gen1',
 		ruleset: ['[Gen 1] OU'],
-		banlist: ['OU', 'UUBL'],
+		banlist: ['OU', 'UUBL', 'Magikarp + Dragon Rage', 'Rapidash + Pay Day', 'Fearow + Pay Day'],
 	},
 	{
 		name: "[Gen 1] NU (Alpha)",
@@ -98,7 +95,7 @@ let Formats = [
 
 		mod: 'gen1',
 		ruleset: ['[Gen 1] OU'],
-		banlist: ['OU', 'UUBL', 'Articuno', 'Dodrio', 'Dragonite', 'Dugtrio', 'Electabuzz', 'Golem', 'Golduck', 'Gyarados', 'Haunter', 'Hypno', 'Kadabra', 'Kangaskhan', 'Omastar', 'Persian', 'Poliwrath', 'Raichu', 'Tangela', 'Tentacruel', 'Vaporeon'],
+		banlist: ['OU', 'UUBL', 'Articuno', 'Dodrio', 'Dragonite', 'Dugtrio', 'Electabuzz', 'Golem', 'Golduck', 'Gyarados', 'Haunter', 'Hypno', 'Kadabra', 'Kangaskhan', 'Omastar', 'Persian', 'Poliwrath', 'Raichu', 'Tangela', 'Tentacruel', 'Vaporeon', 'Magikarp + Dragon Rage', 'Rapidash + Pay Day', 'Fearow + Pay Day'],
 	},
 	{
 		name: "[Gen 1] Stadium OU",
@@ -108,7 +105,7 @@ let Formats = [
 		banlist: ['Uber',
 			'Nidoking + Fury Attack + Thrash', 'Exeggutor + Poison Powder + Stomp', 'Exeggutor + Sleep Powder + Stomp',
 			'Exeggutor + Stun Spore + Stomp', 'Jolteon + Focus Energy + Thunder Shock', 'Flareon + Focus Energy + Ember',
-		],
+			 'Magikarp + Dragon Rage', 'Rapidash + Pay Day', 'Fearow + Pay Day'],
 	},
 
 	// Nintendo Cup
@@ -181,7 +178,8 @@ let Formats = [
 		ruleset: ['Obtainable', 'Team Preview', 'Stadium Sleep Clause', 'Freeze Clause Mod', 'Nickname Clause', 'Endless Battle Clause', 'Exact HP Mod', 'Cancel Mod',
 			  'Allow Tradeback'],
 		banlist: ['Nidoking + Fury Attack + Thrash', 'Exeggutor + Poison Powder + Stomp', 'Exeggutor + Sleep Powder + Stomp',
-			'Exeggutor + Stun Spore + Stomp', 'Jolteon + Focus Energy + Thunder Shock', 'Flareon + Focus Energy + Ember',],
+			'Exeggutor + Stun Spore + Stomp', 'Jolteon + Focus Energy + Thunder Shock', 'Flareon + Focus Energy + Ember',
+			 'Magikarp + Dragon Rage', 'Rapidash + Pay Day', 'Fearow + Pay Day'],
 	},
     {
         name: "[Gen 1] Poke Cup",
@@ -194,7 +192,8 @@ let Formats = [
 		ruleset: ['Obtainable', 'Team Preview', 'Cup Level Limit', 'Stadium Sleep Clause', 'Freeze Clause Mod', 'Species Clause', 'Exact HP Mod', 'Nickname Clause', 'Cancel Mod'],
 		banlist: ['Uber',
 			'Nidoking + Fury Attack + Thrash', 'Exeggutor + Poison Powder + Stomp', 'Exeggutor + Sleep Powder + Stomp',
-			'Exeggutor + Stun Spore + Stomp', 'Jolteon + Focus Energy + Thunder Shock', 'Flareon + Focus Energy + Ember'],
+			'Exeggutor + Stun Spore + Stomp', 'Jolteon + Focus Energy + Thunder Shock', 'Flareon + Focus Energy + Ember',
+			 'Magikarp + Dragon Rage', 'Rapidash + Pay Day', 'Fearow + Pay Day'],
 		cupLevelLimit: [50, 55, 155],
 		teamLength: {
 			validate: [3, 6],
@@ -212,7 +211,8 @@ let Formats = [
 		ruleset: ['Obtainable', 'Team Preview', 'Cup Level Limit', 'Stadium Sleep Clause', 'Freeze Clause Mod', 'Species Clause', 'Exact HP Mod', 'Nickname Clause', 'Cancel Mod'],
 		banlist: ['Uber',
 			'Nidoking + Fury Attack + Thrash', 'Exeggutor + Poison Powder + Stomp', 'Exeggutor + Sleep Powder + Stomp',
-			'Exeggutor + Stun Spore + Stomp', 'Jolteon + Focus Energy + Thunder Shock', 'Flareon + Focus Energy + Ember'],
+			'Exeggutor + Stun Spore + Stomp', 'Jolteon + Focus Energy + Thunder Shock', 'Flareon + Focus Energy + Ember',
+			 'Magikarp + Dragon Rage', 'Rapidash + Pay Day', 'Fearow + Pay Day'],
 		cupLevelLimit: [15, 20, 50],
 		teamLength: {
 			validate: [3, 6],
@@ -228,9 +228,11 @@ let Formats = [
 		
         mod: 'stadium',
 		ruleset: ['Obtainable', 'Team Preview', 'Cup Level Limit', 'Stadium Sleep Clause', 'Freeze Clause Mod', 'Species Clause', 'Exact HP Mod', 'Nickname Clause', 'Cancel Mod'],
-		banlist: ['Uber',
+		banlist: ['Uber', 'OU', 'UUBL', 'UU', 'NUBL', 'NU', 'NFE', 'LC',
 			'Nidoking + Fury Attack + Thrash', 'Exeggutor + Poison Powder + Stomp', 'Exeggutor + Sleep Powder + Stomp',
-			'Exeggutor + Stun Spore + Stomp', 'Jolteon + Focus Energy + Thunder Shock', 'Flareon + Focus Energy + Ember'],
+			'Exeggutor + Stun Spore + Stomp', 'Jolteon + Focus Energy + Thunder Shock', 'Flareon + Focus Energy + Ember',
+			 'Magikarp + Dragon Rage', 'Rapidash + Pay Day', 'Fearow + Pay Day'],
+		unbanlist: ['Bulbasaur', 'Charmander', 'Squirtle', 'Caterpie', 'Weedle', 'Pidgey', 'Rattata', 'Spearow', 'Ekans', 'Pikachu', 'Sandshrew', 'Nidoran-M', 'Nidoran-F', 'Clefairy', 'Vulpix', 'Jigglypuff', 'Zubat', 'Oddish', 'Paras', 'Diglett', 'Meowth', 'Psyduck', 'Growlithe', 'Poliwag', 'Abra', 'Machop', 'Bellsprout', 'Geodude', 'Magnemite', 'Farfetchd', 'Shellder', 'Gastly', 'Krabby', 'Voltorb', 'Exeggcute', 'Cubone', 'Horsea', 'Goldeen', 'Magikarp', 'Ditto', 'Eevee', 'Omanyte', 'Kabuto', 'Dratini'],
 		cupLevelLimit: [25, 30, 80],
 		teamLength: {
 			validate: [3, 6],
@@ -243,7 +245,8 @@ let Formats = [
 	mod: 'stadium',
 		ruleset: ['Obtainable', 'Team Preview', 'Stadium Sleep Clause', 'Freeze Clause Mod', 'Species Clause', 'Nickname Clause', 'Exact HP Mod', 'Cancel Mod'],
 		banlist: ['Nidoking + Fury Attack + Thrash', 'Exeggutor + Poison Powder + Stomp', 'Exeggutor + Sleep Powder + Stomp',
-			'Exeggutor + Stun Spore + Stomp', 'Jolteon + Focus Energy + Thunder Shock', 'Flareon + Focus Energy + Ember',],
+			'Exeggutor + Stun Spore + Stomp', 'Jolteon + Focus Energy + Thunder Shock', 'Flareon + Focus Energy + Ember',
+			 'Magikarp + Dragon Rage', 'Rapidash + Pay Day', 'Fearow + Pay Day'],
 		teamLength: {
 			validate: [3, 6],
 			battle: 3,
@@ -267,7 +270,8 @@ let Formats = [
 		ruleset: ['Obtainable', 'Team Preview', 'Cup Level Limit', 'Stadium Sleep Clause', 'Species Clause', 'Exact HP Mod', 'Nickname Clause', 'Cancel Mod'],
 		banlist: ['Uber',
 			'Nidoking + Fury Attack + Thrash', 'Exeggutor + Poison Powder + Stomp', 'Exeggutor + Sleep Powder + Stomp',
-			'Exeggutor + Stun Spore + Stomp', 'Jolteon + Focus Energy + Thunder Shock', 'Flareon + Focus Energy + Ember'],
+			'Exeggutor + Stun Spore + Stomp', 'Jolteon + Focus Energy + Thunder Shock', 'Flareon + Focus Energy + Ember',
+			 'Magikarp + Dragon Rage', 'Rapidash + Pay Day', 'Fearow + Pay Day'],
 		cupLevelLimit: [50, 55, 155],
 		teamLength: {
 			validate: [3, 6],
@@ -285,7 +289,8 @@ let Formats = [
 		ruleset: ['Obtainable', 'Team Preview', 'Cup Level Limit', 'Stadium Sleep Clause', 'Species Clause', 'Exact HP Mod', 'Nickname Clause', 'Cancel Mod'],
 		banlist: ['Uber',
 			'Nidoking + Fury Attack + Thrash', 'Exeggutor + Poison Powder + Stomp', 'Exeggutor + Sleep Powder + Stomp',
-			'Exeggutor + Stun Spore + Stomp', 'Jolteon + Focus Energy + Thunder Shock', 'Flareon + Focus Energy + Ember'],
+			'Exeggutor + Stun Spore + Stomp', 'Jolteon + Focus Energy + Thunder Shock', 'Flareon + Focus Energy + Ember',
+			 'Magikarp + Dragon Rage', 'Rapidash + Pay Day', 'Fearow + Pay Day'],
 		cupLevelLimit: [15, 20, 50],
 		teamLength: {
 			validate: [3, 6],
@@ -301,9 +306,11 @@ let Formats = [
 		
         mod: 'gen1',
 		ruleset: ['Obtainable', 'Team Preview', 'Cup Level Limit', 'Stadium Sleep Clause', 'Species Clause', 'Exact HP Mod', 'Nickname Clause', 'Cancel Mod'],
-		banlist: ['Uber',
+		banlist: ['Uber', 'OU', 'UUBL', 'UU', 'NUBL', 'NU', 'NFE', 'LC',
 			'Nidoking + Fury Attack + Thrash', 'Exeggutor + Poison Powder + Stomp', 'Exeggutor + Sleep Powder + Stomp',
-			'Exeggutor + Stun Spore + Stomp', 'Jolteon + Focus Energy + Thunder Shock', 'Flareon + Focus Energy + Ember'],
+			'Exeggutor + Stun Spore + Stomp', 'Jolteon + Focus Energy + Thunder Shock', 'Flareon + Focus Energy + Ember',
+			 'Magikarp + Dragon Rage', 'Rapidash + Pay Day', 'Fearow + Pay Day'],
+		unbanlist: ['Bulbasaur', 'Charmander', 'Squirtle', 'Caterpie', 'Weedle', 'Pidgey', 'Rattata', 'Spearow', 'Ekans', 'Pikachu', 'Sandshrew', 'Nidoran-M', 'Nidoran-F', 'Clefairy', 'Vulpix', 'Jigglypuff', 'Zubat', 'Oddish', 'Paras', 'Diglett', 'Meowth', 'Psyduck', 'Growlithe', 'Poliwag', 'Abra', 'Machop', 'Bellsprout', 'Geodude', 'Magnemite', 'Farfetchd', 'Shellder', 'Gastly', 'Krabby', 'Voltorb', 'Exeggcute', 'Cubone', 'Horsea', 'Goldeen', 'Magikarp', 'Ditto', 'Eevee', 'Omanyte', 'Kabuto', 'Dratini'],
 		cupLevelLimit: [25, 30, 80],
 		teamLength: {
 			validate: [3, 6],
@@ -377,7 +384,7 @@ let Formats = [
 		mod: 'gen1doubles',
 		gameType: 'doubles',
 		ruleset: ['Standard'],
-		banlist: ['Uber', 'Wrap', 'Fire Spin', 'Clamp', 'Bind', 'Explosion', 'Self-Destruct'],
+		banlist: ['Uber', 'Wrap', 'Fire Spin', 'Clamp', 'Bind', 'Explosion', 'Self-Destruct', 'Magikarp + Dragon Rage', 'Rapidash + Pay Day', 'Fearow + Pay Day'],
 	},
 
 	// Hacked Formats
@@ -508,7 +515,8 @@ let Formats = [
 		mod: 'gen1nocleric',
 		ruleset: ['Obtainable', 'HP Percentage Mod', 'Cancel Mod', 'Endless Battle Clause', 'Allow Tradeback'],
 		banlist: ['Nidoking + Fury Attack + Thrash', 'Exeggutor + Poison Powder + Stomp', 'Exeggutor + Sleep Powder + Stomp',
-			'Exeggutor + Stun Spore + Stomp', 'Jolteon + Focus Energy + Thunder Shock', 'Flareon + Focus Energy + Ember'],
+			'Exeggutor + Stun Spore + Stomp', 'Jolteon + Focus Energy + Thunder Shock', 'Flareon + Focus Energy + Ember', 
+			  'Magikarp + Dragon Rage', 'Rapidash + Pay Day', 'Fearow + Pay Day'],
 	},
 	{
 		name: "[Gen 1] NFE",
@@ -543,7 +551,7 @@ let Formats = [
 		mod: 'gen1',
 		maxLevel: 5,
 		ruleset: ['Standard', 'Little Cup', 'Allow Tradeback'],
-		banlist: ['Dragon Rage', 'Sonic Boom', 'Wrap', 'NFE', 'Clefairy'],
+		banlist: ['Dragon Rage', 'Sonic Boom', 'Wrap', 'NFE', 'Clefairy', 'Magikarp + Dragon Rage', 'Rapidash + Pay Day', 'Fearow + Pay Day'],
 	},
 	{
 		name: "[Gen 1] LC L100",
@@ -554,6 +562,7 @@ let Formats = [
 
 		mod: 'gen1',
 		maxLevel: 100,
+		banlist: ['Magikarp + Dragon Rage'],
 		ruleset: ['Standard', 'Not Fully Evolved'],
 		banlist: ['NFE'],
 	},
@@ -570,8 +579,7 @@ let Formats = [
 			battle: 1,
 		},
 		ruleset: ['[Gen 1] OU', 'Accuracy Moves Clause', 'Sleep Moves Clause', 'Team Preview'],
-		banlist: ['Explosion', 'Self-Destruct', 'Clamp', 'Bind', 'Wrap', 'Fire Spin', 'Nidoking + Fury Attack + Thrash', 'Exeggutor + Poison Powder + Stomp', 'Exeggutor + Sleep Powder + Stomp',
-			'Exeggutor + Stun Spore + Stomp', 'Jolteon + Focus Energy + Thunder Shock', 'Flareon + Focus Energy + Ember'],
+		banlist: ['Explosion', 'Self-Destruct', 'Clamp', 'Bind', 'Wrap', 'Fire Spin', 'Nidoking + Fury Attack + Thrash', 'Exeggutor + Poison Powder + Stomp', 'Exeggutor + Sleep Powder + Stomp', 'Exeggutor + Stun Spore + Stomp', 'Jolteon + Focus Energy + Thunder Shock', 'Flareon + Focus Energy + Ember', 'Magikarp + Dragon Rage', 'Rapidash + Pay Day', 'Fearow + Pay Day'],
 	},
 	{
 		name: "[Gen 1] Monotype",
@@ -579,7 +587,7 @@ let Formats = [
 
 		mod: 'gen1',
 		ruleset: ['Same Type Clause', 'Standard'],
-		banlist: ['Uber',],
+		banlist: ['Uber', 'Magikarp + Dragon Rage', 'Rapidash + Pay Day', 'Fearow + Pay Day'],
 	},
 	{
 		name: "[Gen 1] Inverse",
@@ -590,8 +598,7 @@ let Formats = [
 
 		mod: 'gen1',
 		ruleset: ['Standard', 'Inverse Mod'],
-		banlist: ['Uber', 'Nidoking + Fury Attack + Thrash', 'Exeggutor + Poison Powder + Stomp', 'Exeggutor + Sleep Powder + Stomp',
-			'Exeggutor + Stun Spore + Stomp', 'Jolteon + Focus Energy + Thunder Shock', 'Flareon + Focus Energy + Ember'],
+		banlist: ['Uber', 'Nidoking + Fury Attack + Thrash', 'Exeggutor + Poison Powder + Stomp', 'Exeggutor + Sleep Powder + Stomp', 'Exeggutor + Stun Spore + Stomp', 'Jolteon + Focus Energy + Thunder Shock', 'Flareon + Focus Energy + Ember', 'Magikarp + Dragon Rage', 'Rapidash + Pay Day', 'Fearow + Pay Day'],
 	},
 	{
 		name: "[Gen 1] Mediocremons",
@@ -606,7 +613,7 @@ let Formats = [
 			  'Marowak', 'Moltres', 'Mr. Mime', 'Muk', 'Ninetales', 'Omastar', 'Onix', 'Persian', 'Pinsir', 'Primeape',
 			  'Raichu', 'Rapidash', 'Sandslash', 'Scyther', 'Tangela', 'Tentacruel', 'Vaporeon', 'Venusaur', 'Victreebel',
 			  'Vileplume', 'Weezing', 'Wigglytuff', 'Haunter', 'Machoke', 'Abra', 'Gastly', 'Geodude', 'Jigglypuff', 'Krabby',
-			  'Omanyte', 'Shellder', 'Tentacool', 'Voltorb', 'Chansey'],
+			  'Omanyte', 'Shellder', 'Tentacool', 'Voltorb', 'Chansey', 'Magikarp + Dragon Rage', 'Rapidash + Pay Day', 'Fearow + Pay Day'],
 	},
 	//FIXME: This doesn't work for some reason. I have a thing in rulesets.js for it, but the code breaks when used. It may be the .ts I copied it from? - Plague
 	/*{
@@ -624,7 +631,7 @@ let Formats = [
 		mod: 'gen1',
 		ruleset: ['Standard', 'Scalemons Mod'],
 		banlist: ['Uber', 'Nidoking + Fury Attack + Thrash', 'Exeggutor + Poison Powder + Stomp', 'Exeggutor + Sleep Powder + Stomp',
-			'Exeggutor + Stun Spore + Stomp', 'Jolteon + Focus Energy + Thunder Shock', 'Flareon + Focus Energy + Ember'],
+			'Exeggutor + Stun Spore + Stomp', 'Jolteon + Focus Energy + Thunder Shock', 'Flareon + Focus Energy + Ember', 'Magikarp + Dragon Rage', 'Rapidash + Pay Day', 'Fearow + Pay Day'],
 	},
 	{
 		name: "[Gen 1] STABmons",
@@ -637,9 +644,7 @@ let Formats = [
 		mod: 'gen1',
 		ruleset: ['Standard', 'STABmons Move Legality'],
 		banlist: ['Mewtwo', 'Mew',
-			'Nidoking + Fury Attack + Thrash', 'Exeggutor + Poison Powder + Stomp', 'Exeggutor + Sleep Powder + Stomp',
-			'Exeggutor + Stun Spore + Stomp', 'Jolteon + Focus Energy + Thunder Shock', 'Flareon + Focus Energy + Ember'
-			 ],
+			'Nidoking + Fury Attack + Thrash', 'Exeggutor + Poison Powder + Stomp', 'Exeggutor + Sleep Powder + Stomp', 'Exeggutor + Stun Spore + Stomp', 'Jolteon + Focus Energy + Thunder Shock', 'Flareon + Focus Energy + Ember', 'Magikarp + Dragon Rage', 'Rapidash + Pay Day', 'Fearow + Pay Day'],
 		restricted: ['Spore'],
 	},
 	{
@@ -651,10 +656,7 @@ let Formats = [
 
 		mod: 'gen1',
 		ruleset: ['Obtainable', 'Species Clause', 'Nickname Clause', 'OHKO Clause', 'Evasion Moves Clause', 'HP Percentage Mod', 'Cancel Mod', 'Dynamax Clause', 'Sleep Clause Mod', 'Endless Battle Clause'],
-		banlist: ['Mewtwo', 'Mew',
-			'Nidoking + Fury Attack + Thrash', 'Exeggutor + Poison Powder + Stomp', 'Exeggutor + Sleep Powder + Stomp',
-			'Exeggutor + Stun Spore + Stomp', 'Jolteon + Focus Energy + Thunder Shock', 'Flareon + Focus Energy + Ember'
-			 ],
+		banlist: ['Mewtwo', 'Mew', 'Nidoking + Fury Attack + Thrash', 'Exeggutor + Poison Powder + Stomp', 'Exeggutor + Sleep Powder + Stomp', 'Exeggutor + Stun Spore + Stomp', 'Jolteon + Focus Energy + Thunder Shock', 'Flareon + Focus Energy + Ember', 'Magikarp + Dragon Rage', 'Rapidash + Pay Day', 'Fearow + Pay Day'],
 		onModifySpecies(species, target, source, effect) {
 			if (!target) return; // Chat command
 			if (effect && ['imposter', 'transform'].includes(effect.id)) return;
@@ -712,7 +714,7 @@ let Formats = [
 
 		mod: 'gen1',
 		ruleset: ['Standard'],
-		banlist: ['Psywave', 'Uber'],
+		banlist: ['Psywave', 'Uber', 'Magikarp + Dragon Rage', 'Rapidash + Pay Day', 'Fearow + Pay Day'],
 	},
 	{
 		name: "[Gen 1] PP 2U",
@@ -720,7 +722,7 @@ let Formats = [
 		mod: 'gen1',
 		ruleset: ['Standard'],
 		banlist: ['Uber', 'Psywave', 'Alakazam', 'Chansey', 'Cloyster', 'Exeggutor', 'Gengar', 'Golem', 'Jolteon',
-			  'Jynx', 'Lapras', 'Rhydon', 'Slowbro', 'Snorlax', 'Starmie', 'Tauros', 'Zapdos'],
+			  'Jynx', 'Lapras', 'Rhydon', 'Slowbro', 'Snorlax', 'Starmie', 'Tauros', 'Zapdos', 'Magikarp + Dragon Rage', 'Rapidash + Pay Day', 'Fearow + Pay Day'],
 	},
 	{
 		name: "[Gen 1] PP 3U",
@@ -730,7 +732,7 @@ let Formats = [
 		banlist: ['Psywave', 'Uber','Alakazam', 'Chansey', 'Cloyster', 'Exeggutor', 'Gengar', 'Golem', 'Jolteon',
 			  'Jynx', 'Lapras', 'Rhydon', 'Slowbro', 'Snorlax', 'Starmie', 'Tauros', 'Zapdos', 'Articuno',
 			  'Dodrio', 'Dragonite', 'Gyarados', 'Haunter', 'Hypno', 'Kadabra', 'Kangaskhan', 'Moltres', 'Persian',
-			  'Poliwrath', 'Raichu', 'Raticate', 'Tentacruel', 'Victreebel'],
+			  'Poliwrath', 'Raichu', 'Raticate', 'Tentacruel', 'Victreebel', 'Magikarp + Dragon Rage', 'Rapidash + Pay Day', 'Fearow + Pay Day'],
 	},
 	{
 		name: "[Gen 1] PP 4U",
@@ -742,7 +744,7 @@ let Formats = [
 			  'Dragonite', 'Gyarados', 'Haunter', 'Hypno', 'Kadabra', 'Kangaskhan', 'Moltres', 'Persian', 'Poliwrath',
 			  'Raichu', 'Raticate', 'Tentacruel', 'Victreebel', 'Aerodactyl', 'Charizard', 'Clefable', 'Dewgong', 'Dugtrio',
 			  'Electabuzz', 'Exeggcute', 'Fearow', 'Golduck', 'Kingler', 'Mr. Mime', 'Pinsir', 'Poliwhirl', 'Sandslash', 'Vaporeon',
-			  'Venusaur', 'Wigglytuff'],
+			  'Venusaur', 'Wigglytuff', 'Magikarp + Dragon Rage', 'Rapidash + Pay Day', 'Fearow + Pay Day'],
 	},
 	{
 		name: "[Gen 1] PP 5U",
@@ -755,7 +757,7 @@ let Formats = [
 			  'Victreebel', 'Aerodactyl', 'Charizard', 'Clefable', 'Dewgong', 'Dugtrio', 'Electabuzz', 'Exeggcute', 'Fearow',
 			  'Golduck', 'Kingler', 'Mr. Mime', 'Pinsir', 'Poliwhirl', 'Sandslash', 'Vaporeon', 'Venusaur', 'Wigglytuff',
 			  'Abra', 'Arcanine', 'Blastoise', 'Nidoking', 'Nidoqueen', 'Omastar', 'Porygon', 'Rapidash', 'Scyther',
-			  'Slowpoke', 'Staryu', 'Tangela', 'Venomoth'],
+			  'Slowpoke', 'Staryu', 'Tangela', 'Venomoth', 'Magikarp + Dragon Rage', 'Rapidash + Pay Day', 'Fearow + Pay Day'],
 	},
 	{
 		name: "[Gen 1] PP 6U",
@@ -770,7 +772,7 @@ let Formats = [
 			  'Abra', 'Arcanine', 'Blastoise', 'Nidoking', 'Nidoqueen', 'Omastar', 'Porygon', 'Rapidash', 'Scyther',
 			  'Slowpoke', 'Staryu', 'Tangela', 'Venomoth', 'Arbok', 'Dragonair', 'Drowzee', 'Electrode', 'Gastly',
 			  'Graveler', 'Lickitung', 'Magmar', 'Ninetales', 'Parasect', 'Poliwag', 'Primeape', 'Seadra', 'Seaking',
-			  'Vileplume', 'Wartortle'],
+			  'Vileplume', 'Wartortle', 'Magikarp + Dragon Rage', 'Rapidash + Pay Day', 'Fearow + Pay Day'],
 	},
 ];
 
