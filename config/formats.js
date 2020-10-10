@@ -376,7 +376,7 @@ let Formats = [
     	},
 	{
 		name: "[Gen 1] RBYPlus",
-       		desc: `A balance mod for Gen 1 from RBY 2k10, the first of its kind. Created by WaterWizard and `,
+       		desc: `A balance mod for Gen 1 from RBY 2k10, the first of its kind, aimed to make every fully evolved Pokemon viable while drastically increasing the power level. Created by WaterWizard and the RBY 2k10 community.`,
        		threads: [
 			`&bullet; <a href="https://web.archive.org/web/20150915182720/http://rby2k10.proboards.com/thread/1208/rbyplus-main">Old Info Megathread</a>`,
 			`&bullet; <a href="https://web.archive.org/web/20150915020701/http://rby2k10.proboards.com/thread/1599/rbyplus-info-spreadsheet-google-drive">Pokemon Info Spreadsheet</a>`,
