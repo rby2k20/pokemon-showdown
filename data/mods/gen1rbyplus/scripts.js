@@ -901,4 +901,4 @@ let BattleScripts = {
 	},
 };
 
-exports.BattleScripts = BattleScripts;ripts;
+exports.BattleScripts = BattleScripts;
