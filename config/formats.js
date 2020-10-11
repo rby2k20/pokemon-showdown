@@ -392,7 +392,7 @@ let Formats = [
 			`&bullet; <a href="https://web.archive.org/web/20140301113018/http://www.rby2k10.proboards.com/thread/1600/speed-tiers-max">Speed Tiers</a>`,
 		],
         	mod: 'gen1rbyplus',
-       		ruleset: ['Standard'],
+		ruleset: ['Obtainable', 'Sleep Clause Mod', 'Freeze Clause Mod', 'Species Clause', 'Evasion Moves Clause', 'HP Percentage Mod', 'Cancel Mod'],
 		unbanlist: ['Mew'],
     	},
 	{
