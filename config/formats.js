@@ -416,7 +416,7 @@ let Formats = [
 	},
 	{
 		name: "[Gen 1] Pure Hackmons",
-		desc: `Anything that can be hacked in-game and is usable in local battles is allowed. You can re-status your Pokemon using special items in this mod via the import/export feature; PAR, SLP, FRZ, PSN and BRN.`,
+		desc: `Anything that can be hacked in-game and is usable in local battles is allowed. You can pre-status your Pokemon using special items in this mod via the import/export feature; PAR, SLP, FRZ, PSN and BRN.`,
 		threads: [
 			`&bullet; <a href="https://www.smogon.com/forums/threads/3656851/">Pure Hackmons</a>`,
 		],
@@ -430,7 +430,7 @@ let Formats = [
 	},
 	{
 		name: "[Gen 1] Balanced Hackmons",
-		desc: `A balanced form of Pure Hackmons. Ruleset taken from MAMP and Quantum Tesseract, then tweaked. You can re-status your Pokemon using special items in this mod via the import/export feature; PAR, SLP, FRZ, PSN and BRN.`,
+		desc: `A balanced form of Pure Hackmons. Ruleset taken from MAMP and Quantum Tesseract, then tweaked. You can pre-status your Pokemon using special items in this mod via the import/export feature; PAR, SLP, FRZ, PSN and BRN.`,
 		threads: [
 			`&bullet; <a href="https://www.smogon.com/forums/threads/old-gens-other-metas-mega-thread.3597495/#post-7258505">RBY Balanced Hackmons Rulings</a>`,
 		],
@@ -528,7 +528,7 @@ let Formats = [
 	},
 	{
 		name: "[Gen 1] Anything Goes",
-		desc: `A metagame where anything is allowed, so long as it can be legally obtained! Tradebacks are also enabled! You can re-status your Pokemon using special items in this mod via the import/export feature; PAR, SLP, FRZ, PSN and BRN.`,
+		desc: `A metagame where anything is allowed, so long as it can be legally obtained! Tradebacks are also enabled! You can pre-status your Pokemon using special items in this mod via the import/export feature; PAR, SLP, FRZ, PSN and BRN.`,
 		threads: [
 			`&bullet; <a href="https://www.smogon.com/forums/threads/3587441/">Anything Goes Metagame Discussion</a>`,
 		],
@@ -567,6 +567,7 @@ let Formats = [
 		threads: [
 			`&bullet; <a href="https://www.smogon.com/forums/threads/old-generations-little-cup-discussion-currently-has-threatlist-for-rby-only.3450397/">RBY LC Guide</a>`,
 			`&bullet; <a href="https://www.smogon.com/forums/threads/rby-little-cup-tradebacks.3533572/">RBY LC Guide w/Tradebacks by Jellicent</a>`,
+			`&bullet; <a href="https://www.pokemonperfect.com/forums/index.php?threads/rby-lc-viability-rankings.4693/">Viability Rankings</a>`,
 			`&bullet; <a href="https://pastebin.com/raw/yeBRR537">RoA Sample Teams</a>`,
 		],
 
@@ -734,6 +735,12 @@ let Formats = [
 	},
 	{
 		name: "[Gen 1] PP 1U",
+		desc: `Pokemon Perfect's OU equivalent. Essentially the same as OU, only Psywave remains banned.`,
+		threads: [
+			`&bullet; <a href="https://www.smogon.com/forums/threads/3572352/">RBY OU Viability Ranking</a>`,
+			`&bullet; <a href="https://www.smogon.com/forums/threads/3650478/#post-8133786">RBY Sample Teams</a>`,
+			`&bullet; <a href="https://pastebin.com/raw/gLahC72J">RoA Sample Teams</a>`,
+		],
 
 		mod: 'gen1',
 		ruleset: ['Standard'],
@@ -741,6 +748,12 @@ let Formats = [
 	},
 	{
 		name: "[Gen 1] PP 2U",
+		desc: `Pokemon Perfect's UU equivalent. Similar to UU, but Victreebel is allowed and Golem is banned.`,
+		threads: [
+			`&bullet; <a href="https://www.pokemonperfect.com/forums/index.php?threads/odds-of-leads-winning-in-each-matchup.4235/">Lead Matchups</a>`,
+			`&bullet; <a href="https://www.pokemonperfect.com/forums/index.php?threads/viability-rankings.4675/">Viability Rankings</a>`,
+			`&bullet; <a href="https://pastebin.com/raw/gLahC72J">RoA Sample Teams for UU, which work here.</a>`,
+		],
 
 		mod: 'gen1',
 		ruleset: ['Standard'],
@@ -749,6 +762,14 @@ let Formats = [
 	},
 	{
 		name: "[Gen 1] PP 3U",
+		desc: `Pokemon Perfect's RU, essentially.`,
+		threads: [
+			`&bullet; <a href="https://www.pokemonperfect.com/forums/index.php?threads/super-simplified-rby-3u-teambuilding.4408/">Simplified Teambuilding</a>`,
+			`&bullet; <a href="https://www.pokemonperfect.com/forums/index.php?threads/viability-rankings.3626/">Viability Rankings</a>`,
+			`&bullet; <a href="https://www.pokemonperfect.com/forums/index.php?threads/the-ultimate-guide-to-rby-3u-ft-peasounay-2k-post-gp-ready.3946/">3U Guide</a>`,
+			`&bullet; <a href="https://www.pokemonperfect.com/forums/index.php?threads/leads.3666/">3U Leads</a>`,
+			`&bullet; <a href="https://www.pokemonperfect.com/forums/index.php?threads/sample-teams-thread.3704/">Sample Teams</a>`,
+		],
 
 		mod: 'gen1',
 		ruleset: ['Standard'],
@@ -759,6 +780,12 @@ let Formats = [
 	},
 	{
 		name: "[Gen 1] PP 4U",
+		desc: `One of Pokemon Perfect's tiers, equivalent to RBY's old NU. Essentially a tier below RU, but above NU.`,
+		threads: [
+			`&bullet; <a href="https://www.pokemonperfect.com/forums/index.php?threads/lead-thread.3817/">Leads</a>`,
+			`&bullet; <a href="https://www.pokemonperfect.com/forums/index.php?threads/viability-rankings.3718/">Viability Rankings</a>`,
+			`&bullet; <a href="https://www.pokemonperfect.com/forums/index.php?threads/sample-teams-thread.3848/">Sample Teams</a>`,
+		],
 
 		mod: 'gen1',
 		ruleset: ['Standard'],
@@ -771,6 +798,13 @@ let Formats = [
 	},
 	{
 		name: "[Gen 1] PP 5U",
+		desc: `Pokemon Perfect's NU equivalent. Fairly different to Smogon's NU, so treat it as a completely different metagame.`,
+		threads: [
+			`&bullet; <a href="https://www.pokemonperfect.com/forums/index.php?threads/leads-and-sleepers.4291/">Leads and Sleepers</a>`,
+			`&bullet; <a href="https://www.pokemonperfect.com/forums/index.php?threads/viability-rankings.3859/">Viability Rankings</a>`,
+			`&bullet; <a href="https://www.pokemonperfect.com/forums/index.php?threads/the-big-4.4274/">The Big 4</a>`,
+			`&bullet; <a href="https://www.pokemonperfect.com/forums/index.php?threads/5a-tournament-teambuilding-primer.4088/">Teambuilding Primer</a>`,
+		],
 
 		mod: 'gen1',
 		ruleset: ['Standard'],
@@ -784,6 +818,11 @@ let Formats = [
 	},
 	{
 		name: "[Gen 1] PP 6U",
+		desc: `Pokemon Perfect's PU equivalent.`,
+		threads: [
+			`&bullet; <a href="https://www.pokemonperfect.com/forums/index.php?threads/rby-6a-speed-tiers.4308/">Speed Tiers</a>`,
+			`&bullet; <a href="https://www.pokemonperfect.com/forums/index.php?threads/rby-6a-viability-rankings.4327/">Viability Rankings</a>`,
+		],
 
 		mod: 'gen1',
 		ruleset: ['Standard'],
