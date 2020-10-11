@@ -49,6 +49,7 @@ let Formats = [
 		name: "[Gen 1] Ubers",
 		threads: [
 			`&bullet; <a href="https://www.smogon.com/forums/posts/8286283/">RBY Ubers</a>`,
+			`&bullet; <a href="https://pastebin.com/raw/WwmEsYKE">RoA Sample Teams</a>`,
 		],
 
 		mod: 'gen1',
@@ -59,6 +60,7 @@ let Formats = [
 		threads: [
 			`&bullet; <a href="https://www.smogon.com/forums/threads/3572352/">RBY OU Viability Ranking</a>`,
 			`&bullet; <a href="https://www.smogon.com/forums/threads/3650478/#post-8133786">RBY Sample Teams</a>`,
+			`&bullet; <a href="https://pastebin.com/raw/gLahC72J">RoA Sample Teams</a>`,
 		],
 
 		mod: 'gen1',
@@ -70,6 +72,7 @@ let Formats = [
 		threads: [
 			`&bullet; <a href="https://www.smogon.com/forums/threads/3572352/">RBY OU Viability Ranking</a>`,
 			`&bullet; <a href="https://www.smogon.com/forums/threads/3650478/#post-8133786">RBY Sample Teams</a>`,
+			`&bullet; <a href="https://pastebin.com/raw/gLahC72J">RoA Sample Teams</a>`,
 		],
 
 		mod: 'gen1',
@@ -81,6 +84,7 @@ let Formats = [
 		threads: [
 			`&bullet; <a href="https://www.smogon.com/forums/threads/3573896/">RBY UU General Discussion</a>`,
 			`&bullet; <a href="https://www.smogon.com/forums/threads/3647713/">RBY UU Viability Ranking</a>`,
+			`&bullet; <a href="https://pastebin.com/raw/L35vWcgi">RoA Sample Teams</a>`,
 		],
 
 		mod: 'gen1',
@@ -91,6 +95,7 @@ let Formats = [
 		name: "[Gen 1] NU (Alpha)",
 		threads: [
 			`&bullet; <a href="https://www.smogon.com/forums/threads/rby-nu-pre-alph-viability-ranking.3668913/">RBY NU Alpha Viability Rankings</a>`,
+			`&bullet; <a href="https://pastebin.com/raw/7YeeFAEe">RoA Sample Teams</a>`,
 		],
 
 		mod: 'gen1',
@@ -99,6 +104,9 @@ let Formats = [
 	},
 	{
 		name: "[Gen 1] Stadium OU",
+		threads: [
+			`&bullet; <a href="https://pastebin.com/raw/jJb4HJcQ">RoA Sample Teams</a>`,
+		],
 
 		mod: 'stadium',
 		ruleset: ['Obtainable', 'Team Preview', 'Stadium Sleep Clause', 'Freeze Clause Mod', 'Species Clause', 'Nickname Clause', 'OHKO Clause', 'Evasion Moves Clause', 'Endless Battle Clause', 'Exact HP Mod', 'Cancel Mod'],
@@ -559,6 +567,7 @@ let Formats = [
 		threads: [
 			`&bullet; <a href="https://www.smogon.com/forums/threads/old-generations-little-cup-discussion-currently-has-threatlist-for-rby-only.3450397/">RBY LC Guide</a>`,
 			`&bullet; <a href="https://www.smogon.com/forums/threads/rby-little-cup-tradebacks.3533572/">RBY LC Guide w/Tradebacks by Jellicent</a>`,
+			`&bullet; <a href="https://pastebin.com/raw/yeBRR537">RoA Sample Teams</a>`,
 		],
 
 		mod: 'gen1',
@@ -584,6 +593,7 @@ let Formats = [
 		desc: `Bring three Pok&eacute;mon to Team Preview and choose one to battle.`,
 		threads: [
 			`&bullet; <a href="https://www.smogon.com/forums/threads/1v1-throwback.3632458/#post-7754986">RBY 1v1 Viability Rankings and Resources</a>`,
+			`&bullet; <a href="https://pastebin.com/raw/jqe3Yt0H">RoA Sample Teams</a>`,
 		],
 
 		mod: 'gen1',
