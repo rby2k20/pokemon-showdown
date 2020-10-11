@@ -423,8 +423,9 @@ let Formats = [
 
 		mod: 'gen1nocleric',
 		debug: true,
+		maxLevel: 255,
 		trunc(n) { return Math.trunc(n); },
-		defaultLevel: 255,
+		defaultLevel: 100,
 		ruleset: ['-Nonexistent', 'HP Percentage Mod', 'Cancel Mod', 'Endless Battle Clause'],
 		unbanlist: ['MissingNo.'],
 	},
@@ -437,8 +438,9 @@ let Formats = [
 
 		mod: 'gen1nocleric',
 		debug: true,
+		maxLevel: 255,
 		trunc(n) { return Math.trunc(n); },
-		defaultLevel: 255,
+		defaultLevel: 100,
 		ruleset: ['-Nonexistent', 'OHKO Clause', 'Evasion Moves Clause', 'HP Percentage Mod', 'Cancel Mod', 'Freeze Clause Mod', 'Sleep Clause Mod', 'Endless Battle Clause'],
 		banlist: ['Mewtwo', 'Wrap', 'Fire Spin', 'Clamp', 'Bind', 'Dig', 'Fly'],
 		unbanlist: ['MissingNo.'],
