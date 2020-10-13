@@ -24,7 +24,7 @@ let Formats = [
 
 		mod: 'gen1',
 		ruleset: ['Obtainable', 'Allow Tradeback', 'Sleep Clause Mod', 'Freeze Clause Mod', 'Species Clause', 'OHKO Clause', 'Evasion Moves Clause', 'HP Percentage Mod', 'Cancel Mod'],
-		banlist: ['Uber', 'Magikarp + Dragon Rage', 'Rapidash + Pay Day', 'Fearow + Pay Day'],
+		banlist: ['Uber', 'Magikarp + Dragon Rage', 'Rapidash + Pay Day', 'Fearow + Pay Day', 'Pikachu + Fly', 'Raichu + Fly'],
 	},
 		{
 		name: "[Gen 1] 1U (Blitz)",
