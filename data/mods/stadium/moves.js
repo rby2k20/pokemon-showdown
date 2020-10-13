@@ -24,6 +24,12 @@ let BattleMovedex = {
 			}
 		},
 	},
+	hyperbeam: {
+		inherit: true,
+		onMoveFail(target, source, move) {
+			source.addVolatile('mustrecharge');
+		},
+	},
 	jumpkick: {
 		inherit: true,
 		desc: "If this attack misses the target, the user 1HP of damage.",
@@ -35,19 +41,19 @@ let BattleMovedex = {
 	leechseed: {
 		inherit: true,
 		onHit() {},
-		effect: {
+		condition: {
 			onStart(target) {
 				this.add('-start', target, 'move: Leech Seed');
 			},
 			onAfterMoveSelfPriority: 1,
 			onAfterMoveSelf(pokemon) {
-				let leecher = pokemon.side.foe.active[pokemon.volatiles['leechseed'].sourcePosition];
+				const leecher = pokemon.side.foe.active[pokemon.volatiles['leechseed'].sourcePosition];
 				if (!leecher || leecher.fainted || leecher.hp <= 0) {
 					this.debug('Nothing to leech into');
 					return;
 				}
-				let toLeech = this.dex.clampIntRange(Math.floor(pokemon.maxhp / 16), 1);
-				let damage = this.damage(toLeech, pokemon, leecher);
+				const toLeech = this.clampIntRange(Math.floor(pokemon.maxhp / 16), 1);
+				const damage = this.damage(toLeech, pokemon, leecher);
 				if (damage) this.heal(damage, leecher, pokemon);
 			},
 		},
@@ -57,7 +63,7 @@ let BattleMovedex = {
 		self: {
 			volatileStatus: 'rage',
 		},
-		effect: {
+		condition: {
 			// Rage lock
 			duration: 255,
 			onStart(target, source, effect) {
@@ -111,7 +117,7 @@ let BattleMovedex = {
 	},
 	substitute: {
 		inherit: true,
-		effect: {
+		condition: {
 			onStart(target) {
 				this.add('-start', target, 'Substitute');
 				this.effectData.hp = Math.floor(target.maxhp / 4);
@@ -128,7 +134,7 @@ let BattleMovedex = {
 					return null;
 				}
 				if (move.category === 'Status') {
-					let SubBlocked = ['leechseed', 'lockon', 'mindreader', 'nightmare'];
+					const SubBlocked = ['leechseed', 'lockon', 'mindreader', 'nightmare'];
 					if (move.status || move.boosts || move.volatileStatus === 'confusion' || SubBlocked.includes(move.id)) {
 						this.add('-activate', target, 'Substitute', '[block] ' + move.name);
 						return null;
@@ -157,7 +163,7 @@ let BattleMovedex = {
 				}
 				this.runEvent('AfterSubDamage', target, source, move, damage);
 				// Add here counter damage
-				let lastAttackedBy = target.getLastAttackedBy();
+				const lastAttackedBy = target.getLastAttackedBy();
 				if (!lastAttackedBy) {
 					target.attackedBy.push({source: source, move: move.id, damage: damage, thisTurn: true});
 				} else {
