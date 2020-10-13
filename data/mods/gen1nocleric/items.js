@@ -9,6 +9,7 @@ let BattleItems = {
 		onUpdate(pokemon) {
 			pokemon.trySetStatus('frz', pokemon);
 			pokemon.setItem('');
+			this.hint("FRZ item activated.");
 		},
 		num: 999,
 		gen: 1,
@@ -21,6 +22,7 @@ let BattleItems = {
 		onUpdate(pokemon) {
 			pokemon.trySetStatus('psn', pokemon);
 			pokemon.setItem('');
+			this.hint("PSN item activated.");
 		},
 		num: 998,
 		gen: 1,
@@ -33,6 +35,7 @@ let BattleItems = {
 		onUpdate(pokemon) {
 			pokemon.trySetStatus('brn', pokemon);
 			pokemon.setItem('');
+			this.hint("BRN item activated.");
 		},
 		num: 997,
 		gen: 1,
@@ -43,8 +46,9 @@ let BattleItems = {
 		name: "PAR",
 		spritenum: 273,
 		onUpdate(pokemon) {
-			pokemon.trySetStatus('prz', pokemon);
+			pokemon.trySetStatus('par', pokemon);
 			pokemon.setItem('');
+			this.hint("PAR item activated.");
 		},
 		num: 996,
 		gen: 1,
@@ -57,6 +61,7 @@ let BattleItems = {
 		onUpdate(pokemon) {
 			pokemon.trySetStatus('slp', pokemon);
 			pokemon.setItem('');
+			this.hint("SLP item activated.");
 		},
 		num: 996,
 		gen: 1,
