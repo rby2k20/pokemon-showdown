@@ -41,19 +41,19 @@ let BattleMovedex = {
 	leechseed: {
 		inherit: true,
 		onHit() {},
-		condition: {
+		effect: {
 			onStart(target) {
 				this.add('-start', target, 'move: Leech Seed');
 			},
 			onAfterMoveSelfPriority: 1,
 			onAfterMoveSelf(pokemon) {
-				const leecher = pokemon.side.foe.active[pokemon.volatiles['leechseed'].sourcePosition];
+				let leecher = pokemon.side.foe.active[pokemon.volatiles['leechseed'].sourcePosition];
 				if (!leecher || leecher.fainted || leecher.hp <= 0) {
 					this.debug('Nothing to leech into');
 					return;
 				}
-				const toLeech = this.clampIntRange(Math.floor(pokemon.maxhp / 16), 1);
-				const damage = this.damage(toLeech, pokemon, leecher);
+				let toLeech = this.clampIntRange(Math.floor(pokemon.maxhp / 16), 1);
+				let damage = this.damage(toLeech, pokemon, leecher);
 				if (damage) this.heal(damage, leecher, pokemon);
 			},
 		},
@@ -63,7 +63,7 @@ let BattleMovedex = {
 		self: {
 			volatileStatus: 'rage',
 		},
-		condition: {
+		effect: {
 			// Rage lock
 			duration: 255,
 			onStart(target, source, effect) {
@@ -117,7 +117,7 @@ let BattleMovedex = {
 	},
 	substitute: {
 		inherit: true,
-		condition: {
+		effect: {
 			onStart(target) {
 				this.add('-start', target, 'Substitute');
 				this.effectData.hp = Math.floor(target.maxhp / 4);
@@ -134,7 +134,7 @@ let BattleMovedex = {
 					return null;
 				}
 				if (move.category === 'Status') {
-					const SubBlocked = ['leechseed', 'lockon', 'mindreader', 'nightmare'];
+					let SubBlocked = ['leechseed', 'lockon', 'mindreader', 'nightmare'];
 					if (move.status || move.boosts || move.volatileStatus === 'confusion' || SubBlocked.includes(move.id)) {
 						this.add('-activate', target, 'Substitute', '[block] ' + move.name);
 						return null;
@@ -163,7 +163,7 @@ let BattleMovedex = {
 				}
 				this.runEvent('AfterSubDamage', target, source, move, damage);
 				// Add here counter damage
-				const lastAttackedBy = target.getLastAttackedBy();
+				let lastAttackedBy = target.getLastAttackedBy();
 				if (!lastAttackedBy) {
 					target.attackedBy.push({source: source, move: move.id, damage: damage, thisTurn: true});
 				} else {
