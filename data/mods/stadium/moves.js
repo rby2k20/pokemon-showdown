@@ -115,6 +115,10 @@ let BattleMovedex = {
 			this.heal(Math.floor(target.maxhp / 2), target, target);
 		},
 	},
+	struggle: {
+		inherit: true,
+		ignoreImmunity: {'Normal': true},
+	},
 	substitute: {
 		inherit: true,
 		effect: {
