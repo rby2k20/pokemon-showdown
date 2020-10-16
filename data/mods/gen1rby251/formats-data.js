@@ -784,6 +784,240 @@ let BattleFormatsData = {
 	meganium: {
 		tier: "OU",
 	},
+	cyndaquil: {
+		tier: "LC",
+	},
+	quilava: {
+		tier: "NFE",
+	},
+	typhlosion: {
+		tier: "UUBL",
+	},
+	totodile: {
+		tier: "LC",
+	},
+	croconaw: {
+		tier: "NFE",
+	},
+	feraligatr: {
+		tier: "NUBL",
+	},
+	sentret: {
+		tier: "LC",
+	},
+	furret: {
+		tier: "NU",
+	},
+	hoothoot: {
+		tier: "LC",
+	},
+	noctowl: {
+		tier: "NU",
+	},
+	ledyba: {
+		tier: "LC",
+	},
+	ledian: {
+		tier: "NU",
+	},
+	spinarak: {
+		tier: "LC",
+	},
+	ariados: {
+		tier: "NU",
+	},
+	chinchou: {
+		tier: "LC",
+	},
+	lanturn: {
+		tier: "UU",
+	},
+	togepi: {
+		tier: "LC",
+	},
+	togetic: {
+		tier: "NU",
+	},
+	natu: {
+		tier: "LC",
+	},
+	xatu: {
+		tier: "NU",
+	},
+	mareep: {
+		tier: "LC",
+	},
+	flaaffy: {
+		tier: "NFE",
+	},
+	ampharos: {
+		tier: "UU",
+	},
+	marill: {
+		tier: "LC",
+	},
+	azumarill: {
+		tier: "NU",
+	},
+	sudowoodo: {
+		tier: "NU",
+	},
+	hoppip: {
+		tier: "LC",
+	},
+	skiploom: {
+		tier: "NFE",
+	},
+	jumpluff: {
+		tier: "UU",
+	},
+	aipom: {
+		tier: "NU",
+	},
+	sunkern: {
+		tier: "LC",
+	},
+	sunflora: {
+		tier: "NU",
+	},
+	yanma: {
+		tier: "NU",
+	},
+	wooper: {
+		tier: "LC",
+	},
+	quagsire: {
+		tier: "UU",
+	},
+	murkrow: {
+		tier: "NU",
+	},
+	misdreavus: {
+		tier: "OU",
+	},
+	unown: {
+		tier: "NU",
+	},
+	wobbuffet: {
+		tier: "NU",
+	},
+	girafarig: {
+		tier: "UU",
+	},
+	pineco: {
+		tier: "LC",
+	},
+	forretress: {
+		tier: "OU",
+	},
+	dunsparce: {
+		tier: "NU",
+	},
+	gligar: {
+		tier: "UU",
+	},
+	snubbull: {
+		tier: "LC",
+	},
+	granbull: {
+		tier: "UU",
+	},
+	qwilfish: {
+		tier: "UU",
+	},
+	shuckle: {
+		tier: "NU",
+	},
+	heracross: {
+		tier: "OU",
+	},
+	sneasel: {
+		tier: "NU",
+	},
+	teddiursa: {
+		tier: "LC",
+	},
+	ursaring: {
+		tier: "UUBL",
+	},
+	slugma: {
+		tier: "LC",
+	},
+	magcargo: {
+		tier: "NU",
+	},
+	swinub: {
+		tier: "LC",
+	},
+	piloswine: {
+		tier: "UU",
+	},
+	corsola: {
+		tier: "NU",
+	},
+	remoraid: {
+		tier: "LC",
+	},
+	octillery: {
+		tier: "NU",
+	},
+	delibird: {
+		tier: "NU",
+	},
+	mantine: {
+		tier: "NU",
+	},
+	skarmory: {
+		tier: "OU",
+	},
+	houndour: {
+		tier: "LC",
+	},
+	houndoom: {
+		tier: "UUBL",
+	},
+	phanpy: {
+		tier: "LC",
+	},
+	donphan: {
+		tier: "UUBL",
+	},
+	stantler: {
+		tier: "NU",
+	},
+	smeargle: {
+		tier: "UUBL",
+	},
+	miltank: {
+		tier: "OU",
+	},
+	raikou: {
+		tier: "OU",
+	},
+	entei: {
+		tier: "UUBL",
+	},
+	suicune: {
+		tier: "OU",
+	},
+	larvitar: {
+		tier: "LC",
+	},
+	pupitar: {
+		tier: "NFE",
+	},
+	tyranitar: {
+		tier: "OU",
+	},
+	lugia: {
+		tier: "Uber",
+	},
+	hooh: {
+		tier: "Uber",
+	},
+	celebi: {
+		tier: "Uber",
+	},
 	missingno: {
 		isNonstandard: "Unobtainable",
 		tier: "Illegal",
