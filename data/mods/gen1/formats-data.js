@@ -71,7 +71,7 @@ let BattleFormatsData = {
 		tier: "LC",
 	},
 	kakuna: {
-		randomBattleMoves: ["poisonsting", "stringshot", "harden"],
+		randomBattleMoves: ["poisonsting", "stringshot"],
 		tier: "NFE",
 	},
 	beedrill: {
@@ -656,7 +656,7 @@ let BattleFormatsData = {
 		tier: "OU",
 	},
 	magikarp: {
-		randomBattleMoves: ["tackle", "dragonrage"],
+		randomBattleMoves: ["splash", "tackle"],
 		tier: "LC",
 	},
 	gyarados: {
