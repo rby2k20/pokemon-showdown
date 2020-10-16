@@ -398,7 +398,11 @@ let Formats = [
     	},
 	{
 		name: "[Gen 1] RBY 251 (Alpha)",
-		desc: `A Pokemon Online mod originally made by Crystal_, ported to Pokemon Showdown by Plague von Karma. This allows Gen 2 Pokemon with minimal changes to their movepool.`,
+		desc: `A Pokemon Online mod originally made by Crystal_, ported to Pokemon Showdown by Plague von Karma. This allows Gen 2 Pokemon with changes to their movepool to be more in-tune with RBY. Gen 2 Pokemon use their Level-up moves minus RBY moves, plus customized TMs.`,
+		threads: [
+			`&bullet; <a href="http://pokemon-online.eu/threads/18311/">Pokemon Online Thread</a>`,
+			`&bullet; <a href="https://docs.google.com/spreadsheets/d/1hS_qUyl_XE6Inh1B83pbG3_pEwBuWVwODyetB-ax5Is/edit?usp=sharing">TM/HM Learnsets</a>`,
+		],
 
 		mod: 'gen1rby251',
 		searchShow: false,
