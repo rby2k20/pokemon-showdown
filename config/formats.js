@@ -397,6 +397,14 @@ let Formats = [
 		unbanlist: ['Mew'],
     	},
 	{
+		name: "[Gen 1] RBY 251 (Alpha)",
+
+		mod: 'gen1rby251',
+		searchShow: false,
+		ruleset: ['Obtainable', 'Sleep Clause Mod', 'Freeze Clause Mod', 'Species Clause', 'Evasion Moves Clause', 'HP Percentage Mod', 'Cancel Mod'],
+		banlist: ['Uber']
+	}
+	{
 		name: "[Gen 1] Doubles OU",
 		desc: `A modified Gen 1 sim made with the intention of making Doubles possible. It uses Gen 3 Doubles Mechanics; Surf targets two opponents, you switch out immediately upon fainting, and spread move damage is halved.`,
 		threads: [
@@ -719,16 +727,6 @@ let Formats = [
 		defaultLevel: 100,
 		ruleset: ['HP Percentage Mod', 'Cancel Mod'],
 	},
-	/*{
-		name: "[Gen 1] RBY 251 Custom Game (Testing)",
-
-		mod: 'gen1rby251',
-		debug: true,
-		maxLevel: 9999,
-		trunc(n) { return Math.trunc(n); },
-		defaultLevel: 100,
-		ruleset: ['HP Percentage Mod', 'Cancel Mod'],
-	},*/
 	// Pokemon Perfect Metagames
 	///////////////////////////////////////////////////////////////////
 
