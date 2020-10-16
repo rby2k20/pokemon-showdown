@@ -397,15 +397,15 @@ let Formats = [
 		unbanlist: ['Mew'],
     	},
 	{
-		name: "[Gen 1] RBY 251 (Alpha)",
-		desc: `A Pokemon Online mod originally made by Crystal_, ported to Pokemon Showdown by Plague von Karma. This allows Gen 2 Pokemon with changes to their movepool to be more in-tune with RBY. Gen 2 Pokemon use their Level-up moves minus RBY moves, plus customized TMs.`,
+		name: "[Gen 1] RBY 251",
+		desc: `A Pokemon Online mod originally made by Crystal_ and ported to Pokemon Showdown by Plague von Karma. This allows Gen 2 Pokemon with changes to their movepool to be more in-tune with RBY. Gen 2 Pokemon use their Level-up moves minus RBY moves, plus customized TMs. Some even keep their signature moves!`,
 		threads: [
 			`&bullet; <a href="http://pokemon-online.eu/threads/18311/">Pokemon Online Thread</a>`,
+			`&bullet; <a href="https://pastebin.com/1PFj9trt">Learnset Code</a>`,
 			`&bullet; <a href="https://docs.google.com/spreadsheets/d/1hS_qUyl_XE6Inh1B83pbG3_pEwBuWVwODyetB-ax5Is/edit?usp=sharing">TM/HM Learnsets</a>`,
 		],
 
 		mod: 'gen1rby251',
-		searchShow: false,
 		ruleset: ['Obtainable', 'Sleep Clause Mod', 'Freeze Clause Mod', 'Species Clause', 'Evasion Moves Clause', 'HP Percentage Mod', 'Cancel Mod'],
 		banlist: ['Uber'],
 		unbanlist: ['Chikorita', 'Bayleef', 'Meganium', 'Cyndaquil', 'Quilava', 'Typhlosion', 'Totodile', 'Croconaw', 'Feraligatr', 'Sentret', 'Furret', 'Hoothoot', 'Noctowl', 'Ledyba', 'Ledian', 'Spinarak', 'Ariados', 'Crobat', 'Chinchou', 'Lanturn', 'Pichu', 'Cleffa', 'Igglybuff', 'Togepi', 'Togetic', 'Natu', 'Xatu', 'Mareep', 'Flaaffy', 'Ampharos', 'Bellossom', 'Marill', 'Azumarill', 'Sudowoodo', 'Politoed', 'Hoppip', 'Skiploom', 'Jumpluff', 'Aipom', 'Sunkern', 'Sunflora', 'Yanma', 'Wooper', 'Quagsire', 'Espeon', 'Umbreon', 'Murkrow', 'Slowking', 'Misdreavus', 'Unown', 'Wobbuffet', 'Girafarig', 'Pineco', 'Forretress', 'Dunsparce', 'Gligar', 'Steelix', 'Snubbull', 'Granbull', 'Qwilfish', 'Scizor', 'Shuckle', 'Heracross', 'Sneasel', 'Teddiursa', 'Ursaring', 'Slugma', 'Magcargo', 'Swinub', 'Piloswine', 'Corsola', 'Remoraid', 'Octillery', 'Delibird', 'Mantine', 'Skarmory', 'Houndour', 'Houndoom', 'Kingdra', 'Phanpy', 'Donphan', 'Porygon2', 'Stantler', 'Smeargle', 'Tyrogue', 'Hitmontop', 'Smoochum', 'Elekid', 'Magby', 'Miltank', 'Blissey', 'Raikou', 'Entei', 'Suicune', 'Larvitar', 'Pupitar', 'Tyranitar', 'Triple Kick', 'Sacred Fire', 'Spider Web', 'Aeroblast', 'Megahorn', 'Sketch', 'Milk Drink', 'Present'],
