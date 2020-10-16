@@ -561,6 +561,7 @@ let Formats = [
 		desc: `A metagame that only allows NFE and LC Pokemon.`,
 		threads: [
 			`&bullet; <a href="https://www.smogon.com/forums/threads/nfe-old-gens-hub.3656369/post-8574232">NFE Old Gens Hub</a>`,
+			`&bullet; <a href="https://pastebin.com/4KpKCYtn">Sample Teams</a>`,
 		],
 		
 		mod: 'gen1',
