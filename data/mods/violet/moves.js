@@ -43,32 +43,57 @@ let BattleMovedex = {
 		inherit: true,
 		basePower: 70,
 		pp: 5,
-  },
+	},
 	disable: {
-		num: 50,
 		accuracy: 100,
-		basePower: 0,
 		category: "Status",
-		desc: "For 4 turns, the target's last move used becomes disabled. Fails if one of the target's moves is already disabled, if the target has not made a move, or if the target no longer knows the move.",
-		shortDesc: "For 4 turns, disables the target's last move used.",
 		id: "disable",
 		isViable: true,
 		name: "Disable",
 		pp: 5,
 		priority: 0,
 		flags: {protect: 1, reflectable: 1, mirror: 1, authentic: 1},
-		onTryHit(target) {
-			return true;
+		onHit: function (target, source) {
+			if (!target.moves.length) return false;
+			let sideCondition = target.side.sideConditions['disable'];
+			if (sideCondition) {
+				target.side.removeSideCondition('disable');
+			}
+			target.side.addSideCondition('disable', target);
 		},
-		status: 'disable',
-		secondary: null,
-		target: "normal",
-		type: "Normal",
-		zMoveEffect: 'clearnegativeboost',
-		contestType: "Clever",
+		effect: {
+			noCopy: true, // doesn't get copied by Baton Pass
+			onStart: function (side, target) {
+				let moves = target.moves;
+				let moveId = moves[this.random(moves.length)];
+				if (!moveId) return false;
+				let move = this.getMove(moveId);
+				this.add('-start', target, 'Disable', move.name);
+				this.effectData.move = move.id;
+				return;
+			},
+			onBeforeMovePriority: 7,
+			onBeforeMove: function (attacker, defender, move) {
+				if (this.effectData.source !== attacker) return;
+				if (move.id === this.effectData.move) {
+					this.add('cant', attacker, 'Disable', move);
+					return false;
+				}
+			},
+			onDisableMove: function (pokemon) {
+				if (this.effectData.source !== pokemon) return;
+				let moves = pokemon.moveset;
+				for (let i = 0; i < moves.length; i++) {
+					if (moves[i].id === this.effectData.move) {
+						pokemon.disableMove(moves[i].id);
+					}
+				}
+			},
+		},
 	},
 	dreameater: {
 		inherit: true,
+		category: "Physical",
 		basePower: 200,
 		drain: [1, 1],
 		onTryImmunity(target) {
@@ -99,9 +124,9 @@ let BattleMovedex = {
 		type: "Flying",
     },
 	haze: {
-		inherit: true,
 		desc: "Eliminates any stat stage changes and status from all active Pokemon. Heal both Pokemon by 33%.",
 		shortDesc: "Remove stat changes, own status, both heal 33%",
+		accuracy: true,
 		pp: 15,
 		onHit(target, source) {
 			this.add('-clearallboost');
@@ -111,18 +136,7 @@ let BattleMovedex = {
 
 				if (pokemon === source) {
 					// Clears the status from the user
-					pokemon.setStatus('');
-				}
-				if (pokemon.status === 'tox') {
-					pokemon.setStatus('psn');
-				}
-				for (const id of Object.keys(pokemon.volatiles)) {
-					if (id === 'residualdmg') {
-						pokemon.volatiles[id].counter = 0;
-					} else {
-						pokemon.removeVolatile(id);
-						this.add('-end', pokemon, id);
-					}
+					pokemon.cureStatus();
 				}
 			}
 		},
@@ -283,6 +297,7 @@ let BattleMovedex = {
   },
 	thrash: {
 		inherit: true,
+		category: "Special",
 		basePower: 100,
 		type: "Dragon",
   },
@@ -293,24 +308,16 @@ let BattleMovedex = {
 	triattack: {
 		inherit: true,
 		accuracy: 100,
-		secondary: {
-			chance: 20,
-			onHit(target, source) {
-				let result = this.random(3);
-				if (result === 0) {
-					target.trySetStatus('brn', source);
-				} else if (result === 1) {
-					target.trySetStatus('par', source);
-				} else {
-					target.trySetStatus('frz', source);
-				}
-			},
-		},
 		type: "Ghost",
   },
 	twineedle: {
 		inherit: true,
 		basePower: 40,
+		multihit: 2,
+		secondary: {
+			chance: 20,
+			status: 'psn',
+		}
   },
 	visegrip: {
 		inherit: true,
