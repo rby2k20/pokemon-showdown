@@ -135,7 +135,6 @@ let BattleTypeChart = {
 			"Dark": 2,
 			"Dragon": 0,
 			"Electric": 0,
-			"Fairy": 1,
 			"Fighting": 1,
 			"Fire": 0,
 			"Flying": 0,
