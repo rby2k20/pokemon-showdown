@@ -27,16 +27,19 @@ let BattleMovedex = {
 		type: "Bug",
 	},
 	conversion: { //Typing needs to be retained after switch-out
-		inherit: true,
 		desc: "Copies foe's typing, and heals 50% health.",
 		shortDesc: "Copy foe's typing, heal 50%",
-		volatileStatus: 'conversion',
+		sideCondition: 'conversion',
+		condition: {
+			     onStart: function (target, source) {
+			     	source.types = target.types;
+				this.add('-start', source, 'typechange', source.types.join(', '), '[from] move: Conversion', '[of] ' + source);
+				return;
+			     },
 		accuracy: true,
 		target: "normal",
 		onHit: function (target, source) {
 			this.heal(Math.floor(source.maxhp / 2), source, source);
-			source.types = target.types;
-			this.add('-start', source, 'typechange', source.types.join(', '), '[from] move: Conversion', '[of] ' + source);
 		},
 	},
 	clamp: {
@@ -61,7 +64,7 @@ let BattleMovedex = {
 			}
 			target.side.addSideCondition('disable', target);
 		},
-		effect: {
+		condition: {
 			noCopy: true, // doesn't get copied by Baton Pass
 			onStart: function (side, target) {
 				let moves = target.moves;
@@ -151,7 +154,7 @@ let BattleMovedex = {
 		basePower: 60,
 		drain: [1, 1],
 	},
-    meditate: {
+  	meditate: {
 		id: "meditate",
 		name: "Meditate",
 		accuracy: true,
