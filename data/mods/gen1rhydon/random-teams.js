@@ -113,7 +113,7 @@ class RandomGen1Teams extends RandomGen2Teams {
 				evs: evs,
 				ivs: ivs,
 				item: '',
-				level: level,
+				level: 20,
 				happiness: 0,
 				shiny: false,
 				nature: 'Serious',
