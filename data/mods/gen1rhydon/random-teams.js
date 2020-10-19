@@ -16,7 +16,7 @@ class RandomGen1Teams extends RandomGen2Teams {
 		let num;
 		for (let i = 0; i < 6; i++) {
 			do {
-				num = this.random(151) + 1;
+				num = this.random(112) + 1;
 			} while (num in hasDexNumber);
 			hasDexNumber[num] = i;
 		}
@@ -82,8 +82,8 @@ class RandomGen1Teams extends RandomGen2Teams {
 			ivs["spd"] = ivs["spa"];
 			ivs["spe"] = ivs["spe"] * 2;
 
-			// Maxed EVs.
-			let evs = {hp: 255, atk: 255, def: 255, spa: 255, spd: 255,	spe: 255};
+			// No EVs, it's Rhydon country
+			let evs = {hp: 0, atk: 0, def: 0, spa: 0, spd: 0, spe: 0};
 
 			// Four random unique moves from movepool. don't worry about "attacking" or "viable".
 			// Since Gens 1 and 2 learnsets are shared, we need to weed out Gen 2 moves.
@@ -106,7 +106,7 @@ class RandomGen1Teams extends RandomGen2Teams {
 
 			team.push({
 				name: poke,
-				species: template.species,
+				species: 'Rhydon',
 				moves: moves,
 				gender: false,
 				ability: 'None',
