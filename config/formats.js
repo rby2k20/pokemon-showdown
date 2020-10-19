@@ -473,6 +473,17 @@ let Formats = [
 		banlist: ['Mewtwo', 'Wrap', 'Fire Spin', 'Clamp', 'Bind', 'Dig', 'Fly'],
 		unbanlist: ['MissingNo.'],
 	},
+	{
+		name: "[Gen 1] The Rhydon Stakes",
+		desc: `A format where you can only use one L20 Pound Rhydon, just like in the RBY Test Battle system. The brain-child of zalarye.`,
+
+		mod: 'gen1rhydon',
+		team: 'random',
+		teamLength: {
+			battle: 1,
+		},
+		ruleset: ['HP Percentage Mod', 'Cancel Mod'],
+	},
 
 	// Randomized Formats
 	///////////////////////////////////////////////////////////////////
