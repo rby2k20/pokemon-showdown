@@ -94,7 +94,7 @@ class RandomGen1Teams extends RandomGen2Teams {
 				for (let move in lsetData.learnset) {
 					if (this.dex.getMove(move).gen !== 1) continue;
 					if (lsetData.learnset[move].some(learned => learned[0] === '1')) {
-						pool.push(move);
+						pool.push('Pound');
 					}
 				}
 			}
@@ -107,7 +107,7 @@ class RandomGen1Teams extends RandomGen2Teams {
 			team.push({
 				name: 'Rhydon',
 				species: 'Rhydon',
-				moves: 'Pound',
+				moves: moves,
 				gender: false,
 				ability: 'None',
 				evs: evs,
