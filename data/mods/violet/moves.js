@@ -35,7 +35,8 @@ let BattleMovedex = {
 			     	source.types = target.types;
 				this.add('-start', source, 'typechange', source.types.join(', '), '[from] move: Conversion', '[of] ' + source);
 				return;
-			     },
+			     }
+		},
 		accuracy: true,
 		target: "normal",
 		onHit: function (target, source) {
