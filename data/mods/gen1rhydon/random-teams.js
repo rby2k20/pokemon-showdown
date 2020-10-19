@@ -105,9 +105,9 @@ class RandomGen1Teams extends RandomGen2Teams {
 			}
 
 			team.push({
-				name: poke,
+				name: 'Rhydon',
 				species: 'Rhydon',
-				moves: moves,
+				moves: 'Pound',
 				gender: false,
 				ability: 'None',
 				evs: evs,
