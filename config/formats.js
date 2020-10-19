@@ -474,11 +474,11 @@ let Formats = [
 		unbanlist: ['MissingNo.'],
 	},
 	{
-		name: "[Gen 1] The Rhydon Stakes",
+		name: "[Gen 1] Duel Arena",
 		desc: `A format where you can only use one L20 Pound Rhydon, just like in the RBY Test Battle system. The brain-child of zalarye.`,
 
 		mod: 'gen1rhydon',
-		team: 'random',
+		team: 'randomCC',
 		teamLength: {
 			battle: 1,
 		},
