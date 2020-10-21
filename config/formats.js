@@ -577,9 +577,9 @@ let Formats = [
 		onValidateSet(set) {
 			if (set.moves.length !== 1 || this.dex.getMove(set.moves[0]).id !== 'metronome') {
 				return [`${set.name || set.species} has illegal moves.`, `(Pok\u00e9mon can only have one Metronome in their moveset)`];
-			}
-		},
-		{
+			},
+	},
+	{
 		name: "[Gen 1] Duel Arena",
 		desc: `A format where you can only use one L20 Pound Rhydon, just like in the RBY Test Battle system. There's no Stat Exp here, only randomized DVs. The brain-child of zalarye. May the best Rhydon win!`,
 		threads: [
@@ -592,7 +592,6 @@ let Formats = [
 			battle: 1,
 		},
 		ruleset: ['HP Percentage Mod', 'Cancel Mod'],
-		},
 	},
 
 	// Miscellaneous Metagames
