@@ -39,6 +39,18 @@ let Formats = [
 		ruleset: ['Obtainable', 'Allow Tradeback', 'Sleep Clause Mod', 'Freeze Clause Mod', 'Species Clause', 'OHKO Clause', 'Evasion Moves Clause', 'HP Percentage Mod', 'Cancel Mod', 'Blitz'],
 		banlist: ['Uber', 'Magikarp + Dragon Rage', 'Rapidash + Pay Day', 'Fearow + Pay Day', 'Pikachu + Fly', 'Raichu + Fly'],
 	},
+	{
+		name: "[Gen 1] Stadium 1U",
+		desc: `A metagame utilizing Pokemon Stadium, with all the mechanics! Sleep Clause counts Rest here to remain true to cartridge. Allows moves obtainable through the Time Capsule.`,
+		threads: [
+			`&bullet; <a href="https://www.smogon.com/forums/threads/gen-1-and-gen-2-how-sleep-clause-works-in-the-pok%C3%A9mon-stadium-games.3661020/">Stadium Sleep Clause details (fixed)</a>`,
+			`&bullet; <a href="https://www.smogon.com/forums/threads/stadium-format-is-now-available-on-ps.3526616/">Research Thread</a>`,
+		],
+
+		mod: 'stadium',
+		ruleset: ['Obtainable', 'Team Preview', 'Stadium Sleep Clause', 'Freeze Clause Mod', 'Species Clause', 'Nickname Clause', 'OHKO Clause', 'Evasion Moves Clause', 'Endless Battle Clause', 'Exact HP Mod', 'Cancel Mod', 'Allow Tradeback'],
+		banlist: ['Uber', 'Magikarp + Dragon Rage', 'Rapidash + Pay Day', 'Fearow + Pay Day', 'Pikachu + Fly', 'Raichu + Fly'],
+	},
 
 	// Smogon Formats
 	///////////////////////////////////////////////////////////////////
@@ -191,18 +203,6 @@ let Formats = [
 		ruleset: ['Obtainable', 'Team Preview', 'Stadium Sleep Clause', 'Freeze Clause Mod', 'Nickname Clause', 'Endless Battle Clause', 'Exact HP Mod', 'Cancel Mod',
 			  'Allow Tradeback'],
 		banlist: ['Magikarp + Dragon Rage', 'Rapidash + Pay Day', 'Fearow + Pay Day', 'Pikachu + Fly', 'Raichu + Fly'],
-	},
-	{
-		name: "[Gen 1] Stadium OU (Tradebacks)",
-		desc: `A metagame utilizing Pokemon Stadium, with all the mechanics! Sleep Clause counts Rest here to remain true to cartridge. Allows moves obtainable through the Time Capsule.`,
-		threads: [
-			`&bullet; <a href="https://www.smogon.com/forums/threads/gen-1-and-gen-2-how-sleep-clause-works-in-the-pok%C3%A9mon-stadium-games.3661020/">Stadium Sleep Clause details (fixed)</a>`,
-			`&bullet; <a href="https://www.smogon.com/forums/threads/stadium-format-is-now-available-on-ps.3526616/">Research Thread</a>`,
-		],
-
-		mod: 'stadium',
-		ruleset: ['Obtainable', 'Team Preview', 'Stadium Sleep Clause', 'Freeze Clause Mod', 'Species Clause', 'Nickname Clause', 'OHKO Clause', 'Evasion Moves Clause', 'Endless Battle Clause', 'Exact HP Mod', 'Cancel Mod', 'Allow Tradeback'],
-		banlist: ['Uber', 'Magikarp + Dragon Rage', 'Rapidash + Pay Day', 'Fearow + Pay Day', 'Pikachu + Fly', 'Raichu + Fly'],
 	},
     	{
         	name: "[Gen 1] Poke Cup",
