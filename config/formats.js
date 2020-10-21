@@ -578,6 +578,7 @@ let Formats = [
 			if (set.moves.length !== 1 || this.dex.getMove(set.moves[0]).id !== 'metronome') {
 				return [`${set.name || set.species} has illegal moves.`, `(Pok\u00e9mon can only have one Metronome in their moveset)`];
 			},
+		},
 	},
 	{
 		name: "[Gen 1] Duel Arena",
