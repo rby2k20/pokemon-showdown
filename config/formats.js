@@ -473,17 +473,6 @@ let Formats = [
 		banlist: ['Mewtwo', 'Wrap', 'Fire Spin', 'Clamp', 'Bind', 'Dig', 'Fly'],
 		unbanlist: ['MissingNo.'],
 	},
-	{
-		name: "[Gen 1] Duel Arena",
-		desc: `A format where you can only use one L20 Pound Rhydon, just like in the RBY Test Battle system. The brain-child of zalarye.`,
-
-		mod: 'gen1rhydon',
-		team: 'randomCC',
-		teamLength: {
-			battle: 1,
-		},
-		ruleset: ['HP Percentage Mod', 'Cancel Mod'],
-	},
 
 	// Randomized Formats
 	///////////////////////////////////////////////////////////////////
@@ -557,6 +546,20 @@ let Formats = [
 			if (set.moves.length !== 1 || this.dex.getMove(set.moves[0]).id !== 'metronome') {
 				return [`${set.name || set.species} has illegal moves.`, `(Pok\u00e9mon can only have one Metronome in their moveset)`];
 			}
+		},
+		{
+		name: "[Gen 1] Duel Arena",
+		desc: `A format where you can only use one L20 Pound Rhydon, just like in the RBY Test Battle system. There's no Stat Exp here, only randomized DVs. The brain-child of zalarye. May the best Rhydon win!`,
+		threads: [
+			`&bullet; <a href="https://docs.google.com/spreadsheets/d/1W6YYb7urDIKMAj3E1xW_RRDhpiEnj-cDhitRXywOtP0/edit?usp=sharing">Duel Arena Spreadsheet</a>`,
+		],
+
+		mod: 'gen1rhydon',
+		team: 'randomCC',
+		teamLength: {
+			battle: 1,
+		},
+		ruleset: ['HP Percentage Mod', 'Cancel Mod'],
 		},
 	},
 
