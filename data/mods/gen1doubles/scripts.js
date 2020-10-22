@@ -29,9 +29,7 @@ let BattleScripts = {
 		// and the user's ally, like Earthquake and Explosion, don't get affected by spread modifiers
 		// Since the RBY Doubles Mod uses ADV Doubles Mechanics, this is necessary.
 		if (move.spreadHit && move.target === 'allAdjacentFoes') {
-			const spreadModifier = move.spreadModifier || 0.5;
-			this.debug('Spread modifier: ' + spreadModifier);
-			baseDamage = this.modify(baseDamage, spreadModifier);
+			baseDamage = this.modify(baseDamage, 0.5);
 		}
 	},
 	// BattlePokemon scripts.
