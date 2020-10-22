@@ -261,7 +261,7 @@ let BattleScripts = {
 			this.add('-notarget');
 			return true;
 		}
-		damage = this.tryMoveHit(target, pokemon, move);
+		
 		// Store 0 damage for last damage if move failed or dealt 0 damage.
 		// This only happens on moves that don't deal damage but call GetDamageVarsForPlayerAttack (disassembly).
 		if (!damage && (move.category !== 'Status' || (move.status && move.category === 'Status' && !['psn', 'tox', 'par'].includes(move.status))) &&
