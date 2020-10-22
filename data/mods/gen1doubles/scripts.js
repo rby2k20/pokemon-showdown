@@ -714,7 +714,7 @@ let BattleScripts = {
 	},
 	// getDamage can be found on sim/battle.js on the Battle object.
 	// It calculates the damage pokemon does to target with move.
-	getSpreadDamage(damage, targets, pokemon, move, moveData, isSecondary, isSelf) {
+	getSpreadDamage(targets, pokemon, move, moveData, isSecondary, isSelf) {
 		// First of all, we get the move.
 		if (typeof move === 'string') {
 			move = this.dex.getActiveMove(move);
