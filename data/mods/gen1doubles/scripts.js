@@ -25,6 +25,15 @@ let BattleScripts = {
 	side: {
 		lastMove: null,
 	},
+	modifyDamage(baseDamage, pokemon, target, move, suppressMessages = false) {
+		// ADV spread move damage mult thing
+		// In Generation 3, the spread move modifier is 0.5x instead of 0.75x. This only applies for moves that hit only both opponents.
+		if (move.spreadHit && move.target === 'allAdjacentFoes') {
+			const spreadModifier = move.spreadModifier || 0.5;
+			this.debug('Spread modifier: ' + spreadModifier);
+			baseDamage = this.modify(baseDamage, spreadModifier);
+		}
+	},
 	// BattlePokemon scripts.
 	pokemon: {
 		getStat(statName, unmodified) {
@@ -221,6 +230,7 @@ let BattleScripts = {
 		}
 
 		/** @type {number | undefined | false | ''} */
+		//This has some ADV Doubles processing in it.
 		let damage = false;
 		let moveResult = false;
 		const {targets, pressureTargets} = pokemon.getMoveTargets(move, target);
@@ -304,13 +314,6 @@ let BattleScripts = {
 		let naturalImmunity = false;
 		let accPass = true;
 
-		// First, check if the target is semi-invulnerable
-		let hitResult = this.runEvent('Invulnerability', target, pokemon, move);
-		if (hitResult === false) {
-			if (!move.spreadHit) this.attrLastMove('[miss]');
-			this.add('-miss', pokemon);
-			return false;
-		}
 		this.runEvent('PrepareHit', pokemon, target, move);
 
 		if (!this.singleEvent('Try', move, null, pokemon, target, move)) {
