@@ -28,7 +28,7 @@ let BattleScripts = {
 		// In Generation 3, the spread move modifier is 0.5x instead of 0.75x. Moves that hit both foes
 		// and the user's ally, like Earthquake and Explosion, don't get affected by spread modifiers
 		// Since the RBY Doubles Mod uses ADV Doubles Mechanics, this is necessary.
-		if (move.spreadHit && move.target === 'allAdjacentFoes') {
+		if (move.spreadHit && move.target === "allAdjacentFoes") {
 			baseDamage = this.modify(baseDamage, 0.5);
 		}
 	},
