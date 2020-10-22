@@ -290,11 +290,12 @@ let BattleScripts = {
 		let naturalImmunity = false;
 		let accPass = true;
 		
-		// First, check if the target is semi-invulnerable
-		let hitResult = this.runEvent('Invulnerability', target, pokemon, move);
-		if (hitResult === false) {
-			if (!move.spreadHit) this.attrLastMove('[miss]');
-			this.add('-miss', pokemon);
+		let hitResult = this.singleEvent('PrepareHit', move, {}, target, pokemon, move);
+		if (!hitResult) {
+			if (hitResult === false) {
+				this.add('-fail', pokemon);
+				this.attrLastMove('[still]');
+			}
 			return false;
 		}
 		this.runEvent('PrepareHit', pokemon, target, move);
@@ -316,6 +317,14 @@ let BattleScripts = {
 			}
 			return this.moveHit(target, pokemon, move);
 		}
+		
+		hitResult = this.runEvent('Invulnerability', target, pokemon, move);
+		if (hitResult === false) {
+			if (!move.spreadHit) this.attrLastMove('[miss]');
+			this.add('-miss', pokemon, target);
+			return false;
+		}
+		
 		// Then, check if the Pokémon is immune to this move.
 		if ((!move.ignoreImmunity || (move.ignoreImmunity !== true && !move.ignoreImmunity[move.type])) && !target.runImmunity(move.type, true)) {
 			if (move.selfdestruct) {
@@ -705,7 +714,7 @@ let BattleScripts = {
 	},
 	// getDamage can be found on sim/battle.js on the Battle object.
 	// It calculates the damage pokemon does to target with move.
-	getSpreadDamage(pokemon, target, move, suppressMessages) {
+	getSpreadDamage(damage, targets, pokemon, move, moveData, isSecondary, isSelf) {
 		// First of all, we get the move.
 		if (typeof move === 'string') {
 			move = this.dex.getActiveMove(move);
