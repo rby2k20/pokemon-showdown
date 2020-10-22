@@ -302,12 +302,11 @@ let BattleScripts = {
 		let naturalImmunity = false;
 		let accPass = true;
 
-		let hitResult = this.singleEvent('PrepareHit', move, {}, target, pokemon, move);
-		if (!hitResult) {
-			if (hitResult === false) {
-				this.add('-fail', pokemon);
-				this.attrLastMove('[still]');
-			}
+		// First, check if the target is semi-invulnerable
+		let hitResult = this.runEvent('Invulnerability', target, pokemon, move);
+		if (hitResult === false) {
+			if (!move.spreadHit) this.attrLastMove('[miss]');
+			this.add('-miss', pokemon);
 			return false;
 		}
 		this.runEvent('PrepareHit', pokemon, target, move);
@@ -329,14 +328,6 @@ let BattleScripts = {
 				return false;
 			}
 			return this.moveHit(target, pokemon, move);
-		}
-		
-		// First, check if the target is semi-invulnerable
-		let hitResult = this.runEvent('Invulnerability', target, pokemon, move);
-		if (hitResult === false) {
-			if (!move.spreadHit) this.attrLastMove('[miss]');
-			this.add('-miss', pokemon);
-			return false;
 		}
 
 		// Then, check if the Pokémon is immune to this move.
