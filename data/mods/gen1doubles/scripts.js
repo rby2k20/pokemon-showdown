@@ -181,7 +181,6 @@ let BattleScripts = {
 		if (!sourceEffect && this.effect.id) sourceEffect = this.effect;
 		let baseMove = this.dex.getMove(moveOrMoveName);
 		let move = this.dex.getActiveMove(baseMove);
-		if (target === undefined) target = this.getRandomTarget(pokemon, move);
 		if (move.target === 'self') {
 			target = pokemon;
 		}
