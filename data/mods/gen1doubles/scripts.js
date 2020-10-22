@@ -222,6 +222,7 @@ let BattleScripts = {
 
 		/** @type {number | undefined | false | ''} */
 		let damage = false;
+		let moveResult = false;
 		const {targets, pressureTargets} = pokemon.getMoveTargets(move, target);
 		if (move.target === 'all' || move.target === 'foeSide' || move.target === 'allySide' || move.target === 'allyTeam') {
 			damage = this.tryMoveHit(target, pokemon, move);
