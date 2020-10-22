@@ -310,6 +310,7 @@ let BattleScripts = {
 		let boostTable = [1, 4 / 3, 5 / 3, 2, 7 / 3, 8 / 3, 3];
 		/** @type {number | false | undefined} */
 		let damage = 0;
+		let moveResult = false;
 		this.setActiveMove(move, pokemon, target);
 		let naturalImmunity = false;
 		let accPass = true;
