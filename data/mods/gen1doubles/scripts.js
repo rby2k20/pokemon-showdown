@@ -198,13 +198,6 @@ let BattleScripts = {
 			// Target changed in ModifyMove, so we must adjust it here
 			target = this.getRandomTarget(pokemon, move);
 		}
-		move = this.runEvent('ModifyMove', pokemon, target, move, move);
-		if (baseMove.target !== move.target) {
-			// Check again, this shouldn't ever happen on Gen 1.
-			target = this.getRandomTarget(pokemon, move);
-			this.debug('not a gen 1 mechanic');
-		}
-		if (!move) return false;
 
 		let attrs = '';
 		if (pokemon.fainted) {
@@ -310,7 +303,6 @@ let BattleScripts = {
 		let boostTable = [1, 4 / 3, 5 / 3, 2, 7 / 3, 8 / 3, 3];
 		/** @type {number | false | undefined} */
 		let damage = 0;
-		let moveResult = false;
 		this.setActiveMove(move, pokemon, target);
 		let naturalImmunity = false;
 		let accPass = true;
@@ -320,6 +312,7 @@ let BattleScripts = {
 		if (!this.singleEvent('Try', move, null, pokemon, target, move)) {
 			return false;
 		}
+		let moveResult = false;
 		if (move.target === 'all' || move.target === 'foeSide' || move.target === 'allySide' || move.target === 'allyTeam') {
 			if (move.target === 'all') {
 				hitResult = this.runEvent('TryHitField', target, pokemon, move);
