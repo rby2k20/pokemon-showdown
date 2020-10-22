@@ -34,7 +34,7 @@ let BattleScripts = {
 			baseDamage = this.modify(baseDamage, spreadModifier);
 		}
 	},
-	baseDamage = this.runEvent('ModifyDamage', pokemon, target, move, baseDamage),
+
 	// BattlePokemon scripts.
 	pokemon: {
 		getStat(statName, unmodified) {
