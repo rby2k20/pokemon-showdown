@@ -188,10 +188,7 @@ let BattleScripts = {
 		if (sourceEffect) move.sourceEffect = sourceEffect.id;
 		this.setActiveMove(move, pokemon, target);
 		this.singleEvent('ModifyMove', move, null, pokemon, target, move, move);
-		if (baseMove.target !== move.target) {
-			// Target changed in ModifyMove, so we must adjust it here
-			target = this.getRandomTarget(pokemon, move);
-		}
+
 		if (!move) return false;
 		let attrs = '';
 		if (pokemon.fainted) {
