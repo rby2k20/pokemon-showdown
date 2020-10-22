@@ -289,6 +289,7 @@ let BattleScripts = {
 		this.setActiveMove(move, pokemon, target);
 		let naturalImmunity = false;
 		let accPass = true;
+		
 		// First, check if the target is semi-invulnerable
 		let hitResult = this.runEvent('Invulnerability', target, pokemon, move);
 		if (hitResult === false) {
@@ -704,7 +705,7 @@ let BattleScripts = {
 	},
 	// getDamage can be found on sim/battle.js on the Battle object.
 	// It calculates the damage pokemon does to target with move.
-	getDamage(pokemon, target, move, suppressMessages) {
+	getSpreadDamage(pokemon, target, move, suppressMessages) {
 		// First of all, we get the move.
 		if (typeof move === 'string') {
 			move = this.dex.getActiveMove(move);
