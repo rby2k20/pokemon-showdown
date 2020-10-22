@@ -1,11 +1,9 @@
 'use strict';
-
 /**
  * Gen 1 mechanics are fairly different to those we know on current gen.
  * Therefor we need to make a lot of changes to the battle engine for this game simulation.
  * This generation inherits all the changes from older generations, that must be taken into account when editing code.
  */
-
 /**@type {ModdedBattleScriptsData} */
 let BattleScripts = {
 	inherit: 'gen1',
@@ -26,8 +24,10 @@ let BattleScripts = {
 		lastMove: null,
 	},
 	modifyDamage(baseDamage, pokemon, target, move, suppressMessages = false) {
-		// ADV spread move damage mult thing
-		// In Generation 3, the spread move modifier is 0.5x instead of 0.75x. This only applies for moves that hit only both opponents.
+		// Double battle multi-hit
+		// In Generation 3, the spread move modifier is 0.5x instead of 0.75x. Moves that hit both foes
+		// and the user's ally, like Earthquake and Explosion, don't get affected by spread modifiers
+		// Since the RBY Doubles Mod uses ADV Doubles Mechanics, this is necessary.
 		if (move.spreadHit && move.target === 'allAdjacentFoes') {
 			const spreadModifier = move.spreadModifier || 0.5;
 			this.debug('Spread modifier: ' + spreadModifier);
@@ -102,9 +102,7 @@ let BattleScripts = {
 		let target = this.getTarget(pokemon, moveOrMoveName, targetLoc);
 		let move = this.dex.getActiveMove(moveOrMoveName);
 		if (target && target.subFainted) target.subFainted = null;
-
 		this.setActiveMove(move, pokemon, target);
-
 		if (pokemon.moveThisTurn || !this.runEvent('BeforeMove', pokemon, target, move)) {
 			// Prevent invulnerability from persisting until the turn ends.
 			pokemon.removeVolatile('twoturnmove');
@@ -141,7 +139,6 @@ let BattleScripts = {
 		}
 		this.useMove(move, pokemon, target, sourceEffect);
 		this.singleEvent('AfterMove', move, null, pokemon, target, move);
-
 		// If target fainted
 		if (target && target.hp <= 0) {
 			// We remove recharge
@@ -155,7 +152,6 @@ let BattleScripts = {
 			this.runEvent('AfterMoveSelf', pokemon, target, move);
 		}
 		if (pokemon.volatiles['mustrecharge']) this.add('-mustrecharge', pokemon);
-
 		// For partial trapping moves, we are saving the target
 		if (move.volatileStatus === 'partiallytrapped' && target && target.hp > 0) {
 			// Let's check if the lock exists
@@ -190,15 +186,13 @@ let BattleScripts = {
 			target = pokemon;
 		}
 		if (sourceEffect) move.sourceEffect = sourceEffect.id;
-
 		this.setActiveMove(move, pokemon, target);
-
 		this.singleEvent('ModifyMove', move, null, pokemon, target, move, move);
 		if (baseMove.target !== move.target) {
 			// Target changed in ModifyMove, so we must adjust it here
 			target = this.getRandomTarget(pokemon, move);
 		}
-
+		if (!move) return false;
 		let attrs = '';
 		if (pokemon.fainted) {
 			// Removing screens upon faint.
@@ -206,10 +200,8 @@ let BattleScripts = {
 			pokemon.side.removeSideCondition('lightscreen');
 			return false;
 		}
-
 		if (sourceEffect) attrs += '|[from]' + this.dex.getEffect(sourceEffect);
 		this.addMove('move', pokemon, move.name, target + attrs);
-
 		if (!this.singleEvent('Try', move, null, pokemon, target, move)) {
 			return true;
 		}
@@ -217,13 +209,11 @@ let BattleScripts = {
 			!this.runEvent('TryMove', pokemon, target, move)) {
 			return true;
 		}
-
 		if (move.ignoreImmunity === undefined) {
 			move.ignoreImmunity = (move.category === 'Status');
 		}
 
 		/** @type {number | undefined | false | ''} */
-		//This has some ADV Doubles processing in it.
 		let damage = false;
 		let moveResult = false;
 		const {targets, pressureTargets} = pokemon.getMoveTargets(move, target);
@@ -276,20 +266,17 @@ let BattleScripts = {
 			return true;
 		}
 		damage = this.tryMoveHit(target, pokemon, move);
-
 		// Store 0 damage for last damage if move failed or dealt 0 damage.
 		// This only happens on moves that don't deal damage but call GetDamageVarsForPlayerAttack (disassembly).
 		if (!damage && (move.category !== 'Status' || (move.status && move.category === 'Status' && !['psn', 'tox', 'par'].includes(move.status))) &&
 		!['conversion', 'haze', 'mist', 'focusenergy', 'confuseray', 'supersonic', 'transform', 'lightscreen', 'reflect', 'substitute', 'mimic', 'leechseed', 'splash', 'softboiled', 'recover', 'rest'].includes(move.id)) {
 			this.lastDamage = 0;
 		}
-
 		// Go ahead with results of the used move.
 		if (damage === false) {
 			this.singleEvent('MoveFail', move, null, target, pokemon, move);
 			return true;
 		}
-
 		if (!move.negateSecondary) {
 			this.singleEvent('AfterMoveSecondarySelf', move, null, pokemon, target, move);
 			this.runEvent('AfterMoveSecondarySelf', pokemon, target, move);
@@ -306,13 +293,17 @@ let BattleScripts = {
 		this.setActiveMove(move, pokemon, target);
 		let naturalImmunity = false;
 		let accPass = true;
-
+		// First, check if the target is semi-invulnerable
+		let hitResult = this.runEvent('Invulnerability', target, pokemon, move);
+		if (hitResult === false) {
+			if (!move.spreadHit) this.attrLastMove('[miss]');
+			this.add('-miss', pokemon);
+			return false;
+		}
 		this.runEvent('PrepareHit', pokemon, target, move);
-
 		if (!this.singleEvent('Try', move, null, pokemon, target, move)) {
 			return false;
 		}
-		let moveResult = false;
 		if (move.target === 'all' || move.target === 'foeSide' || move.target === 'allySide' || move.target === 'allyTeam') {
 			if (move.target === 'all') {
 				hitResult = this.runEvent('TryHitField', target, pokemon, move);
@@ -328,7 +319,6 @@ let BattleScripts = {
 			}
 			return this.moveHit(target, pokemon, move);
 		}
-
 		// Then, check if the Pokémon is immune to this move.
 		if ((!move.ignoreImmunity || (move.ignoreImmunity !== true && !move.ignoreImmunity[move.type])) && !target.runImmunity(move.type, true)) {
 			if (move.selfdestruct) {
@@ -341,21 +331,17 @@ let BattleScripts = {
 			this.add('-immune', target);
 			return false;
 		}
-
 		// Now, let's calculate the accuracy.
 		/** @type {number | true} */
 		let accuracy = move.accuracy;
-
 		// Partial trapping moves: true accuracy while it lasts
 		if (move.volatileStatus === 'partiallytrapped' && pokemon.volatiles['partialtrappinglock'] && target === pokemon.volatiles['partialtrappinglock'].locked) {
 			accuracy = true;
 		}
-
 		// If a sleep inducing move is used while the user is recharging, the accuracy is true.
 		if (move.status === 'slp' && target && target.volatiles['mustrecharge']) {
 			accuracy = true;
 		}
-
 		// OHKO moves only have a chance to hit if the user is at least as fast as the target
 		if (move.ohko) {
 			if (target.speed > pokemon.speed) {
@@ -363,7 +349,6 @@ let BattleScripts = {
 				return false;
 			}
 		}
-
 		// Calculate true accuracy for gen 1, which uses 0-255.
 		if (accuracy !== true) {
 			accuracy = Math.floor(accuracy * 255 / 100);
@@ -387,7 +372,6 @@ let BattleScripts = {
 		accuracy = this.runEvent('Accuracy', target, pokemon, move, accuracy);
 		// Moves that target the user do not suffer from the 1/256 miss chance.
 		if (move.target === 'self' && accuracy !== true) accuracy++;
-
 		// 1/256 chance of missing always, no matter what. Besides the aforementioned exceptions.
 		if (accuracy !== true && !this.randomChance(accuracy, 256)) {
 			this.attrLastMove('[miss]');
@@ -395,7 +379,6 @@ let BattleScripts = {
 			if (accuracy === 255) this.hint("In Gen 1, moves with 100% accuracy can still miss 1/256 of the time.");
 			damage = false;
 		}
-
 		// If damage is 0 and not false it means it didn't miss, let's calc.
 		if (damage !== false) {
 			pokemon.lastDamage = 0;
@@ -433,11 +416,9 @@ let BattleScripts = {
 				damage = this.moveHit(target, pokemon, move);
 			}
 		}
-
 		if (move.category !== 'Status') {
 			target.gotAttacked(move, damage, pokemon);
 		}
-
 		if (move.selfdestruct) {
 			if (!target.subFainted) {
 				this.faint(pokemon, pokemon, move);
@@ -445,21 +426,17 @@ let BattleScripts = {
 				this.hint(`In Gen 1, the user of ${move.name} will not take damage if it breaks a Substitute.`);
 			}
 		}
-
 		// The move missed.
 		if (!damage && damage !== 0) {
 			// Delete the partial trap lock if necessary.
 			delete pokemon.volatiles['partialtrappinglock'];
 			return false;
 		}
-
 		if (move.ohko) this.add('-ohko');
-
 		if (!move.negateSecondary) {
 			this.singleEvent('AfterMoveSecondary', move, null, target, pokemon, move);
 			this.runEvent('AfterMoveSecondary', target, pokemon, move);
 		}
-
 		return damage;
 	},
 	// move Hit can be found on scripts.js
@@ -468,33 +445,26 @@ let BattleScripts = {
 	moveHit(target, pokemon, move, moveData, isSecondary, isSelf) {
 		/** @type {number | false | null | undefined} */
 		let damage = 0;
-
 		if (!isSecondary && !isSelf) this.setActiveMove(move, pokemon, target);
 		/**@type {number | boolean} */
 		let hitResult = true;
 		if (!moveData) moveData = move;
-
 		if (move.ignoreImmunity === undefined) {
 			move.ignoreImmunity = (move.category === 'Status');
 		}
-
 		// We get the sub to the target to see if it existed
 		let targetSub = (target) ? target.volatiles['substitute'] : false;
 		let targetHadSub = (targetSub !== null && targetSub !== false && (typeof targetSub !== 'undefined'));
-
 		if (target) {
 			hitResult = this.singleEvent('TryHit', moveData, {}, target, pokemon, move);
-
 			// Handle here the applying of partial trapping moves to Pokémon with Substitute
 			if (targetSub && moveData.volatileStatus && moveData.volatileStatus === 'partiallytrapped') {
 				target.addVolatile(moveData.volatileStatus, pokemon, move);
 			}
-
 			if (!hitResult) {
 				if (hitResult === false) this.add('-fail', target);
 				return false;
 			}
-
 			// Only run the hit events for the hit itself, not the secondary or self hits
 			if (!isSelf && !isSecondary) {
 				hitResult = this.runEvent('TryHit', target, pokemon, move);
@@ -511,7 +481,6 @@ let BattleScripts = {
 			} else if (isSecondary && !moveData.self) {
 				hitResult = this.runEvent('TrySecondaryHit', target, pokemon, moveData);
 			}
-
 			if (hitResult === 0) {
 				target = null;
 			} else if (!hitResult) {
@@ -519,12 +488,9 @@ let BattleScripts = {
 				return false;
 			}
 		}
-
 		if (target) {
 			let didSomething = false;
-
 			damage = this.getDamage(pokemon, target, moveData);
-
 			// getDamage has several possible return values:
 			//
 			//   a number:
@@ -540,7 +506,6 @@ let BattleScripts = {
 			//
 			// basically, these values have the same meanings as they do for event
 			// handlers.
-
 			if ((damage || damage === 0) && !target.fainted) {
 				if (move.noFaint && damage >= target.hp) {
 					damage = target.hp - 1;
@@ -658,18 +623,15 @@ let BattleScripts = {
 				targetHasSub = (targetSub.hp > 0);
 			}
 		}
-
 		// Here's where self effects are applied.
 		let doSelf = (targetHadSub && targetHasSub) || !targetHadSub;
 		if (moveData.self && (doSelf || (moveData.self !== true && moveData.self.volatileStatus === 'partialtrappinglock'))) {
 			this.moveHit(pokemon, pokemon, move, moveData.self, isSecondary, true);
 		}
-
 		// Now we can save the partial trapping damage.
 		if (pokemon.volatiles['partialtrappinglock']) {
 			pokemon.volatiles['partialtrappinglock'].damage = pokemon.lastDamage;
 		}
-
 		// Apply move secondaries.
 		if (moveData.secondaries) {
 			for (const secondary of moveData.secondaries) {
@@ -687,7 +649,6 @@ let BattleScripts = {
 		if (move.selfSwitch && pokemon.hp) {
 			pokemon.switchFlag = move.selfSwitch;
 		}
-
 		return damage;
 	},
 	// boost can be found on sim/battle.js on Battle object.
@@ -761,51 +722,42 @@ let BattleScripts = {
 				flags: {},
 			});
 		}
-
 		// Let's see if the target is immune to the move.
 		if (!move.ignoreImmunity || (move.ignoreImmunity !== true && !move.ignoreImmunity[move.type])) {
 			if (!target.runImmunity(move.type, true)) {
 				return false;
 			}
 		}
-
 		// Is it an OHKO move?
 		if (move.ohko) {
 			return target.maxhp;
 		}
-
 		// We edit the damage through move's damage callback if necessary.
 		if (move.damageCallback) {
 			return move.damageCallback.call(this, pokemon, target);
 		}
-
 		// We take damage from damage=level moves (seismic toss).
 		if (move.damage === 'level') {
 			return pokemon.level;
 		}
-
 		// If there's a fix move damage, we return that.
 		if (move.damage) {
 			return move.damage;
 		}
-
 		// If it's the first hit on a Normal-type partially trap move, it hits Ghosts anyways but damage is 0.
 		if (move.volatileStatus === 'partiallytrapped' && move.type === 'Normal' && target.hasType('Ghost')) {
 			return 0;
 		}
-
 		// Let's check if we are in middle of a partial trap sequence to return the previous damage.
 		if (pokemon.volatiles['partialtrappinglock'] && (target === pokemon.volatiles['partialtrappinglock'].locked)) {
 			return pokemon.volatiles['partialtrappinglock'].damage;
 		}
-
 		// We check the category and typing to calculate later on the damage.
 		if (!move.category) move.category = 'Physical';
 		if (!move.defensiveCategory) move.defensiveCategory = move.category;
 		// '???' is typeless damage: used for Struggle and Confusion etc
 		if (!move.type) move.type = '???';
 		let type = move.type;
-
 		// We get the base power and apply basePowerCallback if necessary.
 		/** @type {number | false | null} */
 		let basePower = move.basePower;
@@ -816,14 +768,12 @@ let BattleScripts = {
 			return basePower === 0 ? undefined : basePower;
 		}
 		basePower = this.dex.clampIntRange(basePower, 1);
-
 		// Checking for the move's Critical Hit possibility. We check if it's a 100% crit move, otherwise we calculate the chance.
 		let isCrit = move.willCrit || false;
 		if (!isCrit) {
 			// In gen 1, the critical chance is based on speed.
 			// First, we get the base speed, divide it by 2 and floor it. This is our current crit chance.
 			let critChance = Math.floor(pokemon.template.baseStats['spe'] / 2);
-
 			// Now we check for focus energy volatile.
 			if (pokemon.volatiles['focusenergy']) {
 				// If it exists, crit chance is divided by 2 again and floored.
@@ -832,7 +782,6 @@ let BattleScripts = {
 				// Normally, without focus energy, crit chance is multiplied by 2 and capped at 255 here.
 				critChance = this.dex.clampIntRange(critChance * 2, 1, 255);
 			}
-
 			// Now we check for the move's critical hit ratio.
 			if (move.critRatio === 1) {
 				// Normal hit ratio, we divide the crit chance by 2 and floor the result again.
@@ -841,7 +790,6 @@ let BattleScripts = {
 				// High crit ratio, we multiply the result so far by 4 and cap it at 255.
 				critChance = this.dex.clampIntRange(critChance * 4, 1, 255);
 			}
-
 			// Last, we check deppending on ratio if the move critical hits or not.
 			// We compare our critical hit chance against a random number between 0 and 255.
 			// If the random number is lower, we get a critical hit. This means there is always a 1/255 chance of not hitting critically.
@@ -850,7 +798,6 @@ let BattleScripts = {
 			}
 		}
 		if (isCrit) target.getMoveHitData(move).crit = true;
-
 		// Happens after crit calculation.
 		if (basePower) {
 			basePower = this.runEvent('BasePower', pokemon, target, move, basePower);
@@ -860,7 +807,6 @@ let BattleScripts = {
 		}
 		if (!basePower) return 0;
 		basePower = this.dex.clampIntRange(basePower, 1);
-
 		// We now check attacker's and defender's stats.
 		let level = pokemon.level;
 		let attacker = pokemon;
@@ -878,7 +824,6 @@ let BattleScripts = {
 			defense *= 2;
 			defense = this.dex.clampIntRange(defense, 1, 1998);
 		}
-
 		// In the event of a critical hit, the offense and defense changes are ignored.
 		// This includes both boosts and screens.
 		// Also, level is doubled in damage calculation.
@@ -897,7 +842,6 @@ let BattleScripts = {
 			// No screens
 			defense = target.getStat(defType, true);
 		}
-
 		// When either attack or defense are higher than 256, they are both divided by 4 and moded by 256.
 		// This is what cuases the roll over bugs.
 		if (attack >= 256 || defense >= 256) {
@@ -905,12 +849,10 @@ let BattleScripts = {
 			// Defense isn't checked on the cartridge, but we don't want those / 0 bugs on the sim.
 			defense = this.dex.clampIntRange(Math.floor(defense / 4) % 256, 1);
 		}
-
 		// Self destruct moves halve defense at this point.
 		if (move.selfdestruct && defType === 'def') {
 			defense = this.dex.clampIntRange(Math.floor(defense / 2), 1);
 		}
-
 		// Let's go with the calculation now that we have what we need.
 		// We do it step by step just like the game does.
 		let damage = level * 2;
@@ -921,12 +863,10 @@ let BattleScripts = {
 		damage = Math.floor(damage / defense);
 		damage = this.dex.clampIntRange(Math.floor(damage / 50), 1, 997);
 		damage += 2;
-
 		// STAB damage bonus, the "???" type never gets STAB
 		if (type !== '???' && pokemon.hasType(type)) {
 			damage += Math.floor(damage / 2);
 		}
-
 		// Type effectiveness.
 		// The order here is not correct, must change to check the move versus each type.
 		let totalTypeMod = target.runEffectiveness(move);
@@ -949,21 +889,17 @@ let BattleScripts = {
 				damage = Math.floor(damage / 10);
 			}
 		}
-
 		// If damage becomes 0, the move is made to miss.
 		// This occurs when damage was either 2 or 3 prior to applying STAB/Type matchup, and target is 4x resistant to the move.
 		if (damage === 0) return damage;
-
 		// Apply random factor is damage is greater than 1
 		if (damage > 1) {
 			damage *= this.random(217, 256);
 			damage = Math.floor(damage / 255);
 			if (damage > target.hp && !target.volatiles['substitute']) damage = target.hp;
 		}
-
 		// And we are done.
 		return Math.floor(damage);
 	},
 };
-
 exports.BattleScripts = BattleScripts;
