@@ -256,6 +256,22 @@ let BattleScripts = {
 		/** @type {number | false | undefined} */
 		let damage = 0;
 		
+		if (move.target === 'all' || move.target === 'foeSide' || move.target === 'allySide' || move.target === 'allyTeam') {
+			if (move.target === 'all') {
+				hitResult = this.runEvent('TryHitField', target, pokemon, move);
+			} else {
+				hitResult = this.runEvent('TryHitSide', target, pokemon, move);
+			}
+			if (!hitResult) {
+				if (hitResult === false) {
+					this.add('-fail', pokemon);
+					this.attrLastMove('[still]');
+				}
+				return false;
+			}
+			return this.moveHit(target, pokemon, move);
+		}
+		
 		// First, check if the target is semi-invulnerable
 		let hitResult = this.runEvent('Invulnerability', target, pokemon, move);
 		if (hitResult === false) {
