@@ -30,9 +30,13 @@ let BattleScripts = {
 		// Since the RBY Doubles Mod uses ADV Doubles Mechanics, this is necessary.
 		if (move.spreadHit && move.target === "allAdjacentFoes") {
 			baseDamage = this.modify(baseDamage, 0.5);
+			}
+		baseDamage = this.runEvent('ModifyDamage', pokemon, target, move, baseDamage);
+		if (!Math.floor(baseDamage)) {
+			return 1;
 		}
+		return Math.floor(baseDamage);
 	},
-	baseDamage = this.runEvent('ModifyDamage', pokemon, target, move, baseDamage);
 	// BattlePokemon scripts.
 	pokemon: {
 		getStat(statName, unmodified) {
