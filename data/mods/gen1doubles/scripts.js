@@ -33,6 +33,13 @@ let BattleScripts = {
 			this.debug('Spread modifier: ' + spreadModifier);
 			baseDamage = this.modify(baseDamage, spreadModifier);
 		}
+		baseDamage = this.runEvent('ModifyDamage', pokemon, target, move, baseDamage);
+
+		if (!Math.floor(baseDamage)) {
+			return 1;
+		}
+
+		return Math.floor(baseDamage);
 	},
 
 	// BattlePokemon scripts.
