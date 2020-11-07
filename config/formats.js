@@ -16,7 +16,7 @@ let Formats = [
 		name: "[Gen 1] 1U",
 		desc: `RBY with movepool additions from the Time Capsule, tiered by RBY 2k20.`,
 		threads: [
-			`&bullet; <a href="https://www.smogon.com/articles/rby-tradebacks-ou">Information</a>`,
+			`&bullet; <a href="https://www.smogon.com/articles/rby-tradebacks-ou">Tradeback Information</a>`,
 			`&bullet; <a href="https://rby2k20.com/read.php?article=Guides/TradebacksIntro">Introduction to RBY 1U</a>`,
 			`&bullet; <a href="https://www.smogon.com/rb/articles/tradebacks">Old Article</a>`,
 			`&bullet; <a href="https://rby2k20.com/teams.php?tag=rby1u">Sample Teams</a>`,
@@ -30,7 +30,7 @@ let Formats = [
 		name: "[Gen 1] 1U (Blitz)",
 		desc: `RBY with movepool additions from the Time Capsule. Blitz means you've got just 30 seconds to pick a move by default!`,
 		threads: [
-			`&bullet; <a href="https://www.smogon.com/articles/rby-tradebacks-ou">Information</a>`,
+			`&bullet; <a href="https://www.smogon.com/articles/rby-tradebacks-ou">Tradeback Information</a>`,
 			`&bullet; <a href="https://rby2k20.com/read.php?article=Guides/TradebacksIntro">Introduction to RBY 1U</a>`,
 			`&bullet; <a href="https://www.smogon.com/rb/articles/tradebacks">Old Article</a>`,
 		],
@@ -43,7 +43,9 @@ let Formats = [
 		name: "[Gen 1] Stadium 1U",
 		desc: `A metagame utilizing Pokemon Stadium, with all the mechanics! Sleep Clause counts Rest here to remain true to cartridge. Allows moves obtainable through the Time Capsule.`,
 		threads: [
+			`&bullet; <a href="https://www.smogon.com/articles/rby-tradebacks-ou">Tradeback Information</a>`,
 			`&bullet; <a href="https://www.smogon.com/forums/threads/gen-1-and-gen-2-how-sleep-clause-works-in-the-pok%C3%A9mon-stadium-games.3661020/">Stadium Sleep Clause details (fixed)</a>`,
+			`&bullet; <a href="https://rby2k20.com/read.php?article=Guides/Stad1Crits">Critical Hits</a>`,
 			`&bullet; <a href="https://www.smogon.com/forums/threads/stadium-format-is-now-available-on-ps.3526616/">Research Thread</a>`,
 		],
 
@@ -121,6 +123,7 @@ let Formats = [
 		threads: [
 			`&bullet; <a href="https://pastebin.com/raw/jJb4HJcQ">RoA Sample Teams</a>`,
 			`&bullet; <a href="https://www.smogon.com/forums/threads/gen-1-and-gen-2-how-sleep-clause-works-in-the-pok%C3%A9mon-stadium-games.3661020/">Stadium Sleep Clause details (fixed)</a>`,
+			`&bullet; <a href="https://rby2k20.com/read.php?article=Guides/Stad1Crits">Critical Hits</a>`,
 			`&bullet; <a href="https://www.smogon.com/forums/threads/stadium-format-is-now-available-on-ps.3526616/">Research Thread</a>`,
 		],
 
@@ -178,14 +181,15 @@ let Formats = [
 		threads: [
 			`&bullet; <a href="https://rby2k20.com/read.php?article=Guides/NC99Intro">An Introduction to NC99</a>`,
 			`&bullet; <a href="https://rby2k20.com/pokedex.php?meta=nc99">Strategy Dex</a>`,
+			`&bullet; <a href="https://rby2k20.com/read.php?article=Guides/Stad1Crits">Critical Hits</a>`,
 		],
         	mod: 'stadium', 
         	ruleset: ['Obtainable', 'Team Preview', 'Sleep Clause Mod', 'Freeze Clause Mod', 'Species Clause', 'HP Percentage Mod', 'Cancel Mod'],
         	banlist: ['Venusaur','Dugtrio','Alakazam','Golem','Magneton','Gengar','Hypno','Electrode','Exeggutor','Chansey','Kangaskhan','Starmie','Jynx','Tauros','Gyarados','Lapras','Ditto','Vaporeon','Jolteon','Snorlax','Articuno','Zapdos','Dragonite','Mewtwo','Mew','Flareon + Focus Energy + Ember','Nidoking + Fury Attack + Thrash'],
         	maxLevel: 50,
         	teamLength: {
-            	validate: [3, 6],
-            	battle: 3,
+            		validate: [3, 6],
+            		battle: 3,
         	},
     	},
 
@@ -199,6 +203,10 @@ let Formats = [
 		name: "[Gen 1] Stadium Anything Goes",
 		desc: `The Pokemon Stadium Anything Goes format, taken directly from the ruleset in-game. This means Stadium Sleep Clause and Freeze Clause are still used, as they're ran innately in-game. Tradebacks are also enabled.`,
 		mod: 'stadium',
+		threads: [
+			`&bullet; <a href="https://www.smogon.com/articles/rby-tradebacks-ou">Tradeback Information</a>`,
+			`&bullet; <a href="https://rby2k20.com/read.php?article=Guides/Stad1Crits">Critical Hits</a>`,
+			],
 		
 		ruleset: ['Obtainable', 'Team Preview', 'Stadium Sleep Clause', 'Freeze Clause Mod', 'Nickname Clause', 'Endless Battle Clause', 'Exact HP Mod', 'Cancel Mod',
 			  'Allow Tradeback'],
@@ -209,6 +217,7 @@ let Formats = [
         	desc: `Stadium Poke Cup, a port of the Nintendo Cup 1997 format to the N64. This introduced the format to an international audience. Team preview is on, and it functions as a bring 6 pick 3 format. Pokemon going into the battle must be between levels 50 and 55, but levels must not go over 155 in total.`,
 		threads: [
 			`&bullet; <a href="https://rby2k20.com/pokedex.php?meta=nc97">Strategy Dex</a>`,
+			`&bullet; <a href="https://rby2k20.com/read.php?article=Guides/Stad1Crits">Critical Hits</a>`,
 			],    
 	   
         	mod: 'stadium',
@@ -228,11 +237,12 @@ let Formats = [
         	desc: `Stadium Pika Cup, played in the Stadium World Tour in the year 2000. Any Pokemon obtainable at L20 or below can be used. It's a bring 6 pick 3 format, though Pokemon must be between L15 and L20. The total levels of participating Pokemon must not exceed L50.`,
 		threads: [
 			`&bullet; <a href="https://rby2k20.com/pokedex.php?meta=pika">Strategy Dex</a>`,
+			`&bullet; <a href="https://rby2k20.com/read.php?article=Guides/Stad1Crits">Critical Hits</a>`,
 			],
 		
-        	mod: 'stadium',
-		ruleset: ['Obtainable', 'Team Preview', 'Cup Level Limit', 'Stadium Sleep Clause', 'Freeze Clause Mod', 'Species Clause', 'Exact HP Mod', 'Nickname Clause', 'Cancel Mod'],
-		banlist: ['Uber',
+        	mod: 'stadium',//FIXME: Validator for moves and Pokemon is essentially removed due to level validation issues, this needs fixing on PS.
+		ruleset: ['Team Preview', 'Cup Level Limit', 'Stadium Sleep Clause', 'Freeze Clause Mod', 'Species Clause', 'Exact HP Mod', 'Nickname Clause', 'Cancel Mod'],
+		banlist: ['Mew', 'Mewtwo', 
 			'Nidoking + Fury Attack + Thrash', 'Exeggutor + Poison Powder + Stomp', 'Exeggutor + Sleep Powder + Stomp',
 			'Exeggutor + Stun Spore + Stomp', 'Jolteon + Focus Energy + Thunder Shock', 'Flareon + Focus Energy + Ember',
 			 'Magikarp + Dragon Rage', 'Rapidash + Pay Day', 'Fearow + Pay Day', 'Pikachu + Fly', 'Raichu + Fly'],
@@ -247,11 +257,12 @@ let Formats = [
         	desc: `Stadium Petit Cup, played in various tournaments in the 2000s. Pokémon must be of the lowest evolutionary stage, have a height no more than 2 m (6'07") and a weight no more than 20 kg (44.1 lbs.) to compete. In addition, Pokemon must be between levels 25 and 30. It's a bring 6 pick 3 format, and participatingPokemon must not have their total levels exceed L80.`,
 		threads: [
 			`&bullet; <a href="https://rby2k20.com/pokedex.php?meta=petit">Strategy Dex</a>`,
+			`&bullet; <a href="https://rby2k20.com/read.php?article=Guides/Stad1Crits">Critical Hits</a>`,
 			],
 		
         	mod: 'stadium',
 		ruleset: ['Obtainable', 'Team Preview', 'Cup Level Limit', 'Stadium Sleep Clause', 'Freeze Clause Mod', 'Species Clause', 'Exact HP Mod', 'Nickname Clause', 'Cancel Mod'],
-		banlist: ['Uber', 'OU', 'UUBL', 'UU', 'NUBL', 'NU', 'NFE', 'LC',
+		banlist: ['Mew', 'Mewtwo', 'OU', 'UUBL', 'UU', 'NUBL', 'NU', 'NFE', 'LC',
 			'Nidoking + Fury Attack + Thrash', 'Exeggutor + Poison Powder + Stomp', 'Exeggutor + Sleep Powder + Stomp',
 			'Exeggutor + Stun Spore + Stomp', 'Jolteon + Focus Energy + Thunder Shock', 'Flareon + Focus Energy + Ember',
 			 'Magikarp + Dragon Rage', 'Rapidash + Pay Day', 'Fearow + Pay Day', 'Pikachu + Fly', 'Raichu + Fly'],
@@ -266,6 +277,9 @@ let Formats = [
 		name: "[Gen 1] Prime Cup",
 		desc: `Pokemon Stadium's Prime Cup format. Played in the Stadium World Tour in the year 2000. It's a bring 6 pick 3 format, with no restrictions on what can be used so long as it's legally obtainable.`,
 		mod: 'stadium',
+		threads: [
+			`&bullet; <a href="https://rby2k20.com/read.php?article=Guides/Stad1Crits">Critical Hits</a>`,
+			],
 		
 		ruleset: ['Obtainable', 'Team Preview', 'Stadium Sleep Clause', 'Freeze Clause Mod', 'Species Clause', 'Nickname Clause', 'Exact HP Mod', 'Cancel Mod'],
 		banlist: ['Nidoking + Fury Attack + Thrash', 'Exeggutor + Poison Powder + Stomp', 'Exeggutor + Sleep Powder + Stomp',
@@ -309,9 +323,9 @@ let Formats = [
 		`&bullet; <a href="https://rby2k20.com/pokedex.php?meta=pika">Strategy Dex</a>`,
 		],
 		
-        	mod: 'gen1yellow',
-		ruleset: ['Obtainable', 'Team Preview', 'Cup Level Limit', 'Stadium Sleep Clause', 'Species Clause', 'Exact HP Mod', 'Nickname Clause', 'Cancel Mod'],
-		banlist: ['Uber',
+        	mod: 'gen1yellow',//FIXME: Validator for moves and Pokemon is essentially removed due to level validation issues, this needs fixing on PS.
+		ruleset: ['Team Preview', 'Cup Level Limit', 'Stadium Sleep Clause', 'Species Clause', 'Exact HP Mod', 'Nickname Clause', 'Cancel Mod'],
+		banlist: ['Mew', 'Mewtwo', 
 			'Nidoking + Fury Attack + Thrash', 'Exeggutor + Poison Powder + Stomp', 'Exeggutor + Sleep Powder + Stomp',
 			'Exeggutor + Stun Spore + Stomp', 'Jolteon + Focus Energy + Thunder Shock', 'Flareon + Focus Energy + Ember',
 			 'Magikarp + Dragon Rage', 'Rapidash + Pay Day', 'Fearow + Pay Day', 'Pikachu + Fly', 'Raichu + Fly'],
@@ -330,7 +344,7 @@ let Formats = [
 		
         	mod: 'gen1yellow',
 		ruleset: ['Obtainable', 'Team Preview', 'Cup Level Limit', 'Stadium Sleep Clause', 'Species Clause', 'Exact HP Mod', 'Nickname Clause', 'Cancel Mod'],
-		banlist: ['Uber', 'OU', 'UUBL', 'UU', 'NUBL', 'NU', 'NFE', 'LC',
+		banlist: ['Mew', 'Mewtwo', 'OU', 'UUBL', 'UU', 'NUBL', 'NU', 'NFE', 'LC',
 			'Nidoking + Fury Attack + Thrash', 'Exeggutor + Poison Powder + Stomp', 'Exeggutor + Sleep Powder + Stomp',
 			'Exeggutor + Stun Spore + Stomp', 'Jolteon + Focus Energy + Thunder Shock', 'Flareon + Focus Energy + Ember',
 			 'Magikarp + Dragon Rage', 'Rapidash + Pay Day', 'Fearow + Pay Day', 'Pikachu + Fly', 'Raichu + Fly'],
@@ -510,7 +524,7 @@ let Formats = [
 	///////////////////////////////////////////////////////////////////
 	{
 		section: "Randomized Formats",
-		column: 3,
+		column: 5,
 	},
 	{
 		name: "[Gen 1] Random Battle",
@@ -562,7 +576,7 @@ let Formats = [
 		ruleset: ['HP Percentage Mod', 'Cancel Mod'],
 		banlist: ['Pound', 'Karate Chop', 'Double Slap', 'Comet Punch', 'Mega Punch', 'Pay Day', 'Fire Punch', 'Ice Punch', 'Thunder Punch', 'Scratch', 'Vise Grip',
 			'Guillotine', 'Razor Wind', 'Swords Dance', 'Cut', 'Gust', 'Wing Attack', 'Whirlwind', 'Fly', 'Bind', 'Slam', 'Vine Whip', 'Stomp', 'Double Kick',
-			'Mega Kick', 'JumpKick', 'Rolling Kick', 'Sand Attack', 'Headbutt', 'Horn Attack', 'Fury Attack', 'Horn Drill', 'Tackle', 'Body Slam', 'Wrap',
+			'Mega Kick', 'Jump Kick', 'Rolling Kick', 'Sand Attack', 'Headbutt', 'Horn Attack', 'Fury Attack', 'Horn Drill', 'Tackle', 'Body Slam', 'Wrap',
 			'Take Down', 'Thrash', 'Double-Edge', 'Tail Whip', 'Poison Sting', 'Twineedle', 'Pin Missile', 'Leer', 'Bite', 'Growl', 'Roar', 'Sing', 'Supersonic',
 			'Sonicboom', 'Disable', 'Acid', 'Ember', 'Flamethrower', 'Mist', 'Water Gun', 'Hydro Pump', 'Surf', 'Ice Beam', 'Blizzard', 'Psybeam', 'Bubblebeam',
 			'Aurora Beam', 'Hyper Beam', 'Peck', 'Drill Peck', 'Submission', 'Low Kick', 'Counter', 'Seismic Toss', 'Strength', 'Absorb', 'Mega Drain',
@@ -771,28 +785,6 @@ let Formats = [
 			this.add('-start', pokemon, 'typechange', pokemon.getTypes(true).join('/'), '[silent]');
 		},
 	},
-	{
-		name: "[Gen 1] Custom Game",
-
-		mod: 'gen1',
-		searchShow: false,
-		debug: true,
-		maxLevel: 9999,
-		trunc(n) { return Math.trunc(n); },
-		defaultLevel: 100,
-		ruleset: ['HP Percentage Mod', 'Cancel Mod'],
-	},
-	{
-		name: "[Gen 1] Stadium Custom Game",
-
-		mod: 'stadium',
-		searchShow: false,
-		debug: true,
-		maxLevel: 9999,
-		trunc(n) { return Math.trunc(n); },
-		defaultLevel: 100,
-		ruleset: ['HP Percentage Mod', 'Cancel Mod'],
-	},
 	// Pokemon Perfect Metagames
 	///////////////////////////////////////////////////////////////////
 
@@ -902,6 +894,28 @@ let Formats = [
 			  'Slowpoke', 'Staryu', 'Tangela', 'Venomoth', 'Arbok', 'Dragonair', 'Drowzee', 'Electrode', 'Gastly',
 			  'Graveler', 'Lickitung', 'Magmar', 'Ninetales', 'Parasect', 'Poliwag', 'Primeape', 'Seadra', 'Seaking',
 			  'Vileplume', 'Wartortle', 'Magikarp + Dragon Rage', 'Rapidash + Pay Day', 'Fearow + Pay Day', 'Pikachu + Fly', 'Raichu + Fly'],
+	},
+	{
+		name: "[Gen 1] Custom Game",
+
+		mod: 'gen1',
+		searchShow: false,
+		debug: true,
+		maxLevel: 9999,
+		trunc(n) { return Math.trunc(n); },
+		defaultLevel: 100,
+		ruleset: ['HP Percentage Mod', 'Cancel Mod'],
+	},
+	{
+		name: "[Gen 1] Stadium Custom Game",
+
+		mod: 'stadium',
+		searchShow: false,
+		debug: true,
+		maxLevel: 9999,
+		trunc(n) { return Math.trunc(n); },
+		defaultLevel: 100,
+		ruleset: ['HP Percentage Mod', 'Cancel Mod'],
 	},
 ];
 
