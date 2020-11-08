@@ -1,4 +1,7 @@
-export const BattleItems: {[k: string]: ModdedItemData} = {
+'use strict';
+
+/**@type {{[k: string]: ModdedItemData}} */
+let BattleItems = {
 	berryjuice: {
 		inherit: true,
 		isNonstandard: null,
@@ -615,3 +618,4 @@ export const BattleItems: {[k: string]: ModdedItemData} = {
 		},
 	},
 };
+exports.BattleItems = BattleItems;
