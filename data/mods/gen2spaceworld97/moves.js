@@ -101,8 +101,10 @@ let BattleMovedex = {
 						}
 						target = possibleTarget;
 					}
-					const moveData = {
-						id: 'bide',
+					/** @type {ActiveMove} */
+					// @ts-ignore
+					let moveData = {
+						id: /** @type {ID} */('bide'),
 						name: "Bide",
 						accuracy: 100,
 						damage: this.effectData.totalDamage * 2,
@@ -111,7 +113,7 @@ let BattleMovedex = {
 						flags: {contact: 1, protect: 1},
 						effectType: 'Move',
 						type: 'Normal',
-					} as unknown as ActiveMove;
+					};
 					this.tryMoveHit(target, pokemon, moveData);
 					return false;
 				}
