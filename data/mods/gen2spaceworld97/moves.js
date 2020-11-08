@@ -562,7 +562,7 @@ let BattleMovedex = {
 	},
 	nightmare: {
 		inherit: true,
-		pp: 10
+		pp: 10,
 		effect: {
 			noCopy: true,
 			onStart(pokemon) {
@@ -789,10 +789,10 @@ let BattleMovedex = {
 		inherit: true,
 		desc: "One of the user's known moves, besides this move, is selected for use at random. Fails if the user is not asleep. The selected move does not have PP deducted from it, and can currently have 0 PP. This move cannot select Bide, Sleep Talk, or any two-turn move.",
 		onHit(pokemon) {
-			const NoSleepTalk = ['bide', 'sleeptalk'];
-			const moves = [];
+			let NoSleepTalk = ['bide', 'sleeptalk'];
+			let moves = [];
 			for (const moveSlot of pokemon.moveSlots) {
-				const move = moveSlot.id;
+				let move = moveSlot.id;
 				if (move && !NoSleepTalk.includes(move) && !this.dex.getMove(move).flags['charge']) {
 					moves.push(move);
 				}
@@ -880,7 +880,8 @@ let BattleMovedex = {
 					return;
 				}
 				if (move.id === 'twineedle') {
-					move.secondaries = move.secondaries!.filter(p => !p.kingsrock);
+					// @ts-ignore: Twineedle has move.secondaries defined
+					move.secondaries = move.secondaries.filter(p => !p.kingsrock);
 				}
 				if (move.drain) {
 					this.add('-miss', source);
@@ -888,15 +889,12 @@ let BattleMovedex = {
 					return null;
 				}
 				if (move.category === 'Status') {
-					const SubBlocked = ['leechseed', 'lockon', 'mindreader', 'nightmare', 'painsplit', 'sketch'];
+					let SubBlocked = ['leechseed', 'lockon', 'mindreader', 'nightmare', 'painsplit', 'sketch'];
 					if (move.id === 'swagger') {
 						// this is safe, move is a copy
 						delete move.volatileStatus;
 					}
-					if (
-						move.status || (move.boosts && move.id !== 'swagger') ||
-						move.volatileStatus === 'confusion' || SubBlocked.includes(move.id)
-					) {
+					if (move.status || (move.boosts && move.id !== 'swagger') || move.volatileStatus === 'confusion' || SubBlocked.includes(move.id)) {
 						this.add('-activate', target, 'Substitute', '[block] ' + move.name);
 						return null;
 					}
@@ -911,7 +909,7 @@ let BattleMovedex = {
 					return damage;
 				}
 				if (damage > target.volatiles['substitute'].hp) {
-					damage = target.volatiles['substitute'].hp as number;
+					damage = /** @type {number} */ (target.volatiles['substitute'].hp);
 				}
 				target.volatiles['substitute'].hp -= damage;
 				source.lastDamage = damage;
@@ -924,7 +922,7 @@ let BattleMovedex = {
 					this.damage(1, source, target, 'recoil');
 				}
 				this.runEvent('AfterSubDamage', target, source, move, damage);
-				return this.HIT_SUBSTITUTE;
+				return 0; // hit
 			},
 			onEnd(target) {
 				this.add('-end', target, 'Substitute');
@@ -1082,8 +1080,8 @@ let BattleMovedex = {
 	bite: {
 		inherit: true,
 		type: "Normal",
-		desc: "Has a 10% chance to fliunch the target.",
-		shortDesc: "10% chance to fliunch the target.",
+		desc: "Has a 10% chance to flinch the target.",
+		shortDesc: "10% chance to flinch the target.",
 		secondary: {
 			chance: 10,
 			volatileStatus: 'flinch',
