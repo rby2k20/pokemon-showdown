@@ -132,7 +132,7 @@ let BattleItems = {
 					this.add('-enditem', target, this.effect, '[weaken]');
 					return this.chainModify(0.5);
 				}
-			},
+			}
 		},
 	thickclub: {
 		isNonstandard: null,
@@ -231,7 +231,7 @@ let BattleItems = {
 					this.add('-enditem', target, this.effect, '[weaken]');
 					return this.chainModify(0.5);
 				}
-			},
+			}
 		},
 	whitefeather: {
 		id: "whitefeather",
@@ -270,6 +270,7 @@ let BattleItems = {
 	sharpstone: {
 		id: "sharpstone",
 		name: "Sharp Stone",
+		desc: "Holder's Rock-type attacks have 1.1x power.",
 		num: 991,
 		gen: 2,
 		isNonstandard: null,
@@ -278,10 +279,10 @@ let BattleItems = {
 				return basePower * 1.1;
 			}
 		},
-		desc: "Holder's Rock-type attacks have 1.1x power.",
 	},
 	hardstone: {
 		inherit: true,
+		onBasePower() {},
 		desc: "Weakens Rock-type moves.",
 		gen: 2,
 		isNonstandard: null,
@@ -291,9 +292,8 @@ let BattleItems = {
 					this.add('-enditem', target, this.effect, '[weaken]');
 					return this.chainModify(0.5);
 				}
-			},
-		onBasePower() {},
-	},
+			}
+		},
 	sharpbeak: {
 		inherit: true,
 		gen: 2,
@@ -333,7 +333,7 @@ let BattleItems = {
 				this.add('-enditem', target, this.effect, '[weaken]');
 				return this.chainModify(0.5);
 			}
-		},
+		}
 	},
 	poisonbarb: {
 		inherit: true,
@@ -353,6 +353,7 @@ let BattleItems = {
 	poisonfang: {
 		id: "poisonfang",
 		name: "Poison Fang",
+		desc: "Holder's Poison-type attacks have 1.1x power.",
 		num: 996,
 		gen: 2,
 		isNonstandard: null,
@@ -361,25 +362,25 @@ let BattleItems = {
 				return basePower * 1.1;
 			}
 		},
-		desc: "Holder's Poison-type attacks have 1.1x power.",
 	},
 	silverpowder: {
 		inherit: true,
 		gen: 2,
 		isNonstandard: null,
+		onBasePower() {},
 		desc: "Weakens Bug-type moves.",
 		onSourceModifyDamage(damage, source, target, move) {
 			if (move.type === 'Bug' && target.getMoveHitData(move).typeMod > 0 && (!target.volatiles['substitute'] || move.flags['authentic'] || (move.infiltrates && this.gen >= 6))) {
-					this.debug('-50% reduction');
-					this.add('-enditem', target, this.effect, '[weaken]');
-					return this.chainModify(0.5);
-				}
-			},
-		onBasePower() {},
+				this.debug('-50% reduction');
+				this.add('-enditem', target, this.effect, '[weaken]');
+				return this.chainModify(0.5);
+			}
+		}
 	},
 	migraineseed: {
 		id: "migraineseed",
 		name: "Migraine Seed",
+		desc: "Holder's Psychic-type attacks have 1.1x power.",
 		num: 995,
 		gen: 2,
 		isNonstandard: null,
@@ -388,7 +389,6 @@ let BattleItems = {
 				return basePower * 1.1;
 			}
 		},
-		desc: "Holder's Psychic-type attacks have 1.1x power.",
 	},
 	countercuff: { //why do you exist omg
 		id: "countercuff",
@@ -415,12 +415,13 @@ let BattleItems = {
 					this.add('-enditem', target, this.effect, '[weaken]');
 					return this.chainModify(0.5);
 				}
-			},
+			}
 		},
 	twistedspoon: {
 		inherit: true,
 		gen: 2,
 		isNonstandard: null,
+		onBasePower() {},
 		desc: "Weakens Psychic-type moves.",
 		onSourceModifyDamage(damage, source, target, move) {
 			if (move.type === 'Psychic' && target.getMoveHitData(move).typeMod > 0 && (!target.volatiles['substitute'] || move.flags['authentic'] || (move.infiltrates && this.gen >= 6))) {
@@ -428,12 +429,12 @@ let BattleItems = {
 					this.add('-enditem', target, this.effect, '[weaken]');
 					return this.chainModify(0.5);
 				}
-			},
-		onBasePower() {},
-	},
+			}
+		},
 	attackneedle: {
 		id: "attackneedle",
 		name: "Attack Needle",
+		desc: "Holder's Bug-type attacks have 1.1x power.",
 		num: 992,
 		gen: 2,
 		isNonstandard: null,
@@ -442,7 +443,6 @@ let BattleItems = {
 				return basePower * 1.1;
 			}
 		},
-		desc: "Holder's Bug-type attacks have 1.1x power.",
 	},
 	blackbelt: {
 		inherit: true,
@@ -463,7 +463,7 @@ let BattleItems = {
 					this.add('-enditem', target, this.effect, '[weaken]');
 					return this.chainModify(0.5);
 				}
-			},
+			}
 		},
 	firemane: {
 		id: "firemane",
@@ -478,7 +478,7 @@ let BattleItems = {
 					this.add('-enditem', target, this.effect, '[weaken]');
 					return this.chainModify(0.5);
 				}
-			},
+			}
 		},
 	earth: {
 		id: "earth",
@@ -513,7 +513,7 @@ let BattleItems = {
 					this.add('-enditem', target, this.effect, '[weaken]');
 					return this.chainModify(0.5);
 				}
-			},
+			}
 		},
 	grossgarbage: {
 		id: "grossgarbage",
@@ -528,7 +528,7 @@ let BattleItems = {
 					this.add('-enditem', target, this.effect, '[weaken]');
 					return this.chainModify(0.5);
 				}
-			},
+			}
 		},
 	championbelt: {
 		id: "championbelt",
@@ -543,7 +543,7 @@ let BattleItems = {
 					this.add('-enditem', target, this.effect, '[weaken]');
 					return this.chainModify(0.5);
 				}
-			},
+			}
 		},
 	tag: {
 		id: "tag",
@@ -558,7 +558,7 @@ let BattleItems = {
 					this.add('-enditem', target, this.effect, '[weaken]');
 					return this.chainModify(0.5);
 				}
-			},
+			}
 		},
 	"5yencoin": {
 		id: "5yencoin",
@@ -573,7 +573,7 @@ let BattleItems = {
 					this.add('-enditem', target, this.effect, '[weaken]');
 					return this.chainModify(0.5);
 				}
-			},
+			}
 		},
 	guardthread: {
 		id: "guardthread",
@@ -588,7 +588,7 @@ let BattleItems = {
 					this.add('-enditem', target, this.effect, '[weaken]');
 					return this.chainModify(0.5);
 				}
-			},
+			}
 		},
 	stimulusorb: {
 		id: "stimulusorb",
@@ -642,7 +642,7 @@ let BattleItems = {
 					this.add('-enditem', target, this.effect, '[weaken]');
 					return this.chainModify(0.5);
 				}
-			},
+			}
 		},
 	magnet: {
 		inherit: true,
