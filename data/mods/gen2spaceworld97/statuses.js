@@ -153,9 +153,41 @@ let BattleStatuses = {
 		},
 	},
 	partiallytrapped: {
-		inherit: true,
-		durationCallback(target, source) {
-			return this.random(3, 6);
+		name: 'partiallytrapped',
+		id: 'partiallytrapped',
+		num: 0,
+		duration: 2,
+		onBeforeMovePriority: 4,
+		onBeforeMove(pokemon) {
+			this.add('cant', pokemon, 'partiallytrapped');
+			return false;
+		},
+	},
+	partialtrappinglock: {
+		name: 'partialtrappinglock',
+		id: 'partialtrappinglock',
+		num: 0,
+		durationCallback() {
+			let duration = this.sample([2, 2, 2, 3, 3, 3, 4, 5]);
+			return duration;
+		},
+		onResidual(target) {
+			if (target.lastMove && target.lastMove.id === 'struggle' || target.status === 'slp') {
+				delete target.volatiles['partialtrappinglock'];
+			}
+		},
+		onStart(target, source, effect) {
+			this.effectData.move = effect.id;
+		},
+		onDisableMove(pokemon) {
+			if (!pokemon.hasMove(this.effectData.move)) {
+				return;
+			}
+			for (const moveSlot of pokemon.moveSlots) {
+				if (moveSlot.id !== this.effectData.move) {
+					pokemon.disableMove(moveSlot.id);
+				}
+			}
 		},
 	},
 	lockedmove: {
