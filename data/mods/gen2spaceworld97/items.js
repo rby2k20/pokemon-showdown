@@ -38,7 +38,7 @@ let BattleItems = {
 	},
 	focusband: {
 		inherit: true,
-		name: "Focus Orb"
+		name: "Focus Orb",
 		desc: "Holder has a ~11.7% chance to survive an attack that would KO it with 1 HP.",
 		onDamage(damage, target, source, effect) {
 			if (this.randomChance(30, 256) && damage >= target.hp && effect && effect.effectType === 'Move') {
