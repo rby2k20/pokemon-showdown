@@ -20,18 +20,20 @@ let BattleItems = {
 	},
 	dragonfang: {
 		inherit: true,
+		desc: "Holder's Dragon-type attacks have 1.1x power. Evolves Seadra (trade).",
+		isNonstandard: null,
+		gen: 2,
 		onBasePower(basePower, user, target, move) {
 			if (move.type === 'Dragon') {
 				return basePower * 1.1;
 			}
 		},
-		desc: "Holder's Dragon-type attacks have 1.1x power. Evolves Seadra (trade).",
-		isNonstandard: null,
-		gen: 2,
 	},
 	dragonscale: {
 		inherit: true,
 		onBasePower() {},
+		isNonstandard: null,
+		gen: 2,
 		desc: "Weakens Dragon-type moves.",
 		onSourceModifyDamage(damage, source, target, move) {
 			if (move.type === 'Dragon' && target.getMoveHitData(move).typeMod > 0 && (!target.volatiles['substitute'] || move.flags['authentic'] || (move.infiltrates && this.gen >= 6))) {
@@ -40,8 +42,6 @@ let BattleItems = {
 				return this.chainModify(0.5);
 			}
 		},
-		isNonstandard: null,
-		gen: 2,
 	},
 	focusband: {
 		inherit: true,
@@ -131,11 +131,15 @@ let BattleItems = {
 			}
 		},
 	thickclub: {
+		inherit: true,
+		onModifyAtk() {},
 		isNonstandard: null,
 		gen: 2,
-		inherit: true,
-		// In Gen 2 this happens in stat calculation directly.
-		onModifyAtk() {},
+		onBasePower(basePower, user, target, move) {
+			if (move.type === 'Ground') {
+				return basePower * 1.1;
+			}
+		},
 	},
 	berserkgene: {
 		gen: 2,
