@@ -1,4 +1,7 @@
-export const BattleLearnsets: {[k: string]: ModdedLearnsetData} = {
+'use strict';
+
+/**@type {{[k: string]: ModdedLearnsetData}} */
+let BattleLearnsets = {
 	missingno: {
 		learnset: {
 			blizzard: ["1M"],
@@ -12152,3 +12155,4 @@ export const BattleLearnsets: {[k: string]: ModdedLearnsetData} = {
 		eventOnly: true,
 	},
 };
+exports.BattleLearnsets = BattleLearnsets;
