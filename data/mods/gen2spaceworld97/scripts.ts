@@ -1,4 +1,4 @@
-  'use strict';
+'use strict';
 
 /**
  * Gen 2 sw97 scripts.
@@ -698,3 +698,4 @@ let BattleScripts = {
 		return damage;
 	},
 };
+exports.BattleScripts = BattleScripts;
