@@ -130,6 +130,7 @@ let BattleItems = {
 				return this.chainModify(0.5);
 			}
 		},
+	},
 	thickclub: {
 		inherit: true,
 		onModifyAtk() {},
@@ -740,7 +741,6 @@ let BattleItems = {
 			if (!effect || !effect.status) return false;
 			this.add('-immune', target, '[from] item: Thunder Tail');
 			return false;
-			},
 		},
 	},
 };
