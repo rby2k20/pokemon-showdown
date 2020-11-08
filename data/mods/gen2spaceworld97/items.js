@@ -374,7 +374,7 @@ let BattleItems = {
 					this.add('-enditem', target, this.effect, '[weaken]');
 					return this.chainModify(0.5);
 				}
-			}
+			},
 		onBasePower() {},
 	},
 	migraineseed: {
@@ -397,6 +397,7 @@ let BattleItems = {
 		gen: 2,
 		isNonstandard: null,
 		desc: "Reflects 1/4 of damage taken to the attacker upon receiving damage.",
+		onDamagingHitOrder: 2,
 		onDamagingHit(damage, target, source, move) {
 			this.damage(source.baseMaxhp / 8, source, target);
 		},
@@ -414,7 +415,7 @@ let BattleItems = {
 					this.add('-enditem', target, this.effect, '[weaken]');
 					return this.chainModify(0.5);
 				}
-			}
+			},
 		},
 	twistedspoon: {
 		inherit: true,
@@ -427,7 +428,7 @@ let BattleItems = {
 					this.add('-enditem', target, this.effect, '[weaken]');
 					return this.chainModify(0.5);
 				}
-			}
+			},
 		onBasePower() {},
 	},
 	attackneedle: {
@@ -462,7 +463,7 @@ let BattleItems = {
 					this.add('-enditem', target, this.effect, '[weaken]');
 					return this.chainModify(0.5);
 				}
-			}
+			},
 		},
 	firemane: {
 		id: "firemane",
@@ -477,7 +478,7 @@ let BattleItems = {
 					this.add('-enditem', target, this.effect, '[weaken]');
 					return this.chainModify(0.5);
 				}
-			}
+			},
 		},
 	earth: {
 		id: "earth",
@@ -512,7 +513,7 @@ let BattleItems = {
 					this.add('-enditem', target, this.effect, '[weaken]');
 					return this.chainModify(0.5);
 				}
-			}
+			},
 		},
 	grossgarbage: {
 		id: "grossgarbage",
@@ -527,7 +528,7 @@ let BattleItems = {
 					this.add('-enditem', target, this.effect, '[weaken]');
 					return this.chainModify(0.5);
 				}
-			}
+			},
 		},
 	championbelt: {
 		id: "championbelt",
@@ -542,7 +543,7 @@ let BattleItems = {
 					this.add('-enditem', target, this.effect, '[weaken]');
 					return this.chainModify(0.5);
 				}
-			}
+			},
 		},
 	tag: {
 		id: "tag",
@@ -557,7 +558,7 @@ let BattleItems = {
 					this.add('-enditem', target, this.effect, '[weaken]');
 					return this.chainModify(0.5);
 				}
-			}
+			},
 		},
 	"5yencoin": {
 		id: "5yencoin",
@@ -572,7 +573,7 @@ let BattleItems = {
 					this.add('-enditem', target, this.effect, '[weaken]');
 					return this.chainModify(0.5);
 				}
-			}
+			},
 		},
 	guardthread: {
 		id: "guardthread",
@@ -587,7 +588,7 @@ let BattleItems = {
 					this.add('-enditem', target, this.effect, '[weaken]');
 					return this.chainModify(0.5);
 				}
-			}
+			},
 		},
 	stimulusorb: {
 		id: "stimulusorb",
@@ -641,7 +642,7 @@ let BattleItems = {
 					this.add('-enditem', target, this.effect, '[weaken]');
 					return this.chainModify(0.5);
 				}
-			}
+			},
 		},
 	magnet: {
 		inherit: true,
