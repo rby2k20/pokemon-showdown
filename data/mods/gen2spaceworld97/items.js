@@ -28,13 +28,13 @@ let BattleItems = {
 		inherit: true,
 		onBasePower() {},
 		desc: "Weakens Dragon-type moves.",
-		oonSourceModifyDamage(damage, source, target, move) {
+		onSourceModifyDamage(damage, source, target, move) {
 			if (move.type === 'Dragon' && target.getMoveHitData(move).typeMod > 0 && (!target.volatiles['substitute'] || move.flags['authentic'] || (move.infiltrates && this.gen >= 6))) {
 				this.debug('-50% reduction');
 				this.add('-enditem', target, this.effect, '[weaken]');
 				return this.chainModify(0.5);
-			},
-		}
+			}
+		},
 	},
 	focusband: {
 		inherit: true,
@@ -107,8 +107,8 @@ let BattleItems = {
 				this.debug('-50% reduction');
 				this.add('-enditem', target, this.effect, '[weaken]');
 				return this.chainModify(0.5);
-			},
-		}
+			}
+		},
 	},
 	},
 	thickclub: {
@@ -184,8 +184,8 @@ let BattleItems = {
 				this.debug('-50% reduction');
 				this.add('-enditem', target, this.effect, '[weaken]');
 				return this.chainModify(0.5);
-			},
-		}
+			}
+		},
 	},
 	whitefeather: {
 		id: "whitefeather",
@@ -197,8 +197,8 @@ let BattleItems = {
 				this.debug('-50% reduction');
 				this.add('-enditem', target, this.effect, '[weaken]');
 				return this.chainModify(0.5);
-			},
-		}
+			}
+		},
 	},
 	confuseclaw: {
 		id: "confuseclaw",
@@ -233,8 +233,8 @@ let BattleItems = {
 					this.debug('-50% reduction');
 					this.add('-enditem', target, this.effect, '[weaken]');
 					return this.chainModify(0.5);
-				},
-			}
+				}
+			},
 			onBasePower() {},
 		},
 	sharpbeak: {
@@ -267,8 +267,8 @@ let BattleItems = {
 				this.debug('-50% reduction');
 				this.add('-enditem', target, this.effect, '[weaken]');
 				return this.chainModify(0.5);
-			},
-		}
+			}
+		},
 	},
 	poisonbarb: {
 		inherit: true,
@@ -299,8 +299,8 @@ let BattleItems = {
 				this.debug('-50% reduction');
 				this.add('-enditem', target, this.effect, '[weaken]');
 				return this.chainModify(0.5);
-			},
-		}
+			}
+		},
 		onBasePower() {},
 	},
 	migraineseed: {
@@ -333,8 +333,8 @@ let BattleItems = {
 				this.debug('-50% reduction');
 				this.add('-enditem', target, this.effect, '[weaken]');
 				return this.chainModify(0.5);
-			},
-		}
+			}
+		},
 	},
 	twistedspoon: {
 		desc: "Weakens Psychic-type moves."
@@ -343,8 +343,8 @@ let BattleItems = {
 				this.debug('-50% reduction');
 				this.add('-enditem', target, this.effect, '[weaken]');
 				return this.chainModify(0.5);
-			},
-		}
+				}
+			},	
 		onBasePower() {},
 	},
 	attackneedle: {
@@ -372,8 +372,8 @@ let BattleItems = {
 				this.debug('-50% reduction');
 				this.add('-enditem', target, this.effect, '[weaken]');
 				return this.chainModify(0.5);
-			},
-		}
+			}
+		},
 	},
 	firemane: {
 		id: "firemane",
@@ -385,8 +385,8 @@ let BattleItems = {
 				this.debug('-50% reduction');
 				this.add('-enditem', target, this.effect, '[weaken]');
 				return this.chainModify(0.5);
-			},
-		}
+			}
+		},
 	},
 	earth: {
 		id: "earth",
@@ -414,8 +414,8 @@ let BattleItems = {
 				this.debug('-50% reduction');
 				this.add('-enditem', target, this.effect, '[weaken]');
 				return this.chainModify(0.5);
-			},
-		}
+			}
+		},
 	},
 	grossgarbage: {
 		id: "grossgarbage",
@@ -427,8 +427,8 @@ let BattleItems = {
 				this.debug('-50% reduction');
 				this.add('-enditem', target, this.effect, '[weaken]');
 				return this.chainModify(0.5);
-			},
-		}
+			}
+		},
 	},
 	championbelt: {
 		id: "championbelt",
@@ -440,8 +440,8 @@ let BattleItems = {
 				this.debug('-50% reduction');
 				this.add('-enditem', target, this.effect, '[weaken]');
 				return this.chainModify(0.5);
-			},
-		}
+			}
+		},
 	},
 	tag: {
 		id: "tag",
@@ -453,7 +453,7 @@ let BattleItems = {
 				this.debug('-50% reduction');
 				this.add('-enditem', target, this.effect, '[weaken]');
 				return this.chainModify(0.5);
-			},
+			}
 		},
 	},
 	"5yencoin": {
@@ -466,7 +466,7 @@ let BattleItems = {
 				this.debug('-50% reduction');
 				this.add('-enditem', target, this.effect, '[weaken]');
 				return this.chainModify(0.5);
-			},
+			}
 		},
 	},
 	guardthread: {
@@ -479,8 +479,8 @@ let BattleItems = {
 				this.debug('-50% reduction');
 				this.add('-enditem', target, this.effect, '[weaken]');
 				return this.chainModify(0.5);
-			},
-		}
+			}
+		},
 	},
 	stimulusorb: {
 		id: "stimulusorb",
@@ -524,8 +524,8 @@ let BattleItems = {
 				this.debug('-50% reduction');
 				this.add('-enditem', target, this.effect, '[weaken]');
 				return this.chainModify(0.5);
-			},
-		}
+			}
+		},
 	},
 	magnet: {
 		inherit: true,
