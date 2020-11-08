@@ -224,13 +224,13 @@ let BattleItems = {
 		gen: 2,
 		isNonstandard: null,
 		onSourceModifyDamage(damage, source, target, move) {
-			if (move.type === 'Grass' && target.getMoveHitData(move).typeMod > 0 && (!target.volatiles['substitute'] || move.flags['authentic'] || (move.infiltrates && this.gen >= 6))) {
-					this.debug('-50% reduction');
-					this.add('-enditem', target, this.effect, '[weaken]');
-					return this.chainModify(0.5);
-				}
+			if (move.type === 'Dragon' && target.getMoveHitData(move).typeMod > 0 && (!target.volatiles['substitute'] || move.flags['authentic'] || (move.infiltrates && this.gen >= 6))) {
+				this.debug('-50% reduction');
+				this.add('-enditem', target, this.effect, '[weaken]');
+				return this.chainModify(0.5);
 			}
 		},
+	},
 	whitefeather: {
 		id: "whitefeather",
 		name: "White Feather",
@@ -239,13 +239,13 @@ let BattleItems = {
 		gen: 2,
 		isNonstandard: null,
 		onSourceModifyDamage(damage, source, target, move) {
-			if (move.type === 'Flying' && target.getMoveHitData(move).typeMod > 0 && (!target.volatiles['substitute'] || move.flags['authentic'] || (move.infiltrates && this.gen >= 6))) {
-					this.debug('-50% reduction');
-					this.add('-enditem', target, this.effect, '[weaken]');
-					return this.chainModify(0.5);
-				}
-			},
+			if (move.type === 'Dragon' && target.getMoveHitData(move).typeMod > 0 && (!target.volatiles['substitute'] || move.flags['authentic'] || (move.infiltrates && this.gen >= 6))) {
+				this.debug('-50% reduction');
+				this.add('-enditem', target, this.effect, '[weaken]');
+				return this.chainModify(0.5);
+			}
 		},
+	},
 	confuseclaw: {
 		id: "confuseclaw",
 		name: "Confuse Claw",
@@ -285,13 +285,13 @@ let BattleItems = {
 		gen: 2,
 		isNonstandard: null,
 		onSourceModifyDamage(damage, source, target, move) {
-			if (move.type === 'Rock' && target.getMoveHitData(move).typeMod > 0 && (!target.volatiles['substitute'] || move.flags['authentic'] || (move.infiltrates && this.gen >= 6))) {
-					this.debug('-50% reduction');
-					this.add('-enditem', target, this.effect, '[weaken]');
-					return this.chainModify(0.5);
-				}
+			if (move.type === 'Dragon' && target.getMoveHitData(move).typeMod > 0 && (!target.volatiles['substitute'] || move.flags['authentic'] || (move.infiltrates && this.gen >= 6))) {
+				this.debug('-50% reduction');
+				this.add('-enditem', target, this.effect, '[weaken]');
+				return this.chainModify(0.5);
 			}
 		},
+	},
 	sharpbeak: {
 		inherit: true,
 		gen: 2,
@@ -326,12 +326,12 @@ let BattleItems = {
 		gen: 2,
 		isNonstandard: null,
 		onSourceModifyDamage(damage, source, target, move) {
-			if (move.type === 'Electric' && target.getMoveHitData(move).typeMod > 0 && (!target.volatiles['substitute'] || move.flags['authentic'] || (move.infiltrates && this.gen >= 6))) {
+			if (move.type === 'Dragon' && target.getMoveHitData(move).typeMod > 0 && (!target.volatiles['substitute'] || move.flags['authentic'] || (move.infiltrates && this.gen >= 6))) {
 				this.debug('-50% reduction');
 				this.add('-enditem', target, this.effect, '[weaken]');
 				return this.chainModify(0.5);
 			}
-		}
+		},
 	},
 	poisonbarb: {
 		inherit: true,
@@ -368,12 +368,12 @@ let BattleItems = {
 		onBasePower() {},
 		desc: "Weakens Bug-type moves.",
 		onSourceModifyDamage(damage, source, target, move) {
-			if (move.type === 'Bug' && target.getMoveHitData(move).typeMod > 0 && (!target.volatiles['substitute'] || move.flags['authentic'] || (move.infiltrates && this.gen >= 6))) {
+			if (move.type === 'Dragon' && target.getMoveHitData(move).typeMod > 0 && (!target.volatiles['substitute'] || move.flags['authentic'] || (move.infiltrates && this.gen >= 6))) {
 				this.debug('-50% reduction');
 				this.add('-enditem', target, this.effect, '[weaken]');
 				return this.chainModify(0.5);
 			}
-		}
+		},
 	},
 	migraineseed: {
 		id: "migraineseed",
@@ -408,13 +408,13 @@ let BattleItems = {
 		gen: 2,
 		isNonstandard: null,
 		onSourceModifyDamage(damage, source, target, move) {
-			if (move.type === 'Water' && target.getMoveHitData(move).typeMod > 0 && (!target.volatiles['substitute'] || move.flags['authentic'] || (move.infiltrates && this.gen >= 6))) {
-					this.debug('-50% reduction');
-					this.add('-enditem', target, this.effect, '[weaken]');
-					return this.chainModify(0.5);
-				}
+			if (move.type === 'Dragon' && target.getMoveHitData(move).typeMod > 0 && (!target.volatiles['substitute'] || move.flags['authentic'] || (move.infiltrates && this.gen >= 6))) {
+				this.debug('-50% reduction');
+				this.add('-enditem', target, this.effect, '[weaken]');
+				return this.chainModify(0.5);
 			}
 		},
+	},
 	twistedspoon: {
 		inherit: true,
 		gen: 2,
@@ -422,13 +422,13 @@ let BattleItems = {
 		onBasePower() {},
 		desc: "Weakens Psychic-type moves.",
 		onSourceModifyDamage(damage, source, target, move) {
-			if (move.type === 'Psychic' && target.getMoveHitData(move).typeMod > 0 && (!target.volatiles['substitute'] || move.flags['authentic'] || (move.infiltrates && this.gen >= 6))) {
-					this.debug('-50% reduction');
-					this.add('-enditem', target, this.effect, '[weaken]');
-					return this.chainModify(0.5);
-				}
+			if (move.type === 'Dragon' && target.getMoveHitData(move).typeMod > 0 && (!target.volatiles['substitute'] || move.flags['authentic'] || (move.infiltrates && this.gen >= 6))) {
+				this.debug('-50% reduction');
+				this.add('-enditem', target, this.effect, '[weaken]');
+				return this.chainModify(0.5);
 			}
 		},
+	},
 	attackneedle: {
 		id: "attackneedle",
 		name: "Attack Needle",
@@ -456,13 +456,13 @@ let BattleItems = {
 		gen: 2,
 		isNonstandard: null,
 		onSourceModifyDamage(damage, source, target, move) {
-			if (move.type === 'Normal' && target.getMoveHitData(move).typeMod > 0 && (!target.volatiles['substitute'] || move.flags['authentic'] || (move.infiltrates && this.gen >= 6))) {
-					this.debug('-50% reduction');
-					this.add('-enditem', target, this.effect, '[weaken]');
-					return this.chainModify(0.5);
-				}
+			if (move.type === 'Dragon' && target.getMoveHitData(move).typeMod > 0 && (!target.volatiles['substitute'] || move.flags['authentic'] || (move.infiltrates && this.gen >= 6))) {
+				this.debug('-50% reduction');
+				this.add('-enditem', target, this.effect, '[weaken]');
+				return this.chainModify(0.5);
 			}
 		},
+	},
 	firemane: {
 		id: "firemane",
 		name: "Fire Mane",
@@ -471,13 +471,13 @@ let BattleItems = {
 		gen: 2,
 		isNonstandard: null,
 		onSourceModifyDamage(damage, source, target, move) {
-			if (move.type === 'Fire' && target.getMoveHitData(move).typeMod > 0 && (!target.volatiles['substitute'] || move.flags['authentic'] || (move.infiltrates && this.gen >= 6))) {
-					this.debug('-50% reduction');
-					this.add('-enditem', target, this.effect, '[weaken]');
-					return this.chainModify(0.5);
-				}
+			if (move.type === 'Dragon' && target.getMoveHitData(move).typeMod > 0 && (!target.volatiles['substitute'] || move.flags['authentic'] || (move.infiltrates && this.gen >= 6))) {
+				this.debug('-50% reduction');
+				this.add('-enditem', target, this.effect, '[weaken]');
+				return this.chainModify(0.5);
 			}
 		},
+	},
 	earth: {
 		id: "earth",
 		name: "Earth",
@@ -506,13 +506,13 @@ let BattleItems = {
 		gen: 2,
 		isNonstandard: null,
 		onSourceModifyDamage(damage, source, target, move) {
-			if (move.type === 'Ground' && target.getMoveHitData(move).typeMod > 0 && (!target.volatiles['substitute'] || move.flags['authentic'] || (move.infiltrates && this.gen >= 6))) {
-					this.debug('-50% reduction');
-					this.add('-enditem', target, this.effect, '[weaken]');
-					return this.chainModify(0.5);
-				}
+			if (move.type === 'Dragon' && target.getMoveHitData(move).typeMod > 0 && (!target.volatiles['substitute'] || move.flags['authentic'] || (move.infiltrates && this.gen >= 6))) {
+				this.debug('-50% reduction');
+				this.add('-enditem', target, this.effect, '[weaken]');
+				return this.chainModify(0.5);
 			}
 		},
+	},
 	grossgarbage: {
 		id: "grossgarbage",
 		name: "Gross Garbage",
@@ -521,13 +521,13 @@ let BattleItems = {
 		gen: 2,
 		isNonstandard: null,
 		onSourceModifyDamage(damage, source, target, move) {
-			if (move.type === 'Poison' && target.getMoveHitData(move).typeMod > 0 && (!target.volatiles['substitute'] || move.flags['authentic'] || (move.infiltrates && this.gen >= 6))) {
-					this.debug('-50% reduction');
-					this.add('-enditem', target, this.effect, '[weaken]');
-					return this.chainModify(0.5);
-				}
+			if (move.type === 'Dragon' && target.getMoveHitData(move).typeMod > 0 && (!target.volatiles['substitute'] || move.flags['authentic'] || (move.infiltrates && this.gen >= 6))) {
+				this.debug('-50% reduction');
+				this.add('-enditem', target, this.effect, '[weaken]');
+				return this.chainModify(0.5);
 			}
 		},
+	},
 	championbelt: {
 		id: "championbelt",
 		name: "Champion Belt",
@@ -536,13 +536,13 @@ let BattleItems = {
 		gen: 2,
 		isNonstandard: null,
 		onSourceModifyDamage(damage, source, target, move) {
-			if (move.type === 'Fighting' && target.getMoveHitData(move).typeMod > 0 && (!target.volatiles['substitute'] || move.flags['authentic'] || (move.infiltrates && this.gen >= 6))) {
-					this.debug('-50% reduction');
-					this.add('-enditem', target, this.effect, '[weaken]');
-					return this.chainModify(0.5);
-				}
+			if (move.type === 'Dragon' && target.getMoveHitData(move).typeMod > 0 && (!target.volatiles['substitute'] || move.flags['authentic'] || (move.infiltrates && this.gen >= 6))) {
+				this.debug('-50% reduction');
+				this.add('-enditem', target, this.effect, '[weaken]');
+				return this.chainModify(0.5);
 			}
 		},
+	},
 	tag: {
 		id: "tag",
 		name: "Tag",
@@ -551,13 +551,13 @@ let BattleItems = {
 		gen: 2,
 		isNonstandard: null,
 		onSourceModifyDamage(damage, source, target, move) {
-			if (move.type === 'Ghost' && target.getMoveHitData(move).typeMod > 0 && (!target.volatiles['substitute'] || move.flags['authentic'] || (move.infiltrates && this.gen >= 6))) {
-					this.debug('-50% reduction');
-					this.add('-enditem', target, this.effect, '[weaken]');
-					return this.chainModify(0.5);
-				}
+			if (move.type === 'Dragon' && target.getMoveHitData(move).typeMod > 0 && (!target.volatiles['substitute'] || move.flags['authentic'] || (move.infiltrates && this.gen >= 6))) {
+				this.debug('-50% reduction');
+				this.add('-enditem', target, this.effect, '[weaken]');
+				return this.chainModify(0.5);
 			}
 		},
+	},
 	"5yencoin": {
 		id: "5yencoin",
 		name: "5 Yen Coin",
@@ -566,13 +566,13 @@ let BattleItems = {
 		gen: 2,
 		isNonstandard: null,
 		onSourceModifyDamage(damage, source, target, move) {
-			if (move.type === 'Psychic' && target.getMoveHitData(move).typeMod > 0 && (!target.volatiles['substitute'] || move.flags['authentic'] || (move.infiltrates && this.gen >= 6))) {
-					this.debug('-50% reduction');
-					this.add('-enditem', target, this.effect, '[weaken]');
-					return this.chainModify(0.5);
-				}
+			if (move.type === 'Dragon' && target.getMoveHitData(move).typeMod > 0 && (!target.volatiles['substitute'] || move.flags['authentic'] || (move.infiltrates && this.gen >= 6))) {
+				this.debug('-50% reduction');
+				this.add('-enditem', target, this.effect, '[weaken]');
+				return this.chainModify(0.5);
 			}
 		},
+	},
 	guardthread: {
 		id: "guardthread",
 		name: "Guard Thread",
@@ -581,13 +581,13 @@ let BattleItems = {
 		gen: 2,
 		isNonstandard: null,
 		onSourceModifyDamage(damage, source, target, move) {
-			if (move.type === 'Bug' && target.getMoveHitData(move).typeMod > 0 && (!target.volatiles['substitute'] || move.flags['authentic'] || (move.infiltrates && this.gen >= 6))) {
-					this.debug('-50% reduction');
-					this.add('-enditem', target, this.effect, '[weaken]');
-					return this.chainModify(0.5);
-				}
+			if (move.type === 'Dragon' && target.getMoveHitData(move).typeMod > 0 && (!target.volatiles['substitute'] || move.flags['authentic'] || (move.infiltrates && this.gen >= 6))) {
+				this.debug('-50% reduction');
+				this.add('-enditem', target, this.effect, '[weaken]');
+				return this.chainModify(0.5);
 			}
 		},
+	},
 	stimulusorb: {
 		id: "stimulusorb",
 		name: "Stimulus Orb",
@@ -635,13 +635,13 @@ let BattleItems = {
 		gen: 2,
 		isNonstandard: null,
 		onSourceModifyDamage(damage, source, target, move) {
-			if (move.type === 'Ice' && target.getMoveHitData(move).typeMod > 0 && (!target.volatiles['substitute'] || move.flags['authentic'] || (move.infiltrates && this.gen >= 6))) {
-					this.debug('-50% reduction');
-					this.add('-enditem', target, this.effect, '[weaken]');
-					return this.chainModify(0.5);
-				}
+			if (move.type === 'Dragon' && target.getMoveHitData(move).typeMod > 0 && (!target.volatiles['substitute'] || move.flags['authentic'] || (move.infiltrates && this.gen >= 6))) {
+				this.debug('-50% reduction');
+				this.add('-enditem', target, this.effect, '[weaken]');
+				return this.chainModify(0.5);
 			}
 		},
+	},
 	magnet: {
 		inherit: true,
 		name: "Thunder Fang",
