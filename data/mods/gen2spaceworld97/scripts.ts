@@ -1,8 +1,11 @@
+  'use strict';
+
 /**
- * Gen 2 Spaceworld scripts.
+ * Gen 2 sw97 scripts.
  */
 
-export const BattleScripts: ModdedBattleScriptsData = {
+/**@type {ModdedBattleScriptsData} */
+let BattleScripts = {
 	inherit: 'gen2',
 	gen: 2,
 	// BattlePokemon scripts.
