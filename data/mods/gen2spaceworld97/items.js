@@ -501,8 +501,7 @@ let BattleItems = {
 		onModifyAccuracy(accuracy) {
 				this.debug('Detect Orb - decreasing accuracy');
 				return accuracy * 0.8;
-			}
-		},
+		}
 	},
 	mysticwater: {
 		inherit: true,
