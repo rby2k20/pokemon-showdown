@@ -225,7 +225,7 @@ let BattleItems = {
 		},
 		desc: "Holder's Rock-type attacks have 1.1x power.",
 	},
-	hardstone:
+	hardstone: {
 		desc: "Weakens Rock-type moves.",
 		onSourceModifyDamage(damage, source, target, move) {
 			if (move.type === 'Rock' && target.getMoveHitData(move).typeMod > 0 && (!target.volatiles['substitute'] || move.flags['authentic'] || (move.infiltrates && this.gen >= 6))) {
