@@ -502,11 +502,8 @@ let BattleMovedex = {
 		inherit: true,
 		desc: "Deals damage to the opposing Pokemon equal to twice the HP lost by the user from a special attack this turn. This move considers Hidden Power as Normal type, and only the last hit of a multi-hit attack is counted. Fails if the user moves first, if the user was not hit by a special attack this turn, or if the user did not lose HP from the attack.",
 		damageCallback(pokemon, target) {
-			const lastAttackedBy = pokemon.getLastAttackedBy();
-			if (!lastAttackedBy || !lastAttackedBy.move || !lastAttackedBy.thisTurn) return false;
-
-			// Hidden Power counts as physical
-			if (this.getCategory(lastAttackedBy.move) === 'Special' && target.lastMove?.id !== 'sleeptalk') {
+			let lastAttackedBy = pokemon.getLastAttackedBy();
+			if (lastAttackedBy && lastAttackedBy.move && lastAttackedBy.thisTurn && this.getCategory(lastAttackedBy.move) === 'Special' && this.dex.getMove(lastAttackedBy.move).id !== 'hiddenpower' && (!target.lastMove || target.lastMove.id !== 'sleeptalk')) {
 				return 2 * lastAttackedBy.damage;
 			}
 			return false;
