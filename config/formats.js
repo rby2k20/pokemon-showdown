@@ -927,7 +927,8 @@ let Formats = [
 		mod: 'gen2spaceworld97',
 		searchShow: false,
 		debug: true,
-		ruleset: ['Obtainable']
+		ruleset: ['Obtainable'],
+	},
 ];
 
 exports.Formats = Formats;
