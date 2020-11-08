@@ -917,6 +917,17 @@ let Formats = [
 		defaultLevel: 100,
 		ruleset: ['HP Percentage Mod', 'Cancel Mod'],
 	},
+	{
+		name: "[Gen 2] Spaceworld 1997 1U",
+		desc: `Plague von Karma's mod that aims to replicate Spaceworld 1997's mechanics on Pokemon Showdown.`,
+		threads: [
+			`&bullet; <a href="https://www.smogon.com/forums/threads/pokemon-gold-and-silver-demo.3635890/">RoA Thread</a>`,
+		],
+		
+		mod: 'gen2spaceworld97',
+		searchShow: false,
+		debug: true,
+		ruleset: ['Obtainable']
 ];
 
 exports.Formats = Formats;
