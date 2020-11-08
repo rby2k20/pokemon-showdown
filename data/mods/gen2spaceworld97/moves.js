@@ -1233,7 +1233,7 @@ let BattleMovedex = {
 		desc: "No additional effect.",
 		priority: "0",
 		category: "physical",
-		pp: 10
+		pp: 10,
 		type: "Normal",
 		accuracy: 100,
 		basePower: 40,
@@ -1252,7 +1252,7 @@ let BattleMovedex = {
 	},
 	scaryface: {
 		inherit: true,
-		pp: 40
+		pp: 40,
 		accuracy: 85,
 		boosts: {
 			def: -2,
@@ -1301,11 +1301,11 @@ let BattleMovedex = {
 	},
 	synchronize: {
 		name: "Synchronize",
-		id: "coinhurl",
+		id: "synchronize",
 		num: "998",
 		priority: "0",
 		category: "status",
-		pp: 10
+		pp: 10,
 		type: "Psychic",
 		accuracy: 100,
 		basePower: 0,
@@ -1336,7 +1336,7 @@ let BattleMovedex = {
 		desc: "No additional effect.",
 		priority: "0",
 		category: "physical",
-		pp: 10
+		pp: 10,
 		type: "Ground",
 		accuracy: 100,
 		basePower: 25,
@@ -1364,7 +1364,7 @@ let BattleMovedex = {
 		desc: "Confuses the target.",
 		priority: "0",
 		category: "status",
-		pp: 10
+		pp: 10,
 		type: "Psychic",
 		accuracy: 100,
 		basePower: 0,
@@ -1409,7 +1409,7 @@ let BattleMovedex = {
 		desc: "Decreases target's SpA by 1 stage.",
 		priority: "0",
 		category: "status",
-		pp: 40
+		pp: 40,
 		type: "Normal",
 		accuracy: 85,
 		basePower: 0,
@@ -1444,7 +1444,7 @@ let BattleMovedex = {
 		desc: "No additional effect.",
 		priority: "0",
 		category: "physical",
-		pp: 10
+		pp: 10,
 		type: "Rock",
 		accuracy: 100,
 		basePower: 90,
@@ -1460,7 +1460,7 @@ let BattleMovedex = {
 		desc: "No additional effect.",
 		priority: "0",
 		category: "physical",
-		pp: 10
+		pp: 10,
 		type: "Bug",
 		accuracy: 100,
 		basePower: 50,
@@ -1473,7 +1473,7 @@ let BattleMovedex = {
 		desc: "No additional effect.",
 		priority: "0",
 		category: "physical",
-		pp: 10
+		pp: 10,
 		type: "Normal",
 		accuracy: 100,
 		basePower: 30,
@@ -1486,7 +1486,7 @@ let BattleMovedex = {
 		desc: "No additional effect.",
 		priority: "0",
 		category: "physical",
-		pp: 10
+		pp: 10,
 		type: "Flying",
 		accuracy: 100,
 		basePower: 40,
@@ -1499,7 +1499,7 @@ let BattleMovedex = {
 		desc: "No additional effect.",
 		priority: "0",
 		category: "special",
-		pp: 10
+		pp: 10,
 		type: "Water",
 		accuracy: 100,
 		basePower: 30,
@@ -1512,7 +1512,7 @@ let BattleMovedex = {
 		desc: "No additional effect.",
 		priority: "0",
 		category: "physical",
-		pp: 10
+		pp: 10,
 		type: "Steel",
 		accuracy: 100,
 		basePower: 30,
@@ -1539,7 +1539,7 @@ let BattleMovedex = {
 		desc: "No additional effect.",
 		priority: "0",
 		category: "special",
-		pp: 10
+		pp: 10,
 		type: "Water",
 		accuracy: 100,
 		basePower: 30,
@@ -1553,7 +1553,7 @@ let BattleMovedex = {
 		desc: "No additional effect.",
 		priority: "0",
 		category: "special",
-		pp: 10
+		pp: 10,
 		type: "Water",
 		accuracy: 100,
 		basePower: 0,
