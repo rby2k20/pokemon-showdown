@@ -1,56 +1,10 @@
-'use strict';
-
-/**
- * Gen 2 sw97 scripts.
- */
-
-/**@type {ModdedBattleScriptsData} */
-let BattleScripts = {
-	inherit: 'gen2',
-	gen: 2,
-	// BattlePokemon scripts.
-	pokemon: {
-		getStat(statName, unboosted, unmodified, fastReturn) {
-			// @ts-ignore - type checking prevents 'hp' from being passed, but we're paranoid
-			if (statName === 'hp') throw new Error("Please read `maxhp` directly");
-
-			// base stat
-			let stat = this.storedStats[statName];
-
-			// Stat boosts.
-			if (!unboosted) {
-				let boost = this.boosts[statName];
-				if (boost > 6) boost = 6;
-				if (boost < -6) boost = -6;
-				if (boost >= 0) {
-					const boostTable = [1, 1.5, 2, 2.5, 3, 3.5, 4];
-					stat = Math.floor(stat * boostTable[boost]);
-				} else {
-					const numerators = [100, 66, 50, 40, 33, 28, 25];
-					stat = Math.floor(stat * numerators[-boost] / 100);
-				}
-			}
-
-			if (this.status === 'par' && statName === 'spe') {
-				stat = Math.floor(stat / 4);
-			}
-
-			if (!unmodified) {
-				// Burn attack drop is checked when you get the attack stat upon switch in and used until switch out.
-				if (this.status === 'brn' && statName === 'atk') {
-					stat = Math.floor(stat / 2);
-				}
-			}
-
-			// Gen 2 caps stats at 999 and min is 1.'use strict';'use strict';
-
 /**
  * Gen 2 scripts.
  */
 
 /**@type {ModdedBattleScriptsData} */
 let BattleScripts = {
-	inherit: 'gen3',
+	inherit: 'gen2',
 	gen: 2,
 	// BattlePokemon scripts.
 	pokemon: {
