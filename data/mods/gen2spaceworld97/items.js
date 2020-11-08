@@ -40,7 +40,7 @@ let BattleItems = {
 					this.add('-enditem', target, this.effect, '[weaken]');
 					return this.chainModify(0.5);
 				}
-			}
+			},
 		},
 		isNonstandard: null,
 		gen: 2,
@@ -132,7 +132,7 @@ let BattleItems = {
 					this.add('-enditem', target, this.effect, '[weaken]');
 					return this.chainModify(0.5);
 				}
-			}
+			},
 		},
 	thickclub: {
 		isNonstandard: null,
@@ -231,7 +231,7 @@ let BattleItems = {
 					this.add('-enditem', target, this.effect, '[weaken]');
 					return this.chainModify(0.5);
 				}
-			}
+			},
 		},
 	whitefeather: {
 		id: "whitefeather",
@@ -246,7 +246,7 @@ let BattleItems = {
 					this.add('-enditem', target, this.effect, '[weaken]');
 					return this.chainModify(0.5);
 				}
-			}
+			},
 		},
 	confuseclaw: {
 		id: "confuseclaw",
@@ -743,4 +743,5 @@ let BattleItems = {
 		},
 	},
 };
+	
 exports.BattleItems = BattleItems;
