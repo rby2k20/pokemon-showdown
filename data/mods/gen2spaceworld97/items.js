@@ -226,16 +226,16 @@ let BattleItems = {
 		desc: "Holder's Rock-type attacks have 1.1x power.",
 	},
 	hardstone:
-		desc: "Weakens Rock-type moves."
-			onSourceModifyDamage(damage, source, target, move) {
-				if (move.type === 'Rock' && target.getMoveHitData(move).typeMod > 0 && (!target.volatiles['substitute'] || move.flags['authentic'] || (move.infiltrates && this.gen >= 6))) {
-					this.debug('-50% reduction');
-					this.add('-enditem', target, this.effect, '[weaken]');
-					return this.chainModify(0.5);
-				}
-			},
-			onBasePower() {},
+		desc: "Weakens Rock-type moves.",
+		onSourceModifyDamage(damage, source, target, move) {
+			if (move.type === 'Rock' && target.getMoveHitData(move).typeMod > 0 && (!target.volatiles['substitute'] || move.flags['authentic'] || (move.infiltrates && this.gen >= 6))) {
+				this.debug('-50% reduction');
+				this.add('-enditem', target, this.effect, '[weaken]');
+				return this.chainModify(0.5);
+			}
 		},
+		onBasePower() {},
+	},
 	sharpbeak: {
 		inherit: true,
 		name: "Black Feather",
@@ -259,7 +259,7 @@ let BattleItems = {
 	electricpouch: {
 		id: "electricpouch",
 		name: "Electric Pouch",
-		desc: "Weakens Electric-type moves."
+		desc: "Weakens Electric-type moves.",
 		num: 996,
 		onSourceModifyDamage(damage, source, target, move) {
 			if (move.type === 'Electric' && target.getMoveHitData(move).typeMod > 0 && (!target.volatiles['substitute'] || move.flags['authentic'] || (move.infiltrates && this.gen >= 6))) {
@@ -276,7 +276,7 @@ let BattleItems = {
 	strangepower: {
 		id: "strangepower",
 		name: "Strange Power",
-		desc: "The holder's type immunities granted solely by its typing are negated."
+		desc: "The holder's type immunities granted solely by its typing are negated.",
 		num: 995,
 		onNegateImmunity: false,
 	},
@@ -292,7 +292,7 @@ let BattleItems = {
 		desc: "Holder's Poison-type attacks have 1.1x power.",
 	},
 	silverpowder: {
-		desc: "Weakens Bug-type moves."
+		desc: "Weakens Bug-type moves.",
 		onSourceModifyDamage(damage, source, target, move) {
 			if (move.type === 'Bug' && target.getMoveHitData(move).typeMod > 0 && (!target.volatiles['substitute'] || move.flags['authentic'] || (move.infiltrates && this.gen >= 6))) {
 				this.debug('-50% reduction');
