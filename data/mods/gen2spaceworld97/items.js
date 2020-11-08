@@ -110,7 +110,6 @@ let BattleItems = {
 			}
 		},
 	},
-	},
 	thickclub: {
 		inherit: true,
 		// In Gen 2 this happens in stat calculation directly.
