@@ -1,4 +1,7 @@
-export const BattleFormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
+'use strict';
+
+/**@type {{[k: string]: ModdedTemplateFormatsData}} */
+let BattleFormatsData = {
 	bulbasaur: {
 		tier: "LC",
 	},
@@ -3555,3 +3558,4 @@ export const BattleFormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "Uber",
 	},
 };
+exports.BattleFormatsData = BattleFormatsData;
