@@ -176,7 +176,7 @@ let BattleItems = {
 	mysticpetal: {
 		id: "mysticpetal",
 		name: "Mystic Petal",
-		desc: "Weakens Grass-type moves."
+		desc: "Weakens Grass-type moves.",
 		num: 999,
 		onSourceModifyDamage(damage, source, target, move) {
 			if (move.type === 'Grass' && target.getMoveHitData(move).typeMod > 0 && (!target.volatiles['substitute'] || move.flags['authentic'] || (move.infiltrates && this.gen >= 6))) {
@@ -189,7 +189,7 @@ let BattleItems = {
 	whitefeather: {
 		id: "whitefeather",
 		name: "White Feather",
-		desc: "Weakens Flying-type moves."
+		desc: "Weakens Flying-type moves.",
 		num: 998,
 		onSourceModifyDamage(damage, source, target, move) {
 			if (move.type === 'Flying' && target.getMoveHitData(move).typeMod > 0 && (!target.volatiles['substitute'] || move.flags['authentic'] || (move.infiltrates && this.gen >= 6))) {
@@ -202,7 +202,7 @@ let BattleItems = {
 	confuseclaw: {
 		id: "confuseclaw",
 		name: "Confuse Claw",
-		desc: "Hurts opponent on switch-in."
+		desc: "Hurts opponent on switch-in.",
 		num: 997,
 		onStart(pokemon) {
 			if (move.flags['contact']) {
@@ -247,7 +247,7 @@ let BattleItems = {
 	snakeskin: {
 		id: "snakeskin",
 		name: "Snakeskin",
-		desc: "Prevents poisoning."
+		desc: "Prevents poisoning.",
 		num: 997,
 		onSetStatus(status, target, source, effect) {
 			if (status.id !== 'psn') return;
@@ -325,7 +325,7 @@ let BattleItems = {
 	strangewater: {
 		id: "strangewater",
 		name: "Strange Water",
-		desc: "Weakens Water-type moves."
+		desc: "Weakens Water-type moves.",
 		num: 993,
 		onSourceModifyDamage(damage, source, target, move) {
 			if (move.type === 'Water' && target.getMoveHitData(move).typeMod > 0 && (!target.volatiles['substitute'] || move.flags['authentic'] || (move.infiltrates && this.gen >= 6))) {
@@ -336,7 +336,7 @@ let BattleItems = {
 		},
 	},
 	twistedspoon: {
-		desc: "Weakens Psychic-type moves."
+		desc: "Weakens Psychic-type moves.",
 		onSourceModifyDamage(damage, source, target, move) {
 			if (move.type === 'Psychic' && target.getMoveHitData(move).typeMod > 0 && (!target.volatiles['substitute'] || move.flags['authentic'] || (move.infiltrates && this.gen >= 6))) {
 				this.debug('-50% reduction');
@@ -364,7 +364,7 @@ let BattleItems = {
 	jigglingballoon: {
 		id: "jigglingballoon",
 		name: "Jiggling Balloon",
-		desc: "Weakens Normal-type moves."
+		desc: "Weakens Normal-type moves.",
 		num: 990,
 		onSourceModifyDamage(damage, source, target, move) {
 			if (move.type === 'Normal' && target.getMoveHitData(move).typeMod > 0 && (!target.volatiles['substitute'] || move.flags['authentic'] || (move.infiltrates && this.gen >= 6))) {
@@ -377,7 +377,7 @@ let BattleItems = {
 	firemane: {
 		id: "firemane",
 		name: "Fire Mane",
-		desc: "Weakens Fire-type moves."
+		desc: "Weakens Fire-type moves.",
 		num: 989,
 		onSourceModifyDamage(damage, source, target, move) {
 			if (move.type === 'Fire' && target.getMoveHitData(move).typeMod > 0 && (!target.volatiles['substitute'] || move.flags['authentic'] || (move.infiltrates && this.gen >= 6))) {
@@ -390,7 +390,7 @@ let BattleItems = {
 	earth: {
 		id: "earth",
 		name: "Earth",
-		desc: "Prevents paralysis."
+		desc: "Prevents paralysis.",
 		num: 988,
 		onSetStatus(status, target, source, effect) {
 			if (status.id !== 'par') return;
@@ -406,7 +406,7 @@ let BattleItems = {
 	fossilshard: {
 		id: "fossilshard",
 		name: "Fossil Shard",
-		desc: "Weakens Ground-type moves."
+		desc: "Weakens Ground-type moves.",
 		num: 987,
 		onSourceModifyDamage(damage, source, target, move) {
 			if (move.type === 'Ground' && target.getMoveHitData(move).typeMod > 0 && (!target.volatiles['substitute'] || move.flags['authentic'] || (move.infiltrates && this.gen >= 6))) {
@@ -419,7 +419,7 @@ let BattleItems = {
 	grossgarbage: {
 		id: "grossgarbage",
 		name: "Gross Garbage",
-		desc: "Weakens Poison-type moves."
+		desc: "Weakens Poison-type moves.",
 		num: 986,
 		onSourceModifyDamage(damage, source, target, move) {
 			if (move.type === 'Poison' && target.getMoveHitData(move).typeMod > 0 && (!target.volatiles['substitute'] || move.flags['authentic'] || (move.infiltrates && this.gen >= 6))) {
@@ -432,7 +432,7 @@ let BattleItems = {
 	championbelt: {
 		id: "championbelt",
 		name: "Champion Belt",
-		desc: "Weakens Fighting-type moves."
+		desc: "Weakens Fighting-type moves.",
 		num: 985,
 		onSourceModifyDamage(damage, source, target, move) {
 			if (move.type === 'Fighting' && target.getMoveHitData(move).typeMod > 0 && (!target.volatiles['substitute'] || move.flags['authentic'] || (move.infiltrates && this.gen >= 6))) {
@@ -445,7 +445,7 @@ let BattleItems = {
 	tag: {
 		id: "tag",
 		name: "Tag",
-		desc: "Weakens Ghost-type moves."
+		desc: "Weakens Ghost-type moves.",
 		num: 984,
 		onSourceModifyDamage(damage, source, target, move) {
 			if (move.type === 'Ghost' && target.getMoveHitData(move).typeMod > 0 && (!target.volatiles['substitute'] || move.flags['authentic'] || (move.infiltrates && this.gen >= 6))) {
@@ -458,7 +458,7 @@ let BattleItems = {
 	"5yencoin": {
 		id: "5yencoin",
 		name: "5 Yen Coin",
-		desc: "Weakens Psychic-type moves."
+		desc: "Weakens Psychic-type moves.",
 		num: 983,
 		onSourceModifyDamage(damage, source, target, move) {
 			if (move.type === 'Psychic' && target.getMoveHitData(move).typeMod > 0 && (!target.volatiles['substitute'] || move.flags['authentic'] || (move.infiltrates && this.gen >= 6))) {
@@ -471,7 +471,7 @@ let BattleItems = {
 	guardthread: {
 		id: "guardthread",
 		name: "Guard Thread",
-		desc: "Weakens Bug-type moves."
+		desc: "Weakens Bug-type moves.",
 		num: 982,
 		onSourceModifyDamage(damage, source, target, move) {
 			if (move.type === 'Bug' && target.getMoveHitData(move).typeMod > 0 && (!target.volatiles['substitute'] || move.flags['authentic'] || (move.infiltrates && this.gen >= 6))) {
@@ -484,7 +484,7 @@ let BattleItems = {
 	stimulusorb: {
 		id: "stimulusorb",
 		name: "Stimulus Orb",
-		desc: "Prevents sleep."
+		desc: "Prevents sleep.",
 		num: 981,
 		onSetStatus(status, target, source, effect) {
 			if (status.id !== 'slp') return;
@@ -496,7 +496,7 @@ let BattleItems = {
 	detectorb: {
 		id: "detectorb",
 		name: "Detect Orb",
-		desc: "Raises Evasion by 1 stage."
+		desc: "Raises Evasion by 1 stage.",
 		num: 980,
 		onModifyAccuracy(accuracy) {
 				this.debug('Detect Orb - decreasing accuracy');
@@ -516,7 +516,7 @@ let BattleItems = {
 	icebikini: {
 		id: "icebikini",
 		name: "Ice Bikini",
-		desc: "Weakens Ice-type moves."
+		desc: "Weakens Ice-type moves.",
 		num: 979,
 		onSourceModifyDamage(damage, source, target, move) {
 			if (move.type === 'Ice' && target.getMoveHitData(move).typeMod > 0 && (!target.volatiles['substitute'] || move.flags['authentic'] || (move.infiltrates && this.gen >= 6))) {
@@ -541,7 +541,7 @@ let BattleItems = {
 	invisiblewall: {
 		id: "invisiblewall",
 		name: "Invisible Wall",
-		desc: "Halves Special Attack damage."
+		desc: "Halves Special Attack damage.",
 		num: 979,
 		onTryHit(pokemon) {
 			if (pokemon.volatiles['lightscreen']) {
@@ -571,7 +571,7 @@ let BattleItems = {
 	prettytail: {
 		id: "prettytail",
 		name: "Pretty Tail",
-		desc: "Prevents poisoning."
+		desc: "Prevents poisoning.",
 		num: 978,
 		onSetStatus(status, target, source, effect) {
 			if (status.id !== 'psn') return;
@@ -583,7 +583,7 @@ let BattleItems = {
 	watertail: {
 		id: "watertail",
 		name: "Water Tail",
-		desc: "Prevents burns."
+		desc: "Prevents burns.",
 		num: 977,
 		onSetStatus(status, target, source, effect) {
 			if (status.id !== 'brn') return;
@@ -595,7 +595,7 @@ let BattleItems = {
 	firetail: {
 		id: "firetail",
 		name: "Fire Tail",
-		desc: "Prevents freezing."
+		desc: "Prevents freezing.",
 		num: 976,
 		onSetStatus(status, target, source, effect) {
 			if (status.id !== 'frz') return;
@@ -607,7 +607,7 @@ let BattleItems = {
 	thundertail: {
 		id: "thundertail",
 		name: "Thunder Tail",
-		desc: "Prevents paralysis."
+		desc: "Prevents paralysis.",
 		num: 975,
 		onSetStatus(status, target, source, effect) {
 			if (status.id !== 'par') return;
