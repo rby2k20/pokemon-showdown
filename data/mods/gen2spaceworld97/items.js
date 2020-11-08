@@ -5,7 +5,7 @@ let BattleItems = {
 	berryjuice: {
 		inherit: true,
 		isNonstandard: null,
-		gen: 2
+		gen: 2,
 	},
 	brightpowder: {
 		inherit: true,
@@ -16,7 +16,7 @@ let BattleItems = {
 			return accuracy - 20;
 		},
 		isNonstandard: null,
-		gen: 2
+		gen: 2,
 	},
 	dragonfang: {
 		inherit: true,
@@ -27,7 +27,7 @@ let BattleItems = {
 		},
 		desc: "Holder's Dragon-type attacks have 1.1x power. Evolves Seadra (trade).",
 		isNonstandard: null,
-		gen: 2
+		gen: 2,
 	},
 	dragonscale: {
 		inherit: true,
@@ -41,7 +41,7 @@ let BattleItems = {
 			}
 		},
 		isNonstandard: null,
-		gen: 2
+		gen: 2,
 	},
 	focusband: {
 		inherit: true,
@@ -54,12 +54,12 @@ let BattleItems = {
 			}
 		},
 		isNonstandard: null,
-		gen: 2
+		gen: 2,
 	},
 	kingsrock: {
 		inherit: true,
 		isNonstandard: null,
-		gen: 2
+		gen: 2,
 		onModifyMove(move) {
 			const affectedByKingsRock = [
 				'absorb', 'aeroblast', 'barrage', 'beatup', 'bide', 'bonerush', 'bonemerang', 'cometpunch', 'counter', 'crabhammer', 'crosschop', 'cut', 'dig', 'doublekick', 'doubleslap', 'doubleedge', 'dragonrage', 'drillpeck', 'eggbomb', 'explosion', 'extremespeed', 'falseswipe', 'feintattack', 'flail', 'fly', 'frustration', 'furyattack', 'furycutter', 'furyswipes', 'gigadrain', 'hiddenpower', 'highjumpkick', 'hornattack', 'hydropump', 'jumpkick', 'karatechop', 'leechlife', 'machpunch', 'magnitude', 'megadrain', 'megakick', 'megapunch', 'megahorn', 'mirrorcoat', 'nightshade', 'outrage', 'payday', 'peck', 'petaldance', 'pinmissile', 'pound', 'present', 'pursuit', 'psywave', 'quickattack', 'rage', 'rapidspin', 'razorleaf', 'razorwind', 'return', 'reversal', 'rockthrow', 'rollout', 'scratch', 'seismictoss', 'selfdestruct', 'skullbash', 'skyattack', 'slam', 'slash', 'snore', 'solarbeam', 'sonicboom', 'spikecannon', 'strength', 'struggle', 'submission', 'superfang', 'surf', 'swift', 'tackle', 'takedown', 'thief', 'thrash', 'triplekick', 'twineedle', 'visegrip', 'vinewhip', 'vitalthrow', 'watergun', 'waterfall', 'wingattack',
@@ -81,12 +81,12 @@ let BattleItems = {
 		// In Gen 2 this happens in stat calculation directly.
 		onModifySpA() {},
 		isNonstandard: null,
-		gen: 2
+		gen: 2,
 	},
 	luckypunch: {
 		inherit: true,
 		isNonstandard: null,
-		gen: 2
+		gen: 2,
 		desc: "If held by a Chansey, its critical hit ratio is always at stage 2. (25% crit rate)",
 		onModifyCritRatioPriority: -1,
 		onModifyCritRatio(critRatio, user) {
@@ -98,7 +98,7 @@ let BattleItems = {
 	metalpowder: {
 		inherit: true,
 		isNonstandard: null,
-		gen: 2
+		gen: 2,
 		desc: "If held by a Ditto, its Defense and Sp. Def are 1.5x, even while Transformed.",
 		// In Gen 2 this happens in stat calculation directly.
 		onModifyDef() {},
@@ -106,7 +106,7 @@ let BattleItems = {
 	},
 	quickclaw: {
 		isNonstandard: null,
-		gen: 2
+		gen: 2,
 		inherit: true,
 		name: "Quick Needle",
 		desc: "Each turn, holder has a ~23.4% chance to move first in its priority bracket.",
@@ -118,7 +118,7 @@ let BattleItems = {
 	},
 	stick: {
 		isNonstandard: null,
-		gen: 2
+		gen: 2,
 		inherit: true,
 		desc: "Holder's Normal-type attacks have 1.1x power.",
 		onModifyCritRatioPriority: 0,
@@ -133,73 +133,73 @@ let BattleItems = {
 	},
 	thickclub: {
 		isNonstandard: null,
-		gen: 2
+		gen: 2,
 		inherit: true,
 		// In Gen 2 this happens in stat calculation directly.
 		onModifyAtk() {},
 	},
 	berserkgene: {
-		gen: 2
+		gen: 2,
 		inherit: true,
 		isNonstandard: null,
 	},
 	berry: {
-		gen: 2
+		gen: 2,
 		inherit: true,
 		isNonstandard: null,
 	},
 	bitterberry: {
-		gen: 2
+		gen: 2,
 		inherit: true,
 		isNonstandard: null,
 	},
 	burntberry: {
-		gen: 2
+		gen: 2,
 		inherit: true,
 		isNonstandard: null,
 	},
 	goldberry: {
-		gen: 2
+		gen: 2,
 		inherit: true,
 		isNonstandard: null,
 	},
 	iceberry: {
-		gen: 2
+		gen: 2,
 		inherit: true,
 		isNonstandard: null,
 	},
 	mintberry: {
-		gen: 2
+		gen: 2,
 		inherit: true,
 		isNonstandard: null,
 	},
 	miracleberry: {
-		gen: 2
+		gen: 2,
 		inherit: true,
 		isNonstandard: null,
 	},
 	mysteryberry: {
-		gen: 2
+		gen: 2,
 		inherit: true,
 		isNonstandard: null,
 	},
 	pinkbow: {
-		gen: 2
+		gen: 2,
 		inherit: true,
 		isNonstandard: null,
 	},
 	polkadotbow: {
-		gen: 2
+		gen: 2,
 		inherit: true,
 		isNonstandard: null,
 	},
 	przcureberry: {
-		gen: 2
+		gen: 2,
 		inherit: true,
 		isNonstandard: null,
 	},
 	psncureberry: {
-		gen: 2
+		gen: 2,
 		inherit: true,
 		isNonstandard: null,
 	},//spaceworld changes begin here
@@ -208,7 +208,7 @@ let BattleItems = {
 		name: "Leftovers",
 		spritenum: 242,
 		num: 234,
-		gen: 2
+		gen: 2,
 		isNonstandard: null,
 		desc: "Heals 30 HP every turn.",
 		onResidual(pokemon) {
@@ -220,7 +220,7 @@ let BattleItems = {
 		name: "Mystic Petal",
 		desc: "Weakens Grass-type moves.",
 		num: 999,
-		gen: 2
+		gen: 2,
 		isNonstandard: null,
 		onSourceModifyDamage(damage, source, target, move) {
 			if (move.type === 'Grass' && target.getMoveHitData(move).typeMod > 0 && (!target.volatiles['substitute'] || move.flags['authentic'] || (move.infiltrates && this.gen >= 6))) {
@@ -235,7 +235,7 @@ let BattleItems = {
 		name: "White Feather",
 		desc: "Weakens Flying-type moves.",
 		num: 998,
-		gen: 2
+		gen: 2,
 		isNonstandard: null,
 		onSourceModifyDamage(damage, source, target, move) {
 			if (move.type === 'Flying' && target.getMoveHitData(move).typeMod > 0 && (!target.volatiles['substitute'] || move.flags['authentic'] || (move.infiltrates && this.gen >= 6))) {
@@ -250,7 +250,7 @@ let BattleItems = {
 		name: "Confuse Claw",
 		desc: "Hurts opponent on switch-in.",
 		num: 997,
-		gen: 2
+		gen: 2,
 		isNonstandard: null,
 		onStart(pokemon) {
 			if (move.flags['contact']) {
@@ -261,14 +261,14 @@ let BattleItems = {
 	miracleseed: {
 		inherit: true,
 		name: "Big Leaf",
-		gen: 2
+		gen: 2,
 		isNonstandard: null,
 	},
 	sharpstone: {
 		id: "sharpstone",
 		name: "Sharp Stone",
 		num: 991,
-		gen: 2
+		gen: 2,
 		isNonstandard: null,
 		onBasePower(basePower, user, target, move) {
 			if (move.type === 'Rock') {
@@ -280,7 +280,7 @@ let BattleItems = {
 	hardstone: {
 		inherit: true,
 		desc: "Weakens Rock-type moves.",
-		gen: 2
+		gen: 2,
 		isNonstandard: null,
 		onSourceModifyDamage(damage, source, target, move) {
 			if (move.type === 'Rock' && target.getMoveHitData(move).typeMod > 0 && (!target.volatiles['substitute'] || move.flags['authentic'] || (move.infiltrates && this.gen >= 6))) {
@@ -293,13 +293,13 @@ let BattleItems = {
 	},
 	sharpbeak: {
 		inherit: true,
-		gen: 2
+		gen: 2,
 		isNonstandard: null,
 		name: "Black Feather",
 	},
 	silkscarf: {
 		inherit: true,
-		gen: 2
+		gen: 2,
 		isNonstandard: null,
 		name: "Sharp Fang",
 	},
@@ -308,7 +308,7 @@ let BattleItems = {
 		name: "Snakeskin",
 		desc: "Prevents poisoning.",
 		num: 997,
-		gen: 2
+		gen: 2,
 		isNonstandard: null,
 		onSetStatus(status, target, source, effect) {
 			if (status.id !== 'psn') return;
@@ -322,7 +322,7 @@ let BattleItems = {
 		name: "Electric Pouch",
 		desc: "Weakens Electric-type moves.",
 		num: 996,
-		gen: 2
+		gen: 2,
 		isNonstandard: null,
 		onSourceModifyDamage(damage, source, target, move) {
 			if (move.type === 'Electric' && target.getMoveHitData(move).typeMod > 0 && (!target.volatiles['substitute'] || move.flags['authentic'] || (move.infiltrates && this.gen >= 6))) {
@@ -335,7 +335,7 @@ let BattleItems = {
 	poisonbarb: {
 		inherit: true,
 		name: "Toxic Needle",
-		gen: 2
+		gen: 2,
 		isNonstandard: null,
 	},
 	strangepower: {
@@ -343,7 +343,7 @@ let BattleItems = {
 		name: "Strange Power",
 		desc: "The holder's type immunities granted solely by its typing are negated.",
 		num: 995,
-		gen: 2
+		gen: 2,
 		isNonstandard: null,
 		onNegateImmunity: false,
 	},
@@ -351,7 +351,7 @@ let BattleItems = {
 		id: "poisonfang",
 		name: "Poison Fang",
 		num: 996,
-		gen: 2
+		gen: 2,
 		isNonstandard: null,
 		onBasePower(basePower, user, target, move) {
 			if (move.type === 'Poison') {
@@ -362,7 +362,7 @@ let BattleItems = {
 	},
 	silverpowder: {
 		inherit: true,
-		gen: 2
+		gen: 2,
 		isNonstandard: null,
 		desc: "Weakens Bug-type moves.",
 		onSourceModifyDamage(damage, source, target, move) {
@@ -378,7 +378,7 @@ let BattleItems = {
 		id: "migraineseed",
 		name: "Migraine Seed",
 		num: 995,
-		gen: 2
+		gen: 2,
 		isNonstandard: null,
 		onBasePower(basePower, user, target, move) {
 			if (move.type === 'Psychic') {
@@ -391,7 +391,7 @@ let BattleItems = {
 		id: "countercuff",
 		name: "Counter Cuff",
 		num: 994,
-		gen: 2
+		gen: 2,
 		isNonstandard: null,
 		desc: "Reflects 1/4 of damage taken to the attacker upon receiving damage.",
 		onDamagingHit(damage, target, source, move) {
@@ -403,7 +403,7 @@ let BattleItems = {
 		name: "Strange Water",
 		desc: "Weakens Water-type moves.",
 		num: 993,
-		gen: 2
+		gen: 2,
 		isNonstandard: null,
 		onSourceModifyDamage(damage, source, target, move) {
 			if (move.type === 'Water' && target.getMoveHitData(move).typeMod > 0 && (!target.volatiles['substitute'] || move.flags['authentic'] || (move.infiltrates && this.gen >= 6))) {
@@ -415,7 +415,7 @@ let BattleItems = {
 	},
 	twistedspoon: {
 		inherit: true,
-		gen: 2
+		gen: 2,
 		isNonstandard: null,
 		desc: "Weakens Psychic-type moves.",
 		onSourceModifyDamage(damage, source, target, move) {
@@ -431,7 +431,7 @@ let BattleItems = {
 		id: "attackneedle",
 		name: "Attack Needle",
 		num: 992,
-		gen: 2
+		gen: 2,
 		isNonstandard: null,
 		onBasePower(basePower, user, target, move) {
 			if (move.type === 'Bug') {
@@ -443,7 +443,7 @@ let BattleItems = {
 	blackbelt: {
 		inherit: true,
 		name: "Power Bracer",
-		gen: 2
+		gen: 2,
 		isNonstandard: null,
 	},
 	jigglingballoon: {
@@ -451,7 +451,7 @@ let BattleItems = {
 		name: "Jiggling Balloon",
 		desc: "Weakens Normal-type moves.",
 		num: 990,
-		gen: 2
+		gen: 2,
 		isNonstandard: null,
 		onSourceModifyDamage(damage, source, target, move) {
 			if (move.type === 'Normal' && target.getMoveHitData(move).typeMod > 0 && (!target.volatiles['substitute'] || move.flags['authentic'] || (move.infiltrates && this.gen >= 6))) {
@@ -466,7 +466,7 @@ let BattleItems = {
 		name: "Fire Mane",
 		desc: "Weakens Fire-type moves.",
 		num: 989,
-		gen: 2
+		gen: 2,
 		isNonstandard: null,
 		onSourceModifyDamage(damage, source, target, move) {
 			if (move.type === 'Fire' && target.getMoveHitData(move).typeMod > 0 && (!target.volatiles['substitute'] || move.flags['authentic'] || (move.infiltrates && this.gen >= 6))) {
@@ -481,7 +481,7 @@ let BattleItems = {
 		name: "Earth",
 		desc: "Prevents paralysis.",
 		num: 988,
-		gen: 2
+		gen: 2,
 		isNonstandard: null,
 		onSetStatus(status, target, source, effect) {
 			if (status.id !== 'par') return;
@@ -493,7 +493,7 @@ let BattleItems = {
 	nevermeltice: {
 		inherit: true,
 		name: "Ice Fang",
-		gen: 2
+		gen: 2,
 		isNonstandard: null,
 	},
 	fossilshard: {
@@ -501,7 +501,7 @@ let BattleItems = {
 		name: "Fossil Shard",
 		desc: "Weakens Ground-type moves.",
 		num: 987,
-		gen: 2
+		gen: 2,
 		isNonstandard: null,
 		onSourceModifyDamage(damage, source, target, move) {
 			if (move.type === 'Ground' && target.getMoveHitData(move).typeMod > 0 && (!target.volatiles['substitute'] || move.flags['authentic'] || (move.infiltrates && this.gen >= 6))) {
@@ -516,7 +516,7 @@ let BattleItems = {
 		name: "Gross Garbage",
 		desc: "Weakens Poison-type moves.",
 		num: 986,
-		gen: 2
+		gen: 2,
 		isNonstandard: null,
 		onSourceModifyDamage(damage, source, target, move) {
 			if (move.type === 'Poison' && target.getMoveHitData(move).typeMod > 0 && (!target.volatiles['substitute'] || move.flags['authentic'] || (move.infiltrates && this.gen >= 6))) {
@@ -531,7 +531,7 @@ let BattleItems = {
 		name: "Champion Belt",
 		desc: "Weakens Fighting-type moves.",
 		num: 985,
-		gen: 2
+		gen: 2,
 		isNonstandard: null,
 		onSourceModifyDamage(damage, source, target, move) {
 			if (move.type === 'Fighting' && target.getMoveHitData(move).typeMod > 0 && (!target.volatiles['substitute'] || move.flags['authentic'] || (move.infiltrates && this.gen >= 6))) {
@@ -546,7 +546,7 @@ let BattleItems = {
 		name: "Tag",
 		desc: "Weakens Ghost-type moves.",
 		num: 984,
-		gen: 2
+		gen: 2,
 		isNonstandard: null,
 		onSourceModifyDamage(damage, source, target, move) {
 			if (move.type === 'Ghost' && target.getMoveHitData(move).typeMod > 0 && (!target.volatiles['substitute'] || move.flags['authentic'] || (move.infiltrates && this.gen >= 6))) {
@@ -561,7 +561,7 @@ let BattleItems = {
 		name: "5 Yen Coin",
 		desc: "Weakens Psychic-type moves.",
 		num: 983,
-		gen: 2
+		gen: 2,
 		isNonstandard: null,
 		onSourceModifyDamage(damage, source, target, move) {
 			if (move.type === 'Psychic' && target.getMoveHitData(move).typeMod > 0 && (!target.volatiles['substitute'] || move.flags['authentic'] || (move.infiltrates && this.gen >= 6))) {
@@ -576,7 +576,7 @@ let BattleItems = {
 		name: "Guard Thread",
 		desc: "Weakens Bug-type moves.",
 		num: 982,
-		gen: 2
+		gen: 2,
 		isNonstandard: null,
 		onSourceModifyDamage(damage, source, target, move) {
 			if (move.type === 'Bug' && target.getMoveHitData(move).typeMod > 0 && (!target.volatiles['substitute'] || move.flags['authentic'] || (move.infiltrates && this.gen >= 6))) {
@@ -591,7 +591,7 @@ let BattleItems = {
 		name: "Stimulus Orb",
 		desc: "Prevents sleep.",
 		num: 981,
-		gen: 2
+		gen: 2,
 		isNonstandard: null,
 		onSetStatus(status, target, source, effect) {
 			if (status.id !== 'slp') return;
@@ -605,7 +605,7 @@ let BattleItems = {
 		name: "Detect Orb",
 		desc: "Raises Evasion by 1 stage.",
 		num: 980,
-		gen: 2
+		gen: 2,
 		isNonstandard: null,
 		onModifyAccuracy(accuracy) {
 				this.debug('Detect Orb - decreasing accuracy');
@@ -615,14 +615,14 @@ let BattleItems = {
 	mysticwater: {
 		inherit: true,
 		name: "Wet Horn",
-		gen: 2
+		gen: 2,
 		isNonstandard: null,
 	},
 	scopelens: {
 		isNonStandard: null,
 		name: "Sharp Scythe",
 		spritenum: 0,
-		gen: 2
+		gen: 2,
 		isNonstandard: null,
 	},
 	icebikini: {
@@ -630,7 +630,7 @@ let BattleItems = {
 		name: "Ice Bikini",
 		desc: "Weakens Ice-type moves.",
 		num: 979,
-		gen: 2
+		gen: 2,
 		isNonstandard: null,
 		onSourceModifyDamage(damage, source, target, move) {
 			if (move.type === 'Ice' && target.getMoveHitData(move).typeMod > 0 && (!target.volatiles['substitute'] || move.flags['authentic'] || (move.infiltrates && this.gen >= 6))) {
@@ -643,19 +643,19 @@ let BattleItems = {
 	magnet: {
 		inherit: true,
 		name: "Thunder Fang",
-		gen: 2
+		gen: 2,
 		isNonstandard: null,
 	},
 	charcoal: {
 		inherit: true,
 		name: "Fire Claw",
-		gen: 2
+		gen: 2,
 		isNonstandard: null,
 	},
 	spelltag: {
 		inherit: true,
 		name: "Spike",
-		gen: 2
+		gen: 2,
 		isNonstandard: null,
 	},
 	invisiblewall: {
@@ -663,7 +663,7 @@ let BattleItems = {
 		name: "Invisible Wall",
 		desc: "Halves Special Attack damage.",
 		num: 979,
-		gen: 2
+		gen: 2,
 		isNonstandard: null,
 		onTryHit(pokemon) {
 			if (pokemon.volatiles['lightscreen']) {
@@ -678,7 +678,7 @@ let BattleItems = {
 	},
 	metalcoat: {
 		inherit: true,
-		gen: 2
+		gen: 2,
 		isNonstandard: null,
 		onBasePower() {},
 		onTryHit(pokemon) {
@@ -697,7 +697,7 @@ let BattleItems = {
 		name: "Pretty Tail",
 		desc: "Prevents poisoning.",
 		num: 978,
-		gen: 2
+		gen: 2,
 		isNonstandard: null,
 		onSetStatus(status, target, source, effect) {
 			if (status.id !== 'psn') return;
@@ -711,7 +711,7 @@ let BattleItems = {
 		name: "Water Tail",
 		desc: "Prevents burns.",
 		num: 977,
-		gen: 2
+		gen: 2,
 		isNonstandard: null,
 		onSetStatus(status, target, source, effect) {
 			if (status.id !== 'brn') return;
@@ -725,7 +725,7 @@ let BattleItems = {
 		name: "Fire Tail",
 		desc: "Prevents freezing.",
 		num: 976,
-		gen: 2
+		gen: 2,
 		isNonstandard: null,
 		onSetStatus(status, target, source, effect) {
 			if (status.id !== 'frz') return;
@@ -739,7 +739,7 @@ let BattleItems = {
 		name: "Thunder Tail",
 		desc: "Prevents paralysis.",
 		num: 975,
-		gen: 2
+		gen: 2,
 		isNonstandard: null,
 		onSetStatus(status, target, source, effect) {
 			if (status.id !== 'par') return;
