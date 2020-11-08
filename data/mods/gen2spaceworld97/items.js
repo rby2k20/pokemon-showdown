@@ -291,7 +291,7 @@ let BattleItems = {
 					this.add('-enditem', target, this.effect, '[weaken]');
 					return this.chainModify(0.5);
 				}
-			}
+			},
 		onBasePower() {},
 	},
 	sharpbeak: {
