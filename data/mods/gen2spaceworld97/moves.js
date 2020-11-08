@@ -1164,7 +1164,7 @@ let BattleMovedex = {
 		accuracy: 70,
 		basePower: 120,
 		type: "Electric",
-		pp: 10
+		pp: 10,
 		secondary: {
 			chance: 10,
 			status: 'par',
