@@ -1,8 +1,7 @@
-/**
- * Gen 2 moves
- */
+'use strict';
 
-export const BattleMovedex: {[k: string]: ModdedMoveData} = {
+/**@type {{[k: string]: ModdedMoveData}} */
+let BattleMovedex = {
 	absorb: {
 		inherit: true,
 		desc: "The user recovers 1/2 the HP lost by the target, rounded down. If the target has a substitute, this move misses.",
@@ -1671,3 +1670,4 @@ export const BattleMovedex: {[k: string]: ModdedMoveData} = {
 		},
 	},
 };
+exports.BattleMovedex = BattleMovedex;
