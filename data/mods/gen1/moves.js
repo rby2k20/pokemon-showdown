@@ -694,7 +694,6 @@ let BattleMovedex = {
 		onHit(target) {
 			if (damage < 0) {
 				this.hint("Desync Clause activated.");
-				damage = false;
 				return false;
 			}
 		},
