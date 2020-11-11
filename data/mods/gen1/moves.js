@@ -696,7 +696,6 @@ let BattleMovedex = {
 				this.hint("Desync Clause activated.");
 				damage = false;
 				return false;
-				}
 			}
 		},
 	},
