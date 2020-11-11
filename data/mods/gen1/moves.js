@@ -695,7 +695,6 @@ let BattleMovedex = {
 				return false;
 			} else { 
 				return psywaveDamage
-				}
 			}
 		},
 	},
