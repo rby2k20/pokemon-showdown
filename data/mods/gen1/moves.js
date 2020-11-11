@@ -689,10 +689,13 @@ let BattleMovedex = {
 		inherit: true,
 		basePower: 1,
 		damageCallback(pokemon) {
-			return (this.random(0, (1.5 * pokemon.level)));
-			if (random < 0) {
+			let psywaveDamage = (this.random(0, (1.5 * pokemon.level)))
+			if (psywaveDamage < 0) {
 				this.hint("Desync Clause activated.");
 				return false;
+			} else { 
+				return psywaveDamage
+				}
 			}
 		},
 	},
