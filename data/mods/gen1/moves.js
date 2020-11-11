@@ -690,7 +690,7 @@ let BattleMovedex = {
 		basePower: 1,
 		damageCallback(pokemon) {
 			let psywaveDamage = (this.random(0, (1.5 * pokemon.level)))
-			if (psywaveDamage < 0) {
+			if (psywaveDamage <= 0) {
 				this.hint("Desync Clause activated.");
 				return false;
 			} else { 
