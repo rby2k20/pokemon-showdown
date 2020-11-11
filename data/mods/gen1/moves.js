@@ -690,8 +690,9 @@ let BattleMovedex = {
 		basePower: 1,
 		damageCallback(pokemon) {
 			return (this.random(0, (1.5 * pokemon.level)))
-			if (damage === false) {
+			if (damage <= 0) {
 				this.hint("Desync Clause activated.");
+				damage = false;
 				return false;
 			}
 		},
