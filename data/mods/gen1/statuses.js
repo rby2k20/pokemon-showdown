@@ -49,7 +49,7 @@ let BattleStatuses = {
 		onBeforeMove(pokemon) {
 			this.effectData.failedMoveid = undefined;
 			if (this.randomChance(63, 256)) {
-				this.effectData.failedMoveid = this.willMove(pokemon).moveid; //Stores queued move to check for Counter desyncs.
+				this.effectData.failedMoveid = this.queue.willMove(pokemon).moveid; //Stores queued move to check for Counter desyncs.
 				this.add('cant', pokemon, 'par');
 				pokemon.removeVolatile('bide');
 				pokemon.removeVolatile('twoturnmove');
