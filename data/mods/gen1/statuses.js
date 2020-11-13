@@ -49,7 +49,7 @@ let BattleStatuses = {
 		onBeforeMove(pokemon) {
 			if (this.randomChance(63, 256)) {
 				let desyncCheck = this.queue.willMove(pokemon); //Stores queued move to check for Counter desyncs.
-				this.debug(desyncCheck)
+				this.debug('an enemy has been slain', desyncCheck);
 				this.add('cant', pokemon, 'par');
 				pokemon.removeVolatile('bide');
 				pokemon.removeVolatile('twoturnmove');
