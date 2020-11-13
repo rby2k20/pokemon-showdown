@@ -46,10 +46,10 @@ let BattleStatuses = {
 			target.addVolatile('parspeeddrop');
 		},
 		onBeforeMovePriority: 2,
-		onBeforeMove(pokemon) {
+		onBeforeMove(pokemon, source, move) {
 			pokemon.statusData.failedMoveid = undefined;
 			if (this.randomChance(63, 256)) {
-				pokemon.statusData.failedMoveid = this.queue.willMove(pokemon).moveid; //Stores queued move to check for Counter desyncs.
+				pokemon.statusData.failedMoveid = this.queue.willMove(pokemon).move.id; //Stores queued move to check for Counter desyncs.
 				this.add('cant', pokemon, 'par');
 				pokemon.removeVolatile('bide');
 				pokemon.removeVolatile('twoturnmove');
