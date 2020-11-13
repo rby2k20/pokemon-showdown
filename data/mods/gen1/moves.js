@@ -256,10 +256,12 @@ let BattleMovedex = {
 			let lastUsedMove = target.side.lastMove && this.dex.getMove(target.side.lastMove.id);
 			if (lastUsedMove && lastUsedMove.basePower > 0 && ['Normal', 'Fighting'].includes(lastUsedMove.type) && this.lastDamage > 0 && !this.queue.willMove(target)) {
 				if (['Normal', 'Fighting'].includes(this.desyncCheck) && this.lastDamage === 0 || !['Normal', 'Fighting'].includes(this.desyncCheck) && this.lastDamage > 0) {
-					return false;
 					this.hint("Desync Clause activated.");
+					return false;
 				}
-				return 2 * this.lastDamage;
+				else { 
+					return 2 * this.lastDamage; 
+				}
 			}
 			this.debug("Gen 1 Counter failed due to conditions not met");
 			this.add('-fail', pokemon);
