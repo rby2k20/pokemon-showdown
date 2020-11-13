@@ -18,6 +18,7 @@ let BattleScripts = {
 	// Gen 1 stores the last damage dealt by a move in the battle.
 	// This is used for the move Counter.
 	lastDamage: 0,
+	desyncCheck: null,
 	// BattleSide scripts.
 	// In gen 1, last move information is stored on the side rather than on the active Pokémon.
 	// This is because there was actually no side, just Battle and active Pokémon effects.
