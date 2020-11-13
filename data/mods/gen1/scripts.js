@@ -16,7 +16,7 @@ let BattleScripts = {
 		}
 	},
 	init() {
-		let desyncCheck = null,
+		let desyncCheck = null;
 	},
 	// Gen 1 stores the last damage dealt by a move in the battle.
 	// This is used for the move Counter.
