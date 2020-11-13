@@ -5,7 +5,7 @@
  * Therefor we need to make a lot of changes to the battle engine for this game simulation.
  * This generation inherits all the changes from older generations, that must be taken into account when editing code.
  */
-
+let desyncCheck = null,
 /**@type {ModdedBattleScriptsData} */
 let BattleScripts = {
 	inherit: 'gen2',
@@ -17,9 +17,7 @@ let BattleScripts = {
 	},
 	// Gen 1 stores the last damage dealt by a move in the battle.
 	// This is used for the move Counter.
-	// We also need to track potential desyncs through full paralysis, so we define a desyncCheck variable.
 	lastDamage: 0,
-	var desyncCheck = null, //maybe this will work
 	// BattleSide scripts.
 	// In gen 1, last move information is stored on the side rather than on the active Pokémon.
 	// This is because there was actually no side, just Battle and active Pokémon effects.
