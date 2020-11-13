@@ -254,7 +254,15 @@ let BattleMovedex = {
 			// It will fail if the last move selected by the opponent has base power 0 or is not Normal or Fighting Type.
 			// If both are true, counter will deal twice the last damage dealt in battle, no matter what was the move.
 			// That means that, if opponent switches, counter will use last counter damage * 2.
+			// Counter has a lot of ways to desync, these need to be covered by Desync Clause.
 			let lastUsedMove = target.side.lastMove && this.dex.getMove(target.side.lastMove.id);
+			if (['Normal', 'Fighting'].includes(desyncCheck.type) && lastDamage === 0) {
+			    return false;
+			    this.hint("Desync Clause activated.");
+			}
+			if (!['Normal', 'Fighting'].includes(desyncCheck.type) && lastDamage > 0) {
+				return false;
+				this.hint("Desync Clause activated.");
 			if (lastUsedMove && lastUsedMove.basePower > 0 && ['Normal', 'Fighting'].includes(lastUsedMove.type) && this.lastDamage > 0 && !this.queue.willMove(target)) {
 				return 2 * this.lastDamage;
 			}
