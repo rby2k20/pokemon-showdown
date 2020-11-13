@@ -19,7 +19,7 @@ let BattleScripts = {
 	// This is used for the move Counter.
 	// We also need to track potential desyncs through full paralysis, so we define a desyncCheck variable.
 	lastDamage: 0,
-	desyncCheck: this.willMove(pokemon), //maybe this will work
+	desyncCheck: null, //maybe this will work
 	// BattleSide scripts.
 	// In gen 1, last move information is stored on the side rather than on the active Pokémon.
 	// This is because there was actually no side, just Battle and active Pokémon effects.
