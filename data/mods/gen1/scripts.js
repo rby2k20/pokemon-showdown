@@ -93,7 +93,6 @@ let BattleScripts = {
 	runMove(moveOrMoveName, pokemon, targetLoc, sourceEffect) {
 		let target = this.getTarget(pokemon, moveOrMoveName, targetLoc);
 		let move = this.dex.getActiveMove(moveOrMoveName);
-		let desyncCheck = this.willMove(pokemon);
 		if (target && target.subFainted) target.subFainted = null;
 
 		this.setActiveMove(move, pokemon, target);
@@ -115,6 +114,7 @@ let BattleScripts = {
 			}
 		}
 		pokemon.lastDamage = 0;
+		pokemon.desyncCheck = null;
 		let lockedMove = this.runEvent('LockMove', pokemon);
 		if (lockedMove === true) lockedMove = false;
 		if (!lockedMove && (!pokemon.volatiles['partialtrappinglock'] || pokemon.volatiles['partialtrappinglock'].locked !== target)) {
