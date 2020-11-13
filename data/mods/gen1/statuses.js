@@ -47,7 +47,7 @@ let BattleStatuses = {
 		},
 		onBeforeMovePriority: 2,
 		onBeforeMove(pokemon) {
-			pokemon.statusData.failedMoveid = null;
+			pokemon.statusData.failedMoveid = undefined;
 			if (this.randomChance(63, 256)) {
 				pokemon.statusData.failedMoveid = this.queue.willMove(pokemon).moveid; //Stores queued move to check for Counter desyncs.
 				this.add('cant', pokemon, 'par');
