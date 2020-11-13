@@ -15,10 +15,12 @@ let BattleScripts = {
 			this.add('debug', activity);
 		}
 	},
+	init() {
+		let desyncCheck = null,
+	},
 	// Gen 1 stores the last damage dealt by a move in the battle.
 	// This is used for the move Counter.
 	lastDamage: 0,
-	desyncCheck: null,
 	// BattleSide scripts.
 	// In gen 1, last move information is stored on the side rather than on the active Pokémon.
 	// This is because there was actually no side, just Battle and active Pokémon effects.
@@ -93,7 +95,6 @@ let BattleScripts = {
 	runMove(moveOrMoveName, pokemon, targetLoc, sourceEffect) {
 		let target = this.getTarget(pokemon, moveOrMoveName, targetLoc);
 		let move = this.dex.getActiveMove(moveOrMoveName);
-		let desyncCheck = null;
 		if (target && target.subFainted) target.subFainted = null;
 
 		this.setActiveMove(move, pokemon, target);
