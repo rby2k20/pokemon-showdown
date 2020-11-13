@@ -1097,4 +1097,3 @@ let BattleMovedex = {
 	},
 };
 exports.BattleMovedex = BattleMovedex;
-let desyncCheck = null, //maybe this will work
