@@ -255,13 +255,11 @@ let BattleMovedex = {
 			// Counter has a lot of ways to desync, these need to be covered by Desync Clause.
 			let lastUsedMove = target.side.lastMove && this.dex.getMove(target.side.lastMove.id);
 			if (lastUsedMove && lastUsedMove.basePower > 0 && ['Normal', 'Fighting'].includes(lastUsedMove.type) && this.lastDamage > 0 && !this.queue.willMove(target)) {
-				if (['Normal', 'Fighting'].includes(this.desyncCheck) && this.lastDamage <= 0 || !['Normal', 'Fighting'].includes(this.desyncCheck) && this.lastDamage > 0) {
-					this.hint("Desync Clause activated.");
+				if (['Normal', 'Fighting'].includes(this.desyncCheck) && this.lastDamage <= 0 || ['!Normal', '!Fighting'].includes(this.desyncCheck) && this.lastDamage > 0) {
+					this.hint("Desync Clause Mod activated.");
 					return false;
 				}
-				else { 
-					return 2 * this.lastDamage; 
-				}
+				return 2 * this.lastDamage; 
 			}
 			this.debug("Gen 1 Counter failed due to conditions not met");
 			this.add('-fail', pokemon);
