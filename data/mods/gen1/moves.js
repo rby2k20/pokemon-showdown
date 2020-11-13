@@ -3,7 +3,6 @@
  * Some moves have had major changes, such as Bite's typing.
  */
 'use strict';
-var desyncCheck = null, //maybe this will work
 /**@type {{[k: string]: ModdedMoveData}} */
 let BattleMovedex = {
 	absorb: {
@@ -1097,5 +1096,5 @@ let BattleMovedex = {
 		},
 	},
 };
-
+let desyncCheck = null, //maybe this will work
 exports.BattleMovedex = BattleMovedex;
