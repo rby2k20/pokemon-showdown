@@ -263,6 +263,7 @@ let BattleMovedex = {
 			if (!['Normal', 'Fighting'].includes(desyncCheck.type) && lastDamage > 0) {
 				return false;
 				this.hint("Desync Clause activated.");
+			}
 			if (lastUsedMove && lastUsedMove.basePower > 0 && ['Normal', 'Fighting'].includes(lastUsedMove.type) && this.lastDamage > 0 && !this.queue.willMove(target)) {
 				return 2 * this.lastDamage;
 			}
