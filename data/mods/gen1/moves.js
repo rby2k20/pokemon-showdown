@@ -4,7 +4,7 @@
  */
 
 'use strict';
-
+desyncCheck: null,
 /**@type {{[k: string]: ModdedMoveData}} */
 let BattleMovedex = {
 	absorb: {
