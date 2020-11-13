@@ -255,7 +255,7 @@ let BattleMovedex = {
 			// Counter has a lot of ways to desync, these need to be covered by Desync Clause.
 			let lastUsedMove = target.side.lastMove && this.dex.getMove(target.side.lastMove.id);
 			if (lastUsedMove && lastUsedMove.basePower > 0 && ['Normal', 'Fighting'].includes(lastUsedMove.type) && this.lastDamage > 0 && !this.queue.willMove(target)) {
-				if (['Normal', 'Fighting'].includes(this.desyncCheck) && this.lastDamage === 0) || (!['Normal', 'Fighting'].includes(this.desyncCheck) && this.lastDamage > 0) {
+				if (['Normal', 'Fighting'].includes(this.desyncCheck) && this.lastDamage === 0 || !['Normal', 'Fighting'].includes(this.desyncCheck) && this.lastDamage > 0) {
 					return false;
 					this.hint("Desync Clause activated.");
 				}
