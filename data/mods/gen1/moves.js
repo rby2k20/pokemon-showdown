@@ -254,11 +254,11 @@ let BattleMovedex = {
 			// That means that, if opponent switches, counter will use last counter damage * 2.
 			// Counter has a lot of ways to desync, these need to be covered by Desync Clause.
 			let lastUsedMove = target.side.lastMove && this.dex.getMove(target.side.lastMove.id);
-			if (['Normal', 'Fighting'].includes(this.desyncCheck) && lastDamage === 0) {
+			if (['Normal', 'Fighting'].includes(this.desyncCheck) && this.lastDamage === 0) {
 			    return false;
 			    this.hint("Desync Clause activated.");
 			}
-			if (!['Normal', 'Fighting'].includes(this.desyncCheck) && lastDamage > 0) {
+			if (!['Normal', 'Fighting'].includes(this.desyncCheck) && this.lastDamage > 0) {
 				return false;
 				this.hint("Desync Clause activated.");
 			}
