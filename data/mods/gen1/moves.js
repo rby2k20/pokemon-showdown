@@ -257,7 +257,8 @@ let BattleMovedex = {
 			if (['Normal', 'Fighting'].includes(target.statusData.failedMoveid) && this.lastDamage <= 0 || ['!Normal', '!Fighting'].includes(target.statusData.failedMoveid) && this.lastDamage > 0) {
 				this.hint("Desync Clause Mod activated.");
 				return false;
-			} else if (lastUsedMove && lastUsedMove.basePower > 0 && ['Normal', 'Fighting'].includes(lastUsedMove.type) && this.lastDamage > 0 && !this.queue.willMove(target)) {
+			}
+			if (lastUsedMove && lastUsedMove.basePower > 0 && ['Normal', 'Fighting'].includes(lastUsedMove.type) && this.lastDamage > 0 && !this.queue.willMove(target)) {
 				return 2 * this.lastDamage; 
 			}
 			this.debug("Gen 1 Counter failed due to conditions not met");
