@@ -246,7 +246,12 @@ export class BattleQueue extends Array<Action> {
 	addChoice(choices: ActionChoice | ActionChoice[]) {
 		if (!Array.isArray(choices)) choices = [choices];
 		for (const choice of choices) {
-			this.push(...this.resolveAction(choice));
+			const resolvedChoices = this.resolveAction(choice);
+			this.list.push(...resolvedChoices);
+			const resolvedChoice = resolvedChoices[0];
+			if (resolvedChoice && resolvedChoice.choice === 'move') {
+				resolvedChoice.pokemon.side.lastSelectedMove = resolvedChoice.move.id;
+			}
 		}
 	}
 
