@@ -248,14 +248,7 @@ let BattleMovedex = {
 		ignoreImmunity: true,
 		willCrit: false,
 		basePower: 1,
-		// Counter mechanics in gen 1
-		// - a move is Counterable if it is Normal or Fighting type, has nonzero Base Power, and is not Counter
-		// - if Counter is used by the player, it will succeed if the opponent's last used move is Counterable
-		// - if Counter is used by the opponent, it will succeed if the player's last selected move is Counterable
-		// - (Counter will thus desync if the target's last used move is not as counterable as the target's last selected move)
-		// - if Counter succeeds it will deal twice the last move damage dealt in battle (even if it's from a different pokemon because of a switch)
-
-		const lastMove = target.side.lastMove && this.dex.getMove(target.side.lastMove.id);
+		lastMove = target.side.lastMove && this.dex.getMove(target.side.lastMove.id);
 		const lastMoveIsCounterable = lastMove && lastMove.basePower > 0 && ['Normal', 'Fighting'].includes(lastMove.type) && lastMove.id !== 'counter';
 		const lastSelectedMove = target.side.lastSelectedMove && this.dex.getMove(target.side.lastSelectedMove);
 		const lastSelectedMoveIsCounterable = lastSelectedMove && lastSelectedMove.basePower > 0 && ['Normal', 'Fighting'].includes(lastSelectedMove.type) && lastSelectedMove.id !== 'counter';
