@@ -841,7 +841,6 @@ export class Side {
 
 	getChoiceIndex(isPass?: boolean) {
 		let index = this.choice.actions.length;
-
 		if (!isPass) {
 			switch (this.requestState) {
 			case 'move':
@@ -859,7 +858,6 @@ export class Side {
 				break;
 			}
 		}
-
 		return index;
 	}
 
