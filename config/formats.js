@@ -154,7 +154,7 @@ let Formats = [
 			validate: [3, 6],
 			battle: 3,
 		},
-		ruleset: ['Obtainable', 'Team Preview', 'Cup Level Limit', 'Stadium Sleep Clause', 'RGB 1997', 'Species Clause', 'Nickname Clause', 'HP Percentage Mod', 'Cancel Mod'],
+		ruleset: ['Obtainable', 'Team Preview', 'Cup Level Limit', 'Stadium Sleep Clause', 'RGB 1997', 'Species Clause', 'Nickname Clause', 'Cancel Mod'],
 		banlist: ['Uber'],
 	},
     	{
@@ -164,7 +164,7 @@ let Formats = [
         	ruleset: ['Obtainable', 'Team Preview', 'Sleep Clause Mod', 'Freeze Clause Mod', 'Species Clause', 'Exact HP Mod', 'Nickname Clause', 'Cancel Mod'],
 		threads: [
 			`&bullet; <a href="https://rby2k20.com/read.php?article=Guides/Stad0NC98Guide">Introduction</a>`,
-		`&bullet; <a href="https://rby2k20.com/pokedex.php?meta=nc98">Strategy Dex</a>`,
+			`&bullet; <a href="https://rby2k20.com/pokedex.php?meta=nc98">Strategy Dex</a>`,
 		],    
 	    
         	banlist: ['Uber', 'OU', 'UUBL', 'UU', 'NUBL', 'NU', 'NFE', 'LC', 'Nidoking + Fury Attack + Thrash', 'Exeggutor + Poison Powder + Stomp', 'Exeggutor + Sleep Powder + Stomp', 'Exeggutor + Stun Spore + Stomp', 'Jolteon + Focus Energy + Thunder Shock', 'Flareon + Focus Energy + Ember'],
@@ -184,7 +184,7 @@ let Formats = [
 			`&bullet; <a href="https://rby2k20.com/read.php?article=Guides/Stad1Crits">Critical Hits</a>`,
 		],
         	mod: 'stadium', 
-        	ruleset: ['Obtainable', 'Team Preview', 'Sleep Clause Mod', 'Freeze Clause Mod', 'Species Clause', 'HP Percentage Mod', 'Cancel Mod'],
+        	ruleset: ['Obtainable', 'Team Preview', 'Sleep Clause Mod', 'Freeze Clause Mod', 'Species Clause', 'Exact HP Mod', 'Cancel Mod'],
         	banlist: ['Venusaur','Dugtrio','Alakazam','Golem','Magneton','Gengar','Hypno','Electrode','Exeggutor','Chansey','Kangaskhan','Starmie','Jynx','Tauros','Gyarados','Lapras','Ditto','Vaporeon','Jolteon','Snorlax','Articuno','Zapdos','Dragonite','Mewtwo','Mew','Flareon + Focus Energy + Ember','Nidoking + Fury Attack + Thrash'],
         	maxLevel: 50,
         	teamLength: {
@@ -305,7 +305,7 @@ let Formats = [
 			],
 		
        		mod: 'gen1yellow',
-		ruleset: ['Obtainable', 'Team Preview', 'Cup Level Limit', 'Stadium Sleep Clause', 'Species Clause', 'Exact HP Mod', 'Nickname Clause', 'Cancel Mod'],
+		ruleset: ['Obtainable', 'Team Preview', 'Cup Level Limit', 'Stadium Sleep Clause', 'Species Clause', 'Nickname Clause', 'Cancel Mod'],
 		banlist: ['Uber',
 			'Nidoking + Fury Attack + Thrash', 'Exeggutor + Poison Powder + Stomp', 'Exeggutor + Sleep Powder + Stomp',
 			'Exeggutor + Stun Spore + Stomp', 'Jolteon + Focus Energy + Thunder Shock', 'Flareon + Focus Energy + Ember',
@@ -324,7 +324,7 @@ let Formats = [
 		],
 		
         	mod: 'gen1yellow',//FIXME: Validator for moves and Pokemon is essentially removed due to level validation issues, this needs fixing on PS.
-		ruleset: ['Team Preview', 'Cup Level Limit', 'Stadium Sleep Clause', 'Species Clause', 'Exact HP Mod', 'Nickname Clause', 'Cancel Mod'],
+		ruleset: ['Team Preview', 'Cup Level Limit', 'Stadium Sleep Clause', 'Species Clause', 'Nickname Clause', 'Cancel Mod'],
 		banlist: ['Mew', 'Mewtwo', 
 			'Nidoking + Fury Attack + Thrash', 'Exeggutor + Poison Powder + Stomp', 'Exeggutor + Sleep Powder + Stomp',
 			'Exeggutor + Stun Spore + Stomp', 'Jolteon + Focus Energy + Thunder Shock', 'Flareon + Focus Energy + Ember',
@@ -343,7 +343,7 @@ let Formats = [
 		],
 		
         	mod: 'gen1yellow',
-		ruleset: ['Obtainable', 'Team Preview', 'Cup Level Limit', 'Stadium Sleep Clause', 'Species Clause', 'Exact HP Mod', 'Nickname Clause', 'Cancel Mod'],
+		ruleset: ['Obtainable', 'Team Preview', 'Cup Level Limit', 'Stadium Sleep Clause', 'Species Clause', 'Nickname Clause', 'Cancel Mod'],
 		banlist: ['Mew', 'Mewtwo', 'OU', 'UUBL', 'UU', 'NUBL', 'NU', 'NFE', 'LC',
 			'Nidoking + Fury Attack + Thrash', 'Exeggutor + Poison Powder + Stomp', 'Exeggutor + Sleep Powder + Stomp',
 			'Exeggutor + Stun Spore + Stomp', 'Jolteon + Focus Energy + Thunder Shock', 'Flareon + Focus Energy + Ember',
