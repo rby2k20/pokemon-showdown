@@ -52,9 +52,12 @@ export class Side {
 	active: Pokemon[];
 
 	pokemonLeft: number;
+	zMoveUsed: boolean;
+	
 	faintedLastTurn: boolean;
 	faintedThisTurn: boolean;
-	zMoveUsed: boolean;
+	/** only used by Gen 1 Counter */
+	lastSelectedMove: ID = '';
 
 	sideConditions: AnyObject;
 	slotConditions: AnyObject[];
