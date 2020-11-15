@@ -4,11 +4,9 @@
  *
  * @license MIT license
  */
-import {Utils} from '../lib/utils';
-import type {RequestState} from './battle';
-import {Pokemon, EffectState} from './pokemon';
+import {RequestState} from './battle';
+import {Pokemon} from './pokemon';
 import {State} from './state';
-import {toID} from './dex';
 
 /** A single action that can be chosen. */
 export interface ChosenAction {
