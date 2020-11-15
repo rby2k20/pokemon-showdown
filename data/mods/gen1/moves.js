@@ -248,7 +248,7 @@ let BattleMovedex = {
 		ignoreImmunity: true,
 		willCrit: false,
 		basePower: 1,
-		lastMove = target.side.lastMove && this.dex.getMove(target.side.lastMove.id);
+		lastMove = target.side.lastMove && this.dex.getMove(target.side.lastMove.id),
 		const lastMoveIsCounterable = lastMove && lastMove.basePower > 0 && ['Normal', 'Fighting'].includes(lastMove.type) && lastMove.id !== 'counter';
 		const lastSelectedMove = target.side.lastSelectedMove && this.dex.getMove(target.side.lastSelectedMove);
 		const lastSelectedMoveIsCounterable = lastSelectedMove && lastSelectedMove.basePower > 0 && ['Normal', 'Fighting'].includes(lastSelectedMove.type) && lastSelectedMove.id !== 'counter';
