@@ -90,6 +90,7 @@ let BattleMovedex = {
 		desc: "Always drops attack 1 stage.",
 		shortDesc: "Atk drops -1.",
 		basePower: 80,
+		pp: 15,
 		secondary: {
 			chance: 100,
 			boosts: {
@@ -290,6 +291,10 @@ let BattleMovedex = {
 		inherit: true,
 		accuracy: 100,
   },
+	transform: {
+		inherit: true,
+		desc: "The user transforms into the target. The target's current stats, stat stages, types, moves, DVs, species, and sprite are copied. The user's level and HP remain the same and each copied move receives only 5 PP. This move can hit a target using Dig or Fly.",
+	},
 	triattack: {
 		inherit: true,
 		accuracy: 100,
