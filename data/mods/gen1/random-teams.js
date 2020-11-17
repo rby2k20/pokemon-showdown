@@ -1,5 +1,5 @@
 'use strict';
-
+//We lack a Battle Factory randomizer...for now.
 const RandomGen2Teams = require('../gen2/random-teams');
 
 class RandomGen1Teams extends RandomGen2Teams {
@@ -240,9 +240,10 @@ class RandomGen1Teams extends RandomGen2Teams {
 	/**
 	 * Random set generation for Gen 1 Random Battles.
 	 * @param {string | Template} template
+	 * @param {boolean} [usePokemonRecord] - Whether to use the stored pokemon record for setting the pokemon levels.
 	 * @return {RandomTeamsTypes.RandomSet}
 	 */
-	randomSet(template) {
+	randomSet(template, usePokemonRecord) {
 		template = this.dex.getTemplate(template);
 		if (!template.exists) template = this.dex.getTemplate('pikachu'); // Because Gen 1.
 
@@ -358,23 +359,28 @@ class RandomGen1Teams extends RandomGen2Teams {
 			} // End of the check for more than 4 moves on moveset.
 		}
 
-		let levelScale = {
-			LC: 88,
-			NFE: 80,
-			UU: 74,
-			OU: 68,
-			Uber: 65,
-		};
+		let level;
+		if (usePokemonRecord) {
+			level = parseInt(global.pokemonRecord[template.name.toLowerCase()].level);
+		} else {
+			let levelScale = {
+				LC: 88,
+				NFE: 80,
+				UU: 74,
+				OU: 68,
+				Uber: 65,
+			};
 
-		let customScale = {
-			Mewtwo: 62,
-			Caterpie: 99, Metapod: 99, Weedle: 99, Kakuna: 99, Magikarp: 99,
-			Ditto: 88,
-		};
-		// @ts-ignore
-		let level = levelScale[template.tier] || 80;
-		// @ts-ignore
-		if (customScale[template.name]) level = customScale[template.name];
+			let customScale = {
+				Mewtwo: 62,
+				Caterpie: 99, Metapod: 99, Weedle: 99, Kakuna: 99, Magikarp: 99,
+				Ditto: 88,
+			};
+			// @ts-ignore
+			level = levelScale[template.tier] || 80;
+			// @ts-ignore
+			if (customScale[template.name]) level = customScale[template.name];
+		}
 
 		return {
 			name: template.name,
@@ -388,6 +394,36 @@ class RandomGen1Teams extends RandomGen2Teams {
 			shiny: false,
 			gender: false,
 		};
+	}
+
+	// Random team generation for Gen 1 Auto Level Adjusted Random Battles.
+	// This format automatically adjusts pokemon levels so that each pokemon
+	// has equal value on a team on average. As such, we remove a lot of the
+	// logic in the standard random team generation that serves to balance
+	// pokemon.
+	randomAutoLevelAdjustedTeam(side) {
+		let pokemonLeft = 0;
+		let pokemon = [];
+
+		let pokemonPool = [];
+		for (let id in this.dex.data.FormatsData) {
+			let template = this.dex.getTemplate(id);
+			if (!template.isNonstandard && template.randomBattleMoves) {
+				pokemonPool.push(id);
+			}
+		}
+
+		while (pokemonPool.length && pokemonLeft < 6) {
+			let template = this.dex.getTemplate(this.sampleNoReplace(pokemonPool));
+			if (!template.exists) continue;
+
+			let set = this.randomSet(template, true);
+			pokemon.push(set);
+
+			pokemonLeft++;
+		}
+
+		return pokemon;
 	}
 }
 

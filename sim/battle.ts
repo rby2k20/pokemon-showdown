@@ -2335,8 +2335,8 @@ export class Battle {
 			}
 		}
 
-		if (this.gen <= 1) {
-			// in gen 1, fainting skips the rest of the turn
+		if (this.gen <= 1 && this.gameType === 'singles') {
+			// in gen 1, fainting skips the rest of the turn, removed in Plague's doubles format
 			// residuals don't exist in gen 1
 			this.queue.clear();
 		} else if (this.gen <= 3 && this.gameType === 'singles') {

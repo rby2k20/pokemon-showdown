@@ -3,6 +3,7 @@
  * Written by Kris with inspiration from sirDonovan and The Immortal
  */
 
+import * as fs from "fs";
 import {FS} from "../../lib/fs";
 
 const GEN_NAMES: {[k: string]: string} = {
@@ -380,4 +381,24 @@ export const commands: ChatCommands = {
 		`- Supported tiers: OU, Ubers, UU, RU, NU, PU, Monotype (Gen 7 only), LC (Gen 7 only)`,
 		`/bssfactory [pokemon], [gen] - Displays a Pok\u00e9mon's BSS Factory sets. Supports Gen 7. Defaults to Gen 7.`,
 	],
+	randombattleadjusted: function (target, room, user) {
+		if (!this.canTalk()) return;
+		let output = '';
+		let data;
+		try {
+			data = fs.readFileSync('./config/pokemon-match-records.tsv', 'utf8');
+			output = '|html|<table style="width: 100%" border="1" cellspacing ="0" cellpadding="3"><tr><th>Species</th><th>Wins</th><th>Losses</th><th>Level</th></tr>';
+			let lines = data.split('\n');
+			for (let line in lines) {
+				if (line === '0') continue;
+				let splitLine = lines[line].split('\t');
+				if (!splitLine[3]) continue;
+				output += `<tr><td>${Dex.getSpecies(splitLine[0])}</td><td>${splitLine[1]}</td><td>${splitLine[2]}</td><td>${splitLine[3]}</td></tr>`;
+			}
+			output += "</table>";
+		} catch (e) {
+			if (e.code === 'ENOENT') output = 'The file ./config/config/pokemon-match-records.tsv does not exist currently.';
+		}
+		user.popup(output);
+	},
 };

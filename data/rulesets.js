@@ -670,7 +670,7 @@ let BattleFormats = {
 		name: 'Stadium Sleep Clause',
 		desc: "Prevents players from putting one of their opponent's Pok\u00E9mon to sleep if any of the opponent's other Pok\u00E9mon are asleep (different from Sleep Clause Mod because putting your own Pok\u00E9mon to sleep is enough to prevent opponents from putting your others to sleep).",
 		onBegin() {
-			this.add('rule', 'Stadium Sleep Clause: Limit one foe put to sleep');
+			this.add('rule', 'Stadium Sleep Clause: Limit one Pok\u00E9mon put to sleep per team, including from Rest');
 		},
 		onSetStatus(status, target, source) {
 			if (source && source.side === target.side) {
@@ -875,7 +875,7 @@ let BattleFormats = {
 	rgb1997: {
 		effectType: 'ValidatorRule',
 		name: "RGB 1997",
-		desc: "Pokemon are limited to moves obtainable by 1997.",
+		desc: "Pokemon are limited to moves obtainable in 1997.",
 		onValidateSet(set, format) {
       const rgb97Legality = { charizard: { fly: 'illegal' }, butterfree: { confusion: 12, poisonpowder: 15, stunspore: 16, sleeppowder: 17, supersonic: 21, psybeam: 34, flash: 'illegal' , gust: 'illegal' }, fearow: { payday: 'illegal' }, pikachu: { quickattack: 16, tailwhip: 'illegal', slam: 'illegal', lightscreen: 'illegal' }, raichu: { quickattack: 16, tailwhip: 'illegal', slam: 'illegal', lightscreen: 'illegal' }, nidoranf: { doublekick: 43 }, nidorina: { doublekick: 43 }, nidoqueen: { doublekick: 43 }, nidoranm: { doublekick: 43 }, nidorino: { doublekick: 43 }, nidoking: { doublekick: 43 }, venonat: { poisonpowder: 24, supersonic: 'illegal', confusion: 'illegal' }, venomoth: { poisonpowder: 24, supersonic: 'illegal' }, diglett: { cut: 'illegal' }, dugtrio: { cut: 'illegal' }, psyduck: { amnesia: 'illegal' }, golduck: { amnesia: 'illegal' }, mankey: { lowkick: 'illegal', screech: 'illegal' }, primeape: { lowkick: 'illegal', screech: 'illegal' }, kadabra: { kinesis: 'illegal' }, alakazam: { kinesis: 'illegal' }, rapidash: { payday: 'illegal' }, cubone: { tailwhip: 'illegal', headbutt: 'illegal' }, marowak: { tailwhip: 'illegal', headbutt: 'illegal' }, chansey: { tailwhip: 'illegal' }, tangela: { absorb: 29, growth: 49, vinewhip: 'illegal' }, scyther: { wingattack: 'illegal' }, pinsir: { bind: 'illegal' }, magikarp: { dragonrage: 'illegal' }, eevee: { quickattack: 27, tailwhip: 31, bite: 37, growl: 'illegal', focusenergy: 'illegal' }, vaporeon: { quickattack: 27, tailwhip: 31, watergun: 31, bite: 37, acidarmor: 42, haze: 44, mist: 48, hydropump: 54, growl: 'illegal', focusenergy: 'illegal', aurorabeam: 'illegal' }, jolteon: { quickattack: 27, tailwhip: 31, thundershock: 31, bite: 37, doublekick: 42, agility: 44, pinmissile: 48, growl: 'illegal', focusenergy: 'illegal' }, flareon: { quickattack: 27, tailwhip: 31, ember: 31, bite: 37, leer: 42, firespin: 44, flamethrower: 54, growl: 'illegal', focusenergy: 'illegal', smog: 'illegal' }, }
   
@@ -981,6 +981,29 @@ let BattleFormats = {
 			return newTemplate;
 		},
 	},
+	/*flippedmod: {
+		effectType: 'Rule',
+		name: 'Flipped Mod',
+		desc: "Every Pok&eacute;mon's stats are reversed. HP becomes Spe, Atk becomes Spc, Def stays the same.",
+		onBegin() {
+			this.add('rule', 'Pokemon have their stats flipped (HP becomes Spe, vice versa).');
+		},
+		onModifySpecies(species) {
+			const newSpecies = this.dex.deepClone(species);
+			const stats: {[k: string]: number} = {
+				hp: newSpecies.baseStats.spe,
+				atk: newSpecies.baseStats.spa,
+				def: newSpecies.baseStats.def,
+				spa: newSpecies.baseStats.atk,
+				spd: newSpecies.baseStats.atk,
+				spe: newSpecies.baseStats.hp,
+			};
+			for (const i in newSpecies.baseStats) {
+				newSpecies.baseStats[i] = stats[i];
+			}
+			return newSpecies;
+		},
+	},*/
 };
 
 exports.BattleFormats = BattleFormats;

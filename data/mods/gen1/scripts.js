@@ -17,6 +17,7 @@ let BattleScripts = {
 	},
 	// Gen 1 stores the last damage dealt by a move in the battle.
 	// This is used for the move Counter.
+	// failedMoveid is used to determine whether a Desync would happen, and cause Counter to fail in those cases. 
 	lastDamage: 0,
 	// BattleSide scripts.
 	// In gen 1, last move information is stored on the side rather than on the active Pokémon.
