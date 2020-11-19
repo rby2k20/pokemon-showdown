@@ -243,15 +243,17 @@ export class BattleQueue extends Array<Action> {
 		this.insertChoice(action);
 	}
 	
-	//this is the old addChoice. the new one beneath is the rby counter fix
-	/*addChoice(choices: ActionChoice | ActionChoice[]) {
+	//this is the old addChoice, with no counter fix
+	addChoice(choices: ActionChoice | ActionChoice[]) {
 		if (!Array.isArray(choices)) choices = [choices];
 		for (const choice of choices) {
 			this.push(...this.resolveAction(choice));
 		}
-	}*/
+	}
 	
-	addChoice(choices: ActionChoice | ActionChoice[]) {
+	//this is zarel's edit, with the counter fix
+	
+	/*addChoice(choices: ActionChoice | ActionChoice[]) {
 		if (!Array.isArray(choices)) choices = [choices];
 		for (const choice of choices) {
 			const resolvedChoices = this.resolveAction(choice);
@@ -261,7 +263,7 @@ export class BattleQueue extends Array<Action> {
 				resolvedChoice.pokemon.side.lastSelectedMove = resolvedChoice.move.id;
 			}
 		}
-	}
+	}*/
 
 	willAct() {
 		for (const action of this) {
