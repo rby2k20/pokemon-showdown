@@ -242,11 +242,24 @@ export class BattleQueue extends Array<Action> {
 		if (!action.pokemon) action.pokemon = pokemon;
 		this.insertChoice(action);
 	}
-
-	addChoice(choices: ActionChoice | ActionChoice[]) {
+	
+	//this is the old addChoice. the new one beneath is the rby counter fix
+	/*addChoice(choices: ActionChoice | ActionChoice[]) {
 		if (!Array.isArray(choices)) choices = [choices];
 		for (const choice of choices) {
 			this.push(...this.resolveAction(choice));
+		}
+	}*/
+	
+	addChoice(choices: ActionChoice | ActionChoice[]) {
+		if (!Array.isArray(choices)) choices = [choices];
+		for (const choice of choices) {
+			const resolvedChoices = this.resolveAction(choice);
+			this.list.push(...resolvedChoices);
+			const resolvedChoice = resolvedChoices[0];
+			if (resolvedChoice && resolvedChoice.choice === 'move' && resolvedChoice.move.id !== 'recharge') {
+				resolvedChoice.pokemon.side.lastSelectedMove = resolvedChoice.move.id;
+			}
 		}
 	}
 
