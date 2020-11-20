@@ -491,7 +491,6 @@ let Formats = [
 		},
 		banlist: ['Uber', 'Wrap', 'Fire Spin', 'Clamp', 'Bind', 'Explosion', 'Self-Destruct', 'Magikarp + Dragon Rage', 'Rapidash + Pay Day', 'Fearow + Pay Day', 'Pikachu + Fly', 'Raichu + Fly'],
 	},
-<<<<<<< HEAD
 	{
 		name: "[Gen 1] RBY 898",
         	desc: `A mod where every later-generation pokemon is available in gen 1.`,
@@ -502,8 +501,6 @@ let Formats = [
        		ruleset: ['Standard', 'Team Preview', '+Past', '+Future', 'Allow Tradeback'],
 			banlist: ['Uber', 'Abomasnow-Mega', 'Absol-Mega', 'Aerodactyl-Mega', 'Aggron-Mega', 'Alakazam-Mega', 'Altaria-Mega', 'Ampharos-Mega', 'Audino-Mega', 'Banette-Mega', 'Beedrill-Mega', 'Blastoise-Mega', 'Blaziken-Mega', 'Camerupt-Mega', 'Charizard-Mega-X', 'Charizard-Mega-Y', 'Diancie-Mega', 'Gallade-Mega', 'Garchomp-Mega', 'Gardevoir-Mega', 'Gengar-Mega', 'Glalie-Mega', 'Gyarados-Mega', 'Heracross-Mega', 'Houndoom-Mega', 'Kangaskhan-Mega', 'Latias-Mega', 'Latios-Mega', 'Lopunny-Mega', 'Lucario-Mega', 'Manectric-Mega', 'Mawile-Mega', 'Medicham-Mega', 'Mewtwo-Mega-X', 'Mewtwo-Mega-Y', 'Pidgeot-Mega', 'Pinsir-Mega', 'Rayquaza-Mega', 'Sableye-Mega', 'Salamence-Mega', 'Sceptile-Mega', 'Scizor-Mega', 'Sharpedo-Mega', 'Slowbro-Mega', 'Steelix-Mega', 'Swampert-Mega', 'Tyranitar-Mega', 'Venusaur-Mega', 'Lugia', 'Ho-oh', 'Groudon', 'Groudon-Primal', 'Kyogre', 'Kyogre-Primal', 'Rayquaza', 'Latios', 'Latias', 'Dialga', 'Palkia', 'Giratina', 'Cresselia', 'Darkrai', 'Zekrom', 'Reshiram', 'Kyurem-Black', 'Kyurem-White', 'Deoxys', 'Deoxys-Attack', 'Deoxys-Defense', 'Deoxys-Speed', 'Marshadow', 'Lunala', 'Naganadel', 'Necrozma-Dusk-Mane', 'Necrozma-Dawn-Wings', 'Necrozma-Ultra', 'Pheromosa', 'Shaymin-Sky', 'Solgaleo', 'Xerneas', 'Yveltal', 'Zygarde-Complete', 'Arceus', 'Arceus-Bug', 'Arceus-Dark', 'Arceus-Dragon', 'Arceus-Electric', 'Arceus-Fairy', 'Arceus-Fighting', 'Arceus-Fire', 'Arceus-Flying', 'Arceus-Ghost', 'Arceus-Grass', 'Arceus-Ground', 'Arceus-Ice', 'Arceus-Poison', 'Arceus-Psychic', 'Arceus-Rock', 'Arceus-Steel', 'Arceus-Water', 'Calyrex-Ice', 'Calyrex-Shadow', 'Regigigas', 'Slaking', 'Regice', 'Xurkitree'],
     },
-=======
->>>>>>> 62b694191e54562adecd9d00f73b35105015130f
 
 	// Hacked Formats
 	///////////////////////////////////////////////////////////////////
