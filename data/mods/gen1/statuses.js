@@ -230,16 +230,6 @@ let BattleStatuses = {
 		onStart(target, source, effect) {
 			this.effectData.move = effect.id;
 		},
-		onDisableMove(pokemon) {
-			if (!pokemon.hasMove(this.effectData.move)) {
-				return;
-			}
-			for (const moveSlot of pokemon.moveSlots) {
-				if (moveSlot.id !== this.effectData.move) {
-					pokemon.disableMove(moveSlot.id);
-				}
-			}
-		},
 	},
 	mustrecharge: {
 		inherit: true,
