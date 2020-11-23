@@ -1,4 +1,4 @@
-RBY 251 [Currently in an Alpha State]
+RBY 251
 ====================
 
 Introduction
