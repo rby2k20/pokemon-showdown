@@ -51,6 +51,7 @@ let BattleTypeChart = {
 	"Ghost": {
 		damageTaken: {
 			"Bug": 2,
+			"Dark": 1,
 			"Dragon": 0,
 			"Electric": 0,
 			"Fighting": 3,
@@ -113,6 +114,7 @@ let BattleTypeChart = {
 	"Psychic": {
 		damageTaken: {
 			"Bug": 1,
+			"Dark": 1,
 			"Dragon": 0,
 			"Electric": 0,
 			"Fighting": 2,
