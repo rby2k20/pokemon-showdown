@@ -156,7 +156,7 @@ let BattleMovedex = {
 			chance: 10,
 			volatileStatus: 'flinch',
 		},
-		type: "Normal",
+		type: "Dark",
 	},
 	blizzard: {
 		inherit: true,
