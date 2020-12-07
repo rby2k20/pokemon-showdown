@@ -659,8 +659,9 @@ let Formats = [
 		],
 
 		mod: 'gen1',
-		ruleset: ['Standard', 'Not Fully Evolved'],
-		banlist: ['LC']
+		ruleset: ['Standard'],
+		banlist: ['LC', 'NFE', 'OU', 'UU', 'UUBL']
+		unbanlist: ['Ivysaur', 'Charmeleon', 'Wartortle', 'Metapod', 'Kakuna', 'Pidgeotto', 'Nidorina', 'Nidorino', 'Gloom', 'Poliwhirl', 'Kadabra', 'Machoke', 'Weepinbell', 'Graveler', 'Haunter', 'Dragonair']
 	},
 	{
 		name: "[Gen 1] LC (Tradebacks)",
@@ -687,8 +688,8 @@ let Formats = [
 		mod: 'gen1',
 		maxLevel: 100,
 		banlist: ['Dig', 'Fly', 'Magikarp + Dragon Rage', 'Pikachu + Fly'],
-		ruleset: ['Standard', 'Not Fully Evolved'],
-		banlist: ['NFE'],
+		ruleset: ['Standard'],
+		banlist: ['NFE', 'OU', 'UU', 'UUBL'],
 	},
 	{
 		name: "[Gen 1] 1v1",
