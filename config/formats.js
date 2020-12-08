@@ -649,6 +649,8 @@ let Formats = [
 		
 		mod: 'gen1',
 		ruleset: ['Standard', 'Not Fully Evolved'],
+		banlist: ['Uber', 'OU', 'UU', 'UUBL'],
+		unbanlist: ['Graveler', 'Haunter', 'Kadabra']
 	},
 	{
 		name: "[Gen 1] Middle Cup",
@@ -660,7 +662,7 @@ let Formats = [
 
 		mod: 'gen1',
 		ruleset: ['Standard'],
-		banlist: ['LC', 'NFE', 'OU', 'UU', 'UUBL'],
+		banlist: ['LC', 'NFE', 'OU', 'UU', 'UUBL', 'Uber'],
 		unbanlist: ['Ivysaur', 'Charmeleon', 'Wartortle', 'Metapod', 'Kakuna', 'Pidgeotto', 'Nidorina', 'Nidorino', 'Gloom', 'Poliwhirl', 'Kadabra', 'Machoke', 'Weepinbell', 'Graveler', 'Haunter', 'Dragonair'],
 	},
 	{
@@ -689,7 +691,7 @@ let Formats = [
 		maxLevel: 100,
 		banlist: ['Dig', 'Fly', 'Magikarp + Dragon Rage', 'Pikachu + Fly'],
 		ruleset: ['Standard'],
-		banlist: ['NFE', 'OU', 'UU', 'UUBL'],
+		banlist: ['NFE', 'OU', 'UU', 'UUBL' 'Uber'],
 	},
 	{
 		name: "[Gen 1] 1v1",
