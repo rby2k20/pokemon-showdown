@@ -660,8 +660,8 @@ let Formats = [
 
 		mod: 'gen1',
 		ruleset: ['Standard'],
-		banlist: ['LC', 'NFE', 'OU', 'UU', 'UUBL']
-		unbanlist: ['Ivysaur', 'Charmeleon', 'Wartortle', 'Metapod', 'Kakuna', 'Pidgeotto', 'Nidorina', 'Nidorino', 'Gloom', 'Poliwhirl', 'Kadabra', 'Machoke', 'Weepinbell', 'Graveler', 'Haunter', 'Dragonair']
+		banlist: ['LC', 'NFE', 'OU', 'UU', 'UUBL'],
+		unbanlist: ['Ivysaur', 'Charmeleon', 'Wartortle', 'Metapod', 'Kakuna', 'Pidgeotto', 'Nidorina', 'Nidorino', 'Gloom', 'Poliwhirl', 'Kadabra', 'Machoke', 'Weepinbell', 'Graveler', 'Haunter', 'Dragonair'],
 	},
 	{
 		name: "[Gen 1] LC (Tradebacks)",
