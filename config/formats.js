@@ -423,7 +423,7 @@ let Formats = [
 		],
         	mod: 'gen1rbyplus',
 		ruleset: ['Obtainable', 'Sleep Clause Mod', 'Freeze Clause Mod', 'Species Clause', 'Evasion Moves Clause', 'HP Percentage Mod', 'Cancel Mod'],
-		unbanlist: ['Mew'],
+		unbanlist: ['Mew', 'Raichu + Surf', 'Pikachu + Surf'],
     	},
 	{
 		name: "[Gen 1] RBY 251",
