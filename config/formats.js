@@ -691,7 +691,7 @@ let Formats = [
 		maxLevel: 100,
 		banlist: ['Dig', 'Fly', 'Magikarp + Dragon Rage', 'Pikachu + Fly'],
 		ruleset: ['Standard'],
-		banlist: ['NFE', 'OU', 'UU', 'UUBL' 'Uber'],
+		banlist: ['NFE', 'OU', 'UU', 'UUBL', 'Uber'],
 	},
 	{
 		name: "[Gen 1] 1v1",
