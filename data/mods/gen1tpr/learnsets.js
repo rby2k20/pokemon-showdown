@@ -375,7 +375,8 @@ let BattleLearnsets = {
 	valkyre: {learnset: {
 		brickbreak: ["1"],
 		icebeam: ["1"],
-		blizzardthunderbolt: ["1"],
+		blizzard: ["1"],
+		thunderbolt: ["1"],
 		icepunch: ["1"],
 	}},
 	jumparoo: {learnset: {
