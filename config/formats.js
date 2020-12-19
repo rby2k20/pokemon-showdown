@@ -134,6 +134,57 @@ let Formats = [
 			'Exeggutor + Stun Spore + Stomp', 'Jolteon + Focus Energy + Thunder Shock', 'Flareon + Focus Energy + Ember',
 			 'Magikarp + Dragon Rage', 'Rapidash + Pay Day', 'Fearow + Pay Day', 'Pikachu + Fly', 'Raichu + Fly'],
 	},
+	{
+		section: "Smogon Pet Mods"
+	},
+	{
+		name: "[Gen 1] Violet Version",
+		desc: `A balance mod for Gen 1, with the aim of expanding RBY OU while still allowing standard teams to be usable. Team Preview is on.`,
+		threads: [
+			`&bullet; <a href="https://www.pokemonperfect.com/forums/index.php?threads/an-introduction-to-violet-a-modified-rby-metagame.4839/">Introduction to Violet</a>`,
+			`&bullet; <a href="https://www.pokemonperfect.com/forums/index.php?threads/violet-version-viability-rankings.3756/">Viability Rankings</a>`,
+			`&bullet; <a href="https://rby2k20.com/teams.php?tag=violet">Sample Teams</a>`,
+			`&bullet; <a href="https://www.smogon.com/forums/threads/violet-version-gen-1-mod-playable.3532433/">Smogon Thread</a>`,
+			`&bullet; <a href="https://rby2k20.com/pokedex.php?meta=violet">Strategy Dex</a>`,
+		],
+
+		mod: 'violet',
+		ruleset: ['Obtainable', 'Sleep Clause Mod', 'Freeze Clause Mod', 'Species Clause', 'OHKO Clause', 'Evasion Moves Clause', 'HP Percentage Mod', 'Cancel Mod', 'Team Preview'],
+		banlist: ['Uber', 'OU', 'UUBL', 'UU', 'NUBL', 'NU', 'NFE', 'LC'],
+		unbanlist: ['Aerodactyl', 'Alakazam', 'Arbok', 'Articuno', 'Beedrill', 'Blastoise', 'Butterfree', 'Chansey', 'Charizard', 'Cloyster', 'Dragonite', 'Dugtrio', 'Electabuzz', 'Electrode', 'Exeggutor', 'Flareon', 'Gengar', 'Golbat', 'Golduck', 'Golem', 'Gyarados', 'Hypno', 'Jynx', 'Kabutops', 'Machamp', 'Magmar', 'Magneton', 'Mew', 'Moltres', 'Muk', 'Nidoqueen', 'Ninetales', 'Parasect', 'Pidgeot', 'Pinsir', 'Poliwrath', 'Porygon', 'Slowbro', 'Snorlax', 'Starmie', 'Tangela', 'Tauros', 'Vileplume', 'Zapdos'],
+	},
+	{
+      		name: "[Gen 1] Rose Red / Iris Blue",
+        	desc: `A balance mod for Gen 1 that aims to make every fully evolved Pokemon a viable pick in OU, while still maintaining their identity. Many moves are also reworked. Team Preview is on.`,
+        	threads: [
+           		`&bullet; <a href="https://www.smogon.com/forums/threads/gen-1-rose-red-iris-blue.3652237/">Rose Red / Iris Blue</a>`,
+			`&bullet; <a href="https://rby2k20.com/pokedex.php?meta=rrib">Strategy Dex</a>`,
+       		],
+        	mod: 'roseredirisblue',
+        	ruleset: ['Standard', 'Team Preview'],
+    		},
+	{
+		name: "[Gen 1] Rose Red / Iris Blue Expanded",
+        	desc: `A balance mod for Gen 1 that adds select future-generation Pokemon.`,
+        	threads: [
+			`&bullet; <a href="https://www.smogon.com/forums/threads/gen-1-rose-red-iris-blue.3652237/">Rose Red / Iris Blue</a>`,
+		],
+        	mod: 'roseredirisblue',
+       		ruleset: ['Standard', 'Team Preview'],
+		unbanlist: ['Ampharos', 'Forretress', 'Seviper', 'Zangoose', 'Gogoat', 'Breloom', 'Sceptile'],
+    	},
+	{
+		name: "[Gen 1] The Pokedex Redone",
+		desc: `An RBY-centered mod that reconstructs the Pokedex.`,
+		threads: [
+			`&bullet; <a href="https://www.smogon.com/forums/threads/gen-1-the-pok%C3%A9dex-redone-playable-on-dragon-heaven.3652979/">Pet Mod Thread</a>`,
+			`&bullet; <a href="https://docs.google.com/spreadsheets/d/1m-tpPOZ1teO9XUxaq7BYiwzn8LWG_BwM02D-Javhyoc/edit?usp=sharing">Spreadsheet</a>`,
+		],
+
+		mod: 'gen1tpr',
+		ruleset: ['Standard'],
+		banlist: ['Uber'],
+	},
 
 	// Nintendo Cup
 	///////////////////////////////////////////////////////////////////
@@ -377,42 +428,6 @@ let Formats = [
 		unbanlist: ['Aggron', 'Altaria', 'Ampharos', 'Armaldo', 'Azumarill', 'Banette', 'Cacturne', 'Camerupt', 'Castform', 'Chimecho', 'Clefable', 'Crawdaunt', 'Crobat', 'Electrode', 'Fearow', 'Flareon', 'Forretress', 'Glalie', 'Golduck', 'Golem', 'Granbull', 'Hitmonlee', 'Huntail', 'Jumpluff', 'Kabutops', 'Kadabra', 'Lanturn', 'Manectric', 'Mantine', 'Meganium', 'Mightyena', 'Misdreavus', 'Muk', 'Nidoqueen', 'Rapidash', 'Sableye', 'Sandslash', 'Scizor', 'Scyther', 'Sharpedo', 'Shiftry', 'Slowking', 'Stantler', 'Steelix', 'Torkoal', 'Typhlosion', 'Venomoth', 'Vileplume', 'Wailord', 'Whiscash'],
 	},*/
 	{
-		name: "[Gen 1] Violet Version",
-		desc: `A balance mod for Gen 1, with the aim of expanding RBY OU while still allowing standard teams to be usable. Team Preview is on.`,
-		threads: [
-			`&bullet; <a href="https://www.pokemonperfect.com/forums/index.php?threads/an-introduction-to-violet-a-modified-rby-metagame.4839/">Introduction to Violet</a>`,
-			`&bullet; <a href="https://www.pokemonperfect.com/forums/index.php?threads/violet-version-viability-rankings.3756/">Viability Rankings</a>`,
-			`&bullet; <a href="https://rby2k20.com/teams.php?tag=violet">Sample Teams</a>`,
-			`&bullet; <a href="https://www.smogon.com/forums/threads/violet-version-gen-1-mod-playable.3532433/">Smogon Thread</a>`,
-			`&bullet; <a href="https://rby2k20.com/pokedex.php?meta=violet">Strategy Dex</a>`,
-		],
-
-		mod: 'violet',
-		ruleset: ['Obtainable', 'Sleep Clause Mod', 'Freeze Clause Mod', 'Species Clause', 'OHKO Clause', 'Evasion Moves Clause', 'HP Percentage Mod', 'Cancel Mod', 'Team Preview'],
-		banlist: ['Uber', 'OU', 'UUBL', 'UU', 'NUBL', 'NU', 'NFE', 'LC'],
-		unbanlist: ['Aerodactyl', 'Alakazam', 'Arbok', 'Articuno', 'Beedrill', 'Blastoise', 'Butterfree', 'Chansey', 'Charizard', 'Cloyster', 'Dragonite', 'Dugtrio', 'Electabuzz', 'Electrode', 'Exeggutor', 'Flareon', 'Gengar', 'Golbat', 'Golduck', 'Golem', 'Gyarados', 'Hypno', 'Jynx', 'Kabutops', 'Machamp', 'Magmar', 'Magneton', 'Mew', 'Moltres', 'Muk', 'Nidoqueen', 'Ninetales', 'Parasect', 'Pidgeot', 'Pinsir', 'Poliwrath', 'Porygon', 'Slowbro', 'Snorlax', 'Starmie', 'Tangela', 'Tauros', 'Vileplume', 'Zapdos'],
-	},
-	{
-      		name: "[Gen 1] Rose Red / Iris Blue",
-        	desc: `A balance mod for Gen 1 that aims to make every fully evolved Pokemon a viable pick in OU, while still maintaining their identity. Many moves are also reworked. Team Preview is on.`,
-        	threads: [
-           		`&bullet; <a href="https://www.smogon.com/forums/threads/gen-1-rose-red-iris-blue.3652237/">Rose Red / Iris Blue</a>`,
-			`&bullet; <a href="https://rby2k20.com/pokedex.php?meta=rrib">Strategy Dex</a>`,
-       		],
-        	mod: 'roseredirisblue',
-        	ruleset: ['Standard', 'Team Preview'],
-    		},
-	{
-		name: "[Gen 1] Rose Red / Iris Blue Expanded",
-        	desc: `A balance mod for Gen 1 that adds select future-generation Pokemon.`,
-        	threads: [
-			`&bullet; <a href="https://www.smogon.com/forums/threads/gen-1-rose-red-iris-blue.3652237/">Rose Red / Iris Blue</a>`,
-		],
-        	mod: 'roseredirisblue',
-       		ruleset: ['Standard', 'Team Preview'],
-		unbanlist: ['Ampharos', 'Forretress', 'Seviper', 'Zangoose', 'Gogoat', 'Breloom', 'Sceptile'],
-    	},
-	{
 		name: "[Gen 1] RBYPlus",
        		desc: `A balance mod for Gen 1 from RBY 2k10, the first of its kind, aimed to make every fully evolved Pokemon viable while drastically increasing the power level. Created by WaterWizard and the RBY 2k10 community.`,
        		threads: [
@@ -461,7 +476,7 @@ let Formats = [
         	mod: 'retro',
        		ruleset: ['Standard', 'Team Preview', '+Past', '+Future'],
 			banlist: ['Uber', 'Abomasnow-Mega', 'Absol-Mega', 'Aerodactyl-Mega', 'Aggron-Mega', 'Alakazam-Mega', 'Altaria-Mega', 'Ampharos-Mega', 'Audino-Mega', 'Banette-Mega', 'Beedrill-Mega', 'Blastoise-Mega', 'Blaziken-Mega', 'Camerupt-Mega', 'Charizard-Mega-X', 'Charizard-Mega-Y', 'Diancie-Mega', 'Gallade-Mega', 'Garchomp-Mega', 'Gardevoir-Mega', 'Gengar-Mega', 'Glalie-Mega', 'Gyarados-Mega', 'Heracross-Mega', 'Houndoom-Mega', 'Kangaskhan-Mega', 'Latias-Mega', 'Latios-Mega', 'Lopunny-Mega', 'Lucario-Mega', 'Manectric-Mega', 'Mawile-Mega', 'Medicham-Mega', 'Mewtwo-Mega-X', 'Mewtwo-Mega-Y', 'Pidgeot-Mega', 'Pinsir-Mega', 'Rayquaza-Mega', 'Sableye-Mega', 'Salamence-Mega', 'Sceptile-Mega', 'Scizor-Mega', 'Sharpedo-Mega', 'Slowbro-Mega', 'Steelix-Mega', 'Swampert-Mega', 'Tyranitar-Mega', 'Venusaur-Mega', 'Lugia', 'Ho-oh', 'Groudon', 'Groudon-Primal', 'Kyogre', 'Kyogre-Primal', 'Rayquaza', 'Dialga', 'Palkia', 'Giratina', 'Darkrai', 'Zekrom', 'Reshiram', 'Kyurem-Black', 'Kyurem-White', 'Deoxys', 'Deoxys-Attack', 'Deoxys-Defense', 'Deoxys-Speed', 'Marshadow', 'Lunala', 'Naganadel', 'Necrozma-Dusk-Mane', 'Necrozma-Dawn-Wings', 'Necrozma-Ultra', 'Pheromosa', 'Shaymin-Sky', 'Solgaleo', 'Xerneas', 'Yveltal', 'Zygarde-Complete', 'Arceus', 'Arceus-Bug', 'Arceus-Dark', 'Arceus-Dragon', 'Arceus-Electric', 'Arceus-Fairy', 'Arceus-Fighting', 'Arceus-Fire', 'Arceus-Flying', 'Arceus-Ghost', 'Arceus-Grass', 'Arceus-Ground', 'Arceus-Ice', 'Arceus-Poison', 'Arceus-Psychic', 'Arceus-Rock', 'Arceus-Steel', 'Arceus-Water', 'Calyrex-Ice', 'Calyrex-Shadow', 'Regigigas', 'Slaking', 'Regice', 'Greninja-Ash'],
-    },
+    	},
 	{
 		name: "[Gen 1] Doubles OU",
 		desc: `A modified Gen 1 sim made with the intention of making Doubles possible. It uses Gen 3 Doubles Mechanics; Surf targets two opponents, you switch out immediately upon fainting, and spread move damage is halved.`,
