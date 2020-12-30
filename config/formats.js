@@ -6,54 +6,6 @@
 let Formats = [
 
 
-	// RBY 2K20 Metagames
-	///////////////////////////////////////////////////////////////////
-
-	{
-		section: "RBY 2K20 Tiers"
-	},
-	{
-		name: "[Gen 1] 1U",
-		desc: `RBY with movepool additions from the Time Capsule, tiered by RBY 2k20.`,
-		threads: [
-			`&bullet; <a href="https://www.smogon.com/articles/rby-tradebacks-ou">Tradeback Information</a>`,
-			`&bullet; <a href="https://rby2k20.com/read.php?article=Guides/TradebacksIntro">Introduction to RBY 1U</a>`,
-			`&bullet; <a href="https://www.smogon.com/rb/articles/tradebacks">Old Article</a>`,
-			`&bullet; <a href="https://rby2k20.com/teams.php?tag=rby1u">Sample Teams</a>`,
-		],
-
-		mod: 'gen1',
-		ruleset: ['Obtainable', 'Allow Tradeback', 'Sleep Clause Mod', 'Freeze Clause Mod', 'Species Clause', 'OHKO Clause', 'Evasion Moves Clause', 'HP Percentage Mod', 'Cancel Mod'],
-		banlist: ['Uber', 'Magikarp + Dragon Rage', 'Rapidash + Pay Day', 'Fearow + Pay Day', 'Pikachu + Fly', 'Raichu + Fly'],
-	},
-		{
-		name: "[Gen 1] 1U (Blitz)",
-		desc: `RBY with movepool additions from the Time Capsule. Blitz means you've got just 30 seconds to pick a move by default!`,
-		threads: [
-			`&bullet; <a href="https://www.smogon.com/articles/rby-tradebacks-ou">Tradeback Information</a>`,
-			`&bullet; <a href="https://rby2k20.com/read.php?article=Guides/TradebacksIntro">Introduction to RBY 1U</a>`,
-			`&bullet; <a href="https://www.smogon.com/rb/articles/tradebacks">Old Article</a>`,
-		],
-
-		mod: 'gen1',
-		ruleset: ['Obtainable', 'Allow Tradeback', 'Sleep Clause Mod', 'Freeze Clause Mod', 'Species Clause', 'OHKO Clause', 'Evasion Moves Clause', 'HP Percentage Mod', 'Cancel Mod', 'Blitz'],
-		banlist: ['Uber', 'Magikarp + Dragon Rage', 'Rapidash + Pay Day', 'Fearow + Pay Day', 'Pikachu + Fly', 'Raichu + Fly'],
-	},
-	{
-		name: "[Gen 1] Stadium 1U",
-		desc: `A metagame utilizing Pokemon Stadium, with all the mechanics! Sleep Clause counts Rest here to remain true to cartridge. Allows moves obtainable through the Time Capsule.`,
-		threads: [
-			`&bullet; <a href="https://www.smogon.com/articles/rby-tradebacks-ou">Tradeback Information</a>`,
-			`&bullet; <a href="https://www.smogon.com/forums/threads/gen-1-and-gen-2-how-sleep-clause-works-in-the-pok%C3%A9mon-stadium-games.3661020/">Stadium Sleep Clause details (fixed)</a>`,
-			`&bullet; <a href="https://rby2k20.com/read.php?article=Guides/Stad1Crits">Critical Hits</a>`,
-			`&bullet; <a href="https://www.smogon.com/forums/threads/stadium-format-is-now-available-on-ps.3526616/">Research Thread</a>`,
-		],
-
-		mod: 'stadium',
-		ruleset: ['Obtainable', 'Team Preview', 'Stadium Sleep Clause', 'Freeze Clause Mod', 'Species Clause', 'Nickname Clause', 'OHKO Clause', 'Evasion Moves Clause', 'Endless Battle Clause', 'Exact HP Mod', 'Cancel Mod', 'Allow Tradeback'],
-		banlist: ['Uber', 'Magikarp + Dragon Rage', 'Rapidash + Pay Day', 'Fearow + Pay Day', 'Pikachu + Fly', 'Raichu + Fly'],
-	},
-
 	// Smogon Formats
 	///////////////////////////////////////////////////////////////////
 	{
@@ -82,16 +34,18 @@ let Formats = [
 		ruleset: ['Standard'],
 		banlist: ['Uber', 'Magikarp + Dragon Rage', 'Rapidash + Pay Day', 'Fearow + Pay Day', 'Pikachu + Fly', 'Raichu + Fly'],
 	},
-		{
-		name: "[Gen 1] OU (Blitz)",
+	{
+		name: "[Gen 1] OU (Tradebacks)",
+		desc: `RBY with movepool additions from the Time Capsule, tiered by RBY 2k20.`,
 		threads: [
-			`&bullet; <a href="https://www.smogon.com/forums/threads/3572352/">RBY OU Viability Ranking</a>`,
-			`&bullet; <a href="https://www.smogon.com/forums/threads/3650478/#post-8133786">RBY Sample Teams</a>`,
-			`&bullet; <a href="https://pastebin.com/raw/gLahC72J">RoA Sample Teams</a>`,
+			`&bullet; <a href="https://www.smogon.com/articles/rby-tradebacks-ou">Tradeback Information</a>`,
+			`&bullet; <a href="https://rby2k20.com/read.php?article=Guides/TradebacksIntro">Introduction to RBY 1U</a>`,
+			`&bullet; <a href="https://www.smogon.com/rb/articles/tradebacks">Old Article</a>`,
+			`&bullet; <a href="https://rby2k20.com/teams.php?tag=rby1u">Sample Teams</a>`,
 		],
 
 		mod: 'gen1',
-		ruleset: ['[Gen 1] OU', 'Blitz'],
+		ruleset: ['Obtainable', 'Allow Tradeback', 'Sleep Clause Mod', 'Freeze Clause Mod', 'Species Clause', 'OHKO Clause', 'Evasion Moves Clause', 'HP Percentage Mod', 'Cancel Mod'],
 		banlist: ['Uber', 'Magikarp + Dragon Rage', 'Rapidash + Pay Day', 'Fearow + Pay Day', 'Pikachu + Fly', 'Raichu + Fly'],
 	},
 	{
@@ -133,6 +87,20 @@ let Formats = [
 			'Nidoking + Fury Attack + Thrash', 'Exeggutor + Poison Powder + Stomp', 'Exeggutor + Sleep Powder + Stomp',
 			'Exeggutor + Stun Spore + Stomp', 'Jolteon + Focus Energy + Thunder Shock', 'Flareon + Focus Energy + Ember',
 			 'Magikarp + Dragon Rage', 'Rapidash + Pay Day', 'Fearow + Pay Day', 'Pikachu + Fly', 'Raichu + Fly'],
+	},
+	{
+		name: "[Gen 1] Stadium OU (Tradebacks)",
+		desc: `A metagame utilizing Pokemon Stadium, with all the mechanics! Sleep Clause counts Rest here to remain true to cartridge. Allows moves obtainable through the Time Capsule.`,
+		threads: [
+			`&bullet; <a href="https://www.smogon.com/articles/rby-tradebacks-ou">Tradeback Information</a>`,
+			`&bullet; <a href="https://www.smogon.com/forums/threads/gen-1-and-gen-2-how-sleep-clause-works-in-the-pok%C3%A9mon-stadium-games.3661020/">Stadium Sleep Clause details (fixed)</a>`,
+			`&bullet; <a href="https://rby2k20.com/read.php?article=Guides/Stad1Crits">Critical Hits</a>`,
+			`&bullet; <a href="https://www.smogon.com/forums/threads/stadium-format-is-now-available-on-ps.3526616/">Research Thread</a>`,
+		],
+
+		mod: 'stadium',
+		ruleset: ['Obtainable', 'Team Preview', 'Stadium Sleep Clause', 'Freeze Clause Mod', 'Species Clause', 'Nickname Clause', 'OHKO Clause', 'Evasion Moves Clause', 'Endless Battle Clause', 'Exact HP Mod', 'Cancel Mod', 'Allow Tradeback'],
+		banlist: ['Uber', 'Magikarp + Dragon Rage', 'Rapidash + Pay Day', 'Fearow + Pay Day', 'Pikachu + Fly', 'Raichu + Fly'],
 	},
 	{
 		section: "Smogon Pet Mods"
@@ -830,6 +798,7 @@ let Formats = [
 		],
 
 		mod: 'gen1',
+		searchShow: 'false',
 		ruleset: ['Standard'],
 		banlist: ['Psywave', 'Uber', 'Magikarp + Dragon Rage', 'Rapidash + Pay Day', 'Fearow + Pay Day', 'Pikachu + Fly', 'Raichu + Fly'],
 	},
@@ -843,6 +812,7 @@ let Formats = [
 		],
 
 		mod: 'gen1',
+		searchShow: 'false',
 		ruleset: ['Standard'],
 		banlist: ['Uber', 'Psywave', 'Alakazam', 'Chansey', 'Cloyster', 'Exeggutor', 'Gengar', 'Golem', 'Jolteon',
 			  'Jynx', 'Lapras', 'Rhydon', 'Slowbro', 'Snorlax', 'Starmie', 'Tauros', 'Zapdos', 'Magikarp + Dragon Rage', 'Rapidash + Pay Day', 'Fearow + Pay Day', 'Pikachu + Fly', 'Raichu + Fly'],
@@ -859,6 +829,7 @@ let Formats = [
 		],
 
 		mod: 'gen1',
+		searchShow: 'false',
 		ruleset: ['Standard'],
 		banlist: ['Psywave', 'Uber','Alakazam', 'Chansey', 'Cloyster', 'Exeggutor', 'Gengar', 'Golem', 'Jolteon',
 			  'Jynx', 'Lapras', 'Rhydon', 'Slowbro', 'Snorlax', 'Starmie', 'Tauros', 'Zapdos', 'Articuno',
@@ -875,6 +846,7 @@ let Formats = [
 		],
 
 		mod: 'gen1',
+		searchShow: 'false',
 		ruleset: ['Standard'],
 		banlist: ['Psywave', 'Uber', 'Alakazam', 'Chansey', 'Cloyster', 'Exeggutor', 'Gengar', 'Golem', 'Jolteon',
 			  'Jynx', 'Lapras', 'Rhydon', 'Slowbro', 'Snorlax', 'Starmie', 'Tauros', 'Zapdos', 'Articuno', 'Dodrio',
@@ -894,6 +866,7 @@ let Formats = [
 		],
 
 		mod: 'gen1',
+		searchShow: 'false',
 		ruleset: ['Standard'],
 		banlist: ['Psywave', 'Uber', 'Alakazam', 'Chansey', 'Cloyster', 'Exeggutor', 'Gengar', 'Golem', 'Jolteon',
 			  'Jynx', 'Lapras', 'Rhydon', 'Slowbro', 'Snorlax', 'Starmie', 'Tauros', 'Zapdos', 'Articuno', 'Dodrio', 'Dragonite',
@@ -912,6 +885,7 @@ let Formats = [
 		],
 
 		mod: 'gen1',
+		searchShow: 'false',
 		ruleset: ['Standard'],
 		banlist: ['Psywave', 'Uber', 'Alakazam', 'Chansey', 'Cloyster', 'Exeggutor', 'Gengar', 'Golem', 'Jolteon', 'Jynx', 'Lapras',
 			  'Rhydon', 'Slowbro', 'Snorlax', 'Starmie', 'Tauros', 'Zapdos', 'Articuno', 'Dodrio', 'Dragonite', 'Gyarados',
@@ -944,18 +918,6 @@ let Formats = [
 		trunc(n) { return Math.trunc(n); },
 		defaultLevel: 100,
 		ruleset: ['HP Percentage Mod', 'Cancel Mod'],
-	},
-	{
-		name: "[Gen 2] Spaceworld 1997 1U",
-		desc: `Plague von Karma's mod that aims to replicate Spaceworld 1997's mechanics on Pokemon Showdown.`,
-		threads: [
-			`&bullet; <a href="https://www.smogon.com/forums/threads/pokemon-gold-and-silver-demo.3635890/">RoA Thread</a>`,
-		],
-		
-		mod: 'gen2spaceworld97',
-		searchShow: false,
-		debug: true,
-		ruleset: ['Obtainable'],
 	},
 ];
 
