@@ -59,7 +59,6 @@ let Formats = [
 		mod: 'gen1',
 		ruleset: ['[Gen 1] OU'],
 		banlist: ['OU', 'UUBL', 'Magikarp + Dragon Rage', 'Rapidash + Pay Day', 'Fearow + Pay Day', 'Pikachu + Fly', 'Raichu + Fly'],
-		unbanlist: ['Golem']
 	},
 	{
 		name: "[Gen 1] NU (Alpha)",
@@ -70,7 +69,7 @@ let Formats = [
 
 		mod: 'gen1',
 		ruleset: ['[Gen 1] OU'],
-		banlist: ['OU', 'UUBL', 'Articuno', 'Dodrio', 'Dragonite', 'Dugtrio', 'Electabuzz', 'Golem', 'Golduck', 'Gyarados', 'Haunter', 'Hypno', 'Kadabra', 'Kangaskhan', 'Omastar', 'Persian', 'Poliwrath', 'Raichu', 'Tangela', 'Tentacruel', 'Vaporeon', 'Magikarp + Dragon Rage', 'Rapidash + Pay Day', 'Fearow + Pay Day', 'Pikachu + Fly', 'Raichu + Fly'],
+		banlist: ['OU', 'UUBL', 'Articuno', 'Dodrio', 'Dragonite', 'Dugtrio', 'Electabuzz', 'Golduck', 'Gyarados', 'Haunter', 'Hypno', 'Kadabra', 'Kangaskhan', 'Omastar', 'Persian', 'Poliwrath', 'Raichu', 'Tangela', 'Tentacruel', 'Vaporeon', 'Magikarp + Dragon Rage', 'Rapidash + Pay Day', 'Fearow + Pay Day', 'Pikachu + Fly', 'Raichu + Fly'],
 	},
 	{
 		name: "[Gen 1] Stadium OU",
