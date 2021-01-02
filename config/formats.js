@@ -798,7 +798,7 @@ let Formats = [
 		],
 
 		mod: 'gen1',
-		searchShow: 'false',
+		searchShow: false,
 		ruleset: ['Standard'],
 		banlist: ['Psywave', 'Uber', 'Magikarp + Dragon Rage', 'Rapidash + Pay Day', 'Fearow + Pay Day', 'Pikachu + Fly', 'Raichu + Fly'],
 	},
@@ -812,7 +812,7 @@ let Formats = [
 		],
 
 		mod: 'gen1',
-		searchShow: 'false',
+		searchShow: false,
 		ruleset: ['Standard'],
 		banlist: ['Uber', 'Psywave', 'Alakazam', 'Chansey', 'Cloyster', 'Exeggutor', 'Gengar', 'Golem', 'Jolteon',
 			  'Jynx', 'Lapras', 'Rhydon', 'Slowbro', 'Snorlax', 'Starmie', 'Tauros', 'Zapdos', 'Magikarp + Dragon Rage', 'Rapidash + Pay Day', 'Fearow + Pay Day', 'Pikachu + Fly', 'Raichu + Fly'],
@@ -829,7 +829,7 @@ let Formats = [
 		],
 
 		mod: 'gen1',
-		searchShow: 'false',
+		searchShow: false,
 		ruleset: ['Standard'],
 		banlist: ['Psywave', 'Uber','Alakazam', 'Chansey', 'Cloyster', 'Exeggutor', 'Gengar', 'Golem', 'Jolteon',
 			  'Jynx', 'Lapras', 'Rhydon', 'Slowbro', 'Snorlax', 'Starmie', 'Tauros', 'Zapdos', 'Articuno',
@@ -846,7 +846,7 @@ let Formats = [
 		],
 
 		mod: 'gen1',
-		searchShow: 'false',
+		searchShow: false,
 		ruleset: ['Standard'],
 		banlist: ['Psywave', 'Uber', 'Alakazam', 'Chansey', 'Cloyster', 'Exeggutor', 'Gengar', 'Golem', 'Jolteon',
 			  'Jynx', 'Lapras', 'Rhydon', 'Slowbro', 'Snorlax', 'Starmie', 'Tauros', 'Zapdos', 'Articuno', 'Dodrio',
@@ -866,7 +866,7 @@ let Formats = [
 		],
 
 		mod: 'gen1',
-		searchShow: 'false',
+		searchShow: false,
 		ruleset: ['Standard'],
 		banlist: ['Psywave', 'Uber', 'Alakazam', 'Chansey', 'Cloyster', 'Exeggutor', 'Gengar', 'Golem', 'Jolteon',
 			  'Jynx', 'Lapras', 'Rhydon', 'Slowbro', 'Snorlax', 'Starmie', 'Tauros', 'Zapdos', 'Articuno', 'Dodrio', 'Dragonite',
@@ -885,7 +885,7 @@ let Formats = [
 		],
 
 		mod: 'gen1',
-		searchShow: 'false',
+		searchShow: false,
 		ruleset: ['Standard'],
 		banlist: ['Psywave', 'Uber', 'Alakazam', 'Chansey', 'Cloyster', 'Exeggutor', 'Gengar', 'Golem', 'Jolteon', 'Jynx', 'Lapras',
 			  'Rhydon', 'Slowbro', 'Snorlax', 'Starmie', 'Tauros', 'Zapdos', 'Articuno', 'Dodrio', 'Dragonite', 'Gyarados',
