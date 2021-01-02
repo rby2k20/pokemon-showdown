@@ -59,6 +59,7 @@ let Formats = [
 		mod: 'gen1',
 		ruleset: ['[Gen 1] OU'],
 		banlist: ['OU', 'UUBL', 'Magikarp + Dragon Rage', 'Rapidash + Pay Day', 'Fearow + Pay Day', 'Pikachu + Fly', 'Raichu + Fly'],
+		unbanlist: ['Golem']
 	},
 	{
 		name: "[Gen 1] NU (Alpha)",
@@ -89,21 +90,7 @@ let Formats = [
 			 'Magikarp + Dragon Rage', 'Rapidash + Pay Day', 'Fearow + Pay Day', 'Pikachu + Fly', 'Raichu + Fly'],
 	},
 	{
-		name: "[Gen 1] Stadium OU (Tradebacks)",
-		desc: `A metagame utilizing Pokemon Stadium, with all the mechanics! Sleep Clause counts Rest here to remain true to cartridge. Allows moves obtainable through the Time Capsule.`,
-		threads: [
-			`&bullet; <a href="https://www.smogon.com/articles/rby-tradebacks-ou">Tradeback Information</a>`,
-			`&bullet; <a href="https://www.smogon.com/forums/threads/gen-1-and-gen-2-how-sleep-clause-works-in-the-pok%C3%A9mon-stadium-games.3661020/">Stadium Sleep Clause details (fixed)</a>`,
-			`&bullet; <a href="https://rby2k20.com/read.php?article=Guides/Stad1Crits">Critical Hits</a>`,
-			`&bullet; <a href="https://www.smogon.com/forums/threads/stadium-format-is-now-available-on-ps.3526616/">Research Thread</a>`,
-		],
-
-		mod: 'stadium',
-		ruleset: ['Obtainable', 'Team Preview', 'Stadium Sleep Clause', 'Freeze Clause Mod', 'Species Clause', 'Nickname Clause', 'OHKO Clause', 'Evasion Moves Clause', 'Endless Battle Clause', 'Exact HP Mod', 'Cancel Mod', 'Allow Tradeback'],
-		banlist: ['Uber', 'Magikarp + Dragon Rage', 'Rapidash + Pay Day', 'Fearow + Pay Day', 'Pikachu + Fly', 'Raichu + Fly'],
-	},
-	{
-		section: "Smogon Pet Mods"
+		section: "Pet Mods"
 	},
 	{
 		name: "[Gen 1] Violet Version",
@@ -219,7 +206,7 @@ let Formats = [
 		column: 2,
 	},
 	{
-		name: "[Gen 1] Stadium Anything Goes",
+		name: "[Gen 1] Stadium AG",
 		desc: `The Pokemon Stadium Anything Goes format, taken directly from the ruleset in-game. This means Stadium Sleep Clause and Freeze Clause are still used, as they're ran innately in-game. Tradebacks are also enabled.`,
 		mod: 'stadium',
 		threads: [
@@ -230,6 +217,20 @@ let Formats = [
 		ruleset: ['Obtainable', 'Team Preview', 'Stadium Sleep Clause', 'Freeze Clause Mod', 'Nickname Clause', 'Endless Battle Clause', 'Exact HP Mod', 'Cancel Mod',
 			  'Allow Tradeback'],
 		banlist: ['Magikarp + Dragon Rage', 'Rapidash + Pay Day', 'Fearow + Pay Day', 'Pikachu + Fly', 'Raichu + Fly'],
+	},
+	{
+		name: "[Gen 1] Stadium OU (Tradebacks)",
+		desc: `A metagame utilizing Pokemon Stadium, with all the mechanics! Sleep Clause counts Rest here to remain true to cartridge. Allows moves obtainable through the Time Capsule.`,
+		threads: [
+			`&bullet; <a href="https://www.smogon.com/articles/rby-tradebacks-ou">Tradeback Information</a>`,
+			`&bullet; <a href="https://www.smogon.com/forums/threads/gen-1-and-gen-2-how-sleep-clause-works-in-the-pok%C3%A9mon-stadium-games.3661020/">Stadium Sleep Clause details (fixed)</a>`,
+			`&bullet; <a href="https://rby2k20.com/read.php?article=Guides/Stad1Crits">Critical Hits</a>`,
+			`&bullet; <a href="https://www.smogon.com/forums/threads/stadium-format-is-now-available-on-ps.3526616/">Research Thread</a>`,
+		],
+
+		mod: 'stadium',
+		ruleset: ['Obtainable', 'Team Preview', 'Stadium Sleep Clause', 'Freeze Clause Mod', 'Species Clause', 'Nickname Clause', 'OHKO Clause', 'Evasion Moves Clause', 'Endless Battle Clause', 'Exact HP Mod', 'Cancel Mod', 'Allow Tradeback'],
+		banlist: ['Uber', 'Magikarp + Dragon Rage', 'Rapidash + Pay Day', 'Fearow + Pay Day', 'Pikachu + Fly', 'Raichu + Fly'],
 	},
     	{
         	name: "[Gen 1] Poke Cup",
@@ -377,12 +378,41 @@ let Formats = [
 
 	// Modded Formats
 	///////////////////////////////////////////////////////////////////
-
+	//Metagames that change anything from cartridge go here. Even Smogon OMs, at least for now.
+	///////////////////////////////////////////////////////////////////
 	{
 		section: "Modded Formats",
 		column: 3,
 	},
-
+	{
+		name: "[Gen 1] Doubles OU",
+		desc: `A modified Gen 1 sim made with the intention of making Doubles possible. It uses Gen 3 Doubles Mechanics; Surf targets two opponents, you switch out immediately upon fainting, and spread move damage is halved.`,
+		threads: [
+			`&bullet; <a href="https://rby2k20.com/read.php?article=Guides/RBYDoublesIntro">An Introduction to RBY Doubles</a>`,
+		],
+		
+		mod: 'gen1doubles',
+		gameType: 'doubles',
+		ruleset: ['Standard'],
+		banlist: ['Uber', 'Wrap', 'Fire Spin', 'Clamp', 'Bind', 'Explosion', 'Self-Destruct', 'Magikarp + Dragon Rage', 'Rapidash + Pay Day', 'Fearow + Pay Day', 'Pikachu + Fly', 'Raichu + Fly'],
+	},
+	{
+		name: "[Gen 1] 2v2 Doubles",
+		desc: `A modified Gen 1 sim made with the intention of making Doubles possible. It uses Gen 3 Doubles Mechanics; Surf targets two opponents, you switch out immediately upon fainting, and spread move damage is halved. This utilizes a 2v2 format, where you bring 4 and pick 2.`,
+		threads: [
+			`&bullet; <a href="https://rby2k20.com/read.php?article=Guides/RBYDoublesIntro">An Introduction to RBY Doubles</a>`,
+			`&bullet; <a href="https://www.smogon.com/forums/threads/3656321/">2v2 Doubles</a>`,
+		],
+		
+		mod: 'gen1doubles',
+		gameType: 'doubles',
+		ruleset: ['Standard'],
+		teamLength: {
+			validate: [2, 4],
+			battle: 2,
+		},
+		banlist: ['Uber', 'Wrap', 'Fire Spin', 'Clamp', 'Bind', 'Explosion', 'Self-Destruct', 'Magikarp + Dragon Rage', 'Rapidash + Pay Day', 'Fearow + Pay Day', 'Pikachu + Fly', 'Raichu + Fly'],
+	},
 	/*{
 		name: "[Gen 3] ADV 50",
 		threads: [
@@ -446,35 +476,60 @@ let Formats = [
 			banlist: ['Uber', 'Abomasnow-Mega', 'Absol-Mega', 'Aerodactyl-Mega', 'Aggron-Mega', 'Alakazam-Mega', 'Altaria-Mega', 'Ampharos-Mega', 'Audino-Mega', 'Banette-Mega', 'Beedrill-Mega', 'Blastoise-Mega', 'Blaziken-Mega', 'Camerupt-Mega', 'Charizard-Mega-X', 'Charizard-Mega-Y', 'Diancie-Mega', 'Gallade-Mega', 'Garchomp-Mega', 'Gardevoir-Mega', 'Gengar-Mega', 'Glalie-Mega', 'Gyarados-Mega', 'Heracross-Mega', 'Houndoom-Mega', 'Kangaskhan-Mega', 'Latias-Mega', 'Latios-Mega', 'Lopunny-Mega', 'Lucario-Mega', 'Manectric-Mega', 'Mawile-Mega', 'Medicham-Mega', 'Mewtwo-Mega-X', 'Mewtwo-Mega-Y', 'Pidgeot-Mega', 'Pinsir-Mega', 'Rayquaza-Mega', 'Sableye-Mega', 'Salamence-Mega', 'Sceptile-Mega', 'Scizor-Mega', 'Sharpedo-Mega', 'Slowbro-Mega', 'Steelix-Mega', 'Swampert-Mega', 'Tyranitar-Mega', 'Venusaur-Mega', 'Lugia', 'Ho-oh', 'Groudon', 'Groudon-Primal', 'Kyogre', 'Kyogre-Primal', 'Rayquaza', 'Dialga', 'Palkia', 'Giratina', 'Darkrai', 'Zekrom', 'Reshiram', 'Kyurem-Black', 'Kyurem-White', 'Deoxys', 'Deoxys-Attack', 'Deoxys-Defense', 'Deoxys-Speed', 'Marshadow', 'Lunala', 'Naganadel', 'Necrozma-Dusk-Mane', 'Necrozma-Dawn-Wings', 'Necrozma-Ultra', 'Pheromosa', 'Shaymin-Sky', 'Solgaleo', 'Xerneas', 'Yveltal', 'Zygarde-Complete', 'Arceus', 'Arceus-Bug', 'Arceus-Dark', 'Arceus-Dragon', 'Arceus-Electric', 'Arceus-Fairy', 'Arceus-Fighting', 'Arceus-Fire', 'Arceus-Flying', 'Arceus-Ghost', 'Arceus-Grass', 'Arceus-Ground', 'Arceus-Ice', 'Arceus-Poison', 'Arceus-Psychic', 'Arceus-Rock', 'Arceus-Steel', 'Arceus-Water', 'Calyrex-Ice', 'Calyrex-Shadow', 'Regigigas', 'Slaking', 'Regice', 'Greninja-Ash'],
     	},
 	{
-		name: "[Gen 1] Doubles OU",
-		desc: `A modified Gen 1 sim made with the intention of making Doubles possible. It uses Gen 3 Doubles Mechanics; Surf targets two opponents, you switch out immediately upon fainting, and spread move damage is halved.`,
-		threads: [
-			`&bullet; <a href="https://rby2k20.com/read.php?article=Guides/RBYDoublesIntro">An Introduction to RBY Doubles</a>`,
-		],
-		
-		mod: 'gen1doubles',
-		gameType: 'doubles',
-		ruleset: ['Standard'],
-		banlist: ['Uber', 'Wrap', 'Fire Spin', 'Clamp', 'Bind', 'Explosion', 'Self-Destruct', 'Magikarp + Dragon Rage', 'Rapidash + Pay Day', 'Fearow + Pay Day', 'Pikachu + Fly', 'Raichu + Fly'],
+		name: "[Gen 1] Scalemons",
+		desc: `All stats but HP are scaled to make a Pokemon's BST as close to 500 as possible.`,
+
+		mod: 'gen1',
+		ruleset: ['Standard', 'Scalemons Mod'],
+		banlist: ['Uber', 'Nidoking + Fury Attack + Thrash', 'Exeggutor + Poison Powder + Stomp', 'Exeggutor + Sleep Powder + Stomp',
+			'Exeggutor + Stun Spore + Stomp', 'Jolteon + Focus Energy + Thunder Shock', 'Flareon + Focus Energy + Ember', 'Magikarp + Dragon Rage', 'Rapidash + Pay Day', 'Fearow + Pay Day', 'Pikachu + Fly', 'Raichu + Fly'],
 	},
 	{
-		name: "[Gen 1] 2v2 Doubles",
-		desc: `A modified Gen 1 sim made with the intention of making Doubles possible. It uses Gen 3 Doubles Mechanics; Surf targets two opponents, you switch out immediately upon fainting, and spread move damage is halved. This utilizes a 2v2 format, where you bring 4 and pick 2.`,
+		name: "[Gen 1] STABmons",
+		desc: `Pok&eacute;mon can use any move of their typing, in addition to the moves they can normally learn.`,
 		threads: [
-			`&bullet; <a href="https://rby2k20.com/read.php?article=Guides/RBYDoublesIntro">An Introduction to RBY Doubles</a>`,
-			`&bullet; <a href="https://www.smogon.com/forums/threads/3656321/">2v2 Doubles</a>`,
+			`&bullet; <a href="https://www.smogon.com/forums/threads/3656429/">STABmons</a>`,
+			`&bullet; <a href="https://www.smogon.com/forums/threads/3658578/">STABmons Resources</a>`,
 		],
-		
-		mod: 'gen1doubles',
-		gameType: 'doubles',
-		ruleset: ['Standard'],
-		teamLength: {
-			validate: [2, 4],
-			battle: 2,
-		},
-		banlist: ['Uber', 'Wrap', 'Fire Spin', 'Clamp', 'Bind', 'Explosion', 'Self-Destruct', 'Magikarp + Dragon Rage', 'Rapidash + Pay Day', 'Fearow + Pay Day', 'Pikachu + Fly', 'Raichu + Fly'],
-	},
 
+		mod: 'gen1',
+		ruleset: ['Standard', 'STABmons Move Legality'],
+		banlist: ['Mewtwo', 'Mew',
+			'Nidoking + Fury Attack + Thrash', 'Exeggutor + Poison Powder + Stomp', 'Exeggutor + Sleep Powder + Stomp', 'Exeggutor + Stun Spore + Stomp', 'Jolteon + Focus Energy + Thunder Shock', 'Flareon + Focus Energy + Ember', 'Magikarp + Dragon Rage', 'Rapidash + Pay Day', 'Fearow + Pay Day', 'Pikachu + Fly', 'Raichu + Fly'],
+		restricted: ['Spore'],
+	},
+	{
+		name: "[Gen 1] Camomons",
+		desc: `Pok&eacute;mon change type to match their first two moves.`,
+		threads: [
+			`&bullet; <a href="https://www.smogon.com/forums/threads/3656413/">Camomons</a>`,
+		],
+
+		mod: 'gen1',
+		ruleset: ['Obtainable', 'Species Clause', 'Nickname Clause', 'OHKO Clause', 'Evasion Moves Clause', 'HP Percentage Mod', 'Cancel Mod', 'Dynamax Clause', 'Sleep Clause Mod', 'Endless Battle Clause'],
+		banlist: ['Mewtwo', 'Mew', 'Nidoking + Fury Attack + Thrash', 'Exeggutor + Poison Powder + Stomp', 'Exeggutor + Sleep Powder + Stomp', 'Exeggutor + Stun Spore + Stomp', 'Jolteon + Focus Energy + Thunder Shock', 'Flareon + Focus Energy + Ember', 'Magikarp + Dragon Rage', 'Rapidash + Pay Day', 'Fearow + Pay Day', 'Pikachu + Fly', 'Raichu + Fly'],
+		onModifySpecies(species, target, source, effect) {
+			if (!target) return; // Chat command
+			if (effect && ['imposter', 'transform'].includes(effect.id)) return;
+			const types = [...new Set(target.baseMoveSlots.slice(0, 2).map(move => this.dex.getMove(move.id).type))];
+			return Object.assign({}, species, {types: types});
+		},
+		onSwitchIn(pokemon) {
+			this.add('-start', pokemon, 'typechange', pokemon.getTypes(true).join('/'), '[silent]');
+		},
+		onAfterMega(pokemon) {
+			this.add('-start', pokemon, 'typechange', pokemon.getTypes(true).join('/'), '[silent]');
+		},
+	},
+	//FIXME: This doesn't work for some reason. I have a thing in rulesets.js for it, but the code breaks when used. It may be the .ts I copied it from? - Plague
+	/*{
+		name: "[Gen 1] Flipped",
+		desc: `Every Pok&eacute;mon's stats are reversed. HP becomes Spe, Atk becomes Spc, Def stays the same.`,
+
+		mod: 'gen1',
+		ruleset: ['Standard', 'Flipped Mod'],
+		banlist: ['Uber',],
+	},*/
 	// Hacked Formats
 	///////////////////////////////////////////////////////////////////
 	{
@@ -610,7 +665,7 @@ let Formats = [
 		column: 4,
 	},
 	{
-		name: "[Gen 1] Anything Goes",
+		name: "[Gen 1] AG",
 		desc: `A metagame where anything is allowed, so long as it can be legally obtained! Tradebacks are also enabled! You can pre-status your Pokemon using special items in this mod via the import/export feature; PAR, SLP, FRZ, PSN and BRN.`,
 		threads: [
 			`&bullet; <a href="https://www.smogon.com/forums/threads/3587441/">Anything Goes Metagame Discussion</a>`,
@@ -621,32 +676,6 @@ let Formats = [
 		banlist: ['Nidoking + Fury Attack + Thrash', 'Exeggutor + Poison Powder + Stomp', 'Exeggutor + Sleep Powder + Stomp',
 			'Exeggutor + Stun Spore + Stomp', 'Jolteon + Focus Energy + Thunder Shock', 'Flareon + Focus Energy + Ember', 
 			  'Magikarp + Dragon Rage', 'Rapidash + Pay Day', 'Fearow + Pay Day', 'Pikachu + Fly', 'Raichu + Fly'],
-	},
-	{
-		name: "[Gen 1] NFE",
-		desc: `A metagame that only allows NFE and LC Pokemon.`,
-		threads: [
-			`&bullet; <a href="https://www.smogon.com/forums/threads/nfe-old-gens-hub.3656369/post-8574232">NFE Old Gens Hub</a>`,
-			`&bullet; <a href="https://pastebin.com/4KpKCYtn">Sample Teams</a>`,
-		],
-		
-		mod: 'gen1',
-		ruleset: ['Standard', 'Not Fully Evolved'],
-		banlist: ['Uber', 'OU', 'UU', 'UUBL'],
-		unbanlist: ['Graveler', 'Haunter', 'Kadabra']
-	},
-	{
-		name: "[Gen 1] Middle Cup",
-		desc: `A metagame that only allows the 16 NFEs available in RBY.`,
-		threads: [
-			`&bullet; <a href="https://docs.google.com/document/d/1ZJk6uxtDPgCrSO_2GcwmmAFmTUZGsPsW5Jncf6h9rDE/edit?usp=sharing">Meloyy's Middle Cup Guide</a>`,
-			`&bullet; <a href="https://www.smogon.com/forums/threads/gen-1-side-formats-pika-cup-petit-cup-little-cup-level-100-and-middle-cup.3651579/post-8162599">Gen 1 Side Formats Thread</a>`,
-		],
-
-		mod: 'gen1',
-		ruleset: ['Standard'],
-		banlist: ['LC', 'NFE', 'OU', 'UU', 'UUBL', 'Uber'],
-		unbanlist: ['Ivysaur', 'Charmeleon', 'Wartortle', 'Metapod', 'Kakuna', 'Pidgeotto', 'Nidorina', 'Nidorino', 'Gloom', 'Poliwhirl', 'Kadabra', 'Machoke', 'Weepinbell', 'Graveler', 'Haunter', 'Dragonair'],
 	},
 	{
 		name: "[Gen 1] LC (Tradebacks)",
@@ -675,6 +704,33 @@ let Formats = [
 		banlist: ['Dig', 'Fly', 'Magikarp + Dragon Rage', 'Pikachu + Fly'],
 		ruleset: ['Standard'],
 		banlist: ['NFE', 'OU', 'UU', 'UUBL', 'Uber'],
+	},
+	{
+		name: "[Gen 1] NFE",
+		desc: `A metagame that only allows NFE and LC Pokemon.`,
+		threads: [
+			`&bullet; <a href="https://www.smogon.com/forums/threads/nfe-old-gens-hub.3656369/post-8574232">NFE Old Gens Hub</a>`,
+			`&bullet; <a href="https://pastebin.com/4KpKCYtn">Sample Teams</a>`,
+		],
+		
+		mod: 'gen1',
+		ruleset: ['Standard', 'Not Fully Evolved'],
+		banlist: ['Uber', 'OU', 'UU', 'UUBL'],
+		unbanlist: ['Graveler', 'Haunter', 'Kadabra']
+	},
+	{
+		name: "[Gen 1] MC",
+		desc: `Middle Cup, a metagame that only allows the 16 NFEs available in RBY.`,
+		threads: [
+			`&bullet; <a href="https://docs.google.com/document/d/1ZJk6uxtDPgCrSO_2GcwmmAFmTUZGsPsW5Jncf6h9rDE/edit?usp=sharing">Meloyy's Middle Cup Guide</a>`,
+			`&bullet; <a href="https://www.smogon.com/forums/threads/gen-1-side-formats-pika-cup-petit-cup-little-cup-level-100-and-middle-cup.3651579/post-8162599">Gen 1 Side Formats Thread</a>`,
+		],
+
+		mod: 'gen1',
+		maxLevel: 50,
+		ruleset: ['Standard'],
+		banlist: ['LC', 'NFE', 'OU', 'UU', 'UUBL', 'Uber'],
+		unbanlist: ['Ivysaur', 'Charmeleon', 'Wartortle', 'Metapod', 'Kakuna', 'Pidgeotto', 'Nidorina', 'Nidorino', 'Gloom', 'Poliwhirl', 'Kadabra', 'Machoke', 'Weepinbell', 'Graveler', 'Haunter', 'Dragonair'],
 	},
 	{
 		name: "[Gen 1] 1v1",
@@ -725,61 +781,6 @@ let Formats = [
 			  'Raichu', 'Rapidash', 'Sandslash', 'Scyther', 'Tangela', 'Tentacruel', 'Vaporeon', 'Venusaur', 'Victreebel',
 			  'Vileplume', 'Weezing', 'Wigglytuff', 'Haunter', 'Machoke', 'Abra', 'Gastly', 'Geodude', 'Jigglypuff', 'Krabby',
 			  'Omanyte', 'Shellder', 'Tentacool', 'Voltorb', 'Chansey', 'Magikarp + Dragon Rage', 'Rapidash + Pay Day', 'Fearow + Pay Day', 'Pikachu + Fly', 'Raichu + Fly'],
-	},
-	//FIXME: This doesn't work for some reason. I have a thing in rulesets.js for it, but the code breaks when used. It may be the .ts I copied it from? - Plague
-	/*{
-		name: "[Gen 1] Flipped",
-		desc: `Every Pok&eacute;mon's stats are reversed. HP becomes Spe, Atk becomes Spc, Def stays the same.`,
-
-		mod: 'gen1',
-		ruleset: ['Standard', 'Flipped Mod'],
-		banlist: ['Uber',],
-	},*/
-	{
-		name: "[Gen 1] Scalemons",
-		desc: `All stats but HP are scaled to make a Pokemon's BST as close to 500 as possible.`,
-
-		mod: 'gen1',
-		ruleset: ['Standard', 'Scalemons Mod'],
-		banlist: ['Uber', 'Nidoking + Fury Attack + Thrash', 'Exeggutor + Poison Powder + Stomp', 'Exeggutor + Sleep Powder + Stomp',
-			'Exeggutor + Stun Spore + Stomp', 'Jolteon + Focus Energy + Thunder Shock', 'Flareon + Focus Energy + Ember', 'Magikarp + Dragon Rage', 'Rapidash + Pay Day', 'Fearow + Pay Day', 'Pikachu + Fly', 'Raichu + Fly'],
-	},
-	{
-		name: "[Gen 1] STABmons",
-		desc: `Pok&eacute;mon can use any move of their typing, in addition to the moves they can normally learn.`,
-		threads: [
-			`&bullet; <a href="https://www.smogon.com/forums/threads/3656429/">STABmons</a>`,
-			`&bullet; <a href="https://www.smogon.com/forums/threads/3658578/">STABmons Resources</a>`,
-		],
-
-		mod: 'gen1',
-		ruleset: ['Standard', 'STABmons Move Legality'],
-		banlist: ['Mewtwo', 'Mew',
-			'Nidoking + Fury Attack + Thrash', 'Exeggutor + Poison Powder + Stomp', 'Exeggutor + Sleep Powder + Stomp', 'Exeggutor + Stun Spore + Stomp', 'Jolteon + Focus Energy + Thunder Shock', 'Flareon + Focus Energy + Ember', 'Magikarp + Dragon Rage', 'Rapidash + Pay Day', 'Fearow + Pay Day', 'Pikachu + Fly', 'Raichu + Fly'],
-		restricted: ['Spore'],
-	},
-	{
-		name: "[Gen 1] Camomons",
-		desc: `Pok&eacute;mon change type to match their first two moves.`,
-		threads: [
-			`&bullet; <a href="https://www.smogon.com/forums/threads/3656413/">Camomons</a>`,
-		],
-
-		mod: 'gen1',
-		ruleset: ['Obtainable', 'Species Clause', 'Nickname Clause', 'OHKO Clause', 'Evasion Moves Clause', 'HP Percentage Mod', 'Cancel Mod', 'Dynamax Clause', 'Sleep Clause Mod', 'Endless Battle Clause'],
-		banlist: ['Mewtwo', 'Mew', 'Nidoking + Fury Attack + Thrash', 'Exeggutor + Poison Powder + Stomp', 'Exeggutor + Sleep Powder + Stomp', 'Exeggutor + Stun Spore + Stomp', 'Jolteon + Focus Energy + Thunder Shock', 'Flareon + Focus Energy + Ember', 'Magikarp + Dragon Rage', 'Rapidash + Pay Day', 'Fearow + Pay Day', 'Pikachu + Fly', 'Raichu + Fly'],
-		onModifySpecies(species, target, source, effect) {
-			if (!target) return; // Chat command
-			if (effect && ['imposter', 'transform'].includes(effect.id)) return;
-			const types = [...new Set(target.baseMoveSlots.slice(0, 2).map(move => this.dex.getMove(move.id).type))];
-			return Object.assign({}, species, {types: types});
-		},
-		onSwitchIn(pokemon) {
-			this.add('-start', pokemon, 'typechange', pokemon.getTypes(true).join('/'), '[silent]');
-		},
-		onAfterMega(pokemon) {
-			this.add('-start', pokemon, 'typechange', pokemon.getTypes(true).join('/'), '[silent]');
-		},
 	},
 	// Pokemon Perfect Metagames
 	///////////////////////////////////////////////////////////////////
