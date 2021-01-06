@@ -138,6 +138,8 @@ let BattleMovedex = {
 			target.statusData.time = 2;
 			target.statusData.startTime = 2;
 			this.heal(target.maxhp); // Aesthetic only as the healing happens after you fall asleep in-game
+			target.removeVolatile('parspeeddrop'); //Stadium Rest removes major status stat drops. 
+			target.removeVolatile('brnattackdrop');
 		},
 	},
 	softboiled: {
