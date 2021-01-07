@@ -137,9 +137,8 @@ let BattleMovedex = {
 			if (!target.setStatus('slp', source, move)) return false;
 			target.statusData.time = 2;
 			target.statusData.startTime = 2;
+			target.recalculateStats(); // Stadium Rest removes statdrops given by Major Status Conditions.
 			this.heal(target.maxhp); // Aesthetic only as the healing happens after you fall asleep in-game
-			target.removeVolatile('parspeeddrop'); //Stadium Rest removes major status stat drops. 
-			target.removeVolatile('brnattackdrop');
 		},
 	},
 	softboiled: {
