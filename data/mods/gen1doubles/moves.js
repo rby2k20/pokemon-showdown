@@ -13,6 +13,7 @@ let BattleMovedex = {
 				def: -1,
 			},
 		},
+		basePower: 20, //effectively halved as temporary fix.
 		target: "allAdjacentFoes",
 	},
 	amnesia: {
@@ -145,6 +146,7 @@ let BattleMovedex = {
 	},
 	blizzard: {
 		inherit: true,
+		basePower: 60, //effectively halved as temporary fix.
 		accuracy: 90,
 		target: "allAdjacentFoes",
 	},
@@ -159,7 +161,8 @@ let BattleMovedex = {
 				spe: -1,
 			},
 		},
-		target: "normal",
+		basePower: 20,
+		target: "allAdjacentFoes",
 	},
 	bubblebeam: {
 		inherit: true,
@@ -713,6 +716,7 @@ let BattleMovedex = {
 	},
 	rockslide: {
 		inherit: true,
+		basePower: 37,
 		secondary: null,
 		target: "allAdjacentFoes",
 	},
@@ -896,6 +900,7 @@ let BattleMovedex = {
 	},
 	surf: {
 		inherit: true,
+		basePower: 47, //effectively halved as temporary fix.
 		target: "allAdjacentFoes",
 	},
 	superfang: {
@@ -905,6 +910,7 @@ let BattleMovedex = {
 	},
 	swift: {
 		inherit: true,
+		basePower: 30, //effectively halved as temporary fix.
 		target: "allAdjacentFoes",
 	},
 	takedown: {
