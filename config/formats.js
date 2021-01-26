@@ -218,6 +218,20 @@ let Formats = [
 		banlist: ['Magikarp + Dragon Rage', 'Rapidash + Pay Day', 'Fearow + Pay Day', 'Pikachu + Fly', 'Raichu + Fly'],
 	},
 	{
+		name: "[Gen 1] Stadium Ubers",
+		desc: `A metagame utilizing Pokemon Stadium, with all the mechanics! Sleep Clause counts Rest here to remain true to cartridge. Allows moves obtainable through the Time Capsule.`,
+		threads: [
+			`&bullet; <a href="https://www.smogon.com/articles/rby-tradebacks-ou">Tradeback Information</a>`,
+			`&bullet; <a href="https://www.smogon.com/forums/threads/gen-1-and-gen-2-how-sleep-clause-works-in-the-pok%C3%A9mon-stadium-games.3661020/">Stadium Sleep Clause details (fixed)</a>`,
+			`&bullet; <a href="https://rby2k20.com/read.php?article=Guides/Stad1Crits">Critical Hits</a>`,
+			`&bullet; <a href="https://www.smogon.com/forums/threads/stadium-format-is-now-available-on-ps.3526616/">Research Thread</a>`,
+		],
+
+		mod: 'stadium',
+		ruleset: ['Obtainable', 'Team Preview', 'Stadium Sleep Clause', 'Freeze Clause Mod', 'Species Clause', 'Nickname Clause', 'OHKO Clause', 'Evasion Moves Clause', 'Endless Battle Clause', 'Exact HP Mod', 'Cancel Mod'],
+		banlist: ['Uber', 'Magikarp + Dragon Rage', 'Rapidash + Pay Day', 'Fearow + Pay Day', 'Pikachu + Fly', 'Raichu + Fly'],
+	},
+	{
 		name: "[Gen 1] Stadium OU (Tradebacks)",
 		desc: `A metagame utilizing Pokemon Stadium, with all the mechanics! Sleep Clause counts Rest here to remain true to cartridge. Allows moves obtainable through the Time Capsule.`,
 		threads: [
@@ -249,7 +263,7 @@ let Formats = [
 		teamLength: {
 			validate: [3, 6],
 			battle: 3,
-	},
+		},
 	},
 	{
         	name: "[Gen 1] Pika Cup",
@@ -384,6 +398,18 @@ let Formats = [
 		column: 3,
 	},
 	{
+		name: "[Gen 1] Box OU",
+		desc: `Battle using up to 24 Pokemon via the Box feature in the PS Teambuilder!`,
+
+		mod: 'gen1',
+		teamLength: {
+			validate: [1, 24],
+			battle: 24,
+		},
+		ruleset: ['Standard'],
+		banlist: ['Uber', 'Magikarp + Dragon Rage', 'Rapidash + Pay Day', 'Fearow + Pay Day', 'Pikachu + Fly', 'Raichu + Fly'],
+	},
+	{
 		name: "[Gen 1] Doubles OU",
 		desc: `A modified Gen 1 sim made with the intention of making Doubles possible. It uses Gen 3 Doubles Mechanics; Surf targets two opponents, you switch out immediately upon fainting, and spread move damage is halved.`,
 		threads: [
@@ -394,6 +420,18 @@ let Formats = [
 		gameType: 'doubles',
 		ruleset: ['Standard'],
 		banlist: ['Uber', 'Wrap', 'Fire Spin', 'Clamp', 'Bind', 'Explosion', 'Self-Destruct', 'Magikarp + Dragon Rage', 'Rapidash + Pay Day', 'Fearow + Pay Day', 'Pikachu + Fly', 'Raichu + Fly'],
+	},
+	{
+		name: "[Gen 1] Doubles OU (Tradebacks)",
+		desc: `A modified Gen 1 sim made with the intention of making Doubles possible. It uses Gen 3 Doubles Mechanics; Surf targets two opponents, you switch out immediately upon fainting, and spread move damage is halved.`,
+		threads: [
+			`&bullet; <a href="https://rby2k20.com/read.php?article=Guides/RBYDoublesIntro">An Introduction to RBY Doubles</a>`,
+		],
+		
+		mod: 'gen1doubles',
+		gameType: 'doubles',
+		ruleset: ['Standard'],
+		banlist: ['Uber', 'Wrap', 'Fire Spin', 'Clamp', 'Bind', 'Explosion', 'Self-Destruct', 'Magikarp + Dragon Rage', 'Rapidash + Pay Day', 'Fearow + Pay Day', 'Pikachu + Fly', 'Raichu + Fly', 'Allow Tradeback'],
 	},
 	{
 		name: "[Gen 1] 2v2 Doubles",
@@ -472,7 +510,17 @@ let Formats = [
 		],
         	mod: 'retro',
        		ruleset: ['Standard', 'Team Preview', '+Past', '+Future'],
-			banlist: ['Uber', 'Abomasnow-Mega', 'Absol-Mega', 'Aerodactyl-Mega', 'Aggron-Mega', 'Alakazam-Mega', 'Altaria-Mega', 'Ampharos-Mega', 'Audino-Mega', 'Banette-Mega', 'Beedrill-Mega', 'Blastoise-Mega', 'Blaziken-Mega', 'Camerupt-Mega', 'Charizard-Mega-X', 'Charizard-Mega-Y', 'Diancie-Mega', 'Gallade-Mega', 'Garchomp-Mega', 'Gardevoir-Mega', 'Gengar-Mega', 'Glalie-Mega', 'Gyarados-Mega', 'Heracross-Mega', 'Houndoom-Mega', 'Kangaskhan-Mega', 'Latias-Mega', 'Latios-Mega', 'Lopunny-Mega', 'Lucario-Mega', 'Manectric-Mega', 'Mawile-Mega', 'Medicham-Mega', 'Mewtwo-Mega-X', 'Mewtwo-Mega-Y', 'Pidgeot-Mega', 'Pinsir-Mega', 'Rayquaza-Mega', 'Sableye-Mega', 'Salamence-Mega', 'Sceptile-Mega', 'Scizor-Mega', 'Sharpedo-Mega', 'Slowbro-Mega', 'Steelix-Mega', 'Swampert-Mega', 'Tyranitar-Mega', 'Venusaur-Mega', 'Lugia', 'Ho-oh', 'Groudon', 'Groudon-Primal', 'Kyogre', 'Kyogre-Primal', 'Rayquaza', 'Dialga', 'Palkia', 'Giratina', 'Darkrai', 'Zekrom', 'Reshiram', 'Kyurem-Black', 'Kyurem-White', 'Deoxys', 'Deoxys-Attack', 'Deoxys-Defense', 'Deoxys-Speed', 'Marshadow', 'Lunala', 'Naganadel', 'Necrozma-Dusk-Mane', 'Necrozma-Dawn-Wings', 'Necrozma-Ultra', 'Pheromosa', 'Shaymin-Sky', 'Solgaleo', 'Xerneas', 'Yveltal', 'Zygarde-Complete', 'Arceus', 'Arceus-Bug', 'Arceus-Dark', 'Arceus-Dragon', 'Arceus-Electric', 'Arceus-Fairy', 'Arceus-Fighting', 'Arceus-Fire', 'Arceus-Flying', 'Arceus-Ghost', 'Arceus-Grass', 'Arceus-Ground', 'Arceus-Ice', 'Arceus-Poison', 'Arceus-Psychic', 'Arceus-Rock', 'Arceus-Steel', 'Arceus-Water', 'Calyrex-Ice', 'Calyrex-Shadow', 'Regigigas', 'Slaking', 'Regice', 'Greninja-Ash'],
+		banlist: ['Uber', 'Abomasnow-Mega', 'Absol-Mega', 'Aerodactyl-Mega', 'Aggron-Mega', 'Alakazam-Mega', 'Altaria-Mega', 'Ampharos-Mega', 'Audino-Mega', 'Banette-Mega', 'Beedrill-Mega', 'Blastoise-Mega', 'Blaziken-Mega', 'Camerupt-Mega', 'Charizard-Mega-X', 'Charizard-Mega-Y', 'Diancie-Mega', 'Gallade-Mega', 'Garchomp-Mega', 'Gardevoir-Mega', 'Gengar-Mega', 'Glalie-Mega', 'Gyarados-Mega', 'Heracross-Mega', 'Houndoom-Mega', 'Kangaskhan-Mega', 'Latias-Mega', 'Latios-Mega', 'Lopunny-Mega', 'Lucario-Mega', 'Manectric-Mega', 'Mawile-Mega', 'Medicham-Mega', 'Mewtwo-Mega-X', 'Mewtwo-Mega-Y', 'Pidgeot-Mega', 'Pinsir-Mega', 'Rayquaza-Mega', 'Sableye-Mega', 'Salamence-Mega', 'Sceptile-Mega', 'Scizor-Mega', 'Sharpedo-Mega', 'Slowbro-Mega', 'Steelix-Mega', 'Swampert-Mega', 'Tyranitar-Mega', 'Venusaur-Mega', 'Lugia', 'Ho-oh', 'Groudon', 'Groudon-Primal', 'Kyogre', 'Kyogre-Primal', 'Rayquaza', 'Dialga', 'Palkia', 'Giratina', 'Darkrai', 'Zekrom', 'Reshiram', 'Kyurem-Black', 'Kyurem-White', 'Deoxys', 'Deoxys-Attack', 'Deoxys-Defense', 'Deoxys-Speed', 'Marshadow', 'Lunala', 'Naganadel', 'Necrozma-Dusk-Mane', 'Necrozma-Dawn-Wings', 'Necrozma-Ultra', 'Pheromosa', 'Shaymin-Sky', 'Solgaleo', 'Xerneas', 'Yveltal', 'Zygarde-Complete', 'Arceus', 'Arceus-Bug', 'Arceus-Dark', 'Arceus-Dragon', 'Arceus-Electric', 'Arceus-Fairy', 'Arceus-Fighting', 'Arceus-Fire', 'Arceus-Flying', 'Arceus-Ghost', 'Arceus-Grass', 'Arceus-Ground', 'Arceus-Ice', 'Arceus-Poison', 'Arceus-Psychic', 'Arceus-Rock', 'Arceus-Steel', 'Arceus-Water', 'Calyrex-Ice', 'Calyrex-Shadow', 'Regigigas', 'Slaking', 'Regice', 'Greninja-Ash'],
+    	},
+	{
+		name: "[Gen 1] RBY 898 Ubers",
+        	desc: `A mod where every later-generation pokemon is available in gen 1.`,
+        	threads: [
+			`&bullet; <a href="https://www.smogon.com/forums/threads/gen-1-rose-red-iris-blue.3652237/">Rose Red / Iris Blue</a>`,
+		],
+        	mod: 'retro',
+       		ruleset: ['Uber', 'Team Preview', '+Past', '+Future'],
+			banlist: ['Uber', 'Abomasnow-Mega', 'Absol-Mega', 'Aerodactyl-Mega', 'Aggron-Mega', 'Alakazam-Mega', 'Altaria-Mega', 'Ampharos-Mega', 'Audino-Mega', 'Banette-Mega', 'Beedrill-Mega', 'Blastoise-Mega', 'Blaziken-Mega', 'Camerupt-Mega', 'Charizard-Mega-X', 'Charizard-Mega-Y', 'Diancie-Mega', 'Gallade-Mega', 'Garchomp-Mega', 'Gardevoir-Mega', 'Gengar-Mega', 'Glalie-Mega', 'Gyarados-Mega', 'Heracross-Mega', 'Houndoom-Mega', 'Kangaskhan-Mega', 'Latias-Mega', 'Latios-Mega', 'Lopunny-Mega', 'Lucario-Mega', 'Manectric-Mega', 'Mawile-Mega', 'Medicham-Mega', 'Mewtwo-Mega-X', 'Mewtwo-Mega-Y', 'Pidgeot-Mega', 'Pinsir-Mega', 'Rayquaza-Mega', 'Sableye-Mega', 'Salamence-Mega', 'Sceptile-Mega', 'Scizor-Mega', 'Sharpedo-Mega', 'Slowbro-Mega', 'Steelix-Mega', 'Swampert-Mega', 'Tyranitar-Mega', 'Venusaur-Mega', 'Groudon-Primal', 'Kyogre-Primal', 'Kyurem-Black', 'Kyurem-White', 'Deoxys-Attack', 'Deoxys-Defense', 'Deoxys-Speed', 'Necrozma-Dusk-Mane', 'Necrozma-Dawn-Wings', 'Necrozma-Ultra', 'Shaymin-Sky', 'Zygarde-Complete', 'Arceus-Bug', 'Arceus-Dark', 'Arceus-Dragon', 'Arceus-Electric', 'Arceus-Fairy', 'Arceus-Fighting', 'Arceus-Fire', 'Arceus-Flying', 'Arceus-Ghost', 'Arceus-Grass', 'Arceus-Ground', 'Arceus-Ice', 'Arceus-Poison', 'Arceus-Psychic', 'Arceus-Rock', 'Arceus-Steel', 'Arceus-Water', 'Calyrex-Ice', 'Calyrex-Shadow', 'Greninja-Ash'],
     	},
 	{
 		name: "[Gen 1] Scalemons",
@@ -497,6 +545,32 @@ let Formats = [
 			'Nidoking + Fury Attack + Thrash', 'Exeggutor + Poison Powder + Stomp', 'Exeggutor + Sleep Powder + Stomp', 'Exeggutor + Stun Spore + Stomp', 'Jolteon + Focus Energy + Thunder Shock', 'Flareon + Focus Energy + Ember', 'Magikarp + Dragon Rage', 'Rapidash + Pay Day', 'Fearow + Pay Day', 'Pikachu + Fly', 'Raichu + Fly'],
 		restricted: ['Spore'],
 	},
+	{
+		name: "[Gen 1] Reliablemons (Beta)",
+		desc: `Each Pokemon's first 2 moves will match their type. If a Pokemon has a single type, only the first is modified.`,
+		threads: [
+			`&bullet; <a href="https://www.smogon.com/forums/threads/reliablemons.3515558/">Reliablemons</a>`,
+		],
+		
+		mod: 'gen1',
+		ruleset: ['Pokemon', 'Standard'],
+		banlist: ['Uber'],
+		onModifyMove: function(move, pokemon) {
+		    var moves = pokemon.moves;
+		    if (move.id === moves[0]) {
+			var cheese = 0;
+			var crackers = true;
+		    } else if (move.id === moves[1] && pokemon.typesData[1]) {
+			var cheese = 1;
+			var crackers = true;
+		    } else {
+			var crackers = false;
+		    }
+		    if (crackers) {
+			move.type = pokemon.typesData[cheese].type;
+		    }
+		}
+    	},
 	{
 		name: "[Gen 1] Camomons",
 		desc: `Pok&eacute;mon change type to match their first two moves.`,
@@ -612,6 +686,16 @@ let Formats = [
 		team: 'randomCC',
 		ruleset: ['Obtainable', 'HP Percentage Mod', 'Cancel Mod'],
 	},
+	{
+		name: "[Gen 8] Challenge Cup 1v1",
+
+		mod: 'gen1',
+		team: 'randomCC',
+		teamLength: {
+			battle: 1,
+		},
+		ruleset: ['Obtainable', 'HP Percentage Mod', 'Cancel Mod', 'Team Preview'],
+	},
 	//FINISHME: There is a finished JSON File for Gen 1 Battle Factory in the gen1 Mod folder, by yours truly.
 	//The issue is, we lack a randomizer for it, so we can't actually use it. - Plague von Karma
 	/*{
@@ -673,6 +757,19 @@ let Formats = [
 	{
 		section: "Misc. Metagames",
 		column: 4,
+	},
+	{
+		name: "[Gen 1] JPN OU",
+		desc: `RBY OU with Japanese Cartridge mechanics, such as 30% Frz Blizzard.`,
+		threads: [
+			`&bullet; <a href="https://www.smogon.com/forums/threads/3572352/">RBY OU Viability Ranking</a>`,
+			`&bullet; <a href="https://www.smogon.com/forums/threads/3650478/#post-8133786">RBY Sample Teams</a>`,
+			`&bullet; <a href="https://pastebin.com/raw/gLahC72J">RoA Sample Teams</a>`,
+		],
+
+		mod: 'gen1jpn',
+		ruleset: ['Standard'],
+		banlist: ['Uber'],
 	},
 	{
 		name: "[Gen 1] AG",
