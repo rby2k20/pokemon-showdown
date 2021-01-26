@@ -553,7 +553,7 @@ let Formats = [
 		],
 		
 		mod: 'gen1',
-		ruleset: ['Pokemon', 'Standard'],
+		ruleset: ['Obtainable', 'Standard'],
 		banlist: ['Uber'],
 		onModifyMove: function(move, pokemon) {
 		    var moves = pokemon.moves;
@@ -687,7 +687,7 @@ let Formats = [
 		ruleset: ['Obtainable', 'HP Percentage Mod', 'Cancel Mod'],
 	},
 	{
-		name: "[Gen 8] Challenge Cup 1v1",
+		name: "[Gen 1] Challenge Cup 1v1",
 
 		mod: 'gen1',
 		team: 'randomCC',
