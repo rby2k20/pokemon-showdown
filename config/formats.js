@@ -402,12 +402,12 @@ let Formats = [
 		desc: `Battle using up to 24 Pokemon via the Box feature in the PS Teambuilder!`,
 
 		mod: 'gen1',
+		ruleset: ['Standard'],
+		banlist: ['Uber', 'Magikarp + Dragon Rage', 'Rapidash + Pay Day', 'Fearow + Pay Day', 'Pikachu + Fly', 'Raichu + Fly'],
 		teamLength: {
 			validate: [1, 24],
 			battle: 24,
 		},
-		ruleset: ['Standard'],
-		banlist: ['Uber', 'Magikarp + Dragon Rage', 'Rapidash + Pay Day', 'Fearow + Pay Day', 'Pikachu + Fly', 'Raichu + Fly'],
 	},
 	{
 		name: "[Gen 1] Doubles OU",
