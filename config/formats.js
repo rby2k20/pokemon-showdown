@@ -402,8 +402,10 @@ let Formats = [
 		desc: `Battle using up to 24 Pokemon via the Box feature in the PS Teambuilder!`,
 
 		mod: 'gen1',
+		debug: true,
 		ruleset: ['Standard'],
 		banlist: ['Uber', 'Magikarp + Dragon Rage', 'Rapidash + Pay Day', 'Fearow + Pay Day', 'Pikachu + Fly', 'Raichu + Fly'],
+		battle: {trunc: Math.trunc},
 		teamLength: {
 			validate: [1, 24],
 			battle: 24,
