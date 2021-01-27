@@ -36,20 +36,9 @@ let BattleFormats = {
 		onBegin() {
 			this.add('rule', 'Reliablemons Mod: The first moves in a Pokemon\'s moveset are changed to fit their type.');
 		},
-		onModifyMove(move, pokemon) {
-		    var moves = pokemon.moves;
-		    if (move.id === moves[0]) {
-			var cheese = 0;
-			var crackers = true;
-		    } else if (move.id === moves[1] && pokemon.typesData[1]) {
-			var cheese = 1;
-			var crackers = true;
-		    } else {
-			var crackers = false;
-		    }
-		    if (crackers) {
-			move.type = pokemon.typesData[cheese].type;
-		    }
+		onModifyMove: function(move, pokemon) {
+			var index = pokemon.moves.indexOf(move.id);
+			move.type = pokemon.getTypes()[index] || move.type;
 		},
 	},
 };
