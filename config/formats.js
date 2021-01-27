@@ -545,7 +545,7 @@ let Formats = [
 			'Nidoking + Fury Attack + Thrash', 'Exeggutor + Poison Powder + Stomp', 'Exeggutor + Sleep Powder + Stomp', 'Exeggutor + Stun Spore + Stomp', 'Jolteon + Focus Energy + Thunder Shock', 'Flareon + Focus Energy + Ember', 'Magikarp + Dragon Rage', 'Rapidash + Pay Day', 'Fearow + Pay Day', 'Pikachu + Fly', 'Raichu + Fly'],
 		restricted: ['Spore'],
 	},
-	/*{ //FIXME: Reliablemons Mod Rule is fucked up by a TypeError.
+	{ //FIXME: Reliablemons Mod Rule is fucked up by a TypeError.
 		name: "[Gen 1] Reliablemons (Beta)",
 		desc: `Each Pokemon's first 2 moves will match their type. If a Pokemon has a single type, only the first is modified.`,
 		threads: [
@@ -555,7 +555,7 @@ let Formats = [
 		mod: 'gen1',
 		ruleset: ['Obtainable', 'Standard', 'Reliablemons Mod'],
 		banlist: ['Uber'],
-    	},*/
+    	},
 	{
 		name: "[Gen 1] Camomons",
 		desc: `Pok&eacute;mon change type to match their first two moves.`,
