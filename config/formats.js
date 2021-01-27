@@ -397,7 +397,7 @@ let Formats = [
 		section: "Modded Formats",
 		column: 3,
 	},
-	{
+	/*{ //FIXME: validator is cucking us
 		name: "[Gen 1] Box OU",
 		desc: `Battle using up to 24 Pokemon via the Box feature in the PS Teambuilder!`,
 
@@ -410,7 +410,7 @@ let Formats = [
 			validate: [1, 24],
 			battle: 24,
 		},
-	},
+	},*/
 	{
 		name: "[Gen 1] Doubles OU",
 		desc: `A modified Gen 1 sim made with the intention of making Doubles possible. It uses Gen 3 Doubles Mechanics; Surf targets two opponents, you switch out immediately upon fainting, and spread move damage is halved.`,
