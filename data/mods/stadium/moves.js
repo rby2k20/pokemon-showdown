@@ -43,6 +43,31 @@ let BattleMovedex = {
 		inherit: true,
 		// FIXME: onBeforeMove() {},
 	},
+	haze: {
+		inherit: true,
+		target: "self",
+		onHit(target, source) {
+			this.add('-clearallboost');
+			for (const pokemon of this.getAllActive()) {
+				pokemon.clearBoosts();
+				if (pokemon.status !== 'tox') {
+					pokemon.cureStatus();
+					pokemon.recalculateStats();
+				}
+				if (pokemon.status === 'tox') {
+					pokemon.setStatus('psn');
+				}
+				for (const id of Object.keys(pokemon.volatiles)) {
+					if (id === 'residualdmg') {
+						pokemon.volatiles[id].counter = 0;
+					} else {
+						pokemon.removeVolatile(id);
+						this.add('-end', pokemon, id);
+					}
+				}
+			}
+		},
+	},
 	highjumpkick: {
 		inherit: true,
 		desc: "If this attack misses the target, the user takes 1 HP of damage.",
