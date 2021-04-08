@@ -24,7 +24,7 @@ let Formats = [
 		banlist: ['Uber', 'Magikarp + Dragon Rage', 'Rapidash + Pay Day', 'Fearow + Pay Day', 'Pikachu + Fly', 'Raichu + Fly'],
 	},
 	{
-		name: "[Gen 1] OU (Tradebacks)",
+		name: "[Gen 1] Tradebacks OU",
 		desc: `RBY with movepool additions from the Time Capsule, tiered by RBY 2k20.`,
 		threads: [
 			`&bullet; <a href="https://www.smogon.com/articles/rby-tradebacks-ou">Tradeback Information</a>`,
